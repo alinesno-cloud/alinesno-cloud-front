@@ -7,7 +7,7 @@ import Hello from '../views/Hello.vue'
 Vue.use(VueRouter)
 
 /* Layout */
-import { Layout , CommonRoutes } from 'common'
+import { Layout } from 'common'
 
 const constantRoutes = [
   {
@@ -34,8 +34,6 @@ const constantRoutes = [
     component: Hello
   }
 ]
-
-//  var routes = CommonRoutes.concat(constantRoutes)
 
 export default new VueRouter({
   mode: 'history', // 去掉url中的#

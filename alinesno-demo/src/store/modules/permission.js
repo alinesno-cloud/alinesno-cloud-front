@@ -1,6 +1,6 @@
 import { constantRoutes } from 'common/src/router'
 import { getRouters } from 'common/src/api/menu'
-import Layout from 'common'
+import { Layout } from 'common'
 import ParentView from 'common/packages/ParentView';
 
 const permission = {

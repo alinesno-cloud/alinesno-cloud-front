@@ -26,7 +26,7 @@ Vue.use(Router)
  */
 
 // 公共路由
-export const CommonRoutes = [
+export const constantRoutes = [
   {
     path: '/redirect',
     // component: Layout,
