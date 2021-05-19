@@ -7,10 +7,10 @@ import Hello from '../views/Hello.vue'
 Vue.use(VueRouter)
 
 /* Layout */
-import { Layout , ConstantRoutes } from 'common'
+import { Layout } from 'common'
 
 // >>>>>>>>>>> TODO 提取出公共路由 >>>>>>>>>>>>>>>>
-const constomRoutes = [
+export const constantRoutes = [
   {
     path: '',
     component: Layout,
@@ -23,6 +23,21 @@ const constomRoutes = [
         meta: { title: '首页', icon: 'dashboard', noCache: true, affix: true }
       }
     ]
+  },
+  {
+    path: '/login',
+    component: (resolve) => require(['common/src/views/login'], resolve),
+    hidden: true
+  },
+  {
+    path: '/404',
+    component: (resolve) => require(['common/src/views/error/404'], resolve),
+    hidden: true
+  },
+  {
+    path: '/401',
+    component: (resolve) => require(['common/src/views/error/401'], resolve),
+    hidden: true
   },
   {
     path: '/',
@@ -39,5 +54,5 @@ const constomRoutes = [
 export default new VueRouter({
   mode: 'history', // 去掉url中的#
   scrollBehavior: () => ({ y: 0 }),
-  routes: constomRoutes
+  routes: constantRoutes
 })

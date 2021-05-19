@@ -5,6 +5,7 @@ import Element from 'element-ui'
 // >>>>>>>>>>>>>>>>>> person_start >>>>>>>>>>>>>>>>>>>>>>>>>
 import store from './store'
 import router from './router'
+import './permission'
 // >>>>>>>>>>>>>>>>>> person_end >>>>>>>>>>>>>>>>>>>>>>>>>
 
 // >>>>>>>>>>>>>>>>>> common_start >>>>>>>>>>>>>>>>>>>>>>>>>
@@ -14,6 +15,7 @@ import 'common/src/assets/styles/index.scss' // global css
 import 'common/src/assets/styles/ruoyi.scss' // ruoyi css
 
 import App from 'common/src/App'
+import SvgIcon from 'common/packages/SvgIcon'// svg component
 import permission from 'common/src/directive/permission'
 import { parseTime, resetForm, addDateRange, selectDictLabel, selectDictLabels, download, handleTree } from "common/src/utils/ruoyi";
 import Pagination from "common/packages/Pagination";
@@ -41,6 +43,7 @@ Vue.prototype.msgInfo = function (msg) {
 }
 
 // 全局组件挂载
+Vue.component('svg-icon', SvgIcon)
 Vue.component('Pagination', Pagination)
 Vue.component('RightToolbar', RightToolbar)
 
