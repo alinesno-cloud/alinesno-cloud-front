@@ -13,7 +13,7 @@ import router from './router'
 import permission from 'common/src/directive/permission'
 
 import 'common/src/assets/icons' // icon
-// import 'common/src/permission' // permission control
+import 'common/src/permission' // permission control
 import { parseTime, resetForm, addDateRange, selectDictLabel, selectDictLabels, download, handleTree } from "common/src/utils/ruoyi";
 import Pagination from "common/packages/Pagination";
 // 自定义表格工具扩展
