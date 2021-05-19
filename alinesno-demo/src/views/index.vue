@@ -98,7 +98,7 @@
                 <div class="widget-bulletin-list">
                     <div class="pin">
                         <div class="msg">
-                            <span><span hidden="">type:home_bulletin</span> 
+                            <span><span hidden="">type:home_bulletin</span>
                                 <!-- 通知：控制台门户V2.0升级，跨产品、跨地域全局视角资源管理利器 <a href="https://help.aliyun.com/document_detail/202690.html" target="_blank" rel="noopener noreferrer">点击了解</a><br /> --> <span>问卷调研：参与<a href="//survey.aliyun.com/apps/zhiliao/mpyyc_HOI" target="_blank" rel="noopener noreferrer">API满意度有奖调研</a>，赢取阿里云通用代金券！</span></span>
                         </div>
                         <!-- <div class="line"></div> -->
@@ -167,7 +167,7 @@
                 <div class="widget-bulletin-list">
                     <div class="pin">
                         <div class="msg">
-                            <span><span hidden="">type:home_bulletin</span> 
+                            <span><span hidden="">type:home_bulletin</span>
                                 <!-- 通知：控制台门户V2.0升级，跨产品、跨地域全局视角资源管理利器 <a href="https://help.aliyun.com/document_detail/202690.html" target="_blank" rel="noopener noreferrer">点击了解</a><br /> --> <span>问卷调研：参与<a href="//survey.aliyun.com/apps/zhiliao/mpyyc_HOI" target="_blank" rel="noopener noreferrer">API满意度有奖调研</a>，赢取阿里云通用代金券！</span></span>
                         </div>
                         <!-- <div class="line"></div> -->
@@ -204,8 +204,8 @@
                 </div>
             </div>
         </div>
-		</el-col> 
-        </el-row> 
+		</el-col>
+        </el-row>
     </div>
 </div>
 
@@ -232,13 +232,10 @@ export default {
 
 .homeHeader {
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 24px 24px 0;
     background-color: #fff;
-    -webkit-box-shadow: 0 1px 0 0 #f5f5f5;
-    -moz-box-shadow: 0 1px 0 0 #c0c6cc;
+    box-shadow: 0 1px 0 0 #c0c6cc ;
     z-index: 1;
 }
 
@@ -275,6 +272,12 @@ export default {
     padding: 20px !important ;
     padding-left: 20px !important ;
     padding-right: 20px !important ;
+    border: var(--card-border-width,1px) var(--card-border-style,solid) var(--card-border-color,#e3e4e6);
+}
+
+.el-col-8 {
+    width: calc(33.3333333333% - 10px);
+    margin-left: 10px;
 }
 
 .widget-bulletin-list .item {
@@ -403,9 +406,8 @@ export default {
 	margin: 0;
 	padding: 0;
 }
-	
+
 .product_list {
-	
 	a {
 		display: flex;
 		align-items: center;
@@ -426,14 +428,14 @@ export default {
     padding: 0 8px 8px 0;
     overflow: hidden;
     flex: none;
-    width: 25%; 
+    width: 25%;
     float: left;
 	border-radius: 4px;
 	font-size: 12px;
-	
+
 	a {
 		line-height: 42px;
-		
+
 		i {
 			display: none;
 			border: 1px solid #dedede;
@@ -443,7 +445,7 @@ export default {
 			text-align: center;
 		}
 	}
-	
+
 	.WidgetHomeProductMy-product_name-TNtW6 {
 		flex: 1;
 		margin-left: 8px;
