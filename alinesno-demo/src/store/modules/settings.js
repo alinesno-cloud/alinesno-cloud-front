@@ -1,5 +1,5 @@
 import variables from 'common/src/assets/styles/element-variables.scss'
-import defaultSettings from '@/settings'
+import defaultSettings from 'common/src/settings'
 
 const { sideTheme, showSettings, topNav, tagsView, fixedHeader, sidebarLogo } = defaultSettings
 

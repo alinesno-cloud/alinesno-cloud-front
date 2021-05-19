@@ -18,6 +18,7 @@
 </template>
 
 <script>
+
 import RightPanel from './components/RightPanel'
 import { AppMain, Navbar, Settings, Sidebar, TagsView } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
@@ -66,6 +67,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
   @import "common/src/assets/styles/mixin.scss";
   @import "common/src/assets/styles/variables.scss";
 

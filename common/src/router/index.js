@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 /* Layout */
-// import Layout from '@/layout'
+import Layout from 'common/packages/Layout/layout.vue'
 // import ParentView from '@/components/ParentView';
 
 /**
@@ -26,75 +26,59 @@ Vue.use(Router)
  */
 
 // 公共路由
-export const constantRoutes = [
-  {
-    path: '/redirect',
+export const ConstantRoutes = [
+  // {
+    // path: '',
     // component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: '/redirect/:path(.*)',
-        component: (resolve) => require(['common/src/views/redirect'], resolve)
-      }
-    ]
-  },
-  {
-    path: '/login',
-    component: (resolve) => require(['common/src/views/login'], resolve),
-    hidden: true
-  },
-  {
-    path: '/404',
-    component: (resolve) => require(['common/src/views/error/404'], resolve),
-    hidden: true
-  },
-  {
-    path: '/401',
-    component: (resolve) => require(['common/src/views/error/401'], resolve),
-    hidden: true
-  },
-  /*
-  {
-    path: '',
+    // redirect: 'index',
+    // children: [
+      // {
+        // path: 'index',
+        // component: (resolve) => require(['common/src/views/index'], resolve),
+        // name: '首页',
+        // meta: { title: '首页', icon: 'dashboard', noCache: true, affix: true }
+      // }
+    // ]
+  // },
+  // {
+    // path: '/redirect',
     // component: Layout,
-    redirect: 'index',
-    children: [
-      {
-        path: 'index',
-        component: (resolve) => require(['@/views/index'], resolve),
-        name: '首页',
-        meta: { title: '首页', icon: 'dashboard', noCache: true, affix: true }
-      }
-    ]
-  },
-  {
-    path: '/user',
+    // hidden: true,
+    // children: [
+      // {
+        // path: '/redirect/:path(.*)',
+        // component: (resolve) => require(['common/src/views/redirect'], resolve)
+      // }
+    // ]
+  // },
+  // {
+    // path: '/login',
+    // component: (resolve) => require(['common/src/views/login'], resolve),
+    // hidden: true
+  // },
+  // {
+    // path: '/404',
+    // component: (resolve) => require(['common/src/views/error/404'], resolve),
+    // hidden: true
+  // },
+  // {
+    // path: '/401',
+    // component: (resolve) => require(['common/src/views/error/401'], resolve),
+    // hidden: true
+  // },
+  // {
+    // path: '',
     // component: Layout,
-    hidden: true,
-    redirect: 'noredirect',
-    children: [
-      {
-        path: 'profile',
-        component: (resolve) => require(['common/src/views/system/user/profile/index'], resolve),
-        name: 'Profile',
-        meta: { title: '个人中心', icon: 'user' }
-      }
-    ]
-  },
-  {
-    path: '/dict',
-    // component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'type/data/:dictId(\\d+)',
-        component: (resolve) => require(['common/src/views/system/dict/data'], resolve),
-        name: 'Data',
-        meta: { title: '字典数据', icon: '' }
-      }
-    ]
-  }
-  */
+    // redirect: 'index',
+    // children: [
+      // {
+        // path: 'index',
+        // component: (resolve) => require(['@/views/index'], resolve),
+        // name: '首页',
+        // meta: { title: '首页', icon: 'dashboard', noCache: true, affix: true }
+      // }
+    // ]
+  // }
 ]
 
 // export default

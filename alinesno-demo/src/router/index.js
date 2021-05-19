@@ -7,9 +7,10 @@ import Hello from '../views/Hello.vue'
 Vue.use(VueRouter)
 
 /* Layout */
-import { Layout } from 'common'
+import { Layout , ConstantRoutes } from 'common'
 
-const constantRoutes = [
+// >>>>>>>>>>> TODO 提取出公共路由 >>>>>>>>>>>>>>>>
+const constomRoutes = [
   {
     path: '',
     component: Layout,
@@ -38,5 +39,5 @@ const constantRoutes = [
 export default new VueRouter({
   mode: 'history', // 去掉url中的#
   scrollBehavior: () => ({ y: 0 }),
-  routes: constantRoutes
+  routes: constomRoutes
 })
