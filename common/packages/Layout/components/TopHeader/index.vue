@@ -145,6 +145,7 @@ export default {
                 position: relative;
                 padding: 0px 10px;
                 border: 0px;
+                color: #555;
                 height: 50px;
                 line-height: 50px;
                 display: block !important;

@@ -1,5 +1,5 @@
 <template>
-<div class="loginDiv ng-scope">
+<div class="loginDiv ">
     <div class="QRLoginSwitchDiv ng-scope" ng-if="QRLoginModel.hasQRLogin &amp;&amp; !quickLoginModel.hasQuickLogin">
         <div class="QRLogin" ng-click="QRLoginModel.QRLoginTypeSwitch(true)">
             <div ng-class="{'selectedType': QRLoginModel.isQRLogin}" class="ng-binding">
@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div ng-show="!QRLoginModel.isQRLogin &amp;&amp; model.loginType === 'iam'" id="loginForm" class="ng-hide">
+    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" id="loginForm" class="ng-hide">
         <div class="loginTypeDiv">
             <span class="loginTypeNoSelected ng-binding" ng-bind="i18n('enterpriseUser')">账号密码登陆</span>
         </div>
@@ -22,23 +22,43 @@
         </div>
         <div class="loginFormDiv">
             <div class="inputField" style="position: relative;">
-                <input type="text" class="iam-input-text ng-pristine ng-untouched ng-valid ng-valid-maxlength" ng-class="{'iam-input-error': IAMLoginErrorMsg.domainError, '': !IAMLoginErrorMsg.domainError}" ng-model="IAMAccountInput.value" id="IAMAccountInputId" placeholder="租户名/原云帐号" ng-disabled="IAMAccountInput.disable" ng-blur="IAMAccountInput.blur()" ng-change="IAMAccountInput.change()" ng-init="bindIAMAccountTip()" ng-style="IAMAccountInput.style" maxlength="255" autocomplete="off" style="width: 100%; height: 48px;" />
+                <input type="text" class="iam-input-text"
+                        name="account"
+                        v-model="loginForm.code"
+                        @keyup.enter="handleLogin"
+                       placeholder="租户名/原云帐号" maxlength="255" autocomplete="off" style="width: 100%; height: 48px;" />
             </div>
             <div class="inputField" style="position: relative;">
-                <form action="javascript:void(0)" class="ng-pristine ng-valid ng-valid-maxlength">
-                    <input type="text" class="iam-input-text ng-pristine ng-untouched ng-valid ng-valid-maxlength" ng-class="{'iam-input-error': IAMLoginErrorMsg.usernameError || IAMLoginErrorMsg.nameOrPwdError, '': !IAMLoginErrorMsg.usernameError &amp;&amp; !IAMLoginErrorMsg.nameOrPwdError}" ng-model="IAMUsernameInput.value" id="IAMUsernameInputId" placeholder="IAM用户名/邮件地址" ng-blur="IAMUsernameInput.blur()" ng-change="IAMUsernameInput.change()" ng-init="bindIAMUsernameTip()" ng-style="IAMUsernameInput.style" maxlength="255" autocomplete="off" style="width: 100%; height: 48px;" />
-                </form>
+                    <input class="iam-input-text ng-pristine ng-untouched ng-valid ng-valid-maxlength"
+                            v-model="loginForm.password"
+                            type="password"
+                            auto-complete="off"
+                            placeholder="密码"
+                            @keyup.enter="handleLogin"
+                            maxlength="255" autocomplete="off" style="width: 100%; height: 48px;" />
             </div>
             <div class="inputField pwdInputField">
-                <form action="javascript:void(0)" class="ng-pristine ng-valid ng-valid-maxlength">
-                    <input type="password" class="iam-input-text ng-pristine ng-untouched ng-valid ng-valid-maxlength" ng-class="{'iam-input-error': IAMLoginErrorMsg.pwdError || IAMLoginErrorMsg.nameOrPwdError, '': !IAMLoginErrorMsg.pwdError &amp;&amp; !IAMLoginErrorMsg.nameOrPwdError}" ng-model="IAMPasswordInput.value" id="IAMPasswordInputId" placeholder="IAM用户密码" ng-blur="IAMPasswordInput.pwdBlur()" ng-style="IAMPasswordInput.style" ng-change="IAMPasswordInput.change()" maxlength="128" autocomplete="new-password" style="width: 100%; height: 48px;" />
-                </form>
-                <span class="pwdShowimg iam-icon-action-state-invisible" ng-class="{'iam-icon-action-state-visible': IAMPasswordInput.pwdVisible, 'iam-icon-action-state-invisible': !IAMPasswordInput.pwdVisible}" ng-click="IAMPasswordInput.pwdVisibleFunc()"></span>
+                <input type="text" class="iam-input-text"
+                            name="code"
+                            v-model="loginForm.code"
+                            auto-complete="off"
+                            placeholder="验证码"
+                            @keyup.enter="handleLogin"
+                            maxlength="128" autocomplete="new-password" style="width: 60%; height: 48px;" />
+                    <div class="login-code">
+                        <img :src="codeUrl" @click="getCode" class="login-code-img"/>
+                    </div>
             </div>
         </div>
         <div class="buttonAreaDiv">
             <div id="buttonArea">
-                <div id="loginBtn" ng-class="{'loginBtnDisabled': loginBtn.disable}" ng-click="loginBtn.loginClick()" class="loginBtn loginBtnDisabled" tabindex="0">
+                <div id="loginBtn"
+                        :loading="loading"
+                        size="medium"
+                        type="primary"
+                        style="width:100%;"
+                        @click.prevent="handleLogin"
+                        class="loginBtn loginBtnDisabled" tabindex="0">
                     <span id="btn_submit" ng-bind="loginBtn.submitBtnText" class="ng-binding">登录</span>
                 </div>
             </div>
@@ -50,7 +70,7 @@
             <div id="iamCheckArea" class="checkboxDiv checkArea">
                 <input id="checkboxInput" type="checkbox" name="checkboxInput" ng-model="model.rememberChecked" class="ng-pristine ng-untouched ng-valid" />
                 <label for="checkboxInput"></label>
-                <span ng-click="model.rememberCheckedChange()" class="ng-binding">记住登录名</span>
+                <span  class="ng-binding">记住登录名</span>
             </div>
         </div>
         <div class="otherLoginWays">
@@ -58,11 +78,11 @@
                 <span ng-if="!model.isMobile" class="ng-binding ng-scope">其他登录方式 ：</span>
             </span>
             <span class="intervalDiv"></span>
-            <span id="hwAccountLinkDiv" class="otherItemDiv" tabindex="0" ng-click="BiEvent('send', 'event', 'button', 'click', 'login_hwportal', model.hwportalUrl)"> <span ng-click="goHwAccountLogin()" ng-bind="quickLoginModel.hasQuickLogin ? i18n('quickLogin.title') : i18n('hwId.hwAccount')" class="otherLoginColor ng-binding">帐号</span> </span>
+            <span id="hwAccountLinkDiv" class="otherItemDiv" tabindex="0" d> <span class="otherLoginColor ng-binding">帐号</span> </span>
             <span class="intervalDiv hwInterval">|</span>
-            <span id="idpLinkDiv" class="otherItemDiv" ng-click="BiEvent('send', 'event', 'button', 'click', 'login_idp', model.hwportalUrl)"> <span ng-click="goIDPLogin()" ng-bind="i18n('idpLogin.loginLink')" class="otherLoginColor ng-binding">企业联邦用户</span> </span>
+            <span id="idpLinkDiv" class="otherItemDiv"> <span class="otherLoginColor ng-binding">企业联邦用户</span> </span>
         </div>
-    </div>
+    </el-form>
 </div>
 </template>
 
@@ -151,3 +171,223 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+    #banner, #loading{
+        z-index: 1999 !important ;
+    }
+
+@import 'common/src/assets/styles/login/bootstrap.scss';
+@import 'common/src/assets/styles/login/tiny.min.scss';
+@import 'common/src/assets/styles/login/tiny-plus.min.scss';
+@import 'common/src/assets/styles/login/tinyext.min.scss';
+@import 'common/src/assets/styles/login/pageframework.scss';
+@import 'common/src/assets/styles/login/login.scss';
+
+.loginDiv{
+    border-radius: 2px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 15%);
+}
+
+#banner{
+    height: 50px;
+
+    #bannerQuickLink{
+        height: 50px ;
+        line-height: 50px;
+    }
+}
+
+#banner .widthLimit{
+    margin: 0px;
+}
+
+.header-logo-label{
+    font-size: 16px;
+    margin-left: 10px;
+    text-shadow: 0 0 0px black;
+    color: #005bd4;
+    margin-top: 15px;
+    float: left;
+}
+
+.logo-banner{
+    float: left;
+    background: #005BD4;
+    height: 50px;
+    width: 60px;
+    position: relative;
+    left: 0px;
+}
+
+.loginBtnDisabled {
+    background-color: #005bd4 !important ;
+}
+
+#footer .widthLimit{
+    margin: 0px;
+}
+
+#laws span{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.footer-content-russia{
+    margin:auto;
+    padding-top: 15px;
+}
+.col-md-6-left {
+    float:left;
+    text-align: left;
+}
+.col-md-6-right {
+    float:right;
+    text-align: right;
+}
+
+.swapClick.fold:after {
+    content: "";
+    height: 0;
+    width: 0;
+    opacity: 0.7;
+    border-top: 5px solid #FFFFFF;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+.swapClick.unfold:after {
+    content: "";
+    height: 0;
+    width: 0;
+    opacity: 0.7;
+    border-bottom: 5px solid #FFFFFF;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+.cookieMsgContainer {
+    left: 0;
+    background: #eeefef;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 98;
+    padding: 12px 30px;
+}
+
+.cookieMsgContainer .cookieMsgContent {
+    color: #575D6C;
+}
+
+.cookieWarnImg {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    margin-top: -1px
+}
+
+.closeImg,.learnMoreLink{
+    color: #526ECC;
+    cursor: pointer;
+}
+
+.closeImg:before {
+    content: url("https://console-static.huaweicloud.com/static/authui/20210513103904/public/custom/images/close.svg")
+}
+
+#footer .footer-content {
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 30px;
+    background: #f5f5f5;
+    padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 1680px) {
+
+}
+@media only screen and (max-width: 1440px) {
+
+}
+@media only screen and (max-width: 1366px) {
+
+}
+@media only screen and (max-width: 1280px) {
+    #footer .widthLimit {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #footer .copyrightDiv {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #footer .otherLinkDiv {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    #footer .widthLimit {
+        margin: 0px;
+        padding: 0px;
+    }
+    #footer .copyrightDiv {
+        text-align: center;
+    }
+    #footer .otherLinkDiv {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-height: 700px){
+    .cookieMsgContainer{
+        position: fixed;
+        width: calc(100% - 60px);
+        bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #footer .footer-content {
+        display: none !important;
+    }
+    .cookieMsgContainer .cookieMsgContent {
+        margin-right: 12px;
+        text-align: left
+    }
+    .cookieMsgContainer {
+        width: calc(100% - 24px);
+        height: auto;
+        margin: 0;
+        padding: 12px;
+        color: #575D6C
+    }
+}
+
+#loginForm{
+    width:476px !important ;
+}
+.login-code{
+    float: right;
+    width: 33%;
+    border-radius: 4px;
+
+    .login-code-img {
+        border-radius: 4px;
+        border: 0px;
+    }
+}
+</style>

@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 @import 'common/src/assets/styles/login/bootstrap.scss';
 @import 'common/src/assets/styles/login/tiny.min.scss';
@@ -67,7 +67,7 @@ export default {
 }
 
 .loginBtnDisabled {
-    background-color: #005bd49c !important ;
+    background-color: #005bd4 !important ;
 }
 
 #footer .widthLimit{

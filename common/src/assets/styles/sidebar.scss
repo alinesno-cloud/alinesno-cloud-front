@@ -71,6 +71,9 @@
       overflow: hidden !important;
       text-overflow: ellipsis !important;
       white-space: nowrap !important;
+      font-size: 13px !important ;
+      height: 42px !important ;
+      line-height: 42px !important ;
     }
 
     // menu hover
@@ -78,6 +81,7 @@
     .el-submenu__title {
       height: 42px !important ;
       line-height: 42px !important ;
+      font-size: 13px !important ;
       &:hover {
         background-color: rgba(0, 0, 0, 0.06) !important;
       }
