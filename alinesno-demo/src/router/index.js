@@ -1,13 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-import Home from '../views/Home.vue'
-import Hello from '../views/Hello.vue'
-
 Vue.use(VueRouter)
-
-/* Layout */
-import { Layout } from 'common'
+import { Layout , Login } from 'common'
 
 // >>>>>>>>>>> TODO 提取出公共路由 >>>>>>>>>>>>>>>>
 export const constantRoutes = [
@@ -26,7 +20,8 @@ export const constantRoutes = [
   },
   {
     path: '/login',
-    component: (resolve) => require(['common/src/views/login'], resolve),
+    // component: (resolve) => require(['common/packages/Login/login'], resolve),
+    component: Login ,
     hidden: true
   },
   {
@@ -38,16 +33,6 @@ export const constantRoutes = [
     path: '/401',
     component: (resolve) => require(['common/src/views/error/401'], resolve),
     hidden: true
-  },
-  {
-    path: '/',
-    name: 'home',
-    component: Home
-  },
-  {
-    path: '/hello',
-    name: 'hello',
-    component: Hello
   }
 ]
 

@@ -9,22 +9,22 @@ $yellow:#FEC171;
 $panGreen: #30B08F;
 
 // sidebar
-$menuText:#bfcbd9;
+$menuText:#333 ;
 $menuActiveText:#409EFF;
 $subMenuActiveText:#f4f4f5; // https://github.com/ElemeFE/element/issues/12951
 
-$menuBg:#304156;
+$menuBg:#f5f5f5 ;
 $menuHover:#263445;
-$sidebarTitle: #ffffff;
+$sidebarTitle: #333;
 
-$menuLightBg:#ffffff;
+$menuLightBg:#f5f5f5;
 $menuLightHover:#f0f1f5;
 $sidebarLightTitle: #001529;
 
-$subMenuBg:#1f2d3d;
-$subMenuHover:#001528;
+$subMenuBg:#f5f5f5 ;
+$subMenuHover:#e5e5e5 ;
 
-$sideBarWidth: 250px;
+$sideBarWidth: 220px;
 
 // the :export directive is the magic sauce for webpack
 // https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass

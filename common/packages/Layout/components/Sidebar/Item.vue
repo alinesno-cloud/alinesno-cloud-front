@@ -1,4 +1,6 @@
 <script>
+import SvgIcon from 'common/packages/SvgIcon'// svg component
+
 export default {
   name: 'MenuItem',
   functional: true,

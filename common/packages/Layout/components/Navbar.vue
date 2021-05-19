@@ -21,6 +21,7 @@
 
       </template>
 
+      <!--
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
           <img :src="avatar" class="user-avatar">
@@ -38,6 +39,8 @@
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
+      -->
+
     </div>
   </div>
 </template>
@@ -108,7 +111,6 @@ export default {
   overflow: hidden;
   position: relative;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
     line-height: 46px;

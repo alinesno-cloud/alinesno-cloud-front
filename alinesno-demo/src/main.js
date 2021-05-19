@@ -8,14 +8,14 @@ import router from './router'
 import './permission'
 // >>>>>>>>>>>>>>>>>> person_end >>>>>>>>>>>>>>>>>>>>>>>>>
 
-// >>>>>>>>>>>>>>>>>> common_start >>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>> common_start TODO 待整合成一个包 >>>>>>>>>>>>>>>>>>>>>>>>>
 import 'common/src/assets/styles/element-variables.scss'
 import 'common/src/assets/icons' // icon
 import 'common/src/assets/styles/index.scss' // global css
 import 'common/src/assets/styles/ruoyi.scss' // ruoyi css
 
-import App from 'common/src/App'
 import SvgIcon from 'common/packages/SvgIcon'// svg component
+import App from 'common/src/App'
 import permission from 'common/src/directive/permission'
 import { parseTime, resetForm, addDateRange, selectDictLabel, selectDictLabels, download, handleTree } from "common/src/utils/ruoyi";
 import Pagination from "common/packages/Pagination";
