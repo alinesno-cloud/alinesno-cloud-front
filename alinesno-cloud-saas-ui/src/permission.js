@@ -8,7 +8,13 @@ import { getToken } from 'alinesno-ui/src/utils/auth'
 
 NProgress.configure({ showSpinner: false })
 
-const whiteList = ['/login', '/auth-redirect', '/bind', '/register']
+// 白名单配置
+const whiteList = [
+      '/portal',
+      '/login',
+      '/auth-redirect',
+      '/bind',
+      '/register']
 
 router.beforeEach((to, from, next) => {
   NProgress.start()
