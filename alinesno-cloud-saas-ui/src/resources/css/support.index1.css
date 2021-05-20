@@ -1,0 +1,975 @@
+.support-section {
+  padding: 50px 0;
+}
+.section-title {
+  font-size: 36px;
+  color: #252B3A;
+  text-align: center;
+  line-height: 46px;
+}
+.section-title-left,
+.section-title-right {
+  position: relative;
+  width: 90px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.section-title-left {
+  margin-right: 16px;
+}
+.section-title-right {
+  margin-left: 16px;
+}
+.section-title-left::before,
+.section-title-right::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  border: 2px solid #87BBFF;
+}
+.section-title-left::after,
+.section-title-right::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  top: -1px;
+  border-radius: 100%;
+  border-top: 1px dashed #87BBFF;
+}
+.section-title-left::before {
+  left: 0;
+}
+.section-title-right::before {
+  right: 0;
+}
+.section-title-left::after {
+  left: 9px;
+}
+.section-title-right::after {
+  right: 9px;
+}
+.section-content {
+  margin-top: 50px;
+}
+@media (max-width: 1023px) {
+  .section-title-left,
+  .section-title-right {
+    display: none;
+  }
+  .section-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .support-section {
+    padding: 30px 0;
+  }
+  .section-content {
+    margin-top: 20px;
+  }
+}
+.band-banner {
+  min-height: 350px;
+  background: url(./../images/authorized_sales_support-banner-bg.jpg?4358a9613923388017beeab059ae809f) no-repeat center;
+  background-size: cover;
+}
+.banner-innert {
+  max-width: 1210px;
+  padding: 124px 15px;
+  margin: 0 auto;
+  text-align: left;
+}
+.banner-innert h1 {
+  font-size: 48px;
+  color: #FFFFFF;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+}
+.banner-innert p {
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 27px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 1023px) {
+  .band-banner {
+    height: auto;
+    min-height: 300px;
+    width: 100%;
+    background: url(./../images/authorized_sales_support-banner-mb.jpg?a774a1c843c49fbd3fae31c617254f9f) no-repeat center;
+    background-size: cover;
+  }
+  .banner-innert {
+    padding: 86px 25px;
+  }
+  .banner-innert h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .banner-innert p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 760px) {
+  .banner-innert-wrap {
+    top: 30px;
+  }
+  .band-banner h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  .band-banner p {
+    font-size: 14px;
+  }
+  .banner-innert .service-btn {
+    margin-top: 12px;
+  }
+  .band-banner {
+    height: auto;
+    min-height: 300px;
+    width: 100%;
+    background: url(./../images/authorized_sales_support-banner-mb.jpg?a774a1c843c49fbd3fae31c617254f9f) no-repeat center;
+    background-size: cover;
+  }
+  .banner-innert {
+    padding: 72px 15px;
+  }
+}
+.map-section .section-desc {
+  font-size: 18px;
+  color: #666a75;
+  text-align: center;
+  line-height: 22px;
+  margin-top: 10px;
+}
+.map-content-inner {
+  position: relative;
+  max-width: 1000px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.beijing-arrow {
+  z-index: 9999;
+  bottom: -6px;
+}
+.beijing-map-box {
+  height: 400px;
+}
+.map-tips-height {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.map-tips-height::-webkit-scrollbar {
+  width: 7px;
+  height: 1px;
+}
+.guangzhou-arrow {
+  z-index: 9999;
+  bottom: -6px;
+}
+.guangzhou-map-box {
+  height: 400px;
+}
+.map-tips-height-guangzhou {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.map-tips-height-guangzhou::-webkit-scrollbar {
+  width: 7px;
+  height: 1px;
+}
+.map-content-inner img {
+  width: 100%;
+  height: auto;
+}
+.map-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mapList_new {
+  display: none;
+}
+.map-item {
+  position: absolute;
+}
+.map-item-inner {
+  position: relative;
+}
+.map-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #96B0FA;
+  z-index: 4;
+}
+.map-dot-bg {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  opacity: 0.4;
+  background-image: radial-gradient(53% 49%, #DCE4FF 30%, #BED1FA 80%);
+}
+.map-dot-bg .hide {
+  display: none;
+}
+.map-dot-text {
+  position: absolute;
+  font-size: 12px;
+  color: #252b3a;
+}
+.beijing .map-dot-text,
+.taiyuan .map-dot-text,
+.guangzhou .map-dot-text {
+  top: -4px;
+  left: -32px;
+}
+.nanjing .map-dot-text {
+  top: -24px;
+  left: -9px;
+  width: 28px;
+}
+.shanghai {
+  left: 71.5%;
+  top: 61.3%;
+}
+.shanghai .map-dot-text {
+  top: -4px;
+  right: -41px;
+}
+.shenzhen .map-dot-text,
+.qingdao .map-dot-text,
+.hangzhou .map-dot-text,
+.tianjin .map-dot-text,
+.xi-an .map-dot-text,
+.zhengzhou .map-dot-text,
+.chengdu .map-dot-text,
+.chongqing .map-dot-text,
+.changsha .map-dot-text,
+.wuhan .map-dot-text,
+.nanchang .map-dot-text,
+.xiamen .map-dot-text,
+.jinan .map-dot-text,
+.guizhou .map-dot-text,
+.hefei .map-dot-text,
+.xining .map-dot-text,
+.dalian .map-dot-text {
+  top: 17px;
+  left: -8px;
+  width: 28px;
+}
+.shenzhen {
+  left: 60.5%;
+  top: 85.5%;
+}
+.xiamen {
+  left: 67%;
+  top: 78.5%;
+}
+.dalian {
+  left: 70.5%;
+  top: 38%;
+}
+.wulumuqi .map-dot-text,
+.huhehaote .map-dot-text {
+  top: 17px;
+  left: -18px;
+  width: 60px;
+}
+.lanzhou .map-dot-text {
+  top: 17px;
+  left: -8px;
+  width: 60px;
+}
+.kunming .map-dot-text {
+  top: 17px;
+  left: -8px;
+  width: 60px;
+}
+.shijiazhuang .map-dot-text {
+  top: 17px;
+  left: -12px;
+  width: 40px;
+}
+.fuzhou {
+  left: 69%;
+  top: 74.5%;
+}
+.fuzhou .map-dot-text {
+  top: -4px;
+  left: -32px;
+}
+.haerbin .map-dot-text {
+  top: 17px;
+  left: -12px;
+  width: 40px;
+}
+.map-item .map-tips-box {
+  position: absolute;
+  bottom: 17px;
+  left: -128px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+}
+.map-item .map-tips-box.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s;
+  z-index: 6;
+}
+.map-tips-inner {
+  position: relative;
+  width: 260px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #96ADFA;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.map-tips-box .arrow {
+  position: absolute;
+  bottom: -7px;
+  right: 50%;
+  margin-right: -9px;
+  overflow: hidden;
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border-left: 1px solid #96ADFA;
+  border-bottom: 1px solid #96ADFA;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.map-tip-item {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ccc;
+}
+.map-tip-item:last-child {
+  border-bottom: none;
+}
+.map-tip-item .tit {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #252b3a;
+}
+.map-tip-item .tit a {
+  color: #526ECC;
+}
+.map-tip-item .tit a:hover {
+  text-decoration: underline;
+}
+.map-tip-item .desc {
+  color: #666a75;
+  line-height: 22px;
+}
+.map-item-inner .map-animate .light {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity 0.6s;
+  background: #87bbff;
+}
+.map-item-inner .map-animate.show .light {
+  opacity: 0.2;
+  -webkit-animation: breathe 2s ease-out 0s infinite;
+  animation: breathe 2s ease-out 0s infinite;
+}
+.map-item-inner .map-animate.show .light2 {
+  -webkit-animation: breathe 2s ease-out 0.4s infinite;
+  animation: breathe 2s ease-out 0.4s infinite;
+}
+@-webkit-keyframes breathe {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  70% {
+    opacity: 0.6;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes breathe {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  70% {
+    opacity: 0.6;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .map-section .section-desc {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .mapList_new {
+    display: block;
+    margin: 20px 15px 0 15px;
+  }
+  .mapList_new .l_table_td {
+    width: 100%;
+    font-size: 0;
+    background: #FAFAFA;
+    border-bottom: 1px solid #DFE1E6;
+  }
+  .mapList_new .l_table_td .l_table_tr {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% / 3);
+    padding: 10px 15px;
+    font-size: 12px;
+    color: #575D6C;
+    line-height: 18px;
+  }
+  .mapList_new .l_table_th {
+    background: #FFFFFF;
+  }
+  .mapList_new .l_table_th .l_table_tr {
+    background: #526ECC;
+    font-size: 14px;
+    color: #FFFFFF;
+    width: calc((100% - 4px) / 3);
+    margin-right: 2px;
+  }
+  .mapList_new .l_table_th .l_table_tr:nth-child(3) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 780px) {
+  .map-item .map-tips-box.right {
+    left: -140px;
+  }
+  .map-item .map-tips-box.right .arrow {
+    margin-right: -20px;
+  }
+}
+@media (max-width: 692px) {
+  .dalian .map-tips-box.right {
+    left: -150px;
+  }
+  .dalian .map-tips-box.right .arrow {
+    margin-right: -31px;
+  }
+}
+@media (max-width: 680px) {
+  .map-dot {
+    width: 4px;
+    height: 4px;
+  }
+  .map-dot-bg {
+    width: 8px;
+    height: 8px;
+    top: -2px;
+    left: -2px;
+  }
+  .map-item-inner .map-animate .light {
+    width: 15px;
+    height: 15px;
+    top: -6px;
+    left: -6px;
+  }
+  .map-tips-inner {
+    width: 210px;
+  }
+  .map-tip-item .tit {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .map-dot-text {
+    font-size: 8px;
+  }
+  .map-tip-item .desc {
+    font-size: 12px;
+  }
+  .map-tip-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .beijing .map-dot-text,
+  .zhengzhou .map-dot-text,
+  .guangzhou .map-dot-text {
+    top: -3px;
+    left: -18px;
+  }
+  .beijing-map-box {
+    height: 320px;
+  }
+  .guangzhou-map-box {
+    height: 320px;
+  }
+  .map-tips-height {
+    max-height: 320px;
+    overflow-y: scroll;
+    position: initial;
+  }
+  .map-tips-height-guangzhou {
+    max-height: 320px;
+    overflow-y: scroll;
+    position: initial;
+  }
+  .nanjing .map-dot-text {
+    top: -13px;
+    left: -8px;
+  }
+  .haerbin .map-dot-text {
+    top: 5px;
+    left: -9px;
+  }
+  .wuhan .map-dot-text,
+  .taiyuan .map-dot-text {
+    top: -4px;
+    left: -20px;
+  }
+  .shanghai {
+    left: 71.5%;
+    top: 61.3%;
+  }
+  .shanghai .map-dot-text {
+    top: -4px;
+    right: -20px;
+  }
+  .shenzhen .map-dot-text,
+  .qingdao .map-dot-text,
+  .hangzhou .map-dot-text,
+  .xi-an .map-dot-text,
+  .chengdu .map-dot-text,
+  .chongqing .map-dot-text,
+  .hefei .map-dot-text,
+  .guizhou .map-dot-text,
+  .xining .map-dot-text,
+  .dalian .map-dot-text {
+    top: 5px;
+    left: -7px;
+  }
+  .shenzhen {
+    left: 60.5%;
+    top: 85.5%;
+  }
+  .xiamen {
+    left: 67%;
+    top: 78.5%;
+  }
+  .xiamen .map-dot-text {
+    top: 5px;
+    left: -7px;
+  }
+  .dalian {
+    left: 70.5%;
+    top: 38%;
+  }
+  .dalian .map-dot-text {
+    top: -4px;
+    left: 7px;
+  }
+  .tianjin .map-dot-text {
+    top: 4px;
+    left: -7px;
+  }
+  .nanchang .map-dot-text {
+    top: 4px;
+    left: -5px;
+  }
+  .changsha .map-dot-text {
+    top: 4px;
+    left: -6px;
+  }
+  .wulumuqi .map-dot-text {
+    top: 6px;
+    left: -15px;
+  }
+  .lanzhou .map-dot-text {
+    top: 6px;
+    left: -15px;
+  }
+  .kunming .map-dot-text {
+    top: 6px;
+    left: -15px;
+  }
+  .huhehaote .map-dot-text {
+    top: -4px;
+    left: -36px;
+  }
+  .shijiazhuang .map-dot-text {
+    top: 5px;
+    left: -9px;
+  }
+  .fuzhou {
+    left: 69%;
+    top: 74.5%;
+  }
+  .fuzhou .map-dot-text {
+    top: -6px;
+    left: 7px;
+  }
+  .jinan .map-dot-text {
+    top: 4px;
+    left: -9px;
+  }
+  .map-item .map-tips-box {
+    bottom: 12px;
+    left: -106px;
+  }
+  .map-item .map-tips-box.right {
+    left: -168px;
+  }
+  .map-item .map-tips-box.right .arrow {
+    margin-right: -71px;
+  }
+}
+@media (max-width: 415px) {
+  .map-section .section-content {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 350px) {
+  .map-section .section-content {
+    margin-top: 50px;
+  }
+}
+.advantage-section {
+  background: url(./../images/authorized_sales_support-bg_new.jpg?d7d81778ef656c4c54417c9143c07e60) no-repeat center;
+  background-size: cover;
+}
+.advantage-section .section-title {
+  color: #fff;
+}
+.advantage-section .section-desc {
+  max-width: 1210px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  margin: 10px auto 0;
+}
+.advantage-section .section-desc-list {
+  position: relative;
+  display: inline;
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+}
+.section-desc-list-fenge {
+  border: 1px solid #A0A2A8;
+  margin: 0 20px 0 20px;
+}
+.advantage-content {
+  max-width: 1210px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 50px auto 0;
+}
+.advantage-content-inner {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.advantage-item {
+  width: 25%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.advantage-item .item-inner {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  height: 332px;
+  padding: 50px 20px 50px 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+.advantage-item .item-inner:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.advantage-item .icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+.advantage-item .cover {
+  background-image: url(./../images/authorized_sales_support-cover.png?15ec62602b9031fb4f0fa463f70bcbbd);
+}
+.advantage-item .personal {
+  background-image: url(./../images/authorized_sales_support-personal.png?f9e0078acdc5d2f0920c1663e8d28121);
+}
+.advantage-item .experts {
+  background-image: url(./../images/authorized_sales_support-experts.png?cc8f03bfc96a3f242c71353c54f0d499);
+}
+.advantage-item .one-stop {
+  background-image: url(./../images/authorized_sales_support-one-stop.png?2f53b0b4d025cb36f2c6c59ed04f3c4a);
+}
+.advantage-item .tit {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.advantage-item .bar {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #87bbff;
+  margin-bottom: 20px;
+}
+.advantage-item .desc {
+  color: #fff;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  .advantage-content {
+    margin: 20px auto 0;
+  }
+  .advantage-content > ul li:not(:first-child) {
+    margin-top: 20px;
+  }
+  .advantage-section .section-desc-list {
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.8;
+  }
+  .section-desc-list-fenge {
+    margin: 0 9.5px 0 9.5px;
+  }
+  .advantage-content-inner {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 2px;
+    padding-bottom: 5px;
+  }
+  .advantage-item {
+    width: 100%;
+    float: initial;
+    padding-left: 0;
+    padding-right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #DDDDDD;
+    border-radius: 2px;
+  }
+  .advantage-item .item-inner {
+    border: none;
+    padding: 0 14px;
+    height: auto;
+  }
+  .advantage-item .icon {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  .advantage-item .tit {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .advantage-item .bar {
+    margin-bottom: 10px;
+  }
+  .advantage-item .desc {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .advantage-section .section-desc {
+    text-align: left;
+  }
+}
+.logo-content {
+  max-width: 1210px;
+  margin: 0 auto;
+}
+.logo-subtitle {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.logo-item {
+  float: left;
+  text-align: center;
+  margin-top: 48px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  width: 220px;
+  height: 120px;
+  padding: 30px 40px;
+  margin-right: 20px;
+}
+.logo-item .img {
+  width: 140px;
+  height: 60px;
+}
+.logo-item .imgmb {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .logo-item {
+    width: 165px;
+    height: 100px;
+    margin-top: 16px;
+    margin-right: 0px;
+    padding: 30px 30px;
+  }
+  .logo-item .imgpc {
+    display: none;
+  }
+  .logo-subtitle {
+    font-size: 14px;
+  }
+  .logo-item .imgmb {
+    display: inline-block;
+    width: 105px;
+    height: 40px;
+  }
+  .logo-content {
+    padding: 0 15px;
+  }
+  .section-content > ul > li:nth-child(odd) {
+    margin-right: 15px;
+  }
+}
+.study_main {
+  font-size: 0px;
+}
+.study-body {
+  background: url(./../images/authorized_sales_support-study-bg.jpg?782402aaf27fe8aa66338052e5491993) no-repeat center;
+  background-size: cover;
+}
+.study-content {
+  font-size: 24px;
+  color: #FFFFFF;
+  vertical-align: -webkit-baseline-middle;
+}
+.study-btn-font {
+  font-size: 18px;
+}
+.study-btn {
+  margin-left: 30px;
+  display: inline-block;
+  font-size: 0;
+  line-height: normal;
+}
+.study-title-block {
+  margin: 0;
+  display: inline-block;
+}
+.study-title1 {
+  text-align: center;
+  display: inline-block;
+  width: 50%;
+  height: 50px;
+  border-right: 1px solid #FFFFFF;
+}
+.study-title2 {
+  width: 50%;
+  text-align: center;
+  height: 50px;
+  display: inline-block;
+}
+.study-body-fenge {
+  display: none;
+}
+.cui-btn {
+  display: inline-block;
+  height: 40px;
+  padding: 0 30px;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  transition: 0.2s;
+}
+.cui-btn-primary {
+  border-color: #f66f6a;
+  background-color: #f66f6a;
+  color: #fff;
+}
+.cui-btn-primary:hover {
+  box-shadow: 0 8px 16px rgba(246, 111, 106, 0.5);
+}
+@media (max-width: 1023px) {
+  .study-content {
+    font-size: 20px;
+  }
+  .study-body {
+    background: url(./../images/authorized_sales_support-study-bg-mb.jpg?9a6f5fa97a6e99b6f0fa9028a40eea38) no-repeat center;
+    background-size: cover;
+  }
+  .study-title1 {
+    display: block;
+    padding: 0 40px;
+    margin: 0 15px;
+    width: calc(100% - 30px);
+    height: 170px;
+    text-align: center;
+    border-right: none;
+  }
+  .study-title-block {
+    margin: 0 0 30px 0;
+    display: block;
+  }
+  .study-btn {
+    margin: 0;
+    display: block;
+  }
+  .study-title2 {
+    display: block;
+    padding: 0 40px;
+    margin: 30px 15px 0 15px;
+    width: calc(100% - 30px);
+    height: auto;
+    text-align: center;
+  }
+  .study-body-fenge {
+    display: block;
+    border-bottom: 1px solid #FFFFFF;
+    margin: 0 30px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/

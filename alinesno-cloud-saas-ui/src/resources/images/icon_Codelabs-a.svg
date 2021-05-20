@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/Codelabs-a</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图" transform="translate(-218.000000, -509.000000)">
+            <g id="icon/Codelabs-a" transform="translate(218.000000, 509.000000)">
+                <rect id="矩形" fill-opacity="0" fill="#FFFDFD" x="0" y="0" width="40" height="40"></rect>
+                <g id="Group-11" transform="translate(6.000000, 4.000000)">
+                    <line x1="26.7358897" y1="25.3793103" x2="28.4087172" y2="25.3793103" id="Stroke-1551" stroke="#252B3A" stroke-width="2"></line>
+                    <path d="M17.6448,25.3793103 C18.774731,25.3793103 19.8605241,24.9335172 20.6638345,24.137931 L24.0083862,20.832 C24.9739034,19.8455172 24.9739034,18.2466207 24.0083862,17.2601379 C23.0461793,16.278069 21.4715586,16.278069 20.5093517,17.2601379 C19.542731,18.2466207 19.542731,19.8455172 20.5093517,20.832 L23.6530759,24.0750345 C24.4619034,24.9081379 25.5741793,25.3793103 26.7361103,25.3793103" id="Stroke-1552" stroke="#ABBAC4" stroke-width="2"></path>
+                    <line x1="16.0004414" y1="25.3793103" x2="17.6445793" y2="25.3793103" id="Stroke-1553" stroke="#252B3A" stroke-width="2"></line>
+                    <path d="M28.4082759,25.3793103 L28.6896552,25.3793103 L28.6896552,4.27586207 C28.6896552,1.91448276 26.7762759,0 24.4137931,0 L0,0 L0,11.0344828 L0,14.3448276 L0,19.3224828 C0,22.6670345 2.71227586,25.3793103 6.05793103,25.3793103 L16,25.3793103" id="Stroke-1555" stroke="#252B3A" stroke-width="2"></path>
+                    <polygon id="Fill-3039" fill="#ff9d00" transform="translate(14.472662, 12.234566) scale(-1, -1) rotate(-58.000000) translate(-14.472662, -12.234566) " points="19.7956966 17.099531 11.8570759 12.5163586 12.6776276 15.5738759 10.2792828 16.2169103 7.90824828 7.3696 21.0370759 14.9494621"></polygon>
+                    <line x1="2.20689655" y1="30.8965517" x2="27.5862069" y2="30.8965517" id="Stroke-1556" stroke="#252B3A" stroke-width="2"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

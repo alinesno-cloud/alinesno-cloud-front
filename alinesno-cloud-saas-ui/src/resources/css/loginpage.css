@@ -1,0 +1,1108 @@
+#goLogin:hover,#typeSwitchBtn:hover,.loginswap:hover {
+    text-decoration: underline
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #F0F2F5
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #F0F2F5
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #bfc3c6
+}
+
+#loginAdv {
+    float: left;
+    max-width: 700px;
+    max-height: 515px;
+    margin-top: 70px;
+}
+
+#loginForm,#uniIdIframeDiv {
+    float: right;
+    font-size: 14px;
+    border-color: rgba(228,228,228,1);
+    border-radius: 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.1);
+    background-color: #fff;
+    color: #C1C1C1
+}
+
+#loginForm {
+    width: 380px;
+    display: inline-block;
+    margin-top: 80px
+}
+
+#companyUser,#loginForm>ul,#personalUser {
+    margin: auto auto 0;
+    width: 320px
+}
+
+#uniIdIframeDiv {
+    width: 380px;
+    height: 500px;
+    display: inline-block;
+    margin-top: 80px
+}
+
+#loginForm .loginFormDiv {
+    padding: 0 30px;
+    width: 320px
+}
+
+#loginForm .codeSelect {
+    display: inline-block;
+    vertical-align: middle;
+    float: left
+}
+
+#loginForm .codeSelect .tiny-combobox-container {
+    border: none;
+    background-color: #FFF;
+    box-shadow: none
+}
+
+#loginForm .codeSelect .tiny-combobox-editor {
+    padding-left: 8px
+}
+
+#loginForm .codeSelect .tiny-combobox-editor .tiny-combobox-input {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    font-size: 12px
+}
+
+#loginForm .codeSelect .tiny-combobox-popbutton:before {
+    right: 1px;
+    border-top: 5px solid #252B3A
+}
+
+#loginForm .codeSelect .tiny-combobox-disable {
+    background-color: #FFF;
+    border-color: none;
+    box-shadow: none;
+    border-right: none
+}
+
+#loginForm .codeSelect .tiny-combobox-disable .tiny-combobox-input {
+    font-family: PingFangSC-Regular;
+    color: #696969
+}
+
+#loginForm .codeSelect .tiny-combobox-disable .tiny-combobox-input:disabled {
+    opacity: 1!important
+}
+
+#loginForm .phoneInput {
+    display: inline-block;
+    position: relative
+}
+
+#loginForm .phoneInput input.tiny-input-text.valid_error_input {
+    border-top: none;
+    border-left: none;
+    border-right: none
+}
+
+#companyUser,#personalUser {
+    color: #333;
+    font-size: 28px;
+    margin-top: 35px!important;
+    margin-bottom: auto!important
+}
+
+#companyUser>span,#personalUser>span {
+    line-height: 28px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: top
+}
+
+#companyUser>hr,#personalUser>hr {
+    display: inline-block;
+    margin: 5px;
+    border: 0;
+    border-bottom: 1px solid #999
+}
+
+#companyUser>hr {
+    width: 28%
+}
+
+#personalUser>hr {
+    width: 56%
+}
+
+.errorTip {
+    display: block;
+    position: relative;
+    min-height: 32px;
+    font-size: 12px;
+    padding: 0 8px
+}
+
+.errorTip span {
+    color: #F66F6A
+}
+
+#checkError,#isMobileTip,#mobileErrorMsg,#mobileUsersSelectMsg,#serverError {
+    color: red;
+    clear: both
+}
+
+.mobileUsersSelect {
+    margin-bottom: 15px
+}
+
+.mobileUsersSelect .tiny-select {
+    width: 100%
+}
+
+.mobileUsersSelect .tiny-select .tiny-select-input-field {
+    height: 36px;
+    border: none;
+    padding-right: 0
+}
+
+.mobileUsersSelect .tiny-select .tiny-select-input-field input {
+    width: 100%!important;
+    border-right: none
+}
+
+.mobileUsersSelect .tiny-select .tiny-select-input-field:before,.tiny-select-input-field-selected-down:before,.tiny-select-input-field-selected-up:before {
+    border-top: 6px solid #252B3A
+}
+
+.tiny-select-popup-container {
+    border: 1px solid #ADB0B8;
+    box-shadow: 0 2px 5px 0
+}
+
+.tiny-select-option {
+    color: #252B3A
+}
+
+.tiny-select-option-selected {
+    color: #F66F6A;
+    background: #FFEEED
+}
+
+.tiny-select-option-default-selected {
+    background-color: #F66F6A;
+    color: #FFF
+}
+
+#inputVerifyCodeImg {
+    width: 100px;
+    height: 30px;
+    float: right;
+    cursor: pointer
+}
+
+.inputField {
+    margin-bottom: 16px!important;
+    font-size: 14px!important;
+    border-bottom: 1px solid #DFE1E6;
+    position: relative
+}
+
+.inputField:hover {
+    border-bottom: 1px solid #8A8E99
+}
+
+.inputField:last-child {
+    margin-bottom: 0!important;
+    font-size: 14px!important
+}
+
+#loginForm .inputField input {
+    line-height: 20px;
+    border-radius: 0;
+    font-family: PingFangSC-Regular;
+    padding: 0 8px;
+    box-shadow: none
+}
+
+#loginForm>div:last-child {
+    bottom: 0;
+    width: 100%
+}
+
+#buttonArea {
+    margin: 48px 38px 30px;
+    width: 304px
+}
+
+#smsPhone {
+    margin: 5px;
+    font-size: 13px!important
+}
+
+.toDoDiv #checkArea,.typeSwitchDiv {
+    font-size: 12px;
+    display: inline-block
+}
+
+#fpLink {
+    color: #0af;
+    float: right
+}
+
+.toDoDiv {
+    margin: 18px 38px 0;
+    width: 304px
+}
+
+.typeSwitchDiv {
+    font-style: normal;
+    color: #252B3A;
+    max-width: 180px
+}
+
+#typeSwitchBtn {
+    cursor: pointer
+}
+
+#typeSwitchBtn:hover {
+    color: #F66F6A
+}
+
+.toDoDiv #checkArea {
+    float: right;
+    color: #252B3A
+}
+
+.checkboxDiv input[type=checkbox] {
+    opacity: 0;
+    margin: 0;
+    padding: 0
+}
+
+.checkboxDiv input[type=checkbox]:checked+label:before {
+    background: #F66F6A;
+    border-color: #F66F6A
+}
+
+.checkboxDiv input[type=checkbox]:checked+label:after {
+    background: #F66F6A
+}
+
+.checkboxDiv label {
+    position: relative;
+    cursor: pointer
+}
+
+.checkboxDiv label:after,.checkboxDiv label:before {
+    position: absolute;
+    content: ''
+}
+
+.checkboxDiv label:before {
+    left: -20px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ADB0B8;
+    border-radius: 2px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease
+}
+
+.checkboxDiv label:after {
+    left: -16px;
+    top: 2px;
+    width: 4px;
+    height: 7px;
+    border: 0;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background: #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease
+}
+
+.buttonAreaDiv {
+    width: 100%;
+    float: left
+}
+
+.loginBtn {
+    background-color: #F66F6A;
+    border-radius: 2px;
+    color: #fff;
+    cursor: default;
+    width: 100%
+}
+
+.loginBtn:active,.loginBtn:focus,.loginBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(246,111,106,.3);
+    outline: 0
+}
+
+.loginBtn span,.loginBtnDisabled span {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px!important;
+    height: 36px;
+    margin: 0 auto;
+    display: block;
+    line-height: 36px
+}
+
+#bottomBtns,#otherLoginWays {
+    margin-top: 10px;
+    flex-direction: row
+}
+
+.loginBtnDisabled {
+    background-color: #CCC;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px!important;
+    cursor: default;
+    width: 100%
+}
+
+#goLogin,#otherAccounts,.index-uniportal>a,.loginTypeSelected,.loginTypeSwitchImg:hover,.loginswap:hover {
+    cursor: pointer
+}
+
+#bottomBtns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px
+}
+
+.commonLinkDiv {
+    text-align: center
+}
+
+.splitLine {
+    float: left;
+    width: 1px;
+    margin: 0 2px;
+    height: 12px;
+    background: #DFE1E6
+}
+
+#goLogin {
+    color: #5099F8;
+    font-size: small
+}
+
+#content .widthLimit {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px
+}
+
+#content:after,#content:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+#content:before {
+    padding-top: 45px
+}
+
+*,body,html {
+    margin: 0;
+    padding: 0
+}
+
+body,html {
+    height: 100%;
+    min-width: 1260px
+}
+
+.placeholder {
+    color: #aaa!important;
+    font-family: "Microsoft Yahei"!important
+}
+
+.linkSeperator {
+    height: 100%;
+    border-left: 1px #0678FF solid;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.collapse,.expand {
+    height: 0;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: absolute
+}
+
+.expand {
+    width: 0;
+    border-top: 10px solid #0678FF
+}
+
+.collapse {
+    width: 0;
+    border-bottom: 10px solid #0678FF
+}
+
+.verticalLink {
+    font-size: 16px;
+    margin: 0 5px;
+    color: #e4e4e4!important
+}
+
+.requiredImage {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+#enterpriseSwitchTip {
+    border: 1px solid #ccc;
+    color: #666;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    float: right;
+    border-radius: 2px;
+    top: 50px;
+    z-index: 10;
+    padding: 6px;
+    background-color: #f5f5f5;
+    font-size: 12px
+}
+
+.loginTypeDiv {
+    color: #666;
+    font-size: 14px;
+    font-style: normal;
+    padding: 24px 30px 10px;
+    text-align: center
+}
+
+.loginTypeNoSelected {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    line-height: 18px;
+    font-size: 18px;
+    font-family: PingFangSC-Medium;
+    text-align: center;
+    color: #252B3A
+}
+
+.loginTypeSelected {
+    box-sizing: border-box;
+    border-color: #E41E2B;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: 3px;
+    display: inline-block;
+    width: 47%;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    color: #E41E2B
+}
+
+.loginBottomColor {
+    font-size: 12px;
+    color: #252B3A;
+    line-height: 16px
+}
+
+.loginBottomColor:active,.loginBottomColor:focus,.loginBottomColor:hover {
+    color: #F66F6A
+}
+
+.otherLoginColor {
+    font-size: 12px;
+    color: #666A75;
+    line-height: 16px
+}
+
+.otherLoginColor:active,.otherLoginColor:focus,.otherLoginColor:hover {
+    color: #666A75
+}
+
+#otherLoginWays {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+#otherLoginWays .otherItemDiv {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: auto
+}
+
+#otherLoginWays .otherItemDiv .textIcon {
+    height: 13px;
+    padding-top: 1px
+}
+
+#otherLoginWays .otherItemDiv#eChannelLinkDiv {
+    margin-left: auto;
+    margin-right: unset
+}
+
+.tiny-input-text {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #333;
+    font-size: 14px;
+    font-face: NotoSansCJKsc-Regular
+}
+
+.tiny-input-text.valid_error_input:focus,.tiny-input-text:focus {
+    border: none
+}
+
+:-ms-input-placeholder {
+    color: #999!important
+}
+
+#otherAccounts {
+    position: relative;
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 1
+}
+
+#otherAccounts:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #DDD
+}
+
+#otherAccounts .downArrow {
+    margin-left: -7px;
+    padding-right: 7px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-color: #fff
+}
+
+#otherAccounts .downArrow img {
+    width: 8px;
+    height: 8px
+}
+
+#otherAccounts .downArrow img.otherAccountsOpen {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+#otherAccounts .downArrow img.otherAccountsClose {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg)
+}
+
+#otherAccounts .otherLoginColor {
+    padding: 0 7px;
+    position: relative;
+    z-index: 2;
+    background-color: #fff
+}
+
+input[type=password] {
+    color: #333
+}
+
+.homepageLink {
+    color: #A0A2A8
+}
+
+.index-uniportal {
+    position: relative
+}
+
+.index-uniportal:hover>.uniportalTip {
+    display: block
+}
+
+.index-uniportal>.uniportalTip {
+    top: 17px;
+    display: none;
+    position: absolute;
+    bottom: 13px
+}
+
+.index-uniportal>.uniportalTip>span {
+    padding: 2px;
+    box-shadow: 1px 1px 10px #ccc;
+    border: 1px solid #ccc;
+    display: block;
+    background: #fff;
+    margin-left: 90px;
+    width: 183px;
+    font-size: 10px
+}
+
+.forgetPWDUrl,.registUrl {
+    margin-top: -20px;
+    font-size: 13px;
+    float: right
+}
+
+.otherLogin {
+    position: relative;
+    margin-left: 120px
+}
+
+.otherLogin:after,.otherLogin:before {
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background: #ccc;
+    top: 10px;
+    content: ""
+}
+
+.otherLogin:before {
+    left: -120px
+}
+
+.otherLogin:after {
+    left: 100px
+}
+
+.registUrl {
+    color: #666;
+    margin-right: 70px
+}
+
+.forgetPWDUrl {
+    color: #666;
+    margin-right: 0
+}
+
+.shuXianSpan {
+    color: #666;
+    float: right;
+    margin-top: -21px;
+    margin-right: 63px
+}
+
+.helpQuestionmark {
+    background-image: url(https://console-static.huaweicloud.com/static/authui/20201020110441/public/custom/images/helpquestmark.png);
+    float: right;
+    display: inline-block;
+    width: 16px;
+    height: 16px
+}
+
+.loginswap {
+    line-height: 18px
+}
+
+.helptipfather {
+    display: inline-block;
+    position: relative
+}
+
+.userTypeLink:hover .helptipchild {
+    display: block;
+    width: 220px;
+    padding: 8px 3px 3px 6px
+}
+
+.helptipfather span {
+    display: none;
+    color: #666;
+    font-size: 12px;
+    line-height: 20px;
+    background: #FFF;
+    border-radius: 0 0 0 2px;
+    border: 1px solid #EEE;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    text-align: left;
+    position: absolute;
+    left: -150px;
+    top: 10px;
+    z-index: 10;
+    overflow: visible
+}
+
+#loginAdv .login-logo-pad {
+    display: none
+}
+
+.pwdShowimg {
+    top: 10px;
+    right: 8px;
+    position: absolute;
+    width: 15px;
+    height: 15px
+}
+
+#QRLoginDiv,#loginForm,.QRCodeOuter {
+    position: relative
+}
+
+#IAMPasswordInputId>input,#mobilePasswordInputId>input,#personalPasswordInputId>input {
+    ime-mode: disabled;
+    -ms-ime-mode: disabled
+}
+
+@media (max-width: 1269px) {
+    .widthLimit {
+        box-sizing:border-box;
+        padding: 0
+    }
+
+    #content,body,html {
+        max-width: 1270px;
+        min-width: 768px
+    }
+
+    #content {
+        height: calc(100% - 90px)
+    }
+
+    #content .widthLimit {
+        max-width: 768px;
+        padding: 0 15px
+    }
+
+    #loginAdv {
+        margin-top: 40px;
+        max-width: 352px
+    }
+
+    #loginForm {
+        margin-top: 70px
+    }
+
+    #loginAdv .login-logo-pad {
+        display: block
+    }
+
+    #loginAdv .login-logo-pc {
+        display: none
+    }
+}
+
+#loading {
+    display: none
+}
+
+@media (max-width: 768px) {
+    #content {
+        background:linear-gradient(90deg,#F4F5FF 0,#E8EBFD 48%,#F4F5FF 100%)!important;
+        min-height: 0
+    }
+
+    #loginForm,#uniIdIframe {
+        width: 100%;
+        box-shadow: none;
+        background: 0 0
+    }
+
+    #content .widthLimit {
+        padding: 0 30px;
+        width: 100%;
+        max-width: 425px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    #loginAdv {
+        display: none
+    }
+
+    #content,body,html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 0
+    }
+
+    #loginForm {
+        margin-top: 20px
+    }
+
+    #uniIdIframeDiv {
+        width: 100%;
+        height: 100%;
+        margin-top: 0
+    }
+
+    #loginForm .loginFormDiv {
+        width: 100%!important;
+        padding: 0;
+        margin: 0
+    }
+
+    #loginForm .tiny-textbox-container {
+        width: 100%!important
+    }
+
+    #verifyCode .tiny-textbox-container {
+        width: calc(100% - 138px)!important
+    }
+
+    #inputVerifyCodeImg {
+        transform: translateY(4px)
+    }
+
+    .toDoDiv {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%
+    }
+
+    #loginForm .mobileLoginDiv .phoneInput {
+        width: calc(100% - 115px)
+    }
+
+    #buttonArea {
+        margin: 38px auto;
+        width: 100%
+    }
+
+    #otherAccounts .downArrow,#otherAccounts .otherLoginColor {
+        background-color: #0000
+    }
+
+    .userTypeLink:hover .helptipchild {
+        display: none
+    }
+
+    #otherLoginWays .otherItemDiv {
+        margin-right: 0
+    }
+
+    #otherLoginWays .otherItemDiv#vmallLinkDiv {
+        margin-left: 0
+    }
+
+    #otherLoginWays .otherItemDiv#eChannelLinkDiv {
+        margin-left: 0;
+        padding: 0 3px
+    }
+}
+
+#QRLoginDiv {
+    background-color: #fff;
+    color: #C1C1C1;
+    font-size: 14px;
+    border-color: rgba(228,228,228,1);
+    border-radius: 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.1);
+    display: flex;
+    width: 380px;
+    height: 407px;
+    float: right;
+    margin-top: 80px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center
+}
+
+.loginQRCodeDiv {
+    width: 159px;
+    padding: 10px
+}
+
+.QRCodeOuter {
+    height: 179px;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    border: 0 solid #DFE1E6;
+    background: url(https://console-static.huaweicloud.com/static/authui/20201020110441/public/custom/images/QRCode_backgroud.svg);
+    background-size: cover
+}
+
+.QRCodeInner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FFF;
+    height: 179px;
+    width: 180px;
+    background: rgba(7,7,7,.6)
+}
+
+.loginTypeSwitchImg {
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.ti-tooltip {
+    position: absolute;
+    top: 9px;
+    right: 58px;
+    background-color: #333854;
+    color: #dfe1e6;
+    padding: 11px 15px;
+    border: 1px solid #333854;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 5000;
+    white-space: normal;
+    word-wrap: break-word
+}
+
+.ti-tooltip-left:after {
+    height: 20px;
+    margin-top: -10px;
+    right: 0
+}
+
+.ti-tooltip-left:after,.ti-tooltip-left:before {
+    display: block;
+    position: absolute;
+    content: "";
+    overflow: hidden;
+    background: #333854;
+    width: 10px;
+    top: 50%
+}
+
+.ti-tooltip-left:before {
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 1px solid #333854;
+    border-top: 1px solid #333854;
+    margin-top: -5px;
+    right: -5px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,.2)
+}
+
+#countDownDiv {
+    text-align: center;
+    color: #252B3A;
+    font-size: 12px;
+    margin-top: 10px;
+    height: 20px
+}
+
+.remainingTimeTxt {
+    color: #F66F6A
+}
+
+#QRLoginBottomDiv {
+    width: calc(100% - 50px);
+    border-top: 1px solid #575D6C;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 60px;
+    line-height: 50px;
+    display: inline-flex;
+    justify-content: space-between;
+    font-size: 12px
+}
+
+.QRLoginBottomColor {
+    font-size: 12px;
+    color: #575D6C
+}
+
+.QRLoginBottomColor:active,.QRLoginBottomColor:focus,.QRLoginBottomColor:hover {
+    color: #F66F6A
+}
+
+.QRCodeInvalid {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 60px
+}
+
+#refreshQRCodeBtn {
+    width: 80px;
+    margin: 0 auto
+}
+
+.loginStatusDiv {
+    text-align: center
+}
+
+.loginStatusImg {
+    height: 64px;
+    width: 64px;
+    margin-bottom: 16px
+}
+
+.loginStatusTitle {
+    color: #252B3A;
+    font-size: 16px;
+    margin-bottom: 10px
+}
+
+.loginStatusMessage {
+    color: #252B3A;
+    font-size: 12px
+}
+
+@media (max-width: 1269px) {
+    #QRLoginDiv {
+        margin-top:70px
+    }
+
+    .loginTypeSwitchImgCover {
+        border-bottom: 50px solid linear-gradient(90deg,#F4F5FF 0,#E8EBFD 48%,#F4F5FF 100%)
+    }
+}
+
+@media (max-width: 768px) {
+    #QRLoginDiv,#QRLoginTip,.loginTypeSwitchImg {
+        display:none
+    }
+
+    #QRLoginDiv {
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: none;
+        background: 0 0
+    }
+}

@@ -1,0 +1,353 @@
+.msgBtn,body,html,input[ti-password],input[ti-text] {
+    -moz-box-sizing: border-box
+}
+
+#banner {
+    background-color: #252B3A;
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    height: 60px
+}
+
+#footer,#languageSwitch,.sel-lang {
+    position: relative
+}
+
+#logo {
+    margin-top: 8px
+}
+
+#banner .widthLimit {
+    max-width: inherit;
+    padding: 0 20px
+}
+
+#bannerQuickLink {
+    color: #A0A2A8;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    float: right;
+    font-size: 14px
+}
+
+.errorInfo,.errorInfoType,.fieldNew {
+    float: left
+}
+
+#bannerQuickLink a {
+    margin-right: 16px
+}
+
+#bannerQuickLink a:hover {
+    color: #f66f6a;
+    text-decoration: none
+}
+
+#bannerQuickLink span:hover {
+    text-decoration: none
+}
+
+.homepageLink {
+    color: #A0A2A8
+}
+
+.sel-lang {
+    height: 40px;
+    text-align: left;
+    margin-left: 23px
+}
+
+#languageSwitch {
+    display: inline-block;
+    height: 60px;
+    color: #A0A2A8
+}
+
+.active:after,.unActive:hover:after {
+    position: absolute;
+    top: 20px;
+    left: -23px;
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 20px
+}
+
+.active {
+    color: #F66F6A
+}
+
+.active:after {
+    background-color: #F66F6A
+}
+
+.unActive:hover:after {
+    background-color: #212634
+}
+
+#content {
+    background: url(../images/authbackground.jpg) no-repeat;
+    background-size: cover;
+    min-height: calc(100% - 65px);
+    min-width: 1260px;
+    height: auto;
+}
+
+#content:after,#content:before {
+    display: table;
+    clear: both
+}
+
+.errorInfo>span,.errorInfoType,.msgBtn {
+    display: inline-block
+}
+
+.registerTypeDiv {
+    font-style: normal;
+    text-align: center;
+    font-size: 24px;
+    color: #252b3a;
+    letter-spacing: 0;
+    padding: 30px 0
+}
+
+#registerForm>ul {
+    width: 430px;
+    margin: 0 auto;
+    clear: both
+}
+
+.fieldNew {
+    width: 380px;
+    margin-right: 0
+}
+
+.errorInfo {
+    margin: 0 auto 0 6px;
+    line-height: 40px
+}
+
+.errorInfo img {
+    width: 16px;
+    height: 16px
+}
+
+.errorInfo>span {
+    margin-left: 6px;
+    color: #e41e2b;
+    font-size: 13px;
+    line-height: 16px;
+    width: 320px;
+    vertical-align: middle
+}
+
+.submitBtnDiv,.submitBtnDiv2 {
+    background-color: #F66F6A;
+    border: 1px solid #F66F6A;
+    color: #FFF
+}
+
+.submitBtnDiv {
+    width: 430px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+.btnDisabled {
+    background-color: #F7F7F7!important;
+    border: 1px solid #DDD!important;
+    color: #A0A2A8;
+    letter-spacing: 0;
+    cursor: not-allowed
+}
+
+.msgBtn {
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #c3c3c3;
+    background: #fff;
+    color: #666;
+    cursor: pointer;
+    width: 168px;
+    border-radius: 5px;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box
+}
+
+.msgBtnDisabled:hover {
+    color: #999
+}
+
+.text-important {
+    color: #f83!important
+}
+
+.passwordStrength {
+    background: #CCC;
+    display: block;
+    text-align: center;
+    float: right;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFF;
+    border-radius: 4px;
+    height: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    width: 42px
+}
+
+.passwordStrengthField {
+    display: inline-block;
+    clear: both;
+    float: left;
+    width: 260px;
+    margin-top: 3px
+}
+
+.passwordHigh {
+    background: #3EC4FF;
+    border-radius: 6px
+}
+
+.passwordMid {
+    background: #FDB351;
+    border-radius: 6px
+}
+
+.passwordLow {
+    background: #E41E2B;
+    border-radius: 6px
+}
+
+.passwordcontentstyle,.passwordlenstyle {
+    line-height: 10%;
+    display: inline-block;
+    width: 100%;
+    margin-top: 3%
+}
+
+.clearfix:after,.clearfix:before {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden
+}
+
+.tootip-img {
+    width: 16px;
+    height: 16px;
+    margin: 0 auto 3px 0
+}
+
+.tootip-div {
+    margin: -19px 0 10px 20px
+}
+
+#footer {
+    background-color: #3D3E49;
+    color: #C3C5C6;
+    width: 100%;
+    height: 65px;
+    clear: both;
+    font-size: 12px;
+    line-height: 20px
+}
+
+*,body,html {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,PingFang SC,PingFangSC-Regular,Helvetica Neue,Helvetica,Microsoft YaHei,Microsoft JhengHei,Tahoma,Arial,sans-serif
+}
+
+@media(max-width: 1280px) {
+    #footer .widthLimit {
+        margin:0;
+        padding: 0
+    }
+
+    #footer {
+        height: 85px
+    }
+
+    #content {
+        min-height: calc(100% - 85px)
+    }
+}
+
+body,html {
+    height: 100%;
+    min-width: 1260px;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -ms-overflow-style: scrollbar
+}
+
+.widthLimit {
+    margin: 0 auto;
+    max-width: inherit
+}
+
+.clearfix:before {
+    height: 120px
+}
+
+.clearfix:after {
+    height: 60px
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #F0F2F5
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #F0F2F5
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #bfc3c6
+}
+
+input[ti-password],input[ti-text] {
+    -moz-box-shadow: 0 1px 1px 0 #f6f6f6 inset;
+    -webkit-box-shadow: 0 1px 1px 0 #f6f6f6 inset;
+    box-shadow: 0 1px 1px 0 #f6f6f6 inset;
+    border: 1px solid #a0a2a8;
+    height: 32px;
+    line-height: normal;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    vertical-align: middle;
+    border-radius: 2px
+}
+
+.ti-combobox-container,.ti-combobox-container:hover {
+    border: 1px solid #a0a2a8
+}
+
+.ti-combobox-container-focused,.ti-combobox-container-focused:hover {
+    border: 1px solid #499DF2
+}

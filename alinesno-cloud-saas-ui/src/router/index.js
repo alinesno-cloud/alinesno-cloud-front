@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
+
 import { Layout , Login } from 'alinesno-ui'
+import { Portal } from '@/views/portal/index.vue'
 
 // >>>>>>>>>>> TODO 提取出公共路由 >>>>>>>>>>>>>>>>
 export const constantRoutes = [
+  {
+    path: '/portal',
+    component: (resolve) => require(['@/views/portal/index.vue'], resolve),
+    hidden: true
+  },
   {
     path: '',
     component: Layout,
@@ -20,7 +27,6 @@ export const constantRoutes = [
   },
   {
     path: '/login',
-    // component: (resolve) => require(['alinesno-ui/packages/Login/login'], resolve),
     component: Login ,
     hidden: true
   },

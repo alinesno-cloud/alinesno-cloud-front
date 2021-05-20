@@ -6,6 +6,11 @@ import Element from 'element-ui'
 import store from './store'
 import router from './router'
 import './permission'
+
+import 'swiper/dist/css/swiper.min.css'
+import 'swiper/dist/js/swiper.min'
+// import '~@fortawesome/fontawesome-free/scss/fontawesome'
+// import '~@fortawesome/fontawesome-free/scss/'
 // >>>>>>>>>>>>>>>>>> person_end >>>>>>>>>>>>>>>>>>>>>>>>>
 
 // >>>>>>>>>>>>>>>>>> alinesno-ui_start TODO 待整合成一个包 >>>>>>>>>>>>>>>>>>>>>>>>>
