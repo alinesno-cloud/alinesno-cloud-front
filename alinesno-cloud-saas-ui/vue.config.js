@@ -1,6 +1,6 @@
 'use strict'
 const path = require('path')
-const defaultSettings = require('common/src/settings.js')
+const defaultSettings = require('alinesno-ui/src/settings.js')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
