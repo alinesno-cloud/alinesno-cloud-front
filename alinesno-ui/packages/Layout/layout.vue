@@ -69,8 +69,8 @@ export default {
 
 <style lang="scss" scoped>
 
-  @import "common/src/assets/styles/mixin.scss";
-  @import "common/src/assets/styles/variables.scss";
+  @import "alinesno-ui/src/assets/styles/mixin.scss";
+  @import "alinesno-ui/src/assets/styles/variables.scss";
 
   .app-wrapper {
     @include clearfix;

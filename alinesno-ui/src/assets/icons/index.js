@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-// import SvgIcon from 'common/packages/SvgIcon'// svg component
+// import SvgIcon from 'alinesno-ui/packages/SvgIcon'// svg component
 
 // register globally
 // Vue.component('svg-icon', SvgIcon)

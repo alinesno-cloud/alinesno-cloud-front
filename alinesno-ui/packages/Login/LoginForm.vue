@@ -105,9 +105,9 @@
 </template>
 
 <script>
-import { getCodeImg } from "common/src/api/login";
+import { getCodeImg } from "alinesno-ui/src/api/login";
 import Cookies from "js-cookie";
-import { encrypt, decrypt } from 'common/src/utils/jsencrypt'
+import { encrypt, decrypt } from 'alinesno-ui/src/utils/jsencrypt'
 
 export default {
   name: "LoginForm",
@@ -199,12 +199,12 @@ export default {
         z-index: 1999 !important ;
     }
 
-@import 'common/src/assets/styles/login/bootstrap.scss';
-@import 'common/src/assets/styles/login/tiny.min.scss';
-@import 'common/src/assets/styles/login/tiny-plus.min.scss';
-@import 'common/src/assets/styles/login/tinyext.min.scss';
-@import 'common/src/assets/styles/login/pageframework.scss';
-@import 'common/src/assets/styles/login/login.scss';
+@import 'alinesno-ui/src/assets/styles/login/bootstrap.scss';
+@import 'alinesno-ui/src/assets/styles/login/tiny.min.scss';
+@import 'alinesno-ui/src/assets/styles/login/tiny-plus.min.scss';
+@import 'alinesno-ui/src/assets/styles/login/tinyext.min.scss';
+@import 'alinesno-ui/src/assets/styles/login/pageframework.scss';
+@import 'alinesno-ui/src/assets/styles/login/login.scss';
 
 .loginDiv{
     border-radius: 2px;

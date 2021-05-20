@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import logoImg from 'common/src/assets/logo/logo.png'
-import variables from 'common/src/assets/styles/variables.scss'
+import logoImg from 'alinesno-ui/src/assets/logo/logo.png'
+import variables from 'alinesno-ui/src/assets/styles/variables.scss'
 
 export default {
   name: 'SidebarLogo',

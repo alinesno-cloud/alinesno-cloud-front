@@ -26,7 +26,7 @@
 
 <script>
 import path from 'path'
-import { isExternal } from 'common/src/utils/validate'
+import { isExternal } from 'alinesno-ui/src/utils/validate'
 import Item from './Item'
 import AppLink from './Link'
 import FixiOSBug from './FixiOSBug'

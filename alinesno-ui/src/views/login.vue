@@ -54,9 +54,9 @@
 </template>
 
 <script>
-import { getCodeImg } from "common/src/api/login";
+import { getCodeImg } from "alinesno-ui/src/api/login";
 import Cookies from "js-cookie";
-import { encrypt, decrypt } from 'common/src/utils/jsencrypt'
+import { encrypt, decrypt } from 'alinesno-ui/src/utils/jsencrypt'
 
 export default {
   name: "Login",

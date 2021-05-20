@@ -1,4 +1,4 @@
-import request from 'common/src/utils/request'
+import request from 'alinesno-ui/src/utils/request'
 
 // 登录方法
 export function login(username, password, code, uuid) {

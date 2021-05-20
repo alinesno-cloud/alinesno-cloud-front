@@ -1,7 +1,7 @@
-import { constantRoutes } from 'common/src/router'
-import { getRouters } from 'common/src/api/menu'
-import Layout from 'common/packages/Layout/layout'
-import ParentView from 'common/packages/ParentView';
+import { constantRoutes } from 'alinesno-ui/src/router'
+import { getRouters } from 'alinesno-ui/src/api/menu'
+import Layout from 'alinesno-ui/packages/Layout/layout'
+import ParentView from 'alinesno-ui/packages/ParentView';
 
 const permission = {
   state: {

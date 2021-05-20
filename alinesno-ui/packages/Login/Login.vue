@@ -23,12 +23,12 @@ export default {
 
 <style lang="scss" scoped>
 
-@import 'common/src/assets/styles/login/bootstrap.scss';
-@import 'common/src/assets/styles/login/tiny.min.scss';
-@import 'common/src/assets/styles/login/tiny-plus.min.scss';
-@import 'common/src/assets/styles/login/tinyext.min.scss';
-@import 'common/src/assets/styles/login/pageframework.scss';
-@import 'common/src/assets/styles/login/login.scss';
+@import 'alinesno-ui/src/assets/styles/login/bootstrap.scss';
+@import 'alinesno-ui/src/assets/styles/login/tiny.min.scss';
+@import 'alinesno-ui/src/assets/styles/login/tiny-plus.min.scss';
+@import 'alinesno-ui/src/assets/styles/login/tinyext.min.scss';
+@import 'alinesno-ui/src/assets/styles/login/pageframework.scss';
+@import 'alinesno-ui/src/assets/styles/login/login.scss';
 
 .loginDiv{
     border-radius: 2px;

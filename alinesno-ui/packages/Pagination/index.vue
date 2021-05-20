@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { scrollTo } from 'common/src/utils/scroll-to'
+import { scrollTo } from 'alinesno-ui/src/utils/scroll-to'
 
 export default {
   name: 'Pagination',

@@ -1,4 +1,4 @@
-import store from 'common/src/store'
+import store from 'alinesno-ui/src/store'
 
 const { body } = document
 const WIDTH = 992 // refer to Bootstrap's responsive design

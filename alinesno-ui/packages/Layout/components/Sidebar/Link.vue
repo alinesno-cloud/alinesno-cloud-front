@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { isExternal } from 'common/src/utils/validate'
+import { isExternal } from 'alinesno-ui/src/utils/validate'
 
 export default {
   props: {

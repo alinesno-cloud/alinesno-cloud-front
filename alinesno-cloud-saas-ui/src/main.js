@@ -8,18 +8,18 @@ import router from './router'
 import './permission'
 // >>>>>>>>>>>>>>>>>> person_end >>>>>>>>>>>>>>>>>>>>>>>>>
 
-// >>>>>>>>>>>>>>>>>> common_start TODO 待整合成一个包 >>>>>>>>>>>>>>>>>>>>>>>>>
-import 'common/src/assets/styles/element-variables.scss'
-import 'common/src/assets/icons' // icon
-import 'common/src/assets/styles/index.scss' // global css
-import 'common/src/assets/styles/ruoyi.scss' // ruoyi css
+// >>>>>>>>>>>>>>>>>> alinesno-ui_start TODO 待整合成一个包 >>>>>>>>>>>>>>>>>>>>>>>>>
+import 'alinesno-ui/src/assets/styles/element-variables.scss'
+import 'alinesno-ui/src/assets/icons' // icon
+import 'alinesno-ui/src/assets/styles/index.scss' // global css
+import 'alinesno-ui/src/assets/styles/ruoyi.scss' // ruoyi css
 
-import SvgIcon from 'common/packages/SvgIcon'// svg component
-import App from 'common/src/App'
-import permission from 'common/src/directive/permission'
-import { parseTime, resetForm, addDateRange, selectDictLabel, selectDictLabels, download, handleTree } from "common/src/utils/ruoyi";
-import Pagination from "common/packages/Pagination";
-import RightToolbar from "common/packages/RightToolbar" // 自定义表格工具扩展
+import SvgIcon from 'alinesno-ui/packages/SvgIcon'// svg component
+import App from 'alinesno-ui/src/App'
+import permission from 'alinesno-ui/src/directive/permission'
+import { parseTime, resetForm, addDateRange, selectDictLabel, selectDictLabels, download, handleTree } from "alinesno-ui/src/utils/ruoyi";
+import Pagination from "alinesno-ui/packages/Pagination";
+import RightToolbar from "alinesno-ui/packages/RightToolbar" // 自定义表格工具扩展
 
 // 全局方法挂载
 Vue.prototype.parseTime = parseTime
@@ -54,7 +54,7 @@ Vue.use(Element, {
 })
 
 Vue.config.productionTip = false
-// >>>>>>>>>>>>>>>>>> common_end >>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>> alinesno-ui_end >>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 new Vue({

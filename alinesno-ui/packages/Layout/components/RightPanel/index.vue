@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { addClass, removeClass } from 'common/src/utils'
+import { addClass, removeClass } from 'alinesno-ui/src/utils'
 
 export default {
   name: 'RightPanel',

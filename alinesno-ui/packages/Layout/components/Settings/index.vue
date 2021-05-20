@@ -7,7 +7,7 @@
         </div>
         <div class="setting-drawer-block-checbox">
           <div class="setting-drawer-block-checbox-item" @click="handleTheme('theme-dark')">
-            <img src="common/src/assets/images/dark.svg" alt="dark">
+            <img src="alinesno-ui/src/assets/images/dark.svg" alt="dark">
             <div v-if="sideTheme === 'theme-dark'" class="setting-drawer-block-checbox-selectIcon" style="display: block;">
               <i aria-label="图标: check" class="anticon anticon-check">
                 <svg viewBox="64 64 896 896" data-icon="check" width="1em" height="1em" :fill="theme" aria-hidden="true"
@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="setting-drawer-block-checbox-item" @click="handleTheme('theme-light')">
-            <img src="common/src/assets/images/light.svg" alt="light">
+            <img src="alinesno-ui/src/assets/images/light.svg" alt="light">
             <div v-if="sideTheme === 'theme-light'" class="setting-drawer-block-checbox-selectIcon" style="display: block;">
               <i aria-label="图标: check" class="anticon anticon-check">
                 <svg viewBox="64 64 896 896" data-icon="check" width="1em" height="1em" :fill="theme" aria-hidden="true"

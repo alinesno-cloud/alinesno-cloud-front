@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 /* Layout */
-// import Layout from 'common/packages/Layout/layout.vue'
+// import Layout from 'alinesno-ui/packages/Layout/layout.vue'
 
 /**
  * Note: 路由配置项
@@ -33,13 +33,13 @@ export const constantRoutes = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: (resolve) => require(['common/src/views/redirect'], resolve)
+        component: (resolve) => require(['alinesno-ui/src/views/redirect'], resolve)
       }
     ]
   },
   {
     path: '/login',
-    component: (resolve) => require(['common/src/views/login'], resolve),
+    component: (resolve) => require(['alinesno-ui/src/views/login'], resolve),
     hidden: true
   }
 ]

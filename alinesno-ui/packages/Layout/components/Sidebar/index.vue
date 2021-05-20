@@ -27,7 +27,7 @@
 import { mapGetters, mapState } from "vuex";
 import Logo from "./Logo";
 import SidebarItem from "./SidebarItem";
-import variables from "common/src/assets/styles/variables.scss";
+import variables from "alinesno-ui/src/assets/styles/variables.scss";
 
 export default {
     components: { SidebarItem, Logo },

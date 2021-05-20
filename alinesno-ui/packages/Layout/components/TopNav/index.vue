@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { constantRoutes } from "common/src/router";
+import { constantRoutes } from "alinesno-ui/src/router";
 
 export default {
   data() {

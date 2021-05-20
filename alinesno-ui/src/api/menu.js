@@ -1,4 +1,4 @@
-import request from 'common/src/utils/request'
+import request from 'alinesno-ui/src/utils/request'
 
 // 获取路由
 export const getRouters = () => {

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import SvgIcon from 'common/packages/SvgIcon'
+import SvgIcon from 'alinesno-ui/packages/SvgIcon'
 
 export default {
   components: { SvgIcon },

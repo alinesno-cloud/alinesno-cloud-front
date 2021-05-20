@@ -4,7 +4,7 @@ import { Message } from 'element-ui'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-import { getToken } from 'common/src/utils/auth'
+import { getToken } from 'alinesno-ui/src/utils/auth'
 
 NProgress.configure({ showSpinner: false })
 

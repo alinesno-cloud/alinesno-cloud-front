@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
-import { Layout , Login } from 'common'
+import { Layout , Login } from 'alinesno-ui'
 
 // >>>>>>>>>>> TODO 提取出公共路由 >>>>>>>>>>>>>>>>
 export const constantRoutes = [
@@ -20,18 +20,18 @@ export const constantRoutes = [
   },
   {
     path: '/login',
-    // component: (resolve) => require(['common/packages/Login/login'], resolve),
+    // component: (resolve) => require(['alinesno-ui/packages/Login/login'], resolve),
     component: Login ,
     hidden: true
   },
   {
     path: '/404',
-    component: (resolve) => require(['common/src/views/error/404'], resolve),
+    component: (resolve) => require(['alinesno-ui/src/views/error/404'], resolve),
     hidden: true
   },
   {
     path: '/401',
-    component: (resolve) => require(['common/src/views/error/401'], resolve),
+    component: (resolve) => require(['alinesno-ui/src/views/error/401'], resolve),
     hidden: true
   }
 ]

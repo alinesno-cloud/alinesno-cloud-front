@@ -1,5 +1,5 @@
 <script>
-import SvgIcon from 'common/packages/SvgIcon'// svg component
+import SvgIcon from 'alinesno-ui/packages/SvgIcon'// svg component
 
 export default {
   name: 'MenuItem',
