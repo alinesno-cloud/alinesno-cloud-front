@@ -9,6 +9,10 @@ import './permission'
 
 import 'swiper/dist/css/swiper.min.css'
 import 'swiper/dist/js/swiper.min'
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 // import '~@fortawesome/fontawesome-free/scss/fontawesome'
 // import '~@fortawesome/fontawesome-free/scss/'
 // >>>>>>>>>>>>>>>>>> person_end >>>>>>>>>>>>>>>>>>>>>>>>>
@@ -51,6 +55,7 @@ Vue.prototype.msgInfo = function (msg) {
 Vue.component('svg-icon', SvgIcon)
 Vue.component('Pagination', Pagination)
 Vue.component('RightToolbar', RightToolbar)
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.use(permission)
 

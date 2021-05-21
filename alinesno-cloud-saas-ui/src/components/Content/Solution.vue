@@ -21,12 +21,9 @@
                                         <a style="padding-bottom:0px;" href="javascript:void(0)">
                                             <figure class="lb-tiny-iblock lb-img" style="margin-top:0px; margin-bottom:0px;">
                                                 <div>
-                                                    <div class="">
-                                                        <img class="lb-is-lazyloaded" src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/0a0d6b27-b922-4fee-95b9-40f5b876835c.png" />
+                                                    <div class="lb-solution-icons">
+                                                        <i class="fas fa-ship"></i>
                                                     </div>
-                                                    <noscript>
-                                                        <img alt="AWS-Category-Icon_Digital-Marketing_60_Left-Aligned" title="AWS-Category-Icon_Digital-Marketing_60_Left-Aligned" src="http://training-static.linesno.com/alinesno-cdn/saas-portal/2.1.1-rc/resources/images/AWS-Category-Icon_Digital-Marketing_60_Left-Aligned.733668289a14bfe14da4cc4a40e6e75b988cdf38.png" />
-                                                    </noscript>
                                                 </div>
                                             </figure> <h4 id="Advertising_.26_Marketing" class="lb-txt-none lb-txt-blue-link lb-h4 lb-title">数字政府解决方案</h4>
                                             <div class="lb-txt-none lb-txt-black lb-txt-13 lb-mid-v-margin lb-txt lb-current-page-link" style="padding-bottom:50px; margin-top:0px;">
@@ -40,12 +37,9 @@
                                         <a style="padding-bottom:0px;" href="javascript:void(0)">
                                             <figure class="lb-tiny-iblock lb-img" style="margin-top:0px; margin-bottom:0px;">
                                                 <div>
-                                                    <div class="">
-                                                        <img class="lb-is-lazyloaded" src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/ff59f6c9-fb14-45af-aed5-1fd2f0d38f4d.png" />
+                                                    <div class="lb-solution-icons">
+                                                        <i class="fas fa-laptop-medical"></i>
                                                     </div>
-                                                    <noscript>
-                                                        <img alt="AWS-Category-Icon_Digital-Marketing_60_Left-Aligned" title="AWS-Category-Icon_Digital-Marketing_60_Left-Aligned" src="http://training-static.linesno.com/alinesno-cdn/saas-portal/2.1.1-rc/resources/images/AWS-Category-Icon_Digital-Marketing_60_Left-Aligned.733668289a14bfe14da4cc4a40e6e75b988cdf38.png" />
-                                                    </noscript>
                                                 </div>
                                             </figure> <h4 id="Advertising_.26_Marketing" class="lb-txt-none lb-txt-blue-link lb-h4 lb-title" style="margin-top:5px;">新零售行业解决方案</h4>
                                             <div class="lb-txt-none lb-txt-black lb-txt-13 lb-mid-v-margin lb-txt lb-current-page-link" style="padding-bottom:50px; margin-top:0px;">
@@ -59,12 +53,9 @@
                                         <a style="padding-bottom:0px;" href="javascript:void(0)">
                                             <figure class="lb-tiny-iblock lb-img" style="margin-top:0px; margin-bottom:0px;">
                                                 <div>
-                                                    <div class="">
-                                                        <img class="lb-is-lazyloaded" src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/ff59f6c9-fb14-45af-aed5-1fd2f0d38f4d.png" />
+                                                    <div class="lb-solution-icons">
+                                                        <i class="fas fa-tractor"></i>
                                                     </div>
-                                                    <noscript>
-                                                        <img alt="AWS-Category-Icon_Digital-Marketing_60_Left-Aligned" title="AWS-Category-Icon_Digital-Marketing_60_Left-Aligned" src="http://training-static.linesno.com/alinesno-cdn/saas-portal/2.1.1-rc/resources/images/AWS-Category-Icon_Digital-Marketing_60_Left-Aligned.733668289a14bfe14da4cc4a40e6e75b988cdf38.png" />
-                                                    </noscript>
                                                 </div>
                                             </figure> <h4 id="Advertising_.26_Marketing" class="lb-txt-none lb-txt-blue-link lb-h4 lb-title" style="margin-top:5px;">新零售行业解决方案</h4>
                                             <div class="lb-txt-none lb-txt-black lb-txt-13 lb-mid-v-margin lb-txt lb-current-page-link" style="padding-bottom:50px; margin-top:0px;">
@@ -78,12 +69,9 @@
                                         <a style="padding-bottom:0px;" href="javascript:void(0)">
                                             <figure class="lb-tiny-iblock lb-img" style="margin-top:0px; margin-bottom:0px;">
                                                 <div>
-                                                    <div class="">
-                                                        <img class="lb-is-lazyloaded" src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/ff59f6c9-fb14-45af-aed5-1fd2f0d38f4d.png" />
+                                                    <div class="lb-solution-icons">
+                                                        <i class="fas fa-shipping-fast"></i>
                                                     </div>
-                                                    <noscript>
-                                                        <img alt="AWS-Category-Icon_Digital-Marketing_60_Left-Aligned" title="AWS-Category-Icon_Digital-Marketing_60_Left-Aligned" src="http://training-static.linesno.com/alinesno-cdn/saas-portal/2.1.1-rc/resources/images/AWS-Category-Icon_Digital-Marketing_60_Left-Aligned.733668289a14bfe14da4cc4a40e6e75b988cdf38.png" />
-                                                    </noscript>
                                                 </div>
                                             </figure> <h4 id="Advertising_.26_Marketing" class="lb-txt-none lb-txt-blue-link lb-h4 lb-title">新零售行业解决方案</h4>
                                             <div class="lb-txt-none lb-txt-black lb-txt-13 lb-mid-v-margin lb-txt lb-current-page-link" style="padding-bottom:50px; margin-top:0px;">
@@ -289,6 +277,11 @@
 .lb-mid-v-margin{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.lb-solution-icons {
+    font-size: 40px;
+    color: $mainStyle ;
 }
 
 </style>

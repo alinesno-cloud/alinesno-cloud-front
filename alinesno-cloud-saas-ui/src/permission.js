@@ -11,6 +11,13 @@ NProgress.configure({ showSpinner: false })
 // 白名单配置
 const whiteList = [
       '/portal',
+      '/solution',
+      '/technique',
+      '/document',
+      '/support',
+      '/developer',
+      '/about',
+
       '/login',
       '/auth-redirect',
       '/bind',

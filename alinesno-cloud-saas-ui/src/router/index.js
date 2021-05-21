@@ -13,6 +13,41 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/solution',
+    component: (resolve) => require(['@/views/solution/index.vue'], resolve),
+    hidden: true
+  },
+  {
+    path: '/support',
+    component: (resolve) => require(['@/views/support/index.vue'], resolve),
+    hidden: true
+  },
+  {
+    path: '/developer',
+    component: (resolve) => require(['@/views/developer/index.vue'], resolve),
+    hidden: true
+  },
+  {
+    path: '/technique',
+    component: (resolve) => require(['@/views/technique/index.vue'], resolve),
+    hidden: true
+  },
+  {
+    path: '/starter',
+    component: (resolve) => require(['@/views/starter/index.vue'], resolve),
+    hidden: true
+  },
+  {
+    path: '/document',
+    component: (resolve) => require(['@/views/document/index.vue'], resolve),
+    hidden: true
+  },
+  {
+    path: '/about',
+    component: (resolve) => require(['@/views/about/index.vue'], resolve),
+    hidden: true
+  },
+  {
     path: '',
     component: Layout,
     redirect: 'index',

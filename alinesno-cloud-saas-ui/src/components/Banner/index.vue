@@ -3,7 +3,7 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide banner-slide"
-                style="background-image: url('http://training-static.linesno.com/banner_0111.png');">
+                style="background-image: url('http://training-static.linesno.com/bbg.png');">
                 <div class="banner-content">
                     <div class="txt">
                         <h1>立即开始在 新狐云 平台进行构建</h1>
@@ -12,7 +12,6 @@
                         新狐云 都能提供适当服务来帮助您构建复杂的应用程序，
                         同时提高灵活性、可扩展性和可靠性
                         </p>
-                        <a href="/dashboard" class="link" target="_blank">开始使用</a>
                     </div>
                 </div>
                 <div class="img-fix">
@@ -20,18 +19,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="swiper-slide">Slide 2</div> -->
-            <!-- <div class="swiper-slide">Slide 3</div> -->
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-
-        <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- 如果需要滚动条 -->
-        <!--    <div class="swiper-scrollbar"></div>-->
     </div>
 </div>
 </template>
@@ -75,7 +63,6 @@ export default {
             width: 100%;
             height: 100%;
             background-color: #42b983;
-            text-align: center;
             line-height: 350px;
         }
     }
@@ -83,14 +70,14 @@ export default {
     .banner-slide {
         .banner-content {
             position: inherit;
-            max-width: inherit;
             right: 0;
             height: 350px;
             bottom: 0px;
             font-size: 20px;
-            width: 70% ;
-            max-width: 1200px;
+            width: 100%;
             margin: auto;
+            max-width: 1200px;
+            text-align: left;
 
             .link {
                 display: block;
@@ -122,7 +109,6 @@ export default {
             background: none;
             color : #fff ;
             height: 350px;
-            text-align: center;
         }
         .p-label {
             font-size: inherit;

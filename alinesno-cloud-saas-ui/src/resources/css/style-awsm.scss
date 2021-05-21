@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import url('http://static.cloud.linesno.com/asserts/vendors/fontawesome/css/all.css');
 
 @charset "UTF-8";.awsm>* {
     direction: ltr
@@ -405,8 +406,7 @@ html {
 }
 
 .lb-h2 {
-    font-size: 24px;
-    font-size: 2.4rem
+    font-size: 2rem ;
 }
 
 .lb-h1,.lb-h2 {
@@ -16815,7 +16815,7 @@ video::-webkit-media-text-track-display {
 .lb-video figcaption {
     padding: 10px 0;
     font-size: 14px;
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
     text-align: left
 }
 
@@ -24067,7 +24067,7 @@ body:not(.m-nav-panel-active) .m-nav-sidebar-menu .m-nav-panel-link {
 
 .lb-txt-16 {
     font-size: 16px;
-    font-size: 1.6rem;
+    // font-size: 1.6rem;
     line-height: 1.6
 }
 
@@ -26581,7 +26581,7 @@ body:not(.m-nav-panel-active) .m-nav-sidebar-menu .m-nav-panel-link {
 }
 
 .lb-mid-pad {
-    padding: 80px 30px
+    padding: 50px 30px
 }
 
 .lb-large-pad {

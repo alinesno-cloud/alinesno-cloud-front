@@ -11,36 +11,51 @@
     <div class="lb-none-pad lb-none-v-margin lb-item-expander lb-item-expander-cortex lb-has-icon-hover lb-row-max-large lb-snap lb-has-hover-icons-as-active" data-lb-comp="item-expander-cortex" data-lb-comp-registered="true">
         <div class="lb-item-expander-row" id="lb-item-expander-row-04">
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/b145da96-31d0-43bd-95b7-298e980cedf1.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>技术中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fas fa-chalkboard"></i>
+                    </div>
+                    <span>技术中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="787440246718464000" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/bd65a02b-bfbc-44c2-9947-300d58ba5531.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>研发中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fas fa-biohazard"></i>
+                    </div>
+                    <span>研发中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="787440513283260416" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/eb2c50e2-d9eb-4d71-acfb-5885135f48d4.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>物联网中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <span>物联网中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="787440555398266880" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/bb97639a-2f62-4a7e-a11e-9d2f95a3b7a4.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>数据中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fab fa-telegram-plane"></i>
+                    </div>
+                    <span>数据中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="787440600306679808" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/ebd25e91-f603-4a1e-9392-073fa1a5c54d.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>业务中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <span>业务中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
@@ -141,36 +156,51 @@
         </div>
         <div class="lb-item-expander-row" id="lb-item-expander-row-04">
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="787440639988989952" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/0877c893-9e3a-4e32-9ca7-0bcfa134c4c2.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>视觉中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <span>视觉中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="793938687002935296" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/cd229cae-f556-4d8a-9059-aa8d85f24eb1.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>运维中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <span>运维中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="8524543d2445c81411cbd462ca241cfb" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/d7d3ba25-3b27-4d39-bbbd-55479a9e7e5e.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>管理中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <span>管理中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="51b067ba43135742cfe87e4d9455fb6f" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/04/10/b97ea611-fd69-475d-a916-8890b5cdba9b.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>测试中台</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <span>测试中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a" id="e17675ff37994f64013b156b0ec455be" style="text-align: center; height: 100px;"> <img src="http://v2.cloud.dev.lbxinhu.linesno.com:23456/public/2021/05/08/50c448fc-a5a9-4dbc-8c97-27ebf658f2a8.png" style="width: 60px;
-                    position: absolute; top: 0px; margin-left: -33px;" /> <span>运维管理</span>
+                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                    <div class="product-icon-label">
+                        <i class="fas fa-mail-bulk"></i>
+                    </div>
+                    <span>运维管理</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
                 </div> </a>
@@ -247,6 +277,21 @@
 
 .lb-product-label {
     background-color: $mainBgStyle ;
+}
+
+.product-type-a{
+
+    .product-icon-label {
+        top: 0px;
+        text-align: center;
+        position: absolute;
+        margin-left: -30px;
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        font-size: 40px;
+    }
+
 }
 
 </style>
