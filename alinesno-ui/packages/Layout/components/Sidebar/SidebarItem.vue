@@ -83,14 +83,26 @@ export default {
       return false
     },
     resolvePath(routePath) {
+
       if (isExternal(routePath)) {
         return routePath
       }
       if (isExternal(this.basePath)) {
         return this.basePath
       }
+
+     console.log("path = " + this.basePath + " , routePath = " + routePath)
+
       return path.resolve(this.basePath, routePath)
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import url('http://static.cloud.linesno.com/asserts/vendors/fontawesome/css/all.css');
+
+.el-submenu__title i {
+    margin-right: 5px;
+}
+</style>

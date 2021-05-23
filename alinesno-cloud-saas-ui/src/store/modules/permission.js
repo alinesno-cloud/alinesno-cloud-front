@@ -37,6 +37,9 @@ const permission = {
       return new Promise(resolve => {
         // 向后端请求路由数据
         getRouters().then(res => {
+
+          console.log('res = ' + res) ;
+
           const sdata = JSON.parse(JSON.stringify(res.data))
           const rdata = JSON.parse(JSON.stringify(res.data))
           const sidebarRoutes = filterAsyncRouter(sdata)
@@ -104,7 +107,8 @@ function filterChildren(childrenMap, lastRouter = false) {
 }
 
 export const loadView = (view) => { // 路由懒加载
-  return (resolve) => require([`@/views/${view}`], resolve)
+// return (resolve) => require([`@/views/${view}`], resolve)
+    return (resolve) => require([`@/views/index.vue`], resolve)
 }
 
 export default permission

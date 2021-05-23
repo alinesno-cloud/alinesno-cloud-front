@@ -57,7 +57,7 @@ router.beforeEach((to, from, next) => {
       next()
     } else {
       // next(`/login?redirect=${to.fullPath}`) // 否则全部重定向到登录页
-      next(`/portal?redirect=${to.fullPath}`) // 否则全部重定向到登录页
+      next(`/login?redirect=${to.fullPath}`) // 否则全部重定向到登录页
       NProgress.done()
     }
   }
