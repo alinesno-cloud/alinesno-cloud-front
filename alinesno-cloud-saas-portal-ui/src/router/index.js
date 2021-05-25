@@ -52,6 +52,30 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/build',
+    component: BaseLayout,
+    children: [
+      {
+        path: '/build/component',
+        component: (resolve) => require(['@/views/dashboard/buildComponent'], resolve),
+        name: '创建应用',
+        meta: { title: '创建应用', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/build/overview',
+        component: (resolve) => require(['@/views/dashboard/overview'], resolve),
+        name: '组件空间',
+        meta: { title: '组件空间', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/build/connectGit',
+        component: (resolve) => require(['@/views/dashboard/connectGit'], resolve),
+        name: '连接gitlab账号',
+        meta: { title: '连接gitlab账号', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      }
+    ]
+  },
+  {
     path: '',
     component: BaseLayout,
     redirect: 'index',

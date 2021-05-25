@@ -3,11 +3,11 @@
 <el-col :span="24">
 <h3 class="widget-title">创建业务</h3>
 <div class="WidgetHomeProductMy-detailContainer-3W8nd">
-    <div style="position: relative; overflow: hidden; width: 100%;height: 100px;">
+    <div style="position: relative; overflow: hidden; width: 100%;height: 130px;">
         <div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
             <ul class="product_list thm-uglier">
                 <li>
-                <div class="create-item">
+                <router-link to="/build/component" tag="div" class="create-item">
                     <div>
                         <img src="https://gw.alicdn.com/tfs/TB10uW.CNjaK1RjSZFAXXbdLFXa-112-112.png" class="item-image" />
                     </div>
@@ -22,8 +22,8 @@
                     <div>
                         <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
                     </div>
-                </div>
-                <div class="create-item">
+                </router-link>
+                <router-link to="/build/component" tag="div" class="create-item">
                     <div>
                         <img src="https://gw.alicdn.com/tfs/TB1Y8PlCNjaK1RjSZKzXXXVwXXa-112-112.png" class="item-image" />
                     </div>
@@ -38,8 +38,8 @@
                     <div>
                         <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
                     </div>
-                </div>
-                <div class="create-item">
+                </router-link>
+                <router-link to="/build/component" tag="div" class="create-item">
                     <div>
                         <img src="https://gw.alicdn.com/tfs/TB1cbCYCPTpK1RjSZKPXXa3UpXa-112-112.png" class="item-image" />
                     </div>
@@ -54,8 +54,8 @@
                     <div>
                         <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
                     </div>
-                </div>
-                <div class="create-item">
+                </router-link>
+                <router-link to="/build/component" tag="div" class="create-item">
                     <div>
                         <img src="https://gw.alicdn.com/tfs/TB1FNG.CMHqK1RjSZFgXXa7JXXa-102-102.png" class="item-image" />
                     </div>
@@ -70,7 +70,7 @@
                     <div>
                         <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
                     </div>
-                </div>
+                </router-link>
                 </li>
             </ul>
         </div>
@@ -88,7 +88,7 @@
     cursor: pointer;
     display: inline-flex;
     width: 23%;
-    height: 64px;
+    height: 94px;
     border: 0px ;
     border-radius: 8px;
     align-items: center;
@@ -97,7 +97,7 @@
     margin: 0 8px 8px 0;
 
     .item-image {
-        width: 40px;
+        width: 60px;
         margin-right: 12px;
         border-radius: 30%;
         margin-top: 5px;
