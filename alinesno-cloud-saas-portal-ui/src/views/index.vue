@@ -7,6 +7,7 @@
     </div>
 
     <div class="app-container">
+        <index-create />
         <el-row :gutter="20">
         <el-col :span="16">
         <h3 class="widget-title">我的导航</h3>
@@ -161,7 +162,7 @@
 			  </div>
 		</el-col>
         <el-col :span="8">
-			 <div class="next-card next-card-free next-card-show-divider">
+            <div class="next-card next-card-free next-card-show-divider">
             <h3 class="widget-title">平台手册</h3>
             <div class="widget-wrapper" style="position: relative;">
                 <div class="widget-bulletin-list">
@@ -212,8 +213,14 @@
 </template>
 
 <script>
+
+import IndexCreate from './IndexCreate'
+
 export default {
     name: "index",
+    components: {
+        IndexCreate
+    },
     data() {
         return {
             // 版本号
@@ -235,7 +242,7 @@ export default {
     box-sizing: border-box;
     padding: 24px 24px 0;
     background-color: #fff;
-    box-shadow: 0 1px 0 0 #c0c6cc ;
+    box-shadow: 0 1px 0 0 #e3e4e6 ;
     z-index: 1;
 }
 
@@ -252,11 +259,16 @@ export default {
 
 .widget-title {
     margin: -16px 0 0;
-    height: 34px;
     font-size: 14px;
     color: #333;
-    line-height: 54px;
+    line-height: 44px;
     font-weight: 400;
+}
+
+.app-icon {
+    width: 32px;
+    height: 32px;
+    position: relative;
 }
 
 .el-row {

@@ -1,15 +1,8 @@
 <template>
   <div :class="classObj" class="app-wrapper" :style="{'--current-color': theme}">
     <top-header></top-header>
-    <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"/>
-    <sidebar v-if="device==='mobile'&&sidebar.opened"
-             class="sidebar-container"
-             :style="{ backgroundColor: sideTheme === 'theme-dark' ? variables.menuBg : variables.menuLightBg }" />
+    <product-siderbar />
     <div :class="{hasTagsView:needTagsView}" class="main-container">
-      <div :class="{'fixed-header':fixedHeader}">
-          <navbar />
-          <tags-view v-if="needTagsView" />
-      </div>
       <app-main/>
       <right-panel v-if="showSettings">
         <settings />
@@ -22,6 +15,7 @@
 <script>
 
 import RightPanel from './components/RightPanel'
+import ProductSiderbar from './components/ProductSidebar'
 import { AppMain, Navbar, TopHeader , Settings, Sidebar, TagsView } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
 import { mapState } from 'vuex'
@@ -34,7 +28,7 @@ export default {
     Navbar,
     RightPanel,
     Settings,
-    Sidebar,
+    ProductSiderbar,
     TopHeader,
     TagsView
   },
@@ -83,6 +77,10 @@ export default {
     &.mobile.openSidebar {
       position: fixed;
       top: 0;
+    }
+
+    .main-container{
+        margin-left:60px !important
     }
   }
 

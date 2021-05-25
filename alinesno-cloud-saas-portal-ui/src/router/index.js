@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-import { Layout , Login } from 'alinesno-ui'
+import { BaseLayout , Login } from 'alinesno-ui'
 
 // >>>>>>>>>>> TODO 提取出公共路由 >>>>>>>>>>>>>>>>
 export const constantRoutes = [
@@ -53,12 +53,12 @@ export const constantRoutes = [
   },
   {
     path: '',
-    component: Layout,
+    component: BaseLayout,
     redirect: 'index',
     children: [
       {
         path: 'index',
-        component: (resolve) => require(['@/views/index'], resolve),
+        component: (resolve) => require(['@/views/dashboard/home'], resolve),
         name: '首页',
         meta: { title: '首页', icon: 'fas fa-chalkboard', noCache: true, affix: true }
       }
