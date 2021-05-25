@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>网络稳定</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M29.4710191,19.9795478 C29.4853451,19.167867 29.5346832,18.2870965 29.6137908,17.348811 C30.0342221,12.3621271 31.1342172,9 31.662096,9 C32.1899749,9 33.2675224,12.3621271 33.7104013,17.348811 C33.7937193,18.2869474 33.8456884,19.167587 33.8615167,19.9791607 L34.7267739,20.3990866 L35.3333333,24.9386391 L33.4679048,23.9810144 C33.1231892,25.0797947 32.5401499,25.6976219 31.662096,25.6976219 C30.7842864,25.6976219 30.2054499,25.0801383 29.8636426,23.9819312 L28,24.9386391 L28.6065594,20.3990866 L29.4710191,19.9795478 Z M31.5852683,31 C31.2612825,30.0774973 30.4852683,29.2951959 30.4852683,27.7368957 C30.4852683,27.0240106 30.9777551,26.4461031 31.5852683,26.4461031 C32.1927816,26.4461031 32.6852683,27.0240106 32.6852683,27.7368957 C32.6852683,29.2951959 31.8720388,30.1160497 31.5852683,31 Z" id="path-1"></path>
+        <filter x="-327.3%" y="-108.2%" width="754.5%" height="317.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.904420732   0 0 0 0 0.927057927   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="网络稳定" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3">
+            <g transform="translate(0.000000, 3.000000)">
+                <rect id="矩形" fill="#96ADFA" x="5" y="0" width="54" height="40" rx="4"></rect>
+                <path d="M7.92056046,41 L56.0787947,41 C57.7762241,41 59.2888077,42.0713342 59.8521126,43.6725694 L63.4867982,54.004427 C64.0366379,55.5673865 63.2153422,57.2801487 61.6523827,57.8299884 C61.3325177,57.942515 60.9958906,58 60.6568097,58 L3.34254543,58 C1.68569118,58 0.342545432,56.6568542 0.342545432,55 C0.342545432,54.6609191 0.400030424,54.324292 0.512557006,54.004427 L4.14724256,43.6725694 C4.71054748,42.0713342 6.22313108,41 7.92056046,41 Z" id="矩形-copy-20" fill="#2A3C85"></path>
+                <g id="合并形状">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
