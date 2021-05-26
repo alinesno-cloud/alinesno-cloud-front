@@ -1,3 +1,5 @@
+@import '@/resources/css/fontawesome.scss';
+
 .mUylf {
     width: 100%;
     margin-top: -1px;
@@ -464,4 +466,59 @@ svg:not(:root) {
     -webkit-box-align: center;
     align-items: center;
 }
+
+.gWayKh {
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding-right: 8px;
+}
+
+.kpLOEA.dash-size-regular .sc-1ngwmbv-1 {
+    font-size: 14px;
+}
+
+.jPmxjq {
+    color: rgb(47, 47, 47);
+    font-weight: 600;
+}
+
+.gZwepA {
+    display: flex;
+}
+
+.jXociU {
+    margin: 6px 0px;
+    cursor: pointer;
+}
+.gvlVyM {
+    display: block;
+    font-size: 13px;
+    letter-spacing: -0.01em;
+    color: rgb(47, 47, 47);
+    line-height: 1.12;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.gZwepA .commit-message {
+    margin-right: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.kpLOEA.dash-size-regular .sc-1ngwmbv-2 {
+    font-size: 12px;
+}
+.hhsakP {
+    color: rgb(109, 109, 109);
+}
+
+b, strong {
+    font-weight: 600;
+    color: #474f5a;
+}
+
 

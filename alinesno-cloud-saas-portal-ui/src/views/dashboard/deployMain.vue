@@ -22,46 +22,6 @@
                     <div class="sc-1asmw3r-0 mUylf">
                         <div id="snapshot-package">
                             <form novalidate="" autocomplete="off" class="sc-1jra7eo-0 ckZTzS">
-                                <div class="sc-1jra7eo-1 SHJdw">
-                                    <div class="sc-1ngwmbv-3 kpLOEA  dash-size-regular">
-                                        <div class="sc-1ngwmbv-0 dnrqkl">
-                                            <div size="32" class="sc-1jmyn68-0 gNPLxp">
-                                                <img src="https://avatars.githubusercontent.com/u/9816972?v=4" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="sc-1ngwmbv-4 gWayKh">
-                                            <div class="sc-1ngwmbv-1 jPmxjq title-text">
-                                                <div class="ldfwjl-0 gZwepA">
-                                                    <div class="commit-message">
-                                                        <span title="Initial commit">Initial commit</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="sc-1ngwmbv-2 hhsakP sub-text">
-                                                <div class="ldfwjl-1 gGxITc">
-                                                    <strong>switchII</strong> &middot; 
-                                                    <div class="zkjcjj-0 fukuBt" spacing="8">
-                                                        5 days ago
-                                                    </div>
-                                                    <div class="zkjcjj-2 gPSdTU" style="opacity: 0; transform: scale3d(0.75, 0.75, 1); left: -100px; top: -100px;">
-                                                        May 21, 2021, 10:06:56 PM
-                                                    </div> to 
-                                                    <strong class="dark"><img src="/img/branch-icon.png" class="git-branch" /> <span class="lhtyul-0 kKGFPf">master</span></strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sc-1ngwmbv-5 ghKyco">
-                                            <div class="sc-1ngwmbv-6 ldfwjl-3 yjLdY">
-                                                <div class="short-sha">
-                                                    <span class="lhtyul-0 kKGFPf">6cd03c</span>
-                                                </div>
-                                                <div class="change-commit">
-                                                    <a>Change Commit</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <span class="sc-1jra7eo-2 jPJNFw">Build Details</span>
                                 <div class="sc-1x4289u-0 kGRBkg  ">
                                     <div class="sc-1x4289u-1 gvlVyM">
@@ -73,25 +33,15 @@
                                                 <div class="njq98s-1 dFvCty selected " height="120" width="120" data-testid="platform-web">
                                                     <div class="sc-494z8g-0 sc-494z8g-1 jNaurA">
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="cn8m9v-2 bRBUrT" viewbox="0 0 691.79999 491.37192">
-                                                                <g id="g1027" stroke="none" fill="#000000" transform="matrix(0.1,0,0,-0.1,-276.2,574.81291)">
-                                                                <path id="path1023" d="m 7840,5740 c -378,-30 -695,-166 -931,-400 -243,-241 -359,-535 -359,-908 0,-558 229,-948 740,-1257 130,-78 307,-163 613,-295 417,-179 572,-264 671,-370 122,-131 156,-340 79,-500 -15,-31 -54,-83 -89,-118 -118,-119 -304,-182 -535,-182 -390,0 -681,160 -915,506 -32,46 -61,84 -65,84 -9,0 -770,-439 -786,-454 -10,-9 -2,-30 37,-94 304,-512 779,-812 1421,-898 168,-23 483,-22 644,0 404,57 707,191 942,419 250,241 373,553 373,944 0,250 -41,445 -134,638 -64,132 -128,221 -238,333 -211,214 -484,376 -1029,610 -412,177 -550,253 -641,350 -87,93 -124,202 -116,338 7,108 37,181 103,252 95,103 205,146 375,145 193,0 318,-50 445,-178 45,-44 103,-115 130,-158 31,-49 54,-76 62,-73 26,11 753,481 753,488 0,4 -37,62 -82,130 -96,144 -269,324 -388,403 -220,146 -455,221 -765,244 -152,12 -172,12 -315,1 z"></path>
-                                                                <path id="path1025" d="m 4727,3923 -3,-1768 -22,-83 c -29,-109 -63,-174 -123,-234 -84,-84 -192,-119 -372,-120 -257,-1 -411,108 -590,414 -29,48 -55,87 -58,86 -4,-2 -185,-111 -402,-242 l -395,-240 30,-60 c 179,-357 489,-627 862,-751 394,-131 900,-119 1271,30 445,180 706,552 775,1105 6,56 10,681 10,1857 v 1773 h -490 -489 z"></path>
-                                                                </g>
-                                                            </svg>
                                                         </div>
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
-                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">Web</label>
+                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">H5网页</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="njq98s-1 dFvCty  " height="120" width="120" data-testid="platform-ios">
                                                     <div class="sc-494z8g-0 sc-494z8g-1 jNaurA">
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="cn8m9v-1 fARdPc" viewbox="0 0 512 512">
-                                                                <path d="M349.13 136.86c-40.32 0-57.36 19.24-85.44 19.24-28.79 0-50.75-19.1-85.69-19.1-34.2 0-70.67 20.88-93.83 56.45-32.52 50.16-27 144.63 25.67 225.11 18.84 28.81 44 61.12 77 61.47h.6c28.68 0 37.2-18.78 76.67-19h.6c38.88 0 46.68 18.89 75.24 18.89h.6c33-.35 59.51-36.15 78.35-64.85 13.56-20.64 18.6-31 29-54.35-76.19-28.92-88.43-136.93-13.08-178.34-23-28.8-55.32-45.48-85.79-45.48z"></path>
-                                                                <path d="M340.25 32c-24 1.63-52 16.91-68.4 36.86-14.88 18.08-27.12 44.9-22.32 70.91h1.92c25.56 0 51.72-15.39 67-35.11 14.72-18.77 25.88-45.37 21.8-72.66z"></path>
-                                                            </svg>
                                                         </div>
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
                                                             <label color="#445b78" class="sc-1bjkklg-0 APwJ">iOS</label>
@@ -101,12 +51,18 @@
                                                 <div class="njq98s-1 dFvCty  " height="120" width="120" data-testid="platform-android">
                                                     <div class="sc-494z8g-0 sc-494z8g-1 jNaurA">
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="cn8m9v-0 gocQPd" viewbox="0 0 512 512">
-                                                                <path d="M380.91 199l42.47-73.57a8.63 8.63 0 00-3.12-11.76 8.52 8.52 0 00-11.71 3.12l-43 74.52c-32.83-15-69.78-23.35-109.52-23.35s-76.69 8.36-109.52 23.35l-43-74.52a8.6 8.6 0 10-14.88 8.64L131 199C57.8 238.64 8.19 312.77 0 399.55h512c-8.19-86.78-57.8-160.91-131.09-200.55zM138.45 327.65a21.46 21.46 0 1121.46-21.46 21.47 21.47 0 01-21.46 21.46zm235 0A21.46 21.46 0 11395 306.19a21.47 21.47 0 01-21.51 21.46z"></path>
-                                                            </svg>
                                                         </div>
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
                                                             <label color="#445b78" class="sc-1bjkklg-0 APwJ">Android</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="njq98s-1 dFvCty  " height="120" width="120" data-testid="platform-android">
+                                                    <div class="sc-494z8g-0 sc-494z8g-1 jNaurA">
+                                                        <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
+                                                        </div>
+                                                        <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
+                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">小程序</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -128,25 +84,6 @@
                                                 </div></span></span></span>
                                                 <div class="sc-1aswxgt-0 eHlzTH" size="16">
                                                     <ion-icon icon="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'&gt;&lt;title&gt;Chevron Down&lt;/title&gt;&lt;path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M112 184l144 144 144-144' class='ionicon-fill-none'/&gt;&lt;/svg&gt;" role="img" class="md hydrated"></ion-icon>
-                                                </div>
-                                            </div>
-                                            <div class="sc-1ba767h-3 cvdWdR inactive" data-testid="options-container">
-                                                <div class="sc-1ba767h-5 fTNGtK">
-                                                    <div class="option selected" data-testid="select-dropdown-option">
-                                                        <span class="build-stack-text">Linux - 2020.11<span class="sc-1qhwasc-0 lgUShp"><span class="build-stack-pill">
-                                                                    <div color="blue" class="sc-1wxqx4x-0 fZSlbY  ">
-                                                                        <span class="lhtyul-0 kKGFPf pill-label">Latest</span>
-                                                        </div></span></span></span>
-                                                        <div class="sc-1aswxgt-0 eHlzTH" size="16">
-                                                            <ion-icon icon="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'&gt;&lt;title&gt;Checkmark&lt;/title&gt;&lt;path stroke-linecap='round' stroke-linejoin='round' d='M416 128L192 384l-96-96' class='ionicon-fill-none ionicon-stroke-width'/&gt;&lt;/svg&gt;" role="img" class="md hydrated"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                    <div class="option " data-testid="select-dropdown-option">
-                                                        <span class="build-stack-text">Linux - 2020.09</span>
-                                                    </div>
-                                                    <div class="option " data-testid="select-dropdown-option">
-                                                        <span class="build-stack-text">Linux - 2020.06</span>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
