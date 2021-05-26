@@ -62,16 +62,40 @@ export const constantRoutes = [
         meta: { title: '创建应用', icon: 'fas fa-chalkboard', noCache: true, affix: true }
       },
       {
+        path: '/build/connectGit',
+        component: (resolve) => require(['@/views/dashboard/connectGit'], resolve),
+        name: '连接gitlab账号',
+        meta: { title: '连接gitlab账号', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
         path: '/build/overview',
         component: (resolve) => require(['@/views/dashboard/overview'], resolve),
         name: '组件空间',
         meta: { title: '组件空间', icon: 'fas fa-chalkboard', noCache: true, affix: true }
       },
       {
-        path: '/build/connectGit',
-        component: (resolve) => require(['@/views/dashboard/connectGit'], resolve),
-        name: '连接gitlab账号',
-        meta: { title: '连接gitlab账号', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+        path: '/build/information',
+        component: (resolve) => require(['@/views/dashboard/information'], resolve),
+        name: '项目信息',
+        meta: { title: '项目信息', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/build/deploy',
+        component: (resolve) => require(['@/views/dashboard/deploy'], resolve),
+        name: '发布构建',
+        meta: { title: '容器配置', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/build/gitlab',
+        component: (resolve) => require(['@/views/dashboard/gitlab'], resolve),
+        name: '仓库配置',
+        meta: { title: '容器配置', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/build/container',
+        component: (resolve) => require(['@/views/dashboard/container'], resolve),
+        name: '容器配置',
+        meta: { title: '容器配置', icon: 'fas fa-chalkboard', noCache: true, affix: true }
       }
     ]
   },

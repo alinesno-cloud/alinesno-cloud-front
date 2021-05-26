@@ -110,9 +110,10 @@
 
     .item-title {
         font-size: 14px;
-        font-weight: bold;
+        font-weight: 500;
         color: rgba(0, 0, 0, 0.85);
         font-family: 'PingFangSC-Medium';
+        line-height: 2;
     }
 
     .item-desc {

@@ -89,6 +89,24 @@
                                         Menu
                                     </div>
                                 </div>
+                                <div class="njq98s-1 hrzERy" height="140" width="120">
+                                    <div class="sc-4eglrx-0 uFTAi"></div>
+                                    <div class="njq98s-0 cIOlFt">
+                                        Tabs
+                                    </div>
+                                </div>
+                                <div class="njq98s-1 hrzERy  " height="140" width="120">
+                                    <div class="sc-4eglrx-0 emjNvs"></div>
+                                    <div class="njq98s-0 cIOlFt">
+                                        List
+                                    </div>
+                                </div>
+                                <div class="njq98s-1 hrzERy  " height="140" width="120">
+                                    <div class="sc-4eglrx-0 cnMQuN"></div>
+                                    <div class="njq98s-0 cIOlFt">
+                                        Menu
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -99,6 +117,24 @@
                             </div>
                             <div class="njq98s-2 kxsIQe">
                                 <div class="njq98s-1 dFvCty selected " height="120" width="120">
+                                    <div class="sc-4eglrx-2 jjwNqB active">
+                                        <div class="sc-4eglrx-1 emvLjq angular"></div>
+                                        <h5>Angular</h5>
+                                    </div>
+                                </div>
+                                <div class="njq98s-1 dFvCty  " height="120" width="120">
+                                    <div class="sc-4eglrx-2 jjwNqB">
+                                        <div class="sc-4eglrx-1 emvLjq react"></div>
+                                        <h5>React</h5>
+                                    </div>
+                                </div>
+                                <div class="njq98s-1 dFvCty  " height="120" width="120">
+                                    <div class="sc-4eglrx-2 jjwNqB">
+                                        <div class="sc-4eglrx-1 emvLjq vue"></div>
+                                        <h5>Vue</h5>
+                                    </div>
+                                </div>
+                                <div class="njq98s-1 dFvCty" height="120" width="120">
                                     <div class="sc-4eglrx-2 jjwNqB active">
                                         <div class="sc-4eglrx-1 emvLjq angular"></div>
                                         <h5>Angular</h5>

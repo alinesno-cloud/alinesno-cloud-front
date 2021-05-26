@@ -1,28 +1,36 @@
 <template>
-<div>
+<div class="sidebar-nav">
     <el-menu default-active="1-4-1" class="el-menu-vertical-demo" :collapse="isCollapse">
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-location"></i>
-          <span slot="title">导航一</span>
-        </template>
-        <el-menu-item-group>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-      </el-menu-item>
+      <router-link to="/build/overview">
+          <el-menu-item index="/build/overview">
+            <i class="el-icon-menu"></i>
+            <span slot="title">概览</span>
+          </el-menu-item>
+      </router-link>
+      <router-link to="/build/gitlab">
+          <el-menu-item index="3">
+            <i class="el-icon-document"></i>
+            <span slot="title">仓库配置</span>
+          </el-menu-item>
+      </router-link>
+      <router-link to="/build/container">
+          <el-menu-item index="4">
+            <i class="el-icon-setting"></i>
+            <span slot="title">容器配置</span>
+          </el-menu-item>
+      </router-link>
+      <router-link to="/build/information">
+          <el-menu-item index="/build/information">
+            <i class="el-icon-setting"></i>
+            <span slot="title">基本信息</span>
+          </el-menu-item>
+      </router-link>
+      <router-link to="/build/deploy">
+          <el-menu-item index="6">
+            <i class="el-icon-document"></i>
+            <span slot="title">发布构建</span>
+          </el-menu-item>
+      </router-link>
     </el-menu>
 </div>
 </template>
@@ -49,6 +57,17 @@
   .el-menu-vertical-demo:not(.el-menu--collapse) {
       width: 200px;
       min-height: 400px;
+  }
+
+  .sidebar-nav {
+      float: left;
+      width: 200px;
+      position: fixed;
+      height: 100%;
+      border-right: 1px solid #e6e6e6;
+  }
+  .el-menu-item{
+      font-size: 12px;
   }
 </style>
 

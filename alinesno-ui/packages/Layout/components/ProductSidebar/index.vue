@@ -50,8 +50,9 @@
       height: 100%;
       width: 60px;
       border-right: 1px solid #e6e6e6;
-      margin-top: 50px;
+      padding-top: 50px;
       overflow: hidden;
+      position: fixed;
   }
 </style>
 

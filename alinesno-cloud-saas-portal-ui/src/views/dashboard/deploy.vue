@@ -1,19 +1,19 @@
 <template>
     <div>
         <overview-nav />
-        <overview-main />
+        <deploy-main />
     </div>
 </template>
 
 <script>
 
 import OverviewNav from './overviewNav'
-import OverviewMain from './overviewMain'
+import DeployMain from './deployMain'
 
 export default {
     components: {
         OverviewNav ,
-        OverviewMain
+        DeployMain
     },
 };
 </script>

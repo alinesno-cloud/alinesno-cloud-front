@@ -1,19 +1,19 @@
 <template>
 <div class="top-headers">
-    <div class="header-logo-bar">
+    <router-link tag="div" class="header-logo-bar" to="/index">
         <button class="header-logo" data-spm-click="gostr=/aliyun;locaid=ddock">
             <img src="http://training-static.linesno.com/fox_cloud/fox_header.png" style="position: absolute;width: 40px;top: 5px;left: 10px;">
         </button>
         <a title="新狐云数字化平台" target="_self" class="header-logo-label">
             <span>新狐云数字化平台</span>
         </a>
-    </div>
+    </router-link>
     <div class="">
         <div class=""></div>
     </div>
     <nav class="CB-gKhVFp header-text">
         <div class="CB-qpwBh">
-            <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >开发手册</a>
+            <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/index">控制台</router-link>
         </div>
         <div class="CB-qpwBh">
             <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >项目规范</a>
