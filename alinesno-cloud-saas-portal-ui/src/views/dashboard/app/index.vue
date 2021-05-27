@@ -2,8 +2,8 @@
     <div class="rl31dg-2 iKCdHH">
         <div class="rl31dg-3 fCytZy">
             <div class="sc-1d9uflq-1 kjzgGw">
-                <h1 class="jc6i63-0 sc-1d9uflq-2 cmoiYo">创建一个管理应用</h1>
-                <p class="djs2am-0 sc-1d9uflq-3 hVuhLe">基于服务化组件创建前后端分离，单体管理应用.</p>
+                <h1 class="jc6i63-0 sc-1d9uflq-2 cmoiYo">创建移动应用</h1>
+                <p class="djs2am-0 sc-1d9uflq-3 hVuhLe">移动应用包括H5、Android、IOS、微信小程序等.</p>
                 <div class="sc-494z8g-0 sc-494z8g-1 sc-4eglrx-3 fyoXML">
                     <div class="sc-4eglrx-4 hNEHOb">
                         <div class="sc-4eglrx-6 kTTBp">
@@ -37,84 +37,52 @@
                                     </div>
                                 </div>
                             </div>
-                            <component-attr />
+                            <app-attr />
                         </div>
                     </div>
                     <div class="sc-494z8g-0 sc-494z8g-2 jXsIvj">
                         <div class="sc-494z8g-0 sc-494z8g-1 gQtOCy">
                             <div class="sc-494z8g-0 sc-494z8g-2 sc-4eglrx-5 gjguTC">
-                                <label color="#616E7E" class="sc-1bjkklg-0 hDuZmn">选择应用模板</label>
-                            </div>
-                            <div class="njq98s-2 kxsIQe">
-                                <div class="njq98s-1 hrzERy  selected" height="140" width="120">
-                                    <div class="sc-4eglrx-0 cnMQuN"></div>
-                                    <div class="njq98s-0 cIOlFt">
-                                        空白系统模板
-                                    </div>
-                                </div>
-                                <div class="njq98s-1 hrzERy" height="140" width="120">
-                                    <div class="sc-4eglrx-0 uFTAi"></div>
-                                    <div class="njq98s-0 cIOlFt">
-                                        通用权限模板
-                                    </div>
-                                </div>
-                                <div class="njq98s-1 hrzERy  " height="140" width="120">
-                                    <div class="sc-4eglrx-0 emjNvs"></div>
-                                    <div class="njq98s-0 cIOlFt">
-                                        集团权限模板
-                                    </div>
-                                </div>
-                                <div class="njq98s-1 hrzERy  " height="140" width="120">
-                                    <div class="sc-4eglrx-0 cnMQuN"></div>
-                                    <div class="njq98s-0 cIOlFt">
-                                        合同管理模板
-                                    </div>
-                                </div>
-                                <div class="njq98s-1 hrzERy" height="140" width="120">
-                                    <div class="sc-4eglrx-0 uFTAi"></div>
-                                    <div class="njq98s-0 cIOlFt">
-                                        移动溯源模板
-                                    </div>
-                                </div>
-                                <div class="njq98s-1 hrzERy  " height="140" width="120">
-                                    <div class="sc-4eglrx-0 emjNvs"></div>
-                                    <div class="njq98s-0 cIOlFt">
-                                        矫正管理平台模板
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sc-494z8g-0 sc-494z8g-2 jXsIvj" style="margin-top:20px;">
-                        <div class="sc-494z8g-0 sc-494z8g-1 gQtOCy">
-                            <div class="sc-494z8g-0 sc-494z8g-2 sc-4eglrx-5 gjguTC">
-                                <label color="#616E7E" class="sc-1bjkklg-0 hDuZmn">配套移动应用(推荐)</label>
+                                <label color="#616E7E" class="sc-1bjkklg-0 hDuZmn">Pick a template</label>
                             </div>
                             <div class="njq98s-2 kxsIQe">
                                 <div class="njq98s-1 hrzERy selected " height="140" width="120">
                                     <div class="sc-4eglrx-0 uFTAi"></div>
                                     <div class="njq98s-0 cIOlFt">
-                                        矫正移动端
+                                        基础模板
                                     </div>
                                 </div>
                                 <div class="njq98s-1 hrzERy  " height="140" width="120">
                                     <div class="sc-4eglrx-0 emjNvs"></div>
                                     <div class="njq98s-0 cIOlFt">
-                                        溯源移动端
+                                        电商模板
                                     </div>
                                 </div>
                                 <div class="njq98s-1 hrzERy  " height="140" width="120">
                                     <div class="sc-4eglrx-0 cnMQuN"></div>
                                     <div class="njq98s-0 cIOlFt">
-                                        在线移动打印
+                                        点餐模板
+                                    </div>
+                                </div>
+                                <div class="njq98s-1 hrzERy" height="140" width="120">
+                                    <div class="sc-4eglrx-0 uFTAi"></div>
+                                    <div class="njq98s-0 cIOlFt">
+                                        企业展示
+                                    </div>
+                                </div>
+                                <div class="njq98s-1 hrzERy  " height="140" width="120">
+                                    <div class="sc-4eglrx-0 emjNvs"></div>
+                                    <div class="njq98s-0 cIOlFt">
+                                        视频直播
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="sc-4eglrx-7 iHjquI">
-                        <router-link to="/index" tag="button" class="sc-4eglrx-8 dsYJZf">取消</router-link>
-                        <router-link to="/build/connectGit" tag="button" class="aap711-0 LrZpX  dash-color-primary dash-size-large" font-weight="700">
+                        <button class="sc-4eglrx-8 dsYJZf">Cancel</button>
+
+                        <router-link to="/build/app/gitlab" tag="button" class="aap711-0 LrZpX  dash-color-primary dash-size-large" font-weight="700">
                             <span>下一步</span>
                         </router-link>
                     </div>
@@ -125,11 +93,11 @@
 </template>
 
 <script>
-import componentAttr from './component/attribute'
+import AppAttr from './attribute'
 
 export default {
     components: {
-        componentAttr
+        AppAttr
     },
 };
 </script>
@@ -137,6 +105,10 @@ export default {
 <style scoped lang="scss">
 
 @import '@/resources/css/build/component.scss';
+
+.iHjquI {
+    margin-top: 30px;
+}
 
 </style>
 

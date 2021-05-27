@@ -11,9 +11,8 @@
 
         <el-row :gutter="20">
         <el-col :span="16">
-        <h3 class="widget-title">我的导航</h3>
+        <h3 class="widget-title">我的应用</h3>
         <div class="widget-product-recent">
-            <h4 class="subtitle">最近访问</h4>
             <div dir="ltr" role="row" class="next-row next-row-wrap" style="margin-left: -4px; margin-right: -4px; margin-bottom: -8px;">
                 <div dir="ltr" role="gridcell" class="next-col next-col-4" >
                     <a class="tag" target="_blank" href="//iot.console.aliyun.com" data-spm-click="gostr=/aliyun-console.home-product-recent.recentlist;locaid=dre0;title=物联网平台" rel="noreferrer"><span>物联网平台</span></a>
@@ -52,7 +51,6 @@
                     <a class="tag" target="_blank" href="//yundun.console.aliyun.com/?p=sas" data-spm-click="gostr=/aliyun-console.home-product-recent.recentlist;locaid=dre11;title=云安全中心（态势感知）" rel="noreferrer"><span>云安全中心（态势感知）</span></a>
                 </div>
             </div>
-            <h4 class="subtitle">保有资源的云产品<i aria-haspopup="true" aria-expanded="false" class="next-icon next-icon-help next-xs" style="font-size: 0px; vertical-align: middle; margin: -1px 4px 0px;"></i></h4>
             <div dir="ltr" role="row" class="next-row next-row-wrap" style="margin-left: -4px; margin-right: -4px; margin-bottom: -8px;">
                 <div dir="ltr" role="gridcell" class="next-col next-col-4" >
                     <a class="tag" target="_blank" href="//sls.console.aliyun.com" data-spm-click="gostr=/aliyun-console.home-product-recent.recentlist;locaid=dreta0;title=日志服务" rel="noreferrer"><span>日志服务</span></a>
@@ -143,7 +141,7 @@
         <el-row :gutter="20">
         <el-col :span="16">
 			<div class="WidgetHomeProductMy-detailContainer-3W8nd">
-			   <h3 class="WidgetHomeProductMy-opendProductTitle-3NDOg"><span tooltipicon="help" class="nb-rc-text product-title"><span class="the-text">已开通的云产品</span><span class="nb-rc-text-tooltip" aria-haspopup="true" aria-expanded="false"><i class="v2-0-1-icon v2-0-1-icon-question-circle v2-0-1-medium"></i></span></span></h3>
+			   <h3 class="WidgetHomeProductMy-opendProductTitle-3NDOg"><span tooltipicon="help" class="nb-rc-text product-title"><span class="the-text">已开通组件</span><span class="nb-rc-text-tooltip" aria-haspopup="true" aria-expanded="false"><i class="v2-0-1-icon v2-0-1-icon-question-circle v2-0-1-medium"></i></span></span></h3>
 			   <div style="position: relative; overflow: hidden; width: 100%; height: 182px;">
 				<div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
 				 <ul class="product_list thm-uglier">
@@ -260,11 +258,12 @@ export default {
 }
 
 .widget-title {
-    margin: -16px 0 0;
     font-size: 14px;
     color: #333;
-    line-height: 44px;
+    line-height: 24px;
     font-weight: 400;
+//    float: left;
+    width: 100%;
 }
 
 .app-icon {
@@ -287,6 +286,7 @@ export default {
     padding-left: 20px !important ;
     padding-right: 20px !important ;
     border: var(--card-border-width,1px) var(--card-border-style,solid) var(--card-border-color,#e3e4e6);
+    height: 312px;
 }
 
 .el-col-8 {

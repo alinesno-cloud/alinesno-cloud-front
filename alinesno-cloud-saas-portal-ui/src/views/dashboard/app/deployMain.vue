@@ -25,7 +25,7 @@
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
                                                         </div>
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
-                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">本地jar包</label>
+                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">H5</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -34,7 +34,7 @@
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
                                                         </div>
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
-                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">Docker平台</label>
+                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">IOS</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -43,7 +43,16 @@
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
                                                         </div>
                                                         <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
-                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">K8S容器</label>
+                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">Android</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="njq98s-1 dFvCty  " height="120" width="120" data-testid="platform-android">
+                                                    <div class="sc-494z8g-0 sc-494z8g-1 jNaurA">
+                                                        <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
+                                                        </div>
+                                                        <div class="sc-494z8g-0 sc-494z8g-2 ggtYoZ">
+                                                            <label color="#445b78" class="sc-1bjkklg-0 APwJ">小程序</label>
                                                         </div>
                                                     </div>
                                                 </div>

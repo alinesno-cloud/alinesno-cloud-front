@@ -48,14 +48,6 @@
     width: 32px;
     height: 32px;
 }
-.jPJNFw {
-    text-transform: uppercase;
-    font-size: 11px;
-    font-weight: lighter;
-    line-height: 12px;
-    letter-spacing: 2px;
-    color: rgb(103, 111, 128);
-}
 .kGRBkg {
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -71,7 +63,7 @@
     margin-bottom: 4px;
 }
 .YjUSS {
-    margin-top: 4px;
+    margin: 10px 0px;
 }
 .croJar {
     display: flex;
@@ -167,20 +159,8 @@
     margin-right: 1.25rem;
 }
 .dFvCty {
-    width: 120px;
-    height: 120px;
-    max-width: 120px;
-    max-height: 120px;
-    box-shadow: rgb(0 13 36 / 10%) 0px 2px 8px, rgb(0 13 36 / 4%) 0px 2px 4px;
-    border: 2px solid transparent;
-    border-radius: 8px;
-}
-
-.dFvCty {
-    width: 120px;
-    height: 120px;
-    max-width: 120px;
-    max-height: 120px;
+    width: 150px;
+    height: 80px;
     box-shadow: rgb(0 13 36 / 10%) 0px 2px 8px, rgb(0 13 36 / 4%) 0px 2px 4px;
     border: 2px solid transparent;
     border-radius: 8px;
@@ -271,7 +251,7 @@ a {
     text-transform: uppercase;
     font-size: 11px;
     font-weight: lighter;
-    line-height: 12px;
+    line-height: 15px;
     letter-spacing: 2px;
     color: rgb(103, 111, 128);
 }
@@ -338,10 +318,6 @@ svg:not(:root) {
 .cZlSjT.dash-size-regular .sc-1ngwmbv-1 {
     font-size: 14px;
 }
-.jPmxjq {
-    color: rgb(47, 47, 47);
-    font-weight: 600;
-}
 
 .dzXnzX.dzXnzX.dzXnzX .sub-text {
     font-size: 14px;
@@ -388,11 +364,11 @@ label {
     padding: 8px 10px;
 }
 .LrZpX.dash-color-primary {
-    background-color: rgb(56, 128, 255);
+    background-color: #005bd4 ;
     color: rgb(255, 255, 255);
+    width: 80px ;
 }
 .LrZpX {
-    font-family: Inter, "Inter UI", Helvetica, Arial, sans-serif;
     display: inline-flex;
     flex-wrap: nowrap;
     -webkit-box-pack: center;
@@ -407,7 +383,6 @@ label {
     letter-spacing: -0.01em;
     transition: all 0.2s ease 0s;
     white-space: nowrap;
-    box-shadow: rgb(0 16 46 / 12%) 0px 2px 6px, rgb(0 0 0 / 8%) 0px 1px 3px;
 }
 
 .LrZpX.dash-color-danger {
@@ -481,6 +456,7 @@ svg:not(:root) {
 .jPmxjq {
     color: rgb(47, 47, 47);
     font-weight: 600;
+    line-height: 2 ;
 }
 
 .gZwepA {

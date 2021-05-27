@@ -6,7 +6,9 @@
                 <header class="sc-1djcgio-0 kGnRig border">
                     <div class="sc-1djcgio-3 dXewuO">
                         <div class="title">
-                            <span size="9" font-weight="bold" letter-spacing="tight" class="sc-1j7hf9c-0 kgZwum o1dmim-0 lhVMEx">矫正项目管理系统</span>
+                            <span size="9" font-weight="bold" letter-spacing="tight" class="sc-1j7hf9c-0 kgZwum o1dmim-0 lhVMEx">
+                                矫正应用
+                            </span>
                             <div class="sc-1djcgio-1 gmJZOP">
                                 <div class="sc-1hxcl3c-1 bRiPhV">
                                     <span class="title">项目ID</span>

@@ -52,6 +52,68 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/build/things',
+    component: BaseLayout,
+    children: [
+      {
+        path: '/build/things/index',
+        component: (resolve) => require(['@/views/dashboard/things/index'], resolve),
+        name: '创建物联网应用',
+        meta: { title: '创建物联网应用', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      }
+    ]
+  },
+  {
+    path: '/build/datawork',
+    component: BaseLayout,
+    children: [
+      {
+        path: '/build/datawork/index',
+        component: (resolve) => require(['@/views/dashboard/datawork/index'], resolve),
+        name: '创建大数据应用',
+        meta: { title: '创建大数据应用', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      }
+    ]
+  },
+  {
+    path: '/build/app',
+    component: BaseLayout,
+    children: [
+      {
+        path: '/build/app/index',
+        component: (resolve) => require(['@/views/dashboard/app/index'], resolve),
+        name: '创建移动应用',
+        meta: { title: '创建移动应用', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/build/app/gitlab',
+        component: (resolve) => require(['@/views/dashboard/app/gitlab'], resolve),
+        name: '连接仓库'
+      },
+      {
+        path: '/build/app/model',
+        component: (resolve) => require(['@/views/dashboard/app/model'], resolve),
+        name: '模型管理'
+      },
+      {
+        path: '/build/app/overview',
+        component: (resolve) => require(['@/views/dashboard/app/overview'], resolve),
+        name: '组件空间',
+        meta: { title: '组件空间', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/build/app/config',
+        component: (resolve) => require(['@/views/dashboard/app/config'], resolve),
+        name: '配置管理'
+      },
+      {
+        path: '/build/app/deploy',
+        component: (resolve) => require(['@/views/dashboard/app/deploy'], resolve),
+        name: '应用发布'
+      }
+    ]
+  },
+  {
     path: '/build',
     component: BaseLayout,
     children: [

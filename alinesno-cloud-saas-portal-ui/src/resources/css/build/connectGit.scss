@@ -15,6 +15,7 @@ label {
 .cpSike.dash-size-regular {
     font-size: 13px;
     padding: 8px 10px;
+    cursor: pointer ;
 }
 .cpSike.dash-color-secondary {
     background-color: rgb(255, 255, 255);
@@ -80,17 +81,11 @@ label {
     padding: 20px;
     border-radius: 8px;
     background-color: rgb(246, 248, 252);
-    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 .clzwGX {
     display: flex;
     margin-right: 1rem;
-    flex-direction: column;
-}
-.cdyGWv {
-    display: flex;
-    -webkit-box-flex: 0;
-    flex-grow: 0;
     flex-direction: column;
 }
 .fBDhon {
@@ -113,6 +108,8 @@ label {
 .LrZpX.dash-size-regular {
     font-size: 13px;
     padding: 8px 10px;
+    cursor: pointer ;
+    width: 80px;
 }
 .LrZpX.dash-color-primary {
     background-color: #005bd4;
@@ -219,6 +216,7 @@ img {
 }
 .sub-text {
     font-weight: 400;
+    line-height: 2;
 }
 .cZlSjT.dash-size-regular .sc-1ngwmbv-1 {
     font-size: 14px;
@@ -264,12 +262,6 @@ img {
     -webkit-box-pack: end;
     justify-content: flex-end;
 }
-.elwCEo .sc-1ngwmbv-4 {
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-}
 .gWayKh {
     overflow: hidden;
     -webkit-box-flex: 1;
@@ -306,6 +298,9 @@ img {
     display: flex;
     flex-direction: column;
     z-index: 1;
+    max-width: 980px;
+    margin: auto;
+    padding-top: 30px;
 }
 .fCytZy {
     overflow: auto;

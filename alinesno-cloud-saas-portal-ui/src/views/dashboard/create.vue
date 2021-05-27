@@ -1,76 +1,92 @@
 <template>
 <el-row :gutter="20">
 <el-col :span="24">
-<h3 class="widget-title">创建业务</h3>
+<h3 class="widget-title">平台业务场景</h3>
 <div class="WidgetHomeProductMy-detailContainer-3W8nd">
     <div style="position: relative; overflow: hidden; width: 100%;height: 130px;">
         <div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
             <ul class="product_list thm-uglier">
                 <li>
                 <router-link to="/build/component" tag="div" class="create-item">
-                    <div>
-                        <img src="https://gw.alicdn.com/tfs/TB10uW.CNjaK1RjSZFAXXbdLFXa-112-112.png" class="item-image" />
+                <div>
+                    <img src="https://gw.alicdn.com/tfs/TB10uW.CNjaK1RjSZFAXXbdLFXa-112-112.png" class="item-image" />
+                </div>
+                <div class="item-cont">
+                    <div class="item-title">
+                        业务管理应用
                     </div>
-                    <div class="item-cont">
-                        <div class="item-title">
-                            创建业务管理后台
-                        </div>
-                        <div class="item-desc">
-                            适用于需要审批的场景
-                        </div>
+                    <div class="item-desc">
+                        业务管理平台和后台快速创建
                     </div>
-                    <div>
-                        <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
-                    </div>
+                </div>
+                <div>
+                    <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
+                </div>
                 </router-link>
-                <router-link to="/build/component" tag="div" class="create-item">
-                    <div>
-                        <img src="https://gw.alicdn.com/tfs/TB1Y8PlCNjaK1RjSZKzXXXVwXXa-112-112.png" class="item-image" />
+                <router-link to="/build/app/index" tag="div" class="create-item">
+                <div>
+                    <img src="https://gw.alicdn.com/tfs/TB1Y8PlCNjaK1RjSZKzXXXVwXXa-112-112.png" class="item-image" />
+                </div>
+                <div class="item-cont">
+                    <div class="item-title">
+                        业务App前端
                     </div>
-                    <div class="item-cont">
-                        <div class="item-title">
-                            创建业务App前端
-                        </div>
-                        <div class="item-desc">
-                            适用于需要审批的场景
-                        </div>
+                    <div class="item-desc">
+                        移动端业务快速开发平台
                     </div>
-                    <div>
-                        <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
-                    </div>
+                </div>
+                <div>
+                    <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
+                </div>
                 </router-link>
-                <router-link to="/build/component" tag="div" class="create-item">
-                    <div>
-                        <img src="https://gw.alicdn.com/tfs/TB1cbCYCPTpK1RjSZKPXXa3UpXa-112-112.png" class="item-image" />
+                <router-link to="/build/datawork/index" tag="div" class="create-item">
+                <div>
+                    <img src="https://gw.alicdn.com/tfs/TB1cbCYCPTpK1RjSZKPXXa3UpXa-112-112.png" class="item-image" />
+                </div>
+                <div class="item-cont">
+                    <div class="item-title">
+                        大数据应用
                     </div>
-                    <div class="item-cont">
-                        <div class="item-title">
-                            创建大数据应用
-                        </div>
-                        <div class="item-desc">
-                            适用于需要审批的场景
-                        </div>
+                    <div class="item-desc">
+                        在线大数据开发采集和管理平台
                     </div>
-                    <div>
-                        <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
-                    </div>
+                </div>
+                <div>
+                    <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
+                </div>
                 </router-link>
-                <router-link to="/build/component" tag="div" class="create-item">
-                    <div>
-                        <img src="https://gw.alicdn.com/tfs/TB1FNG.CMHqK1RjSZFgXXa7JXXa-102-102.png" class="item-image" />
+                <router-link to="/build/things/index" tag="div" class="create-item">
+                <div>
+                    <img src="https://gw.alicdn.com/tfs/TB1FNG.CMHqK1RjSZFgXXa7JXXa-102-102.png" class="item-image" />
+                </div>
+                <div class="item-cont">
+                    <div class="item-title">
+                        物联网应用(内测中)
                     </div>
-                    <div class="item-cont">
-                        <div class="item-title">
-                            创建物联网应用
-                        </div>
-                        <div class="item-desc">
-                            适用于需要审批的场景
-                        </div>
+                    <div class="item-desc">
+                        低成本、快速地实现“设备-设备”、“设备-用户应用”
                     </div>
-                    <div>
-                        <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
-                    </div>
+                </div>
+                <div>
+                    <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
+                </div>
                 </router-link>
+                <!-- <router-link to="/build/workflow/index" tag="div" class="create-item">
+                <div>
+                    <img src="https://gw.alicdn.com/tfs/TB1FNG.CMHqK1RjSZFgXXa7JXXa-102-102.png" class="item-image" />
+                </div>
+                <div class="item-cont">
+                    <div class="item-title">
+                        创建工作流应用
+                    </div>
+                    <div class="item-desc">
+                        适用需要走审批的工作流业务场景
+                    </div>
+                </div>
+                <div>
+                    <img width="16" src="https://gw.alicdn.com/tfs/TB1uQuzN7Y2gK0jSZFgXXc5OFXa-128-128.png" />
+                </div>
+                </router-link> -->
                 </li>
             </ul>
         </div>

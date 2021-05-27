@@ -50,7 +50,7 @@
                                         </div>
                                     </div>
                                     <div class="sc-1ngwmbv-5 ghKyco">
-                                        <router-link to="/build/overview" tag="button" class="aap711-0 LrZpX  dash-color-primary dash-size-regular" font-weight="700">
+                                        <router-link to="/build/app/overview" tag="button" class="aap711-0 LrZpX  dash-color-primary dash-size-regular" font-weight="700">
                                             <span> &nbsp;&nbsp; 选择&nbsp;&nbsp; </span>
                                         </router-link>
                                     </div>
