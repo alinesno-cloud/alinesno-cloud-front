@@ -1,6 +1,7 @@
 .container-main{
-    float:right ;
     width: calc(100% - 210px) ;
+    max-width: 980px;
+    margin: auto;
 }
 
 .bTZuBz {
@@ -31,7 +32,7 @@
 }
 
 .kEITgy .account-type-selector {
-    display: flex;
+    // display: flex;
     background: rgb(255, 255, 255);
     -webkit-box-pack: center;
     justify-content: center;
@@ -57,7 +58,7 @@
 }
 
 .kEITgy .account-type-selector > ul {
-    box-shadow: rgb(0 13 36 / 0%) 0px 10px 20px 0px, rgb(0 13 36 / 10%) 0px 2px 8px 0px;
+    // box-shadow: rgb(0 13 36 / 0%) 0px 10px 20px 0px, rgb(0 13 36 / 10%) 0px 2px 8px 0px;
     border-radius: 6px;
     list-style: none;
     display: flex;
@@ -71,7 +72,6 @@
 
 .kEITgy .account-type-selector > ul > li {
     cursor: pointer;
-    flex: 1 1 0%;
     height: 100%;
     position: relative;
     z-index: 1;
@@ -129,7 +129,6 @@
 }
 
 .LrZpX {
-    font-family: Inter, "Inter UI", Helvetica, Arial, sans-serif;
     display: inline-flex;
     flex-wrap: nowrap;
     -webkit-box-pack: center;
@@ -149,4 +148,11 @@
 
 .LrZpX.dash-size-regular {
     padding: 8px 10px;
+}
+
+.kEITgy .account-type-selector > ul > li ul.features li {
+    color: rgb(59, 67, 77);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.8;
 }

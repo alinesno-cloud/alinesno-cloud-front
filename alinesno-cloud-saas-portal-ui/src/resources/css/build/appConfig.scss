@@ -1,0 +1,856 @@
+@import '@/resources/css/fontawesome.scss';
+
+// @import url('https://www.apicloud.com/css/CADConfig.css') ;
+// @import url('https://www.apicloud.com/css/base.css') ;
+// @import url('https://www.apicloud.com/css/bootstrap.css') ;
+// @import url('https://www.apicloud.com/libs/webuploader/webuploader.css') ;
+
+.container-main{
+    width: calc(100% - 210px);
+    max-width: 980px;
+    margin: auto;
+}
+.webuploader-container {
+	position: relative;
+}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+    width: 100%;
+    height: 100%;
+    background: none;
+    padding: 0;
+    color: #4D7CB6;
+    display: block;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 13px;
+}
+.webuploader-pick-hover {
+	background: #00a2d4;
+}
+
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events:none;
+}
+
+.col-md-6 {
+    width: 50%;
+}
+
+.panel-CADConfig .row {
+    margin: 0;
+}
+
+.panel-CADConfig label.title {
+    font-size: 14px;
+    color: #252323;
+    margin-bottom: 22px;
+    display: block;
+}
+.panel-CADConfig label {
+    margin: 0;
+    padding: 0;
+}
+label {
+    font-weight: normal;
+}
+
+.panel-CADConfig .row {
+    margin: 0;
+}
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.upload-con-type.active {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    height: 100px;
+    display: block;
+}
+.panel-CADConfig .row {
+    margin: 0;
+}
+ 
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.btn-group-CADConfig .btn.active, .btn-group-CADConfig .btn:hover {
+    color: #fff;
+    background-color: #416B9E;
+}
+.btn-group-CADConfig .btn.first {
+    border-right: 1px solid #E7EAE9;
+}
+.btn-group>.btn:first-child {
+    margin-left: 0;
+}
+
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.btn-group-CADConfig .btn.last {
+    border-left: 1px solid #E7EAE9;
+}
+.btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group {
+    margin-left: -1px;
+}
+.btn-group-CADConfig .btn {
+    color: #8a8a8a;
+    width: 91px;
+    height: 34px;
+    background-color: #F4F6F4;
+    border: none;
+    font-size: 12px;
+    padding: 0 12px;
+    line-height: 34px;
+}
+.btn-group>.btn, .btn-group-vertical>.btn {
+    position: relative;
+    float: left;
+}
+
+input[type=file] {
+    display: block;
+}
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.panel-CADConfig label {
+    margin: 0;
+    padding: 0;
+}
+label {
+    font-weight: normal;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.panel-CADConfig {
+    padding: 0;
+}
+
+.padding-48 {
+    padding: 28px 0;
+}
+
+.panel-CADConfig label {
+    margin: 0;
+    padding: 0;
+}
+
+.panel-CADConfig label.title {
+    font-size: 14px;
+    color: #252323;
+    margin-bottom: 22px;
+    display: block;
+}
+
+.panel-CADConfig .row {
+    margin: 0;
+}
+
+.hide-file {
+    opacity: 0;
+    height: 0px;
+    width: 10px;
+}
+
+.label-tip {
+    color: #BEBEBF;
+    font-size: 12px;
+}
+
+.label-a-CAD {
+    cursor: pointer;
+    color: #4D7CB6 !important;
+    bottom: 18px;
+    margin: 0 auto;
+}
+
+.label-a-CAD:hover {
+    text-decoration: underline;
+}
+
+.btn-group-CADConfig .btn {
+    color: #8a8a8a;
+    width: 91px;
+    height: 34px;
+    background-color: #F4F6F4;
+    border: none;
+    font-size: 12px;
+    padding: 0 12px;
+    line-height: 34px;
+}
+
+.btn-group-CADConfig .btn.last {
+    border-left: 1px solid #E7EAE9;
+}
+
+.btn-group-CADConfig .btn.first {
+    border-right: 1px solid #E7EAE9;
+}
+
+.btn-group-CADConfig .btn.active,.btn-group-CADConfig .btn:hover {
+    color: #fff;
+    background-color: #416B9E;
+}
+
+#img-container-CADConfig {
+    margin: 0 auto;
+    height: 702px;
+    position: relative;
+}
+
+#upload-loading {
+    position: absolute;
+    z-index: 100;
+    width: 66px;
+    height: 66px;
+    left: 50%;
+    top: 50%;
+    margin-top: -33px;
+    margin-left: -33px;
+    background: #000 url(/img/cad-loading.gif) no-repeat center;
+    border-radius: 8px;
+    opacity: .3;
+    filter: alpha(opacity=30);
+}
+
+#upload-top-cover {
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    height: 100%;
+    z-index: 10;
+}
+
+#toggle-launch-cover {
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    height: 180px;
+    z-index: 10;
+}
+
+/*左侧的关键部分*/
+/*1.外框*/
+#img-container-CADConfig.dev_1080_1920 {
+    width: 362px;
+    background: url(/img/1080_1920_dev.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_1536_2048 {
+    width: 410px;
+    background: url(/img/1536_2048_dev.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_750_1334 {
+    width: 410px;
+    background: url(/img/750_1334_dev.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_640_1136 {
+    width: 330px;
+    background: url(/img/640_1136_dev.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_640_960 {
+    width: 330px;
+    background: url(/img/640_960_dev.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_1125_2436 {
+    width: 351px;
+    background: url(/img/1125_2436_dev.png) center center no-repeat;
+}
+
+#img-container-CADConfig .dev_1125_2436 {
+    position: absolute;
+    left: 0;
+    left: 0;
+    width: 351px;
+    background: url(/img/1125_2436_dev.png) center center no-repeat;
+    margin: 0 auto;
+    height: 702px;
+    position: relative;
+}
+
+/*横屏*/
+#img-container-CADConfig.dev_1080_1920_l {
+    width: 438px;
+    background: url(/img/screen/1080_1920_dev_l.png) center center no-repeat;
+    background-size: 100% auto;
+}
+
+#img-container-CADConfig.dev_1536_2048_l {
+    width: 438px;
+    background: url(/img/screen/1536_2048_dev_l.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_750_1334_l {
+    width: 438px;
+    background: url(/img/screen/750_1334_dev_l.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_640_1136_l {
+    width: 438px;
+    background: url(/img/screen/640_1136_dev_l.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_640_960_l {
+    width: 438px;
+    background: url(/img/screen/640_960_dev_l.png) center center no-repeat;
+}
+
+#img-container-CADConfig.dev_1125_2436_l {
+    width: 438px;
+    background: url(/img/screen/1125_2436_dev_l.png) center center no-repeat;
+}
+
+#img-container-CADConfig .dev_1125_2436_l {
+    position: absolute;
+    left: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 702px;
+    position: relative;
+    width: 438px;
+    background: url(/img/screen/1125_2436_dev_l.png) center center no-repeat;
+}
+
+/*2.状态栏*/
+#img-container-CADConfig .statusbar-img-container {
+    margin: 0 auto;
+    position: absolute;
+    display: none;
+    z-index: 2;
+}
+
+#img-container-CADConfig .statusbar-img-container.active {
+    display: block;
+}
+
+#img-container-CADConfig.dev_1080_1920 .statusbar-img-container {
+    /*width: 316px;*/
+    width: 310px;
+    height: 20px;
+    background: url(/img/1080_1920_sb.png) center center no-repeat;
+    left: 26px;
+    top: 67px;
+}
+
+#img-container-CADConfig.dev_1536_2048 .statusbar-img-container {
+    width: 326px;
+    height: 21px;
+    background: url(/img/1536_2048_sb.png) center center no-repeat;
+    left: 44px;
+    top: 130px;
+}
+
+#img-container-CADConfig.dev_750_1334 .statusbar-img-container {
+    width: 301px;
+    height: 21px;
+    background: url(/img/750_1334_sb.png) center center no-repeat;
+    left: 55px;
+    top: 83px;
+}
+
+#img-container-CADConfig.dev_640_1136 .statusbar-img-container {
+    width: 280px;
+    height: 18px;
+    background: url(/img/640_1136_sb.png) center center no-repeat;
+    left: 26px;
+    top: 104px;
+}
+
+#img-container-CADConfig.dev_640_960 .statusbar-img-container {
+    width: 284px;
+    height: 18px;
+    background: url(/img/640_960_sb.png) center center no-repeat;
+    left: 25px;
+    top: 138px;
+}
+
+#img-container-CADConfig.dev_1125_2436 .statusbar-img-container {
+    width: 304px;
+    height: 23px;
+    background: url(/img/1125_2436_sb.png) center center no-repeat;
+    left: 24px;
+    top: 22px;
+}
+
+/*横屏*/
+#img-container-CADConfig.dev_1080_1920_l .statusbar-img-container {
+    width: 360px;
+    height: 12px;
+    background: url(/img/screen/1080_1920_sb_l.png) center center no-repeat;
+    left: 33px;
+    top: 253px;
+}
+
+#img-container-CADConfig.dev_1536_2048_l .statusbar-img-container {
+    width: 349px;
+    height: 13px;
+    background: url(/img/screen/1536_2048_sb_l.png) center center no-repeat;
+    left: 42px;
+    top: 220px;
+}
+
+#img-container-CADConfig.dev_750_1334_l .statusbar-img-container {
+    width: 335px;
+    height: 12px;
+    background: url(/img/screen/750_1334_sb_l.png) center center no-repeat;
+    left: 51px;
+    top: 258px;
+}
+
+#img-container-CADConfig.dev_640_1136_l .statusbar-img-container {
+    width: 307px;
+    height: 12px;
+    background: url(/img/screen/640_1136_sb_l.png) center center no-repeat;
+    left: 64px;
+    top: 264px;
+}
+
+#img-container-CADConfig.dev_640_960_l .statusbar-img-container {
+    width: 283px;
+    height: 10px;
+    background: url(/img/screen/640_960_sb_l.png) center center no-repeat;
+    left: 78px;
+    top: 256px;
+}
+
+/*3.启动页*/
+#img-startpage-CADConfig {
+    position: absolute;
+    display: block;
+    border: none;
+    z-index: 1;
+}
+
+#img-container-CADConfig.dev_1080_1920 #img-startpage-CADConfig {
+    background: url(/img/1080_1920_sp.png) center center no-repeat;
+    background-size: contain;
+    width: 309px;
+    height: 548px;
+    left: 27px;
+    top: 69px;
+}
+
+#img-container-CADConfig.dev_1536_2048 #img-startpage-CADConfig {
+    background: url(/img/1536_2048_sp.png) center center no-repeat;
+    background-size: contain;
+    width: 324px;
+    height: 433px;
+    left: 44px;
+    top: 131px;
+}
+
+#img-container-CADConfig.dev_750_1334 #img-startpage-CADConfig {
+    background: url(/img/750_1334_sp.png) center center no-repeat;
+    width: 302px;
+    height: 534px;
+    left: 55px;
+    top: 84px;
+    background-size: contain;
+}
+
+#img-container-CADConfig.dev_640_1136 #img-startpage-CADConfig {
+    background: url(/img/640_1136_sp.png) center center no-repeat;
+    width: 276px;
+    height: 491px;
+    left: 28px;
+    top: 104px;
+    background-size: contain;
+}
+
+#img-container-CADConfig.dev_640_960 #img-startpage-CADConfig {
+    background: url(/img/640_960_sp.png) center center no-repeat;
+    width: 284px;
+    height: 422px;
+    left: 24px;
+    top: 139px;
+    background-size: contain;
+}
+
+#img-container-CADConfig.dev_1125_2436 #img-startpage-CADConfig {
+    background: url(/img/1125_2436_sp.png) center center no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: contain;
+}
+
+/*横屏*/
+#img-container-CADConfig.dev_1080_1920_l #img-startpage-CADConfig {
+    background: url(/img/screen/1080_1920_sp_l.png) center center no-repeat;
+    background-size: contain;
+    width: 347px;
+    height: 194px;
+    left: 40px;
+    top: 257px;
+}
+
+#img-container-CADConfig.dev_1536_2048_l #img-startpage-CADConfig {
+    background: url(/img/screen/1536_2048_sp_l.png) center center no-repeat;
+    width: 348px;
+    height: 262px;
+    left: 42px;
+    top: 220px;
+    background-size: contain;
+}
+
+#img-container-CADConfig.dev_750_1334_l #img-startpage-CADConfig {
+    background: url(/img/screen/750_1334_sp_l.png) center center no-repeat;
+    width: 333px;
+    height: 188px;
+    left: 52px;
+    top: 258px;
+    background-size: contain;
+}
+
+#img-container-CADConfig.dev_640_1136_l #img-startpage-CADConfig {
+    background: url(/img/screen/640_1136_sp_l.png) center center no-repeat;
+    width: 305px;
+    height: 174px;
+    left: 66px;
+    top: 264px;
+    background-size: contain;
+}
+
+#img-container-CADConfig.dev_640_960_l #img-startpage-CADConfig {
+    background: url(/img/screen/640_960_sp_l.png) center center no-repeat;
+    width: 282px;
+    height: 188px;
+    left: 78px;
+    top: 256px;
+    background-size: contain;
+}
+
+#img-container-CADConfig.dev_1125_2436_l #img-startpage-CADConfig {
+    background: url(/img/screen/1125_2436_sp_l.png) center center no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: contain;
+}
+
+.upload-con-type {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    height: 100px;
+    display: none;
+}
+
+.upload-con-type.active {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    height: 100px;
+    display: block;
+}
+
+#icon-CADConfig-android {
+    width: 83px;
+    height: 83px;
+    border-radius: 13px;
+}
+
+#icon-CADConfig-ios {
+    width: 83px;
+    height: 83px;
+}
+
+.icon-CADConfig {
+    width: 83px;
+    height: 83px;
+}
+
+.panel-CADConfig .changeImg-box {
+    width: 80px;
+    height: 106px;
+    margin-right: 2px;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.panel-CADConfig .changeImg-box .resolution {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    left: 0;
+    bottom: 8px;
+    height: 12px;
+    line-height: 15px;
+    font-size: 13px;
+    color: #919191;
+    position: absolute;
+}
+
+.panel-CADConfig .changeImg-box .CAD_star {
+    background: url(/img/media/appoverview.png) no-repeat;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    z-index: 6;
+    background-position: -128px -69px;
+}
+
+.panel-CADConfig .changeImg-box:hover .CAD_star {
+    background: url(/img/media/appoverview.png) no-repeat;
+    background-position: -158px -69px;
+}
+
+.panel-CADConfig .changeImg-box {
+    background: url(/img/media/price.png) no-repeat #EBEEED;
+}
+
+.panel-CADConfig .changeImg-box.box1 {
+    background-position: -5px -210px;
+}
+
+.panel-CADConfig .changeImg-box.box2 {
+    background-position: -95px -210px;
+}
+
+.panel-CADConfig .changeImg-box.box3 , .panel-CADConfig .changeImg-box.box4 , .panel-CADConfig .changeImg-box.box5 {
+    background-position: -185px -210px;
+}
+
+.panel-CADConfig .changeImg-box.box6 {
+    background-position: -254px -210px;
+}
+
+.panel-CADConfig .cover-box {
+    width: 80px;
+    height: 106px;
+    display: none;
+    position: relative;
+}
+
+.panel-CADConfig .changeImg-box:hover .cover-box {
+    width: 80px;
+    height: 106px;
+    display: block;
+}
+
+/*.panel-CADConfig .cover-box.active{
+    width: 110px;
+    height: 110px;
+    display: block;
+}*/
+.panel-CADConfig .changeImg-box .blue-cover {
+    background-color: #4F83C3;
+    width: 80px;
+    height: 106px;
+    line-height: 106px;
+    text-align: center;
+    color: white;
+}
+
+.label-a-CAD2 {
+    cursor: pointer;
+    color: white !important;
+    height: 14px;
+    line-height: 14px;
+    position: absolute;
+    left: 27px;
+    bottom: 9px;
+}
+
+.label-a-CAD2 span {
+    height: 14px;
+    line-height: 14px;
+}
+
+.label-a-CAD2 span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.label-a-CAD2:hover {
+    text-decoration: underline;
+}
+
+.label-a-CAD2 .upload-style1 {
+    display: inline-block;
+}
+
+.label-a-CAD2 .upload-style2 {
+    display: none;
+}
+
+.label-a-CAD2.active {
+    left: 6px;
+}
+
+.label-a-CAD2.active .upload-style1 {
+    display: none;
+}
+
+.label-a-CAD2.active .upload-style2 {
+    display: block;
+}
+
+.clear-sp {
+    cursor: pointer;
+    color: white !important;
+    display: none;
+    position: absolute;
+    right: 6px;
+    bottom: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    height: 14px;
+    line-height: 14px;
+}
+
+.clear-sp:hover {
+    text-decoration: underline;
+}
+
+.clear-sp.active {
+    display: block;
+}
+
+#upload-icon-label {
+    bottom: 0;
+    margin-top: 22px;
+    margin-bottom: 25px;
+}
+
+#upload-icon-label-android {
+    bottom: 0;
+    margin-top: 22px;
+    margin-bottom: 25px;
+}
+
+#upload-icon-label-ios {
+    bottom: 0;
+    margin-top: 22px;
+    margin-bottom: 25px;
+}
+
+.panel-CADConfig .webuploader-pick {
+    width: 100%;
+    height: 100%;
+    background: none;
+    padding: 0;
+    color: #4D7CB6;
+    display: block;
+}
+
+#upload-icon-label-android, #upload-icon-label-ios,.upload-icon-label {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+}
+
+#up-launch1, #up-launch2, #up-launch3, #up-launch4, #up-launch5, #up-launch6 {
+    position: absolute !important;
+}
+
+#up-launch1:hover, #up-launch2:hover, #up-launch3:hover, #up-launch4:hover, #up-launch5:hover, #up-launch6:hover {
+    text-decoration: underline;
+}
+
+#up-launch1 .webuploader-pick, #up-launch2 .webuploader-pick, #up-launch3 .webuploader-pick, #up-launch4 .webuploader-pick, #up-launch5 .webuploader-pick, #up-launch6 .webuploader-pick {
+    color: #fff !important;
+}
+
+/*en*/
+.en #img-container-CADConfig.dev_1080_1920 #img-startpage-CADConfig {
+    background: url(/img/1080_1920_spen.png) center center no-repeat;
+}
+
+.en #img-container-CADConfig.dev_1536_2048 #img-startpage-CADConfig {
+    background: url(/img/1536_2048_spen.png) center center no-repeat;
+}
+
+.en #img-container-CADConfig.dev_750_1334 #img-startpage-CADConfig {
+    background: url(/img/750_1334_spen.png) center center no-repeat;
+}
+
+.en #img-container-CADConfig.dev_640_1136 #img-startpage-CADConfig {
+    background: url(/img/640_1136_spen.png) center center no-repeat;
+}
+
+.en #img-container-CADConfig.dev_640_960 #img-startpage-CADConfig {
+    background: url(/img/640_960_spen.png) center center no-repeat;
+}
+
+/*横屏*/
+.en #img-container-CADConfig.dev_1080_1920_l #img-startpage-CADConfig {
+    background: url(/img/screen/1080_1920_spen_l.png) center center no-repeat;
+}
+
+.en #img-container-CADConfig.dev_1536_2048_l #img-startpage-CADConfig {
+    background: url(/img/screen/1536_2048_spen_l.png) center center no-repeat;
+}
+
+.en #img-container-CADConfig.dev_750_1334_l #img-startpage-CADConfig {
+    background: url(/img/screen/750_1334_spen_l.png) center center no-repeat;
+}
+
+.en #img-container-CADConfig.dev_640_1136_l #img-startpage-CADConfig {
+    background: url(/img/screen/640_1136_spen_l.png) center center no-repeat;
+}
+
+.en #img-container-CADConfig.dev_640_960_l #img-startpage-CADConfig {
+    background: url(/img/screen/640_960_spen_l.png) center center no-repeat;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
