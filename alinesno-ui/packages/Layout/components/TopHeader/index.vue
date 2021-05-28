@@ -22,13 +22,10 @@
             <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >消息管理</a>
         </div>
         <div class="CB-qpwBh">
-            <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >费用</a>
-        </div>
-        <div class="CB-qpwBh">
             <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >通知管理</a>
         </div>
         <div class="CB-qpwBh">
-            <a  href="//workorder.console.aliyun.com" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >工单</a>
+            <a @click="handleAdd" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >工单</a>
         </div>
         <div class="CB-qpwBh">
             <a  href="//beian.aliyun.com" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >备案</a>
@@ -49,16 +46,123 @@
             <a divided @click="logout" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >退出</a>
         </div>
     </nav>
+
+     <!-- 添加或修改公告对话框 -->
+    <el-dialog :title="title" :visible.sync="open" width="780px" append-to-body>
+      <el-form ref="form" :model="form" :rules="rules" label-width="80px">
+        <el-row>
+          <el-col :span="12">
+            <el-form-item label="公告标题" prop="noticeTitle">
+              <el-input v-model="form.noticeTitle" placeholder="请输入公告标题" />
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="公告类型" prop="noticeType">
+              <el-select v-model="form.noticeType" placeholder="请选择">
+                <el-option
+                  v-for="dict in typeOptions"
+                  :key="dict.dictValue"
+                  :label="dict.dictLabel"
+                  :value="dict.dictValue"
+                ></el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
+          <el-col :span="24">
+            <el-form-item label="状态">
+              <el-radio-group v-model="form.status">
+                <el-radio
+                  v-for="dict in statusOptions"
+                  :key="dict.dictValue"
+                  :label="dict.dictValue"
+                >{{dict.dictLabel}}</el-radio>
+              </el-radio-group>
+            </el-form-item>
+          </el-col>
+          <el-col :span="24">
+            <el-form-item label="内容">
+              <editor v-model="form.noticeContent" :min-height="192"/>
+            </el-form-item>
+          </el-col>
+        </el-row>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="submitForm">确 定</el-button>
+        <el-button @click="cancel">取 消</el-button>
+      </div>
+    </el-dialog>
+
 </div>
 </template>
 
 <script>
 export default {
     name: 'TopHeader',
+    data() {
+        return {
+            // 遮罩层
+            loading: true,
+            // 选中数组
+            ids: [],
+            // 非单个禁用
+            single: true,
+            // 非多个禁用
+            multiple: true,
+            // 显示搜索条件
+            showSearch: true,
+            // 总条数
+            total: 0,
+            // 公告表格数据
+            noticeList: [],
+            // 弹出层标题
+            title: "",
+            // 是否显示弹出层
+            open: false,
+            // 类型数据字典
+            statusOptions: [],
+            // 状态数据字典
+            typeOptions: [],
+            // 查询参数
+            queryParams: {
+                pageNum: 1,
+                pageSize: 10,
+                noticeTitle: undefined,
+                createBy: undefined,
+                status: undefined
+            },
+            // 表单参数
+            form: {},
+            // 表单校验
+            rules: {
+                noticeTitle: [
+                { required: true, message: "公告标题不能为空", trigger: "blur" }
+                ],
+                noticeType: [
+                { required: true, message: "公告类型不能为空", trigger: "change" }
+                ]
+            }
+        };
+    },
 	methods: {
 		toggleSideBar() {
 		  this.$store.dispatch('app/toggleSideBar')
 		},
+        // 表单重置
+        reset() {
+            this.form = {
+                noticeId: undefined,
+                noticeTitle: undefined,
+                noticeType: undefined,
+                noticeContent: undefined,
+                status: "0"
+            };
+            this.resetForm("form");
+        },
+        handleAdd() {
+            this.reset();
+            this.open = true;
+            this.title = "添加公告";
+        },
 		async logout() {
 		  this.$confirm('确定注销并退出系统吗？', '提示', {
 			confirmButtonText: '确定',

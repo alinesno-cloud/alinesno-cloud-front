@@ -96,6 +96,19 @@
 </el-row>
 </template>
 
+<script>
+  export default {
+    methods: {
+      openWaring() {
+        this.$notify({
+          title: '警告',
+          message: '这是一条警告的提示消息',
+          type: 'warning'
+        });
+      }
+    }
+  }
+</script>
 
 <style scoped lang="scss">
 
