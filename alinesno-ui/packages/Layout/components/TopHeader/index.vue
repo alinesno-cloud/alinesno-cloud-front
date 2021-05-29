@@ -16,31 +16,24 @@
             <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/index">控制台</router-link>
         </div>
         <div class="CB-qpwBh">
-            <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >项目规范</a>
+            <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/document">文档服务</router-link>
         </div>
         <div class="CB-qpwBh">
-            <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >消息管理</a>
+            <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/notifications">消息管理</router-link>
         </div>
         <div class="CB-qpwBh">
-            <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >通知管理</a>
+            <a @click="handleAdd" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab">工单</a>
         </div>
         <div class="CB-qpwBh">
-            <a @click="handleAdd" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >工单</a>
+            <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/support">支持管理</router-link>
         </div>
         <div class="CB-qpwBh">
-            <a  href="//beian.aliyun.com" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >备案</a>
+            <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" >【系统管理员-张三】</a>
         </div>
         <div class="CB-qpwBh">
-            <a  href="//www.aliyun.com/service" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >文档</a>
-        </div>
-        <div class="CB-qpwBh">
-            <a  href="//www.aliyun.com/service" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >支持</a>
-        </div>
-        <div class="CB-qpwBh">
-            <a  href="//www.aliyun.com/service" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >【系统管理员-张三】</a>
-        </div>
-        <div class="CB-qpwBh">
-            <a class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" ><img src="//oss.aliyuncs.com/aliyun_id_photo_bucket/default_family.jpg" alt="" class="su70ez-0 CB-gLgKdv" /></a>
+            <a class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >
+                <img src="//oss.aliyuncs.com/aliyun_id_photo_bucket/default_family.jpg" alt="" class="su70ez-0 CB-gLgKdv" />
+            </a>
         </div>
         <div class="CB-qpwBh">
             <a divided @click="logout" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >退出</a>
@@ -51,37 +44,30 @@
     <el-dialog :title="title" :visible.sync="open" width="780px" append-to-body>
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
         <el-row>
-          <el-col :span="12">
-            <el-form-item label="公告标题" prop="noticeTitle">
-              <el-input v-model="form.noticeTitle" placeholder="请输入公告标题" />
-            </el-form-item>
-          </el-col>
-          <el-col :span="12">
-            <el-form-item label="公告类型" prop="noticeType">
-              <el-select v-model="form.noticeType" placeholder="请选择">
-                <el-option
-                  v-for="dict in typeOptions"
-                  :key="dict.dictValue"
-                  :label="dict.dictLabel"
-                  :value="dict.dictValue"
-                ></el-option>
-              </el-select>
+          <el-col :span="24">
+            <el-form-item label="提交工单" prop="noticeTitle">
+              <el-input v-model="form.noticeTitle" placeholder="请输入工单标题" />
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="状态">
-              <el-radio-group v-model="form.status">
-                <el-radio
-                  v-for="dict in statusOptions"
-                  :key="dict.dictValue"
-                  :label="dict.dictValue"
-                >{{dict.dictLabel}}</el-radio>
-              </el-radio-group>
-            </el-form-item>
+              <el-form-item label="优先级">
+                  <el-radio-group v-model="form.resource">
+                      <el-radio label="重要"></el-radio>
+                      <el-radio label="普通"></el-radio>
+                  </el-radio-group>
+              </el-form-item>
+          </el-col>
+          <el-col :span="24">
+              <el-form-item label="产品名称">
+                  <el-select v-model="form.region" placeholder="请选择活动区域">
+                      <el-option label="区域一" value="shanghai"></el-option>
+                      <el-option label="区域二" value="beijing"></el-option>
+                  </el-select>
+              </el-form-item>
           </el-col>
           <el-col :span="24">
             <el-form-item label="内容">
-              <editor v-model="form.noticeContent" :min-height="192"/>
+              <el-input type="textarea" rows="5" v-model="form.desc" placeholder="请用一两句话描述您遇到的问题现象"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -161,7 +147,7 @@ export default {
         handleAdd() {
             this.reset();
             this.open = true;
-            this.title = "添加公告";
+            this.title = "添加工单";
         },
 		async logout() {
 		  this.$confirm('确定注销并退出系统吗？', '提示', {
@@ -189,7 +175,7 @@ export default {
         top: 0px;
         right: 0px;
         left: 0px;
-        z-index: 9999;
+        z-index: 10;
         box-shadow: 0 2px 4px 0 var(--cb-color-shadow,rgba(0,0,0,0.16));
 
         .header-logo-label{

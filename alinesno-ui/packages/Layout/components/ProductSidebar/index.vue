@@ -23,6 +23,8 @@
         class="productDrawer"
         :visible.sync="drawer"
         :direction="direction"
+        wrapperClosable="true"
+        withHeader=false
         size="60%"
         :before-close="handleClose">
         <div class="cf-service-box">
@@ -218,7 +220,7 @@ import ProductList from "./ProductList";
   }
 
 .cf-service-section {
-    width: 253px;
+    width: 200px;
     position: relative;
     float: left;
     margin-bottom: 20px;
@@ -241,18 +243,26 @@ import ProductList from "./ProductList";
     cursor: pointer;
     border-bottom: 1px solid transparent;
 }
+
 li {
     list-style: none;
 }
 
 .cf-service-nav-item a {
     color: #252b3a;
+    font-size: 12px ;
     text-decoration: none!important;
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 90%;
+}
+
+blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 </style>

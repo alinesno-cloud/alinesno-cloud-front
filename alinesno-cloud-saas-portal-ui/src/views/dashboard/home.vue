@@ -9,12 +9,6 @@
         <div class="widget-product-recent">
             <div dir="ltr" role="row" class="next-row next-row-wrap" style="margin-left: -4px; margin-right: -4px; margin-bottom: -8px;">
                 <div dir="ltr" role="gridcell" class="next-col next-col-4" >
-                    <a class="tag" target="_blank" href="//iot.console.aliyun.com" data-spm-click="gostr=/aliyun-console.home-product-recent.recentlist;locaid=dre0;title=物联网平台" rel="noreferrer"><span>物联网平台</span></a>
-                </div>
-                <div dir="ltr" role="gridcell" class="next-col next-col-4" >
-                    <a class="tag" target="_blank" href="//oss.console.aliyun.com" data-spm-click="gostr=/aliyun-console.home-product-recent.recentlist;locaid=dre1;title=对象存储 OSS" rel="noreferrer"><span>对象存储 OSS</span></a>
-                </div>
-                <div dir="ltr" role="gridcell" class="next-col next-col-4" >
                     <a class="tag" target="_blank" href="//cr.console.aliyun.com" data-spm-click="gostr=/aliyun-console.home-product-recent.recentlist;locaid=dre2;title=容器镜像服务" rel="noreferrer"><span>容器镜像服务</span></a>
                 </div>
                 <div dir="ltr" role="gridcell" class="next-col next-col-4" >
@@ -361,41 +355,21 @@ export default {
 }
 
 .tag {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 12px;
     margin-bottom: 8px;
-    height: 32px;
+    height: 42px;
     width: 95%;
     font-size: 12px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
     border-radius: 2px;
     background-color: #f7f9fa;
     overflow: hidden;
-    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     color: #333!important;
     cursor: pointer;
-    -webkit-transition: background-color .1s linear;
-    -o-transition: background-color linear .1s;
-    -moz-transition: background-color linear .1s;
     transition: background-color .1s linear;
     white-space: nowrap;
     text-decoration: none;

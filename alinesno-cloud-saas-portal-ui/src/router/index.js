@@ -171,6 +171,24 @@ export const constantRoutes = [
         component: (resolve) => require(['@/views/dashboard/home'], resolve),
         name: '首页',
         meta: { title: '首页', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      } ,
+      {
+        path: '/dashboard/document',
+        component: (resolve) => require(['@/views/dashboard/document/index'], resolve),
+        name: '文档服务',
+        meta: { title: '文档服务', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/dashboard/notifications',
+        component: (resolve) => require(['@/views/dashboard/notifications/index'], resolve),
+        name: '消息管理',
+        meta: { title: '消息管理', icon: 'fas fa-chalkboard', noCache: true, affix: true }
+      },
+      {
+        path: '/dashboard/support',
+        component: (resolve) => require(['@/views/dashboard/support/index'], resolve),
+        name: '支持管理',
+        meta: { title: '支持管理', icon: 'fas fa-chalkboard', noCache: true, affix: true }
       }
     ]
   },
