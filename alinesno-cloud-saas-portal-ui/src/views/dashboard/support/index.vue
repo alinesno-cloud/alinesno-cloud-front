@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-container">
         <support-normal />
         <support-professor />
     </div>
@@ -18,6 +18,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.main-container {
+    max-width: 1200px ;
+    top: 0px !important;
+    margin-bottom: 100px;
+}
 </style>
 
 

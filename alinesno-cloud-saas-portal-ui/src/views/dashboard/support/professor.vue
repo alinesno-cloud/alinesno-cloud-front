@@ -13,7 +13,7 @@
                 </div>
                 <div class="ace-card-serviceportal-experts-pc-content">
                     <div class="ace-card-serviceportal-experts-pc-content-item">
-                        <div class="ace-card-serviceportal-experts-pc-content-item-top" style="background: url(&quot;https://img.alicdn.com/tfs/TB15Vp8UoY1gK0jSZFMXXaWcVXa-560-144.png&quot;) center center / 100% no-repeat rgb(255, 255, 255);">
+                        <div class="ace-card-serviceportal-experts-pc-content-item-top">
                             <div class="ace-card-serviceportal-experts-pc-content-item-top-title">
                                 <span>咨询与设计</span>
                             </div>
@@ -54,7 +54,7 @@
                         <a class="ace-link ace-link-primary ace-card-serviceportal-experts-pc-content-item-btn" href="https://www.aliyun.com/service/list?spm=5176.support-home.J_6342904660.4.4fe1156fV3ROEW" target="_blank" data-spm-anchor-id="5176.support-home.J_6342904660.4"><span>查看全部</span><i class="ace-custom-icon  icon aliyun-icon aliyun-icon-arrow_right"></i></a>
                     </div>
                     <div class="ace-card-serviceportal-experts-pc-content-item">
-                        <div class="ace-card-serviceportal-experts-pc-content-item-top" style="background: url(&quot;https://img.alicdn.com/tfs/TB1ZL05UeH2gK0jSZJnXXaT1FXa-560-144.png&quot;) center center / 100% no-repeat rgb(255, 255, 255);">
+                        <div class="ace-card-serviceportal-experts-pc-content-item-top">
                             <div class="ace-card-serviceportal-experts-pc-content-item-top-title">
                                 <span>迁移与部署</span>
                             </div>
@@ -94,7 +94,7 @@
                         <a class="ace-link ace-link-primary ace-card-serviceportal-experts-pc-content-item-btn" href="https://www.aliyun.com/service/list?spm=5176.support-home.J_6342904660.8.4fe1156fV3ROEW" target="_blank" data-spm-anchor-id="5176.support-home.J_6342904660.8"><span>查看全部</span><i class="ace-custom-icon  icon aliyun-icon aliyun-icon-arrow_right"></i></a>
                     </div>
                     <div class="ace-card-serviceportal-experts-pc-content-item">
-                        <div class="ace-card-serviceportal-experts-pc-content-item-top" style="background: url(&quot;https://img.alicdn.com/tfs/TB1GP8TjBFR4u4jSZFPXXanzFXa-560-144.png&quot;) center center / 100% no-repeat rgb(255, 255, 255);">
+                        <div class="ace-card-serviceportal-experts-pc-content-item-top">
                             <div class="ace-card-serviceportal-experts-pc-content-item-top-title">
                                 <span>运维与管理</span>
                             </div>
@@ -135,7 +135,7 @@
                         <a class="ace-link ace-link-primary ace-card-serviceportal-experts-pc-content-item-btn" href="https://www.aliyun.com/service/list?spm=5176.support-home.J_6342904660.12.4fe1156fV3ROEW" target="_blank" data-spm-anchor-id="5176.support-home.J_6342904660.12"><span>查看全部</span><i class="ace-custom-icon  icon aliyun-icon aliyun-icon-arrow_right"></i></a>
                     </div>
                     <div class="ace-card-serviceportal-experts-pc-content-item">
-                        <div class="ace-card-serviceportal-experts-pc-content-item-top" style="background: url(&quot;https://img.alicdn.com/tfs/TB157yVhipE_u4jSZKbXXbCUVXa-560-144.png&quot;) center center / 100% no-repeat rgb(255, 255, 255);">
+                        <div class="ace-card-serviceportal-experts-pc-content-item-top">
                             <div class="ace-card-serviceportal-experts-pc-content-item-top-title">
                                 <span>优化与提升</span>
                             </div>
@@ -184,6 +184,145 @@
 </script>
 
 <style scoped lang="scss">
+
+.ace-card-serviceportal-experts-pc-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.ace-card-serviceportal-experts-pc-title-world1 {
+    font-size: 28px;
+    color: #181818;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 36px;
+}
+
+.ace-card-serviceportal-experts-pc-title-world2 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 24px;
+}
+
+.ace-card-serviceportal-experts-pc-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ace-card-serviceportal-experts-pc-content-item:first-of-type {
+    margin-left: 0;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    padding: 0 20px;
+    background: #005bd4;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-content {
+    display: block;
+    height: 130px;
+    position: relative;
+    padding: 20px 47px 20px 20px;
+    background: #fff;
+    margin-bottom: 1px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-content-title {
+    height: 24px;
+    font-size: 16px;
+    color: #181818;
+    line-height: 24px;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-content-subTitle {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-content-img {
+    margin-left: 4px;
+    width: 36px;
+    position: relative;
+    top: 3px;
+    height: auto;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-content-subTitle {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-content-icon {
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    color: #dedede;
+}
+
+.ace-card-serviceportal-experts-pc-content-item {
+    width: 25%;
+    margin-right: 24px;
+    border: 1px solid #f5f5f5;
+    border-radius: 3px ;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-btn {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    color: #005BD4;
+    letter-spacing: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+.ace-card-serviceportal-experts-pc-content-item-top-title {
+    font-size: 20px;
+    color: #fff;
+    line-height: 24px;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
 </style>
 
 

@@ -15,7 +15,7 @@
             </div>
             <div class="ace-card-serviceportal-basicservices_pc">
                 <div class="ace-card-serviceportal-basicservices_pc_item">
-                    <div class="ace-card-serviceportal-basicservices_pc_item_top" style="background: url(&quot;https://img.alicdn.com/tfs/TB19QyVhipE_u4jSZKbXXbCUVXa-1160-176.png&quot;) center center / cover no-repeat rgb(255, 106, 0);">
+                    <div class="ace-card-serviceportal-basicservices_pc_item_top" >
                         <div class="ace-card-serviceportal-basicservices_pc_item_top_title">
                             <span>7&times;24小时服务</span>
                         </div>
@@ -24,32 +24,15 @@
                         </div>
                     </div>
                     <div class="ace-card-serviceportal-basicservices_pc_item_bottom">
-                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1t6F7UoY1gK0jSZFCXXcwqXXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 182px;">
+                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1t6F7UoY1gK0jSZFCXXcwqXXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 112px;">
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_name">
                                 <span>智能客服</span>
                             </div>
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec">
                                 <span>智能诊断，秒级解答，为您推荐最佳解决方案或匹配合适的人工服务</span>
                             </div>
-                            <div class="ace-card-serviceportal-basicservices_pc_item_bottom_linkAndBtn">
-                                <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link">
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item">
-                                        <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_left_link_item_link" href="https://www.aliyun.com/core/online-consult?from=bg778QBnk9" target="_blank">售前咨询</a>
-                                    </div>
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item">
-                                        <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_left_link_item_link" href="https://ia.aliyun.com/home" target="_blank">售后咨询</a>
-                                    </div>
-                                    <br />
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item1">
-                                        <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_left_link_item_link" href="https://ia.aliyun.com/home?query=%E5%A4%87%E6%A1%88%E9%97%AE%E9%A2%98&amp;channel=pc" target="_blank">备案咨询</a>
-                                    </div>
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item1">
-                                        <span class="ace-card-serviceportal-basicservices_pc_item_left_link_item_link">移动端助手（钉钉小智）</span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB16bh0UeL2gK0jSZPhXXahvXXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 182px;">
+                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB16bh0UeL2gK0jSZPhXXahvXXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 112px;">
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_name">
                                 <span>咨询电话</span>
                             </div>
@@ -57,11 +40,6 @@
                                 <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec1_word">
                                     <span>售前咨询：</span>
                                     <span style="color: rgb(55, 61, 65);">95187-1</span>
-                                </div>
-                                <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec1_word1">
-                                    <span>工作日 早9:00-晚8:00</span>
-                                    <br />
-                                    <span>休息日 早9:00-晚6:00</span>
                                 </div>
                                 <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec1_word">
                                     <span>备案咨询：</span>
@@ -72,35 +50,27 @@
                                     <span style="color: rgb(55, 61, 65);">400-80-13260</span>
                                 </div>
                             </div>
-                            <div class="ace-card-serviceportal-basicservices_pc_item_bottom_linkAndBtn"></div>
                         </div>
-                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1gYkagCslXu8jSZFuXXXg7FXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 202px;">
+                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1gYkagCslXu8jSZFuXXXg7FXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 112px;">
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_name">
                                 <span>技术工单</span>
                             </div>
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec">
                                 <span>技术工程师为您提供产品配置指导、故障排查等技术支持</span>
                             </div>
-                            <div class="ace-card-serviceportal-basicservices_pc_item_bottom_linkAndBtn">
-                                <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_bottom_btn" href="https://smartservice.console.aliyun.com/service/list" target="_blank"><button type="button" class="ace-btn ace-medium ace-btn-secondary"><span class="ace-btn-helper">提交工单</span></button></a>
-                            </div>
                         </div>
-                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1.dqEUbY1gK0jSZTEXXXDQVXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 202px;">
+                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1.dqEUbY1gK0jSZTEXXXDQVXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 112px;">
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_name">
                                 <span>建议与投诉</span>
                             </div>
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec">
                                 <span>聆听您对阿里云产品与服务的建议和投诉</span>
                             </div>
-                            <div class="ace-card-serviceportal-basicservices_pc_item_bottom_linkAndBtn">
-                                <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_bottom_btn" href="https://www.aliyun.com/connect/home" target="_blank"><button type="button" class="ace-btn ace-medium ace-btn-secondary"><span class="ace-btn-helper">我要建议</span></button></a>
-                                <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_bottom_btn" href="https://www.aliyun.com/connect/complaint" target="_blank"><button type="button" class="ace-btn ace-medium ace-btn-secondary"><span class="ace-btn-helper">我要投诉</span></button></a>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="ace-card-serviceportal-basicservices_pc_item">
-                    <div class="ace-card-serviceportal-basicservices_pc_item_top" style="background: url(&quot;https://img.alicdn.com/tfs/TB12JSngdTfau8jSZFwXXX1mVXa-1160-176.png&quot;) center center / cover no-repeat rgb(255, 106, 0);">
+                    <div class="ace-card-serviceportal-basicservices_pc_item_top" >
                         <div class="ace-card-serviceportal-basicservices_pc_item_top_title">
                             <span>文档与工具</span>
                         </div>
@@ -109,68 +79,36 @@
                         </div>
                     </div>
                     <div class="ace-card-serviceportal-basicservices_pc_item_bottom">
-                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB11v05UeH2gK0jSZJnXXaT1FXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 182px;">
+                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB11v05UeH2gK0jSZJnXXaT1FXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 112px;">
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_name">
                                 <span>文档中心</span>
                             </div>
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec">
                                 <span>提供产品介绍、使用指导、最佳实践等全面详尽的产品文档</span>
                             </div>
-                            <div class="ace-card-serviceportal-basicservices_pc_item_bottom_linkAndBtn">
-                                <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_bottom_btn" href="https://help.aliyun.com" target="_blank"><button type="button" class="ace-btn ace-medium ace-btn-secondary"><span class="ace-btn-helper">查看更多</span></button></a>
-                            </div>
                         </div>
-                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB16Hh0UeL2gK0jSZPhXXahvXXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 182px;">
+                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB16Hh0UeL2gK0jSZPhXXahvXXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 112px;">
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_name">
                                 <span>新手入门</span>
                             </div>
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec">
                                 <span>通过快速入门教程、视频、学习路径等帮您快速应用云产品</span>
                             </div>
-                            <div class="ace-card-serviceportal-basicservices_pc_item_bottom_linkAndBtn">
-                                <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_bottom_btn" href="https://help.aliyun.com/learn/getting-started.html?spm=5176.12825654.h2v3icoap.1017.74202c4aipNnln" target="_blank"><button type="button" class="ace-btn ace-medium ace-btn-secondary"><span class="ace-btn-helper">查看更多</span></button></a>
-                            </div>
                         </div>
-                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1bjj8h3gP7K4jSZFqXXamhVXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 202px;">
+                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1bjj8h3gP7K4jSZFqXXamhVXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 112px;">
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_name">
                                 <span>自助工具</span>
                             </div>
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec">
                                 <span>包括账号、财资、产品使用等常用自助工具</span>
                             </div>
-                            <div class="ace-card-serviceportal-basicservices_pc_item_bottom_linkAndBtn">
-                                <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link">
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item">
-                                        <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_left_link_item_link" href="https://api.aliyun.com" target="_blank">API在线调试工具</a>
-                                    </div>
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item">
-                                        <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_left_link_item_link" href="https://zijian.aliyun.com/#/domainDetect" target="_blank">域名检测工具</a>
-                                    </div>
-                                    <br />
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item1">
-                                        <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_left_link_item_link" href="https://wanwang.aliyun.com/domain/domain-renew" target="_blank">域名代续费</a>
-                                    </div>
-                                </div>
-                                <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_bottom_btn" href="https://help.aliyun.com/learn/tool.html" target="_blank"><button type="button" class="ace-btn ace-medium ace-btn-secondary"><span class="ace-btn-helper">查看全部工具</span></button></a>
-                            </div>
                         </div>
-                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1n.S6gdTfau8jSZFwXXX1mVXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 202px;">
+                        <div class="ace-card-serviceportal-basicservices_pc_item_bottom_item" style="background: url(&quot;https://img.alicdn.com/tfs/TB1n.S6gdTfau8jSZFwXXX1mVXa-580-364.png&quot;) right bottom / cover no-repeat rgb(255, 255, 255); height: 112px;">
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_name">
                                 <span>开发者资源</span>
                             </div>
                             <div class="ace-card-serviceportal-basicservices_pc_item_bottom_dec">
                                 <span>提供开发者常用的SDK与API，DevOps工具等资源</span>
-                            </div>
-                            <div class="ace-card-serviceportal-basicservices_pc_item_bottom_linkAndBtn">
-                                <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link">
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item">
-                                        <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_left_link_item_link" href="https://help.aliyun.com/learn/developer.html#f1" target="_blank">SDK与API</a>
-                                    </div>
-                                    <div class="ace-card-serviceportal-basicservices_pc_item_bottom_link_item">
-                                        <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_left_link_item_link" href="https://help.aliyun.com/learn/developer.html#f3" target="_blank">DevOps工具</a>
-                                    </div>
-                                </div>
-                                <a class="ace-link ace-link-primary ace-card-serviceportal-basicservices_pc_item_bottom_btn" href="https://help.aliyun.com/learn/developer.html" target="_blank"><button type="button" class="ace-btn ace-medium ace-btn-secondary"><span class="ace-btn-helper">查看全部资源</span></button></a>
                             </div>
                         </div>
                     </div>
@@ -187,12 +125,7 @@
 <style scoped lang="scss">
 
 .ace-card-serviceportal-basicservices {
-    background: hsla(0,0%,85%,.3);
-    box-sizing: border-box;
-}
-
-.ace-card-serviceportal-basicservices {
-    background: hsla(0,0%,85%,.3);
+    background: #fff ;
     box-sizing: border-box;
 }
 
@@ -210,6 +143,22 @@
     letter-spacing: 0;
     text-align: center;
     line-height: 36px;
+}
+
+.ace-card-serviceportal-basicservices_pc_item_bottom_dec1_word {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 23px;
+}
+
+.ace-card-serviceportal-basicservices_pc_item_bottom_dec1_word1 {
+    padding-left: 69px;
+    font-size: 12px;
+    color: #999;
+    text-align: justify;
+    line-height: 20px;
 }
 
 .ace-card-serviceportal-basicservices_pc_title_word2 {
@@ -232,11 +181,8 @@
 .ace-card-serviceportal-basicservices_pc_item {
     width: 50%;
     margin-right: 24px;
-}
-
-.ace-card-serviceportal-basicservices_pc_item {
-    width: 50%;
-    margin-right: 24px;
+    border: 1px solid #f5f5f5 ;
+    border-radius: 10px;
 }
 
 .ace-card-serviceportal-basicservices_pc_item_bottom {
@@ -270,12 +216,11 @@
 .ace-card-serviceportal-basicservices_pc_item_bottom_item {
     position: relative;
     width: 50%;
-    height: 202px;
+    height: 112px;
     margin-bottom: 1px;
     padding: 20px 24px;
     box-sizing: border-box;
     background-color: #fff;
-    border-right: 1px solid hsla(0,0%,85%,.3);
 }
 
 .ace-card-serviceportal-basicservices_pc_item_bottom_name {
@@ -292,10 +237,12 @@
 
 .ace-card-serviceportal-basicservices_pc_item_top {
     display: flex;
+    background-color: #005bd4 ;
     flex-direction: column;
     justify-content: center;
     height: 88px;
     padding: 0 24px;
+    border-radius: 3px 3px 0px 0px;
 }
 
 .ace-btn.ace-medium {
@@ -304,13 +251,48 @@
 }
 
 .ace-btn.ace-btn-secondary, .ace-btn.ace-btn-secondary.visited, .ace-btn.ace-btn-secondary:link, .ace-btn.ace-btn-secondary:visited {
-    color: #ff6a00;
+    color: #005BD4;
+}
+
+.ace-card-serviceportal-basicservices_pc_item_bottom_dec {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .ace-btn.ace-btn-secondary {
     border-style: solid;
     background-color: transparent;
-    border-color: #ff6a00;
+    border-color: #005BD4;
+}
+
+.ace-btn.ace-btn-secondary {
+    border-style: solid;
+    background-color: transparent;
+    border-color: #005BD4;
+}
+
+.ace-card-serviceportal-basicservices_pc_item_bottom_link_item1 {
+    display: inline-block;
+    position: relative;
+    color: #005BD4;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: .16px;
+}
+
+.ace-btn.ace-medium {
+    border-radius: 0;
+    padding: 0 24px;
+    height: 32px;
+    font-size: 14px;
+    border-width: 1px;
 }
 </style>
 
