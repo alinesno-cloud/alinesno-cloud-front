@@ -1,6 +1,6 @@
 <template>
   <div :class="classObj" class="app-wrapper" :style="{'--current-color': theme}">
-    <top-header></top-header>
+    <top-header />
     <product-siderbar />
     <div :class="{hasTagsView:needTagsView}" class="main-container">
       <app-main/>

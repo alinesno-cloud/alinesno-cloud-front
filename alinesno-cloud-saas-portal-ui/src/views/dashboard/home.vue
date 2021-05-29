@@ -1,11 +1,5 @@
 <template>
 <div class="home">
-    <div class="homeHeader" data-spm="home-header">
-        <div class="greeting" style="padding-bottom: 20px;">
-            <h1>您好，luoandon@gmail.com</h1>
-        </div>
-    </div>
-
     <div class="app-container">
         <index-create />
 
