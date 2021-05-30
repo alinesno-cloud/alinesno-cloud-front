@@ -1,6 +1,7 @@
 <template>
     <div :class="{'has-logo':showLogo}" :style="{ backgroundColor: settings.sideTheme === 'theme-dark' ? variables.menuBg : variables.menuLightBg }">
         <logo v-if="showLogo" :collapse="isCollapse" />
+        <siderbar-view />
         <el-scrollbar :class="settings.sideTheme" wrap-class="scrollbar-wrapper">
             <el-menu
                 :default-active="activeMenu"
@@ -26,11 +27,12 @@
 <script>
 import { mapGetters, mapState } from "vuex";
 import Logo from "./Logo";
+import SiderbarView from "./SidebarView";
 import SidebarItem from "./SidebarItem";
 import variables from "alinesno-ui/src/assets/styles/variables.scss";
 
 export default {
-    components: { SidebarItem, Logo },
+    components: { SidebarItem, Logo , SiderbarView },
     computed: {
         ...mapState(["settings"]),
         ...mapGetters(["sidebarRouters", "sidebar"]),

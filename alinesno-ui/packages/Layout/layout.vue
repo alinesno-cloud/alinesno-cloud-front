@@ -2,8 +2,7 @@
   <div :class="classObj" class="app-wrapper" :style="{'--current-color': theme}">
     <top-header></top-header>
     <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"/>
-    <sidebar v-if="device==='mobile'&&sidebar.opened"
-             class="sidebar-container"
+    <sidebar class="sidebar-container"
              :style="{ backgroundColor: sideTheme === 'theme-dark' ? variables.menuBg : variables.menuLightBg }" />
     <div :class="{hasTagsView:needTagsView}" class="main-container">
       <div :class="{'fixed-header':fixedHeader}">

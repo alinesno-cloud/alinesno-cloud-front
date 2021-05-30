@@ -133,6 +133,11 @@ export default {
 		toggleSideBar() {
 		  this.$store.dispatch('app/toggleSideBar')
 		},
+        submitForm(){
+        } ,
+        cancel(){
+
+        } ,
         // 表单重置
         reset() {
             this.form = {

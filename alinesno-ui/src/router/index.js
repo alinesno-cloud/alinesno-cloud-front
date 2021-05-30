@@ -1,7 +1,6 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-
-Vue.use(Router)
+// import Router from 'vue-router'
+// Vue.use(Router)
 
 /* Layout */
 // import Layout from 'alinesno-ui/packages/Layout/layout.vue'
