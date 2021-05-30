@@ -51,9 +51,14 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(res => {
     // 未设置状态码则默认成功状态
     const code = res.data.code || 200;
+
+    // alert('code = ' + code) ; 
+
     // 获取错误信息
     const msg = errorCode[code] || res.data.msg || errorCode['default']
     if (code === 401) {
+      console.debug("code = " + code) ; 
+
       MessageBox.confirm('登录状态已过期，您可以继续留在该页面，或者重新登录', '系统提示', {
           confirmButtonText: '重新登录',
           cancelButtonText: '取消',
@@ -64,6 +69,17 @@ service.interceptors.response.use(res => {
           location.href = '/index';
         })
       })
+    } else if (code === 4011) {
+      const targetUrl = res.targetUrl ; 
+
+      console.debug('重定向路由 , targetUrl = ' + targetUrl) ;
+
+      let originUrl = encodeURI(window.location.href) ;
+      let redirectUrl = res.targetUrl.concat('?originUrl=').concat(originUrl);
+      console.log(redirectUrl);
+
+      window.location.href = redirectUrl;
+
     } else if (code === 500) {
       Message({
         message: msg,

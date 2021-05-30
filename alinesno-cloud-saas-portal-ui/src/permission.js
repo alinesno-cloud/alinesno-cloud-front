@@ -10,7 +10,9 @@ NProgress.configure({ showSpinner: false })
 
 // 白名单配置
 const whiteList = [
+      '/',
       '/portal',
+      '/product',
       '/solution',
       '/technique',
       '/document',
@@ -21,7 +23,6 @@ const whiteList = [
       '/login',
       '/auth-redirect',
       '/bind',
-      '/portal',
       '/register']
 
 router.beforeEach((to, from, next) => {
@@ -56,8 +57,8 @@ router.beforeEach((to, from, next) => {
       // 在免登录白名单，直接进入
       next()
     } else {
-      // next(`/login?redirect=${to.fullPath}`) // 否则全部重定向到登录页
       next(`/login?redirect=${to.fullPath}`) // 否则全部重定向到登录页
+      // next(`/portal?redirect=${to.fullPath}`) // 否则全部重定向门户首页
       NProgress.done()
     }
   }

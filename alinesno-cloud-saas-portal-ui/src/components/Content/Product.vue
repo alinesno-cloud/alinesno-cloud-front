@@ -5,23 +5,24 @@
         <div class="lb-col lb-tiny-24 lb-mid-24">
             <div class="lb-none-pad lb-none-v-margin lb-box" style="height:40px;">
             </div>
-            <h2 id="Explore_Our_Products" class="lb-tiny-align-center lb-txt-normal lb-txt-none lb-txt-36 lb-small-v-margin lb-h2 lb-title" style="margin-top:0px;"> 探索我们的产品</h2>
+            <h2 id="Explore_Our_Products" class="lb-tiny-align-center lb-txt-normal lb-txt-none lb-txt-36 lb-small-v-margin lb-h2 lb-title" style="margin-top:0px;"> 我们的产品</h2>
         </div>
     </div>
     <div class="lb-none-pad lb-none-v-margin lb-item-expander lb-item-expander-cortex lb-has-icon-hover lb-row-max-large lb-snap lb-has-hover-icons-as-active" data-lb-comp="item-expander-cortex" data-lb-comp-registered="true">
         <div class="lb-item-expander-row" id="lb-item-expander-row-04">
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange(this)" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active selected" :class="{ selected: n==isActive}" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fas fa-chalkboard"></i>
                     </div>
                     <span>技术中台</span>
                     <div class="lb-triangle" style="display: none;">
                         <div class="lb-triangle-inner"></div>
-                </div> </a>
+                    </div> 
+                </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fas fa-biohazard"></i>
                     </div>
@@ -31,7 +32,7 @@
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fab fa-angular"></i>
                     </div>
@@ -41,7 +42,7 @@
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fab fa-telegram-plane"></i>
                     </div>
@@ -51,7 +52,7 @@
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fas fa-ambulance"></i>
                     </div>
@@ -156,7 +157,7 @@
         </div>
         <div class="lb-item-expander-row" id="lb-item-expander-row-04">
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
@@ -166,7 +167,7 @@
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fas fa-shipping-fast"></i>
                     </div>
@@ -176,7 +177,7 @@
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fas fa-server"></i>
                     </div>
@@ -186,7 +187,7 @@
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fas fa-rocket"></i>
                     </div>
@@ -196,7 +197,7 @@
                 </div> </a>
             </div>
             <div class="lb-item-wrapper" data-id="0" id="lb-item-expander-wrapper-00">
-                <a class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
+                <a @click="handleChange()" href="javascript:void(0)" class="lb-trigger product-type-a product-type-a-first lb-active" id="787440042262921216">
                     <div class="product-icon-label">
                         <i class="fas fa-mail-bulk"></i>
                     </div>
@@ -266,6 +267,24 @@
 
 </template>
 
+<script>
+
+export default {
+    data() {
+      return {
+          isActive : 0 ,
+      };
+    },
+    methods: {
+      handleChange:function( message , event ) {
+        console.log("handler this is a test! " + event + " , message = " + message);
+      }
+    }
+  };
+
+
+</script>
+
 <style lang="scss" scoped>
 
 @import '@/resources/css/style-awsm.scss';
@@ -292,6 +311,14 @@
         font-size: 40px;
     }
 
+}
+
+.lb-trigger {
+    opacity: 0.6 ; 
+}
+
+.lb-trigger.selected {
+    opacity: 1 ; 
 }
 
 </style>

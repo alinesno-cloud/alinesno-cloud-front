@@ -12,6 +12,16 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/',
+    component: (resolve) => require(['@/views/portal/index'], resolve),
+    hidden: true
+  },
+  {
+    path: '/product',
+    component: (resolve) => require(['@/views/product/index'], resolve),
+    hidden: true
+  },
+  {
     path: '/portal',
     component: (resolve) => require(['@/views/portal/index'], resolve),
     hidden: true
