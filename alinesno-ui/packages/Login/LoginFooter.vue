@@ -153,7 +153,7 @@
 
 #footer .footer-content {
     height: 50px;
-    position: absolute;
+    position: fixed ;
     bottom: 0px;
     width: 100%;
     margin: 0px;
