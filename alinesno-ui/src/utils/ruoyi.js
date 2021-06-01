@@ -69,6 +69,12 @@ export function addDateRange(params, dateRange, propName) {
 	return search;
 }
 
+// 格式化日期
+export function parseDatetime(date) {
+  var dateee = new Date(date).toJSON();
+  return new Date(+new Date(dateee) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '')
+}
+
 // 回显数据字典
 export function selectDictLabel(datas, value) {
 	var actions = [];
