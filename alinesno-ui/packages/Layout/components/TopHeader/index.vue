@@ -22,7 +22,7 @@
             <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/notifications">消息管理</router-link>
         </div>
         <div class="CB-qpwBh">
-            <a @click="handleAdd" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab">工单</a>
+            <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/workorder">提交工单</router-link>
         </div>
         <div class="CB-qpwBh">
             <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/support">支持管理</router-link>
@@ -39,44 +39,6 @@
             <a divided @click="logout" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank" >退出</a>
         </div>
     </nav>
-
-     <!-- 添加或修改公告对话框 -->
-    <el-dialog :title="title" :visible.sync="open" width="780px" append-to-body>
-      <el-form ref="form" :model="form" :rules="rules" label-width="80px">
-        <el-row>
-          <el-col :span="24">
-            <el-form-item label="提交工单" prop="noticeTitle">
-              <el-input v-model="form.noticeTitle" placeholder="请输入工单标题" />
-            </el-form-item>
-          </el-col>
-          <el-col :span="24">
-              <el-form-item label="优先级">
-                  <el-radio-group v-model="form.resource">
-                      <el-radio label="重要"></el-radio>
-                      <el-radio label="普通"></el-radio>
-                  </el-radio-group>
-              </el-form-item>
-          </el-col>
-          <el-col :span="24">
-              <el-form-item label="产品名称">
-                  <el-select v-model="form.region" placeholder="请选择活动区域">
-                      <el-option label="区域一" value="shanghai"></el-option>
-                      <el-option label="区域二" value="beijing"></el-option>
-                  </el-select>
-              </el-form-item>
-          </el-col>
-          <el-col :span="24">
-            <el-form-item label="内容">
-              <el-input type="textarea" rows="5" v-model="form.desc" placeholder="请用一两句话描述您遇到的问题现象"></el-input>
-            </el-form-item>
-          </el-col>
-        </el-row>
-      </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="submitForm">确 定</el-button>
-        <el-button @click="cancel">取 消</el-button>
-      </div>
-    </el-dialog>
 
 </div>
 </template>
