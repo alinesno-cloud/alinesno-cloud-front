@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar-view">
         <h1 class="sidebar-title">
-            功能概览
+            单点登陆管理
         </h1>
     </div>
 </template>
