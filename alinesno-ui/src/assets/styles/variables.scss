@@ -26,6 +26,14 @@ $subMenuHover:#e5e5e5 ;
 
 $sideBarWidth: 220px;
 
+// 主题
+$mainStyle: #005BD4 ;
+$textStyle: #333 ;
+$bannerBg: #fff ;
+$mainBgStyle: #f4f5f7 ;
+
+$footerBgStyle: #252525 ;
+
 // the :export directive is the magic sauce for webpack
 // https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
 :export {
@@ -40,5 +48,8 @@ $sideBarWidth: 220px;
   subMenuHover: $subMenuHover;
   sideBarWidth: $sideBarWidth;
   sidebarTitle: $sidebarTitle;
-  sidebarLightTitle: $sidebarLightTitle
+  sidebarLightTitle: $sidebarLightTitle;
+  bannerBg: $bannerBg;
+  mainStyle: $mainStyle;
+  mainBgStyle: $mainBgStyle;
 }
