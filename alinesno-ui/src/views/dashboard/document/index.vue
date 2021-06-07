@@ -1,169 +1,203 @@
 <template>
 <div class="home">
     <div class="app-container">
-
+        <div class="document-panel">
         <el-row :gutter="20">
-        <el-col :span="16">
-			<div class="WidgetHomeProductMy-detailContainer-3W8nd">
-			   <h3 class="WidgetHomeProductMy-opendProductTitle-3NDOg">
-                   <span tooltipicon="help" class="nb-rc-text product-title">
-                       <span class="the-text">前端手册</span>
-                   </span>
-               </h3>
-			   <div style="position: relative; overflow: hidden; width: 100%; height: 182px;">
-				<div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
-				 <ul class="product_list thm-uglier">
-				  <li><a href="https://dm.console.aliyun.com" target="_blank"><i class="wind-rc-product-icon glyph-dm"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="邮件推送">邮件推送</span></a></li>
-                  <li><a href="https://vod.console.aliyun.com" target="_blank"><i class="wind-rc-product-icon glyph-vod"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="视频点播">视频点播</span></a></li>
-				  <li><a href="https://oss.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-oss"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="对象存储 OSS">对象存储 OSS</span></a></li>
-				  <li><a href="https://iot.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-iot"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="物联网平台">物联网平台</span></a></li>
-				  <li><a href="https://cds.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-codepipeline"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="CodePipeline">CodePipeline</span></a></li>
-				  <li><a href="https://apigateway.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-apigateway"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="API 网关">API 网关</span></a></li>
-				  <li><a href="https://mns.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-mns"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="消息服务 MNS">消息服务 MNS</span></a></li>
-				  <li><a href="https://ahas.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-ahas"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="应用高可用服务">应用高可用服务</span></a></li>
-				  <li><a href="https://dc.console.aliyun.com/next/index#/domain/list/all-domain" target="_blank" ><i class="wind-rc-product-icon glyph-domain"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="域名">域名</span></a></li>
-				  <li><a href="https://sls.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-sls"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="日志服务">日志服务</span></a></li>
-				  <li><a href="https://market.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-market"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="云市场">云市场</span></a></li>
-				 </ul>
-				</div>
-			   </div>
-			  </div>
-		</el-col>
-        <el-col :span="8">
-            <div class="next-card next-card-free next-card-show-divider">
-            <h3 class="widget-title">平台手册</h3>
-            <div class="widget-wrapper" style="position: relative;">
-                <div class="widget-bulletin-list">
-                    <div class="cont">
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060847550.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem0;itemid=1060847550">【升级】5月20日云通信短信服务中国联通网络割接操作通知</a>
+        <el-col :span="24">
+        <div class="WidgetHomeProductMy-detailContainer-3W8nd">
+            <h3 class="h3-title">
+                <span tooltipicon="help" class="nb-rc-text product-title">
+                    <span class="the-text">接入教程</span>
+                </span>
+            </h3>
+            <div class="learn-box" >
+                <div class="learn-box-list">
+                    <ul class="product_list thm-uglier">
+                        <li @click='jumpTo()' class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-accessible-icon"></i> Oauth2应用接入
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060847364.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem1;itemid=1060847364">【其他】5月31日未实名认证.公司/.网络域名将被注册局暂停解析</a>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846481.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem2;itemid=1060846481">【升级】5月23日注册局维护通知</a>
+                        </li>
+                        <li @click='jumpTo()' class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> 旧系统接入
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846468.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem3;itemid=1060846468">【升级】5月19日DDoS高防（国际）升级通知</a>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846187.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem4;itemid=1060846187">【漏洞预警】XStream &lt; 1.4.17 反序列化远程代码执行漏洞（CVE-2021-29505）</a>
+                        </li>
+                        <li @click='jumpTo()' class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-app-store-ios"></i> 单点数据同步
                         </div>
-                    </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li @click='jumpTo()' class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> 多种验证码管理
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li @click='jumpTo()' class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-app-store-ios"></i> 集成第三方单点登陆
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li @click='jumpTo()' class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> IFrame应用嵌套
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
 		</el-col>
         </el-row>
         <el-row :gutter="20">
-        <el-col :span="16">
-			<div class="WidgetHomeProductMy-detailContainer-3W8nd">
-			   <h3 class="WidgetHomeProductMy-opendProductTitle-3NDOg">
-                   <span tooltipicon="help" class="nb-rc-text product-title">
-                       <span class="the-text">前端手册</span>
-                   </span>
-               </h3>
-			   <div style="position: relative; overflow: hidden; width: 100%; height: 182px;">
-				<div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
-				 <ul class="product_list thm-uglier">
-				  <li><a href="https://dm.console.aliyun.com" target="_blank"><i class="wind-rc-product-icon glyph-dm"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="邮件推送">邮件推送</span></a></li>
-                  <li><a href="https://vod.console.aliyun.com" target="_blank"><i class="wind-rc-product-icon glyph-vod"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="视频点播">视频点播</span></a></li>
-				  <li><a href="https://oss.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-oss"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="对象存储 OSS">对象存储 OSS</span></a></li>
-				  <li><a href="https://iot.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-iot"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="物联网平台">物联网平台</span></a></li>
-				  <li><a href="https://cds.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-codepipeline"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="CodePipeline">CodePipeline</span></a></li>
-				  <li><a href="https://apigateway.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-apigateway"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="API 网关">API 网关</span></a></li>
-				  <li><a href="https://mns.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-mns"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="消息服务 MNS">消息服务 MNS</span></a></li>
-				  <li><a href="https://ahas.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-ahas"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="应用高可用服务">应用高可用服务</span></a></li>
-				  <li><a href="https://dc.console.aliyun.com/next/index#/domain/list/all-domain" target="_blank" ><i class="wind-rc-product-icon glyph-domain"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="域名">域名</span></a></li>
-				  <li><a href="https://sls.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-sls"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="日志服务">日志服务</span></a></li>
-				  <li><a href="https://market.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-market"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="云市场">云市场</span></a></li>
-				 </ul>
-				</div>
-			   </div>
-			  </div>
-		</el-col>
-        <el-col :span="8">
-            <div class="next-card next-card-free next-card-show-divider">
-            <h3 class="widget-title">平台手册</h3>
-            <div class="widget-wrapper" style="position: relative;">
-                <div class="widget-bulletin-list">
-                    <div class="cont">
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060847550.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem0;itemid=1060847550">【升级】5月20日云通信短信服务中国联通网络割接操作通知</a>
+        <el-col :span="24">
+        <div class="WidgetHomeProductMy-detailContainer-3W8nd">
+            <h3 class="h3-title">
+                <span tooltipicon="help" class="nb-rc-text product-title">
+                    <span class="the-text">接入教程</span>
+                </span>
+            </h3>
+            <div class="learn-box" >
+                <div class="learn-box-list">
+                    <ul class="product_list thm-uglier">
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-accessible-icon"></i> Oauth2应用接入
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060847364.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem1;itemid=1060847364">【其他】5月31日未实名认证.公司/.网络域名将被注册局暂停解析</a>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846481.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem2;itemid=1060846481">【升级】5月23日注册局维护通知</a>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> 旧系统接入
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846468.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem3;itemid=1060846468">【升级】5月19日DDoS高防（国际）升级通知</a>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846187.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem4;itemid=1060846187">【漏洞预警】XStream &lt; 1.4.17 反序列化远程代码执行漏洞（CVE-2021-29505）</a>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-app-store-ios"></i> 单点数据同步
                         </div>
-                    </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> 多种验证码管理
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-app-store-ios"></i> 集成第三方单点登陆
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> IFrame应用嵌套
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
 		</el-col>
         </el-row>
         <el-row :gutter="20">
-        <el-col :span="16">
-			<div class="WidgetHomeProductMy-detailContainer-3W8nd">
-			   <h3 class="WidgetHomeProductMy-opendProductTitle-3NDOg">
-                   <span tooltipicon="help" class="nb-rc-text product-title">
-                       <span class="the-text">前端手册</span>
-                   </span>
-               </h3>
-			   <div style="position: relative; overflow: hidden; width: 100%; height: 182px;">
-				<div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
-				 <ul class="product_list thm-uglier">
-				  <li><a href="https://dm.console.aliyun.com" target="_blank"><i class="wind-rc-product-icon glyph-dm"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="邮件推送">邮件推送</span></a></li>
-                  <li><a href="https://vod.console.aliyun.com" target="_blank"><i class="wind-rc-product-icon glyph-vod"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="视频点播">视频点播</span></a></li>
-				  <li><a href="https://oss.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-oss"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="对象存储 OSS">对象存储 OSS</span></a></li>
-				  <li><a href="https://iot.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-iot"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="物联网平台">物联网平台</span></a></li>
-				  <li><a href="https://cds.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-codepipeline"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="CodePipeline">CodePipeline</span></a></li>
-				  <li><a href="https://apigateway.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-apigateway"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="API 网关">API 网关</span></a></li>
-				  <li><a href="https://mns.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-mns"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="消息服务 MNS">消息服务 MNS</span></a></li>
-				  <li><a href="https://ahas.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-ahas"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="应用高可用服务">应用高可用服务</span></a></li>
-				  <li><a href="https://dc.console.aliyun.com/next/index#/domain/list/all-domain" target="_blank" ><i class="wind-rc-product-icon glyph-domain"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="域名">域名</span></a></li>
-				  <li><a href="https://sls.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-sls"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="日志服务">日志服务</span></a></li>
-				  <li><a href="https://market.console.aliyun.com" target="_blank" ><i class="wind-rc-product-icon glyph-market"></i><span class="WidgetHomeProductMy-product_name-TNtW6" title="云市场">云市场</span></a></li>
-				 </ul>
-				</div>
-			   </div>
-			  </div>
-		</el-col>
-        <el-col :span="8">
-            <div class="next-card next-card-free next-card-show-divider">
-            <h3 class="widget-title">平台手册</h3>
-            <div class="widget-wrapper" style="position: relative;">
-                <div class="widget-bulletin-list">
-                    <div class="cont">
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060847550.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem0;itemid=1060847550">【升级】5月20日云通信短信服务中国联通网络割接操作通知</a>
+        <el-col :span="24">
+        <div class="WidgetHomeProductMy-detailContainer-3W8nd">
+            <h3 class="h3-title">
+                <span tooltipicon="help" class="nb-rc-text product-title">
+                    <span class="the-text">接入教程</span>
+                </span>
+            </h3>
+            <div class="learn-box" >
+                <div class="learn-box-list">
+                    <ul class="product_list thm-uglier">
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-accessible-icon"></i> Oauth2应用接入
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060847364.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem1;itemid=1060847364">【其他】5月31日未实名认证.公司/.网络域名将被注册局暂停解析</a>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846481.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem2;itemid=1060846481">【升级】5月23日注册局维护通知</a>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> 旧系统接入
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846468.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem3;itemid=1060846468">【升级】5月19日DDoS高防（国际）升级通知</a>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
                         </div>
-                        <div class="item">
-                            <a class="wind-rc-link" href="//help.aliyun.com/noticelist/articleid/1060846187.html" target="_blank" data-spm-click="gostr=/aliyun-console.help-bulletin.item;locaid=ditem4;itemid=1060846187">【漏洞预警】XStream &lt; 1.4.17 反序列化远程代码执行漏洞（CVE-2021-29505）</a>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-app-store-ios"></i> 单点数据同步
                         </div>
-                    </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> 多种验证码管理
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fab fa-app-store-ios"></i> 集成第三方单点登陆
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                        <li class="product_list_li">
+                        <div class="text-title">
+                            <i class="fas fa-ambulance"></i> IFrame应用嵌套
+                        </div>
+                        <div class="text-descript">
+                            本教程适用企业、个人，基于开源的PbootCMS，快速搭建拥有丰富功能的网站。
+                        </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
 		</el-col>
         </el-row>
+        </div>
     </div>
 </div>
 
@@ -184,11 +218,17 @@ export default {
         goTarget(href) {
             window.open(href, "_blank");
         },
+        jumpTo(){
+            this.$router.push('/dashboard/article/1231231');
+        }
     },
 };
 </script>
 
 <style scoped lang="scss">
+
+@import url('http://static.cloud.linesno.com/asserts/vendors/fontawesome/css/all.css') ;
+
 
 .homeHeader {
     position: relative;
@@ -239,7 +279,6 @@ export default {
     padding-left: 20px !important ;
     padding-right: 20px !important ;
     border: var(--card-border-width,1px) var(--card-border-style,solid) var(--card-border-color,#e3e4e6);
-    height: 312px;
 }
 
 .el-col-8 {
@@ -258,6 +297,58 @@ export default {
 
     a {
         color: #555;
+    }
+}
+
+.product_list_li:nth-child(3),.product_list_li:nth-child(6) {
+    border-right: 0px;
+}
+
+.product_list_li {
+    width: 33% !important;
+    padding: 20px !important ;
+    border-radius: 0px !important ;
+
+    i{
+        font-size: 22px;
+        color: #005bd4;
+        opacity: 0.6;
+        margin-right: 10px;
+    }
+
+    .text-title{
+        font-family: PingFangSC-Medium;
+        font-size: 16px;
+        color: #333;
+        letter-spacing: 0;
+        line-height: 24px;
+    }
+
+    &:hover{
+        background-color:#f7f9fa ;
+        cursor:pointer ;
+        border-radius: 4px;
+        transition: background-color .5s;
+
+        i{
+            opacity: 1;
+            transition: opacity .5s;
+        }
+
+        .text-title{
+            color: #005bd4;
+            text-shadow: 0 0 20px #9e9a9a;
+        }
+    }
+
+    .text-descript{
+        margin-top: 8px;
+        opacity: .7;
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #333;
+        letter-spacing: .37px;
+        line-height: 20px;
     }
 }
 
@@ -311,53 +402,10 @@ export default {
 }
 
 .next-col-4 {
-    -ms-flex: 0 0 16.66667%;
-    -webkit-flex: 0 0 16.66667%;
     flex: 0 0 16.66667%;
     width: 16.66667%;
     max-width: 16.66667%;
     float: left ;
-}
-
-.tag {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0 12px;
-    margin-bottom: 8px;
-    height: 32px;
-    width: 95%;
-    font-size: 12px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    background-color: #f7f9fa;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    color: #333!important;
-    cursor: pointer;
-    -webkit-transition: background-color .1s linear;
-    -o-transition: background-color linear .1s;
-    -moz-transition: background-color linear .1s;
-    transition: background-color .1s linear;
-    white-space: nowrap;
-    text-decoration: none;
 }
 
 .subtitle {
@@ -420,6 +468,67 @@ export default {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
+}
+
+.h3-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-left: 16px;
+
+}
+
+.text-icons{
+    float: right;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ccc;
+}
+
+li.product_list_li.count-li {
+    background: url(https://img.alicdn.com/tfs/TB1uQ8uVLb2gK0jSZK9XXaEgFXa-816-160.png) 0% 0% / 100% 100% no-repeat;
+    width: calc(50% - 16px) !important;
+    height: 140px;
+    border-right: 0px;
+    border-radius: 5px !important;
+    margin: 0px 0px 16px 16px !important;
+}
+
+.count-text-button > button {
+    padding: 0 16px;
+    height: 32px;
+    line-height: 30px;
+    font-size: 12px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #005bd4 ;
+    border-color: transparent;
+    margin-top: 20px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.document-panel{
+    width: 100% ;
+    max-width: 1024px ;
+    margin: auto ;
+
+    .learn-box{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 230px;
+
+        .learn-box-list{
+            position: absolute;
+            inset: 0px;
+            overflow: scroll;
+            margin-right: -17px;
+            margin-bottom: -17px;
+        }
+    }
 }
 
 </style>

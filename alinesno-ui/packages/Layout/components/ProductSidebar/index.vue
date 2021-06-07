@@ -17,7 +17,7 @@
         :direction="direction"
         :withHeader=false
         :modal=false
-        wrapperClosable="true"
+        :wrapperClosable=true
         size="700px"
         :before-close="handleClose">
 

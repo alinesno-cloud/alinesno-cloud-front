@@ -1,6 +1,6 @@
 <template>
-    <div class="main-container">
-        <support-normal />
+    <div class="support-container">
+        <!-- <support-normal /> -->
         <support-professor />
     </div>
 </template>
@@ -18,10 +18,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.main-container {
+.support-container {
     max-width: 1200px ;
     top: 0px !important;
     margin-bottom: 100px;
+    margin: auto ;
 }
 </style>
 
