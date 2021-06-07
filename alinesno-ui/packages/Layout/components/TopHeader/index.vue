@@ -8,9 +8,7 @@
             <span>新狐云数字化平台</span>
         </a>
     </router-link>
-    <div class="">
-        <div class=""></div>
-    </div>
+    <header-app />
     <nav class="CB-gKhVFp header-text">
         <div class="CB-qpwBh">
             <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/index">控制台</router-link>
@@ -44,8 +42,14 @@
 </template>
 
 <script>
+
+import HeaderApp from './application' ;
+
 export default {
     name: 'TopHeader',
+    components:{
+        HeaderApp
+    },
     data() {
         return {
             // 遮罩层
