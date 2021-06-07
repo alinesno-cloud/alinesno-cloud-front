@@ -181,6 +181,8 @@ export default {
 
 .cf-service-nav-item-title{
     color: #333;
+    font-size: 14px ;
+    font-weight: 700 ;
 }
 
 span.product-text-label {
