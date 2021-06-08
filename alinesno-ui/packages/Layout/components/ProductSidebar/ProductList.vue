@@ -7,19 +7,19 @@
                 </div>
                 <ul>
                     <li class="cf-service-nav-item">
-                        <a class="cf-service-nav-item-label" title="基础权限管理平台">
-                            基础权限管理平台
+                        <a @click="openService" class="cf-service-nav-item-label" title="基础权限管理服务">
+                            基础权限管理服务
                             <span class="product-text-label">推荐</span>
                         </a>
                     </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="云门户管理平台"> 云门户管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="通知管理平台"> 通知管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="文档打印管理平台"> 文档打印管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="存储管理平台"> 存储管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="工作流管理平台"> 工作流管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="网关管理平台"> 网关管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="单点登陆管理平台"> 单点登陆管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据报表管理平台"> 数据报表管理平台 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="云门户管理服务"> 云门户管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="通知管理服务"> 通知管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="文档打印管理服务"> 文档打印管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="存储管理服务"> 存储管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="工作流管理服务"> 工作流管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="网关管理服务"> 网关管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="单点登陆管理服务"> 单点登陆管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据报表管理服务"> 数据报表管理服务 <span style="display:none">正常</span> </a> </li>
                     <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="文件管理系统"> 文件管理系统 <span style="display:none">正常</span> </a> </li>
                 </ul>
             </div>
@@ -31,7 +31,7 @@
                 </div>
                 <ul>
                     <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="版本控制"> 版本控制 <span style="display:none">正常</span> </a> </li> <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" href="/product-detail?productId=a5e0ebbbb707aefed0b5cf20eb18194c" target="_blank"  title="持续集成"> 持续集成 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" @click="openApply" title="私有云基础PaaS平台"> 私有云平台 <span class="product-text-label">企业</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" @click="openApply" title="私有云基础PaaS服务"> 私有云服务 <span class="product-text-label">企业</span> </a> </li>
                     <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="Prometheus监控"> Prometheus监控 <span style="display:none">正常</span> </a> </li>
                 </ul>
             </div>
@@ -42,12 +42,12 @@
                     数据中台
                 </div>
                 <ul>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" @click="openTest" title="ETL在线调试平台"> ETL在线调试平台 <span class="product-text-label">内测</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据大屏管理平台"> 数据大屏管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据大屏管理平台"> 数据大屏管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据大屏管理平台"> 数据大屏管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据大屏管理平台"> 数据大屏管理平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据融合平台"> 数据融合平台 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" @click="openTest" title="ETL在线调试服务"> ETL在线调试服务 <span class="product-text-label">内测</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据大屏管理服务"> 数据大屏管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据大屏管理服务"> 数据大屏管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据大屏管理服务"> 数据大屏管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据大屏管理服务"> 数据大屏管理服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="数据融合服务"> 数据融合服务 <span style="display:none">正常</span> </a> </li>
                     <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="实时计算仓库"> 实时计算仓库 <span style="display:none">正常</span> </a> </li>
                 </ul>
             </div>
@@ -58,8 +58,8 @@
                     物联网管理
                 </div>
                 <ul>
-                            <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="网关服务平台"> 网关服务平台 <span style="display:none">正常</span> </a> </li>
-                            <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="物联网管理平台"> 物联网管理平台 <span style="display:none">正常</span> </a> </li>
+                            <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="网关服务服务"> 网关服务服务 <span style="display:none">正常</span> </a> </li>
+                            <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="物联网管理服务"> 物联网管理服务 <span style="display:none">正常</span> </a> </li>
                 </ul>
             </div>
         </div>
@@ -77,7 +77,7 @@
                     <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="微服务研发引擎"> 微服务研发引擎 <span style="display:none">正常</span> </a> </li>
                     <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="开发手册"> 前端框架引擎 <span style="display:none">正常</span> </a> </li>
                     <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="前端设计"> 容器持续集成 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="测试框架"> 代码管理平台 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="测试框架"> 代码管理服务 <span style="display:none">正常</span> </a> </li>
                 </ul>
             </div>
         </div>
@@ -87,8 +87,8 @@
                     业务中台
                 </div>
                 <ul>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="代码生成器平台"> 代码生成器平台 <span style="display:none">正常</span> </a> </li>
-                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="低代码开发平台"> 工作流开发平台 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="代码生成器服务"> 代码生成器服务 <span style="display:none">正常</span> </a> </li>
+                    <li class="cf-service-nav-item"> <a class="cf-service-nav-item-label" target="_blank"  title="低代码开发服务"> 工作流开发服务 <span style="display:none">正常</span> </a> </li>
                 </ul>
             </div>
         </div>
@@ -109,6 +109,20 @@ export default {
             });
           }
         });
+      } ,
+      openService() {
+          this.$confirm('你将使用此服务，是否需要查阅服务使用手册?', '提示', {
+              confirmButtonText: '进入服务',
+              cancelButtonText: '服务手册',
+              type: 'success'
+          }).then(() => {
+              this.$message({
+                  type: 'success',
+                  message: '正在重定向并打开服务链接 ...... '
+              });
+          }).catch(() => {
+              this.$router.push('/dashboard/article/1231231');
+          });
       } ,
       openApply() {
         this.$prompt('此为企业组件，请输入申请理由', '提示', {
@@ -175,14 +189,14 @@ export default {
     list-style: none ;
     padding: 0px;
     color: #333;
-    font-size: 13px;
-    line-height: 2.2 ;
+    font-size: 12px;
+    line-height: 2.3 ;
 }
 
 .cf-service-nav-item-title{
     color: #333;
-    font-size: 14px ;
-    font-weight: 700 ;
+    font-size: 15px ;
+    font-weight: 500 ;
 }
 
 span.product-text-label {

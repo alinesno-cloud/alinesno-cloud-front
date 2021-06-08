@@ -23,7 +23,7 @@
             <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/workorder">提交工单</router-link>
         </div>
         <div class="CB-qpwBh">
-            <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/support">支持管理</router-link>
+            <router-link tag="a" class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" to="/dashboard/platform/service">支持管理</router-link>
         </div>
         <div class="CB-qpwBh">
             <a  class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" >【系统管理员-张三】</a>

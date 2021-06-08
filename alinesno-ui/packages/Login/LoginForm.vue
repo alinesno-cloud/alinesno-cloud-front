@@ -42,9 +42,9 @@
             <div class="inputField" style="position: relative;">
                 <input type="text" class="iam-input-text"
                         name="account"
-                        v-model="loginForm.code"
+                        v-model="loginForm.username"
                         @keyup.enter="handleLogin"
-                       placeholder="租户名/原云帐号" maxlength="255" autocomplete="off" style="width: 100%; height: 48px;" />
+                       placeholder="账号名" maxlength="255" autocomplete="off" style="width: 100%; height: 48px;" />
             </div>
             <div class="inputField" style="position: relative;">
                     <input class="iam-input-text ng-pristine ng-untouched ng-valid ng-valid-maxlength"
@@ -116,8 +116,8 @@ export default {
       codeUrl: "",
       cookiePassword: "",
       loginForm: {
-        username: "admin",
-        password: "admin123",
+        username: "",
+        password: "",
         rememberMe: false,
         code: "",
         uuid: ""

@@ -5,9 +5,9 @@
         <i class="el-icon-position"></i>
         <span slot="title">研发中台</span>
       </el-menu-item>
-      <el-menu-item index="3">
+      <el-menu-item index="3" @click="jumpTo">
         <i class="el-icon-document"></i>
-        <span slot="title">我的应用</span>
+        <span slot="title">平台服务</span>
       </el-menu-item>
     </el-menu>
 
@@ -46,6 +46,9 @@ import ProductList from "./ProductList";
     methods: {
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
+      },
+      jumpTo(){
+        this.$router.push('/dashboard/platform/technique');
       },
       handleClose(done) {
         done();
