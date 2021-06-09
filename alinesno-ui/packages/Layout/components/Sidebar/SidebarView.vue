@@ -1,12 +1,25 @@
 <template>
     <div class="sidebar-view">
         <h1 class="sidebar-title">
-            单点登陆管理
+            {{ currentApplicationName }}
         </h1>
     </div>
 </template>
 
 <script>
+import { mapGetters, mapState } from "vuex";
+export default {
+    data(){
+        return {
+            currentApplicationName:''
+        }
+    },
+    mounted() {
+        var v = this.$store.state.permission.currentApp;
+        this.currentApplicationName = v.applicationName ;
+    }
+}
+
 </script>
 
 <style lang="scss" scoped>
