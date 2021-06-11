@@ -36,7 +36,7 @@ export const constantRoutes = [
         hidden: true
       },
       {
-        path: '/dashboard/support',
+        path: '/dashboard/platform/service',
         component: (resolve) => require(['alinesno-ui/src/views/dashboard/support'], resolve),
         name: '支持管理',
         hidden: true
