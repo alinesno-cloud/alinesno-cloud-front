@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: saas-alinesno-cloud-cloud-base-ui-v2
+  namespace: product-alinesno-cloud
+spec:
+  rules:
+    - host: v212.ui.cloud-base.admin.dev.lbxinhu.linesno.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: dev-alinesno-cloud-cloud-base-ui-v2
+              servicePort: 80
