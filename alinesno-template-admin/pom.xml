@@ -4,14 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>alinesno.cloud.watcher</groupId>
-		<artifactId>alinesno-cloud-watcher-parent</artifactId>
-		<version>2.1.1-RC</version>
-		<relativePath/>
+		<groupId>com.alinesno.cloud</groupId>
+		<artifactId>alinesno-cloud-starter-parent</artifactId>
+		<version>2.1.2-Alpha</version>
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>com.alinesno.cloud.ui</groupId>
-	<artifactId>alinesno-cloud-ui</artifactId>
+	<artifactId>alinesno-cloud-base-cloud-ui</artifactId>
 	<packaging>jar</packaging>
 
 	<url>http://maven.apache.org</url>
@@ -35,33 +35,35 @@
 				  	<!-- 若不方便访问官网，可使用国内淘宝镜像-->
 				  	<nodeDownloadRoot>https://npm.taobao.org/mirrors/node/</nodeDownloadRoot>
 				  	<npmDownloadRoot>https://registry.npm.taobao.org/npm/-/</npmDownloadRoot>
+				  	<yarnDownloadRoot>https://npm.taobao.org/mirrors/yarn/</yarnDownloadRoot>
 				</configuration>
 				<executions>
 					<execution>
-						<id>install node and npm</id>
+						<id>install node and yarn</id>
 						<goals>
-							<goal>install-node-and-npm</goal>
+							<goal>install-node-and-yarn</goal>
 						</goals>
 						<configuration>
 							<nodeVersion>v12.13.0</nodeVersion>
+							<yarnVersion>v1.22.10</yarnVersion>
 						</configuration>
 					</execution>
 					<execution>
-						<id>npm install</id>
+						<id>yarn install</id>
 						<goals>
-							<goal>npm</goal>
+							<goal>yarn</goal>
 						</goals>
 						<configuration>
 							<arguments>install</arguments>
 						</configuration>
 					</execution>
 					<execution>
-						<id>npm run build</id>
+						<id>yarn run build</id>
 						<goals>
-							<goal>npm</goal>
+							<goal>yarn</goal>
 						</goals>
 						<configuration>
-							<arguments>run build</arguments>
+							<arguments>run build:prod</arguments>
 						</configuration>
 					</execution>
 				</executions>
@@ -88,5 +90,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
