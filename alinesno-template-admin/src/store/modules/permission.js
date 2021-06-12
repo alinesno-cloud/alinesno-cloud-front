@@ -6,16 +6,12 @@ import ParentView from 'alinesno-ui/packages/ParentView';
 const permission = {
   state: {
     routes: [],
-    currentApp: {},
     addRoutes: [],
     defaultRoutes: [],
     topbarRouters: [],
     sidebarRouters: []
   },
   mutations: {
-    SET_CURRENT_APP: (state, app) => {
-      state.currentApp = app
-    },
     SET_ROUTES: (state, routes) => {
       state.addRoutes = routes
       state.routes = constantRoutes.concat(routes)
@@ -41,20 +37,15 @@ const permission = {
       return new Promise(resolve => {
         // 向后端请求路由数据
         getRouters().then(res => {
-
-          const currentApp = JSON.parse(JSON.stringify(res.currentApp))
           const sdata = JSON.parse(JSON.stringify(res.data))
           const rdata = JSON.parse(JSON.stringify(res.data))
           const sidebarRoutes = filterAsyncRouter(sdata)
           const rewriteRoutes = filterAsyncRouter(rdata, false, true)
           rewriteRoutes.push({ path: '*', redirect: '/404', hidden: true })
-
-          commit('SET_CURRENT_APP', currentApp)
           commit('SET_ROUTES', rewriteRoutes)
           commit('SET_SIDEBAR_ROUTERS', constantRoutes.concat(sidebarRoutes))
           commit('SET_DEFAULT_ROUTES', sidebarRoutes)
           commit('SET_TOPBAR_ROUTES', sidebarRoutes)
-
           resolve(rewriteRoutes)
         })
       })
