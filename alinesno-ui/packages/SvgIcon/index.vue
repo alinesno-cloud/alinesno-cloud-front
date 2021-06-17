@@ -1,8 +1,8 @@
 <template>
   <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners" />
-  <!-- <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
+  <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
     <use :xlink:href="iconName" />
-  </svg> -->
+  </svg>
 </template>
 
 <script>
@@ -25,14 +25,17 @@ export default {
       return isExternal(this.iconClass)
     },
     iconName() {
-      return `#icon-${this.iconClass}`
+      // return `#icon-${this.iconClass}`
+      return `#icon-button`
     },
     svgClass() {
-      if (this.className) {
-        return 'svg-icon ' + this.className
-      } else {
-        return 'svg-icon'
-      }
+        console.log('this class name = ' + this.className) ;
+
+        if (this.className) {
+            return 'svg-icon ' + this.className
+        } else {
+            return 'svg-icon'
+        }
     },
     styleExternalIcon() {
       return {
