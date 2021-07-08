@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import { removeToken, setExpiresIn, setRefreshToken, setToken } from '../utils/auth'
+import store from '../store'
 // import Router from 'vue-router'
 // Vue.use(Router)
 
@@ -42,4 +44,6 @@ export const constantRoutes = [
     hidden: true
   }
 ]
+
+
 
