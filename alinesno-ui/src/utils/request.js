@@ -15,7 +15,9 @@ const service = axios.create({
 // request拦截器
 service.interceptors.request.use(config => {
   // 是否需要设置 token
-  config.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
+  if (config.url !== '/tryLogin') {
+    config.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
+  }
 
   // get请求映射params参数
   if (config.method === 'get' && config.params) {
