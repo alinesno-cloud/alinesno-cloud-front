@@ -65,7 +65,7 @@ service.interceptors.response.use(res => {
         const params = new URLSearchParams()
         const { secret, loginEndPoint } = data.data
         const fromRouter = location.href
-        params.append('fromHere', fromRouter)
+        params.append('redirect_uri', fromRouter)
         params.append('secret', secret)
         store.dispatch('LogOut').then(() => {
           location.href = `${loginEndPoint}?${params.toString()}`

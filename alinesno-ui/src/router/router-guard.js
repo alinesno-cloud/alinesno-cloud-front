@@ -55,7 +55,7 @@ const AuthGuardService = (to, from, next) => {
         const { loginEndPoint, secret } = res.data
         const fromRouter = location.href
         const query = new URLSearchParams()
-        query.append('fromHere', fromRouter)
+        query.append('redirect_uri', fromRouter)
         query.append('secret', secret)
         location.href = `${loginEndPoint}?${query.toString()}`
       })
