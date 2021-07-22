@@ -11,13 +11,16 @@ export function checkPermi(value) {
     const permissionDatas = value
     const all_permission = "*:*:*";
 
-    const hasPermission = permissions.some(permission => {
-      return all_permission === permission || permissionDatas.includes(permission)
-    })
+    try{
+        const hasPermission = permissions.some(permission => {
+          return all_permission === permission || permissionDatas.includes(permission)
+        })
 
-    if (!hasPermission) {
-      return false
-    }
+        if (!hasPermission) {
+          return false
+        }
+    }catch(e){}
+
     return true
   } else {
     console.error(`need roles! Like checkPermi="['system:user:add','system:user:edit']"`)
