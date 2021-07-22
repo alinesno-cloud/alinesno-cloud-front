@@ -28,8 +28,10 @@ export default function searchParam(context, ref, form) {
         } else {
             const wrapper = context.$refs[`${formname}.${i}`].$attrs.wrapper === undefined ? 'eq' : context.$refs[`${formname}.${i}`].$attrs.wrapper
             const properties = context.$refs[`${formname}.${i}`].$vnode.data.model.value
-            let obj = {'column': i, 'type': wrapper, 'value': properties}
-            paramArr.push(obj)
+            if(properties != null){
+                let obj = {'column': i, 'type': wrapper, 'value': properties}
+                paramArr.push(obj)
+            }
         }
     }
     return paramArr
