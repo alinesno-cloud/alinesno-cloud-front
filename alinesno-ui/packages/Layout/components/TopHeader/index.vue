@@ -1,13 +1,16 @@
 <template>
   <div class="top-headers">
     <router-link tag="div" class="header-logo-bar" to="/index">
-      <button class="header-logo" data-spm-click="gostr=/aliyun;locaid=ddock">
+      <button class="header-logo">
         <img src="http://training-static.linesno.com/fox_cloud/fox_header.png"
              style="position: absolute;width: 40px;top: 5px;left: 10px;">
       </button>
-      <a title="新狐云数字化平台" target="_self" class="header-logo-label">
-        <span>新狐云数字化平台</span>
+      <a :title="saasTitle" target="_self" class="header-logo-label">
+        <span>{{ saasTitle }} </span>
       </a>
+      <el-button v-if="saasUrl" class="dashboard-home" size="small" icon="el-icon-s-home" @click="dashboardHome()">  
+        工作台
+      </el-button>
     </router-link>
     <header-app/>
     <nav class="CB-gKhVFp header-text">
@@ -62,47 +65,8 @@ export default {
   },
   data () {
     return {
-      // 遮罩层
-      loading: true,
-      // 选中数组
-      ids: [],
-      // 非单个禁用
-      single: true,
-      // 非多个禁用
-      multiple: true,
-      // 显示搜索条件
-      showSearch: true,
-      // 总条数
-      total: 0,
-      // 公告表格数据
-      noticeList: [],
-      // 弹出层标题
-      title: '',
-      // 是否显示弹出层
-      open: false,
-      // 类型数据字典
-      statusOptions: [],
-      // 状态数据字典
-      typeOptions: [],
-      // 查询参数
-      queryParams: {
-        pageNum: 1,
-        pageSize: 10,
-        noticeTitle: undefined,
-        createBy: undefined,
-        status: undefined
-      },
-      // 表单参数
-      form: {},
-      // 表单校验
-      rules: {
-        noticeTitle: [
-          { required: true, message: '公告标题不能为空', trigger: 'blur' }
-        ],
-        noticeType: [
-          { required: true, message: '公告类型不能为空', trigger: 'change' }
-        ]
-      }
+      saasTitle: '新狐云数字化平台',
+      saasUrl : 'http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/' ,
     }
   },
   methods: {
@@ -114,6 +78,9 @@ export default {
     cancel () {
 
     },
+    dashboardHome(){
+        window.location.href = this.saasUrl ; 
+    } ,
     // 表单重置
     reset () {
       this.form = {
@@ -238,6 +205,14 @@ export default {
     }
   }
 }
+
+.dashboard-home{
+  background-color: #f4f6f7;
+  border: 0px;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
 </style>
 
 
