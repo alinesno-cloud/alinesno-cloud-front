@@ -1,0 +1,13 @@
+// portal
+$mainStyle: #005BD4 ;
+$textStyle: #333 ;
+$bannerBg: #fff ;
+$mainBgStyle: #f4f5f7 ;
+
+$footerBgStyle: #252525 ;
+
+:export {
+    bannerBg: $bannerBg ;
+    mainStyle: $mainStyle ;
+    mainBgStyle: $mainBgStyle ;
+}
