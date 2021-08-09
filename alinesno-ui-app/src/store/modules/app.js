@@ -1,56 +1,76 @@
-import Cookies from 'js-cookie'
+import {
+	getUserInfo
+} from "@/api/user.js";
 
 const state = {
-  sidebar: {
-    opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
-    withoutAnimation: false
-  },
-  device: 'desktop',
-  size: Cookies.get('size') || 'medium'
-}
+	token: uni.getStorageSync('token') || false,
+	backgroundColor: "#fff",
+	userInfo: {},
+	project: uni.getStorageSync('project'),
+	uid: uni.getStorageSync('uid') || 0,
+	homeActive: false,
+	phoneStatus:true
+};
 
 const mutations = {
-  TOGGLE_SIDEBAR: state => {
-    state.sidebar.opened = !state.sidebar.opened
-    state.sidebar.withoutAnimation = false
-    if (state.sidebar.opened) {
-      Cookies.set('sidebarStatus', 1)
-    } else {
-      Cookies.set('sidebarStatus', 0)
-    }
-  },
-  CLOSE_SIDEBAR: (state, withoutAnimation) => {
-    Cookies.set('sidebarStatus', 0)
-    state.sidebar.opened = false
-    state.sidebar.withoutAnimation = withoutAnimation
-  },
-  TOGGLE_DEVICE: (state, device) => {
-    state.device = device
-  },
-  SET_SIZE: (state, size) => {
-    state.size = size
-    Cookies.set('size', size)
-  }
-}
+	SETPHONESTATUS(state,val){
+		state.phoneStatus = val;
+	},
+	LOGIN(state, opt) {
+		state.token = opt.token;
+		uni.setStorageSync('token',opt.token);
+	},
+	SETUID(state,val){
+		state.uid = val;
+		uni.setStorageSync('uid', val);
+	},
+	UPDATE_LOGIN(state, token) {
+		state.token = token;
+	},
+	LOGOUT(state) {
+		state.token = undefined;
+		state.uid = undefined
+		uni.removeStorageSync('token')
+		uni.removeStorageSync('project')
+		uni.removeStorageSync('juese')
+		uni.removeStorageSync('userInfo')
+	},
+	
+	UPDATE_USERINFO(state, userInfo) {
+		state.userInfo = userInfo;
+		uni.setStorageSync('userInfo', userInfo);
+		
+	},
+	OPEN_HOME(state) {
+		state.homeActive = true;
+	},
+	CLOSE_HOME(state) {
+		state.homeActive = false;
+	},
+};
 
 const actions = {
-  toggleSideBar({ commit }) {
-    commit('TOGGLE_SIDEBAR')
-  },
-  closeSideBar({ commit }, { withoutAnimation }) {
-    commit('CLOSE_SIDEBAR', withoutAnimation)
-  },
-  toggleDevice({ commit }, device) {
-    commit('TOGGLE_DEVICE', device)
-  },
-  setSize({ commit }, size) {
-    commit('SET_SIZE', size)
-  }
-}
+	USERINFO({
+		state,
+		commit
+	}, force) {
+		if (state.userInfo !== null && !force)
+			return Promise.resolve(state.userInfo);
+		else
+			return new Promise(reslove => {
+				getUserInfo().then(res => {
+					commit("UPDATE_USERINFO", res.data);
+					uni.setStorageSync('userInfo', res.data);
+					reslove(res.data);
+				});
+			}).catch(() => {
+
+			});
+	}
+};
 
 export default {
-  namespaced: true,
-  state,
-  mutations,
-  actions
-}
+	state,
+	mutations,
+	actions
+};

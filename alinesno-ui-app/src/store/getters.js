@@ -1,18 +1,16 @@
-const getters = {
-  sidebar: state => state.app.sidebar,
-  size: state => state.app.size,
-  device: state => state.app.device,
-  visitedViews: state => state.tagsView.visitedViews,
-  cachedViews: state => state.tagsView.cachedViews,
-  token: state => state.user.token,
-  avatar: state => state.user.avatar,
-  name: state => state.user.name,
-  introduction: state => state.user.introduction,
-  roles: state => state.user.roles,
-  permissions: state => state.user.permissions,
-  permission_routes: state => state.permission.routes,
-  topbarRouters:state => state.permission.topbarRouters,
-  defaultRoutes:state => state.permission.defaultRoutes,
-  sidebarRouters:state => state.permission.sidebarRouters,
-}
-export default getters
+export default {
+  token: state => state.app.token,
+  isLogin: state => !!state.app.token,
+  backgroundColor: state => state.app.backgroundColor,
+  userInfo: state => state.app.userInfo || {},
+	project: state => state.app.project || {},
+  uid:state => state.app.uid,
+  homeActive: state => state.app.homeActive,
+  home: state => state.app.home,
+};
+// export default {
+//   token: state => 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJrYWlmYS5jcm1lYi5uZXQiLCJhdWQiOiJrYWlmYS5jcm1lYi5uZXQiLCJpYXQiOjE1NzcwODM1MzQsIm5iZiI6MTU3NzA4MzUzNCwiZXhwIjoxNTc3MDk0MzM0LCJqdGkiOnsiaWQiOjExMCwidHlwZSI6InVzZXIifX0.U-i1pbdRjyXI1gr79Uq2XBPZ89T8f5Ai9jwrR8woTwE',
+//   isLogin: state => true,
+//   backgroundColor: state => state.app.backgroundColor,
+//   userInfo: state => state.app.userInfo || {}
+// };
