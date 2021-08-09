@@ -1,0 +1,150 @@
+<view class="banner-box">
+	<swiper class="banner-slide" indicator-dots="{{true}}" indicator-color="rgba(255,255,255,.5)"
+		indicator-active-color="#e0ba4f">
+		<swiper-item wx:for="{{data.info.images}}" wx:key="id">
+			<view class="banner-img">
+				<image src="{{item}}" class="banner-image"></image>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>
+
+<view class="pro-info">
+	<view class="pro-info-price">
+		<view class="new-price">￥<text class="big">{{f.clear_zero(data.info.min_price)}}</text></view>
+		<view class="old-price">¥{{f.clear_zero(data.info.min_market_price)}}</view>
+	</view>
+	<view class="pro-name">{{data.info.name}}</view>
+	<view class="pro-tips">{{data.info.small_title}}</view>
+	<view class="sale-bar">
+		<view class="sale-p">{{data.info.send_money > 0 ? "￥"+ data.info.send_money: ' 一件包邮' }} </view>
+		<view class="sale-p">已售{{data.info.sale_num}}件</view>
+	</view>
+
+	<view class="share_btn" bindtap="showShare">
+		<image src="{{cdn}}icon/share.png" class="pro-nav-icon"></image>
+		<view class="pro-nav-p">分享</view>
+	</view>
+
+</view>
+
+<view class="grid">
+	<view class="off-bar" bindtap="show_goods_sel" data-flag="cart">
+		<view class="off-left">
+			<view class="off-title">已选</view>
+			<view class="off-name">{{show_name?show_name:'请选择购买'}}</view>
+		</view>
+		<image src="{{cdn}}icon/ra.png" class="ra"></image>
+	</view>
+	<view class="off-bar" bindtap="showCanshu" wx:if="{{data.as.length>0}}">
+		<view class="off-left">
+			<view class="off-title">参数</view>
+			<view class="off-name">{{data.as[0].name}} {{data.as[1].name}}</view>
+		</view>
+		<image src="{{cdn}}icon/ra.png" class="ra"></image>
+	</view>
+	<view class="off-bar">
+		<view class="off-left">
+			<view class="off-title">物流</view>
+			<view class="off-name">{{data.info.send_money > 0 ? "￥"+ data.info.send_money: '包邮' }}</view>
+		</view>
+	</view>
+
+</view>
+<include src="comment" />
+
+<view class="detail">
+	<view class="detail-wrap">
+		<view class="detail-title">
+			<view class="detail-title-h">图文详情</view>
+		</view>
+	</view>
+	<rich-text nodes="{{data.info.content_html}}" style='  padding:50px; padding-top:0;'></rich-text>
+</view>
+
+<!-- 底部 -->
+<view class="pro-btm-wrap" style="padding-bottom: {{buBottom}}rpx">
+	<view class="pro-btm">
+		<view class="pro-btm-left">
+			<view class="pro-nav" bindtap="tourl" data-url="/pages/index/index">
+				<image src="/ico/home.png" class="pro-nav-icon"></image>
+				<view class="pro-nav-p">首页</view>
+			</view>
+			<view class="pro-nav" bindtap="tourl" data-url="/pages/goods/cart/cart">
+				<view class="pro-nav-num" wx:if="{{cart_num>0}}">{{cart_num}}</view>
+				<image src="/ico/cart.png" class="pro-nav-icon"></image>
+				<view class="pro-nav-p">购物车</view>
+			</view>
+
+
+			<view class="pro-nav {{data.is_atn?'act':''}}" bindtap="atn">
+				<image src="/ico/atn{{data.is_atn?'_act':''}}.png" class="pro-nav-icon"></image>
+				<view class="pro-nav-p">收藏</view>
+			</view>
+
+		</view>
+
+		<view class="pro-btm-right" wx:if="{{data.is_can == 1}}">
+			<view class="pro-btn1" catchtap="show_goods_sel" data-flag="cart">加入购物车</view>
+			<view class="pro-btn2" catchtap="show_goods_sel" data-flag="buy">立即购买</view>
+		</view>
+		<view class="pro-btm-right" wx:if="{{data.is_can == 0}}">
+			<view class="pro-btn1" style="width:100%;background-color: #7d7c7b;">{{data.can_msg}}</view>
+		</view>
+	</view>
+</view>
+
+<view class="pro-btm-margin" style="padding-bottom: {{buBottom}}rpx"></view>
+
+
+<!-- 分享 -->
+<view class="mask" wx:if="{{isShow3}}" bindtap="showShare"></view>
+
+<view class="share-qr" wx:if="{{isShow3}}" style="bottom: calc(210rpx + {{buBottom}}rpx)">
+	<image src="{{cdn}}icon/x2.png" class="x-close" bindtap="showShare"></image>
+	<view class="member">
+		<image src="{{hb_url}}" class="member-hb"></image>
+	</view>
+
+</view>
+
+<view class="share-popp {{isShow3==true?'move':''}}" style="padding-bottom: {{buBottom}}rpx">
+	<view class="share-btn">
+		<button open-type="share" class="fenxiang" style="width:100%;"></button>
+		<image src="{{cdn}}icon/wechat.png" class="share-btn-icon"></image>
+		<view class="share-btn-p">分享给朋友</view>
+	</view>
+	<view class="share-btn" bindtap="msg">
+		<image src="{{cdn}}icon/quan.png" class="share-btn-icon"></image>
+		<view class="share-btn-p">分享朋友圈</view>
+	</view>
+	<view class="share-btn" bindtap="saveimg" data-img="{{hb_url}}">
+		<image src="{{cdn}}icon/save.png" class="share-btn-icon"></image>
+		<view class="share-btn-p">保存图片</view>
+	</view>
+</view>
+
+
+
+
+
+<!-- 商品参数 -->
+<view class="mask" wx:if="{{isShow2}}" bindtap="showCanshu"></view>
+<view class="canshu {{isShow2==true?'move':''}}" style="padding-bottom: {{buBottom}}rpx">
+	<view class="detail-title">
+		<view class="detail-title-h">商品参数</view>
+	</view>
+	<image src="{{cdn}}icon/x.png" class="x-close" bindtap="showCanshu"></image>
+	<scroll-view style="height: 600rpx" model:scroll-y="{{true}}">
+		<view class="canshu-bar" wx:for="{{data.as}}">
+			<view class="canshu-name">{{item.name}}</view>
+			<view class="canshu-p">{{data.newRs[item.field_id].val}}</view>
+		</view>
+	</scroll-view>
+</view>
+
+<poster id="poster" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail"></poster>
+<goods id="goods"></goods>
+
+<!-- 选择规格弹窗 -->
+<wxs module="f" src="../../../utils/f.wxs" />

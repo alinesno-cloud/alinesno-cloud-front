@@ -1,0 +1,19 @@
+.page-bottom-img{
+  margin: 0 auto 10rpx;
+  padding-top: 20rpx;
+  width: 150rpx;
+  display: block;
+}
+.page-bottom {
+  display: block;
+  margin: 10rpx auto 10rpx;
+  width: 400rpx;
+	font-size: 24rpx;
+	color: #b3b3b3;
+  line-height: 33rpx;
+  text-align: center;
+}
+.page-bottom navigator {
+	display: inline-block;
+	color: #ef8b15;
+}

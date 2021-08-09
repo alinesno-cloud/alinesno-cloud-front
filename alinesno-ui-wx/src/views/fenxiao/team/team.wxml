@@ -1,0 +1,31 @@
+<view class="search-bar">
+  <input placeholder="搜索名称" class="search-in" bindinput="get_title" bindblur="search_title" />
+</view>
+
+<view class="fans">
+
+  <view class="fans-list">
+    <view class="fans-item" wx:for="{{list}}">
+      <view class="fans-man" >
+        <view class="fans-img">
+          <image src="{{item.headimgurl}}" class="fans-image" width="78" height="78"></image>
+        </view>
+        <view class="fans-info">
+          <view class="fans-name">{{item.nickname}} </view>
+          <view class="fans-time">{{item.create_time}}加入</view>
+        </view>
+      </view>
+      <view class="fans-count">
+        <view class="fans-p">订单金额/元</view>
+        <view class="fans-num"> {{item.goods_total}} </view>
+      </view>
+      <view class="fans-count">
+        <view class="fans-p">订单数</view>
+        <view class="fans-num">{{item.count}}</view>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+ <msg wx:if='{{list.length<1}}'></msg>

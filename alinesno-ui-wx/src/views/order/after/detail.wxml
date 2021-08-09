@@ -1,0 +1,50 @@
+<!--pages/user/afterSales/detail/index.wxml-->
+<view class=" ">
+  <view class="header_cv">
+    <view class="title_tv"><image src="/ico/success-img.png"></image>{{data.status_str}}</view>
+    <view class="tt">退款金额：¥{{data.refund_price}}</view>
+  </view>
+  <view class="conteView">
+    <view class="conte_cv">
+      <!-- <view class="order_ct">
+        <view class="name">商品名称</view>
+        <view class="rt">{{data.name}}</view>
+      </view> -->
+      <view class="order_ct">
+        <view class="name">售后单号</view>
+        <view class="rt">{{data.sn}}</view>
+      </view>
+      <view class="order_ct">
+        <view class="name">申请金额</view>
+        <view class="rt">¥{{data.refund_price}}</view>
+      </view>
+      <view class="order_ct">
+        <view class="name">申请原因</view>
+        <view class="rt">{{data.refund_reason}}</view>
+      </view>
+      <view class="order_ct">
+        <view class="name">申请说明</view>
+        <view class="rt">{{data.refund_remark}}</view>
+      </view>
+    </view>
+    <view class="conte_cv conte_cv2">
+      <view class="title">申请记录</view>
+      <view class="order_ct" wx:for="{{data.log}}" wx:for-item="log">
+        <view class="name">{{log.content}}</view>
+        <view class="rt">{{log.create_time}}</view>
+      </view>
+      <!-- <view class="order_ct">
+        <view class="name">平台同意退款</view>
+        <view class="rt">2020年11月20日 12:10:12</view>
+      </view>
+      <view class="order_ct">
+        <view class="name">平台受理时间</view>
+        <view class="rt">2020年11月20日 12:10:12</view>
+      </view>
+      <view class="order_ct">
+        <view class="name">您的申请退款</view>
+        <view class="rt">2020年11月20日 12:10:12</view>
+      </view> -->
+    </view>
+  </view>
+</view>

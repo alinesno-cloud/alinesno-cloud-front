@@ -1,0 +1,8 @@
+<view style=" margin:0 auto; text-align:center">
+	<image src="empty.png" style="width: 150rpx;height: 150rpx;"></image>
+</view>
+<view class="bottom-text">
+	<view class="line"></view>
+	{{msg}}
+	<view class="line"></view>
+</view>

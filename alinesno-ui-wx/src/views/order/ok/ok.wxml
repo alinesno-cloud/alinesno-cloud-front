@@ -1,0 +1,30 @@
+<!--  付款成功 -->
+<view class="head">
+	<image class="success-img" src="/ico/success-img.png" mode="widthFix" />
+	<view class="title">支付成功</view>
+	<view class="date">{{data.time}}</view>
+	<view class="btn-wrap flex-center">
+		<navigator  url="/pages/index/index"  open-type="reLaunch"  class="btn">返回首页</navigator>
+		<navigator url="/pages/order/index/index"  open-type="reLaunch"  class="btn">查看订单</navigator>
+	</view>
+</view>
+<goods_list list="{{data.like_goods}}" show_msg="" title="猜你喜欢"></goods_list>
+
+<!-- 代金券弹窗 -->
+<view class="popup token-popup" wx:if="{{1>2}}">
+	<view class="mask"></view>
+	<view class="popup-content">
+		<image class="close-btn" mode="widthFix" src="/ico/popclose-btn.png" />
+		<image class="money-bg" src="/ico/money-bg.png" mode="widthFix" />
+		<view class="title">恭喜您获得</view>
+		<view class="token flex-center">
+			<image src="/ico/polygon.png" class="token-bg" mode="widthFix" />
+			<view class="token-num"><text class="symbol">￥</text>500</view>
+			<view class="token-text">代金券<text>满100抵用</text></view>
+		</view>
+		<view class="tips">代金券已放入 [我的-代金券]</view>
+		<view class="btn">
+			<image class="btn-bg" src="/ico/btn-bg.png" mode="widthFix" /><text class="text">我知道了</text>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,10 @@
+<!-- 设置帮助详情 -->
+<view class="wrap">
+    <view class="title">{{data.info.title}}</view>
+
+    <view class="text">
+        	<rich-text class="article-con" nodes="{{data.info.html}}"></rich-text>
+    </view>
+</view>
+
+<nav></nav>

@@ -1,0 +1,204 @@
+.bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 280rpx;
+  background-color: #4EA9F6;
+}
+
+view {
+  box-sizing: content-box;
+}
+
+.state-wrap {
+  padding: 50rpx 70rpx;
+  color: #fff;
+}
+
+.state-wrap .state {
+  margin-bottom: 20rpx;
+  font-size: 38rpx;
+}
+
+.state-wrap .date {
+  font-size: 24rpx;
+}
+
+.detail {
+  margin: 0 30rpx;
+  padding: 0 40rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  overflow: hidden;
+  font-size: 24rpx;
+}
+
+.detail .row {
+  display: flex;
+  margin: 30rpx 0;
+}
+
+.detail .name {
+  color: #7E7E7E;
+}
+
+.detail .content {
+  flex: 1;
+  text-align: right;
+}
+
+.detail .money {
+  color: #F9604E;
+}
+
+.progress-area {
+  margin: 30rpx;
+  padding: 0 40rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+}
+
+.progress-area .item {
+  display: flex;
+  padding-top: 40rpx;
+}
+
+.progress-area .point {
+  position: relative;
+  margin-top: 10rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+  background-color: #BBBBBB;
+}
+
+.progress-area .point::before {
+  content: "";
+  position: absolute;
+  top: 20rpx;
+  left: 50%;
+  display: block;
+  width: 2rpx;
+  height: 160rpx;
+  background-color: #E8E8E8;
+  transform: translate(-50%, 0);
+}
+
+.progress-area .item:last-of-type .point::before {
+  display: none;
+}
+
+.progress-area .content {
+  flex: 1;
+  margin-left: 30rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 2rpx solid #f3f3f3;
+}
+
+.progress-area .item:last-of-type .content {
+  border-bottom: none;
+}
+
+.progress-area .active {
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #7E7E7E;
+}
+
+.progress-area .date {
+  font-size: 24rpx;
+  color: #7E7E7E;
+}
+
+
+/* **进行中** */
+
+.progress-area .item.ing .point {
+  background-color: #F9604E;
+  box-shadow: 0 0 0 2rpx rgba(249, 95, 78, 0.2);
+  transform: scale(1.6);
+}
+
+.progress-area .item.ing .point::before {
+  transform-origin: left top;
+  transform: scale(0.6);
+}
+
+.progress-area .item.ing .active {
+  color: #222;
+}
+
+
+/* ********* */
+
+
+/* **已完成** */
+
+.progress-area .item.ed .point {
+  background-color: #F9604E;
+}
+
+.progress-area .item.ed .point::before {
+  background-color: rgba(249, 95, 78, 0.2);
+}
+
+.progress-area .item.ed .active {
+  color: #222;
+}
+
+
+/* ********* */
+
+.part_wrap {
+  margin: 0 20rpx 25rpx;
+  padding-left: 20rpx;
+}
+.whitebg {
+  background: #fff;
+  }
+  
+.heading_wrap {
+  border-bottom: 1rpx solid #efefef;
+}
+
+.heading_wrap .itemlable {
+  padding-top: 20rpx;
+  line-height: 50rpx;
+}
+
+.content_wrap .itemlable {
+  line-height: 80rpx;
+}
+
+.heading_info input {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.btn_long {
+  border-radius: 10rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+  background: #0076fe;
+  /* border: 1rpx solid #0076fe; */
+  margin-top: 20rpx;
+
+}
+
+ .copy-btn {
+  padding: 0.2em 1em;
+  background-color: #DDDDDD;
+  border-radius: 1em;
+  font-size: 26rpx;
+  color: #7E7E7E;
+  width: 90rpx;
+  text-align: center;
+  float: right;
+  margin-right: 30rpx;
+}

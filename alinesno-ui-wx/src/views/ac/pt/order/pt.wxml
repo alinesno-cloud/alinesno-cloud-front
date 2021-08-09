@@ -1,0 +1,53 @@
+<!-- 5-8我的订单 -->
+<view class="pub-tab flex-center">
+  <view wx:for="{{arr}}" class="pub-tab-item {{flag==item.flag?'active':''}}" bindtap='change_flag' data-flag="{{item.flag}}">
+    <text class="">{{item.name}}</text>
+  </view>
+</view>
+
+<view class="order-wrap">
+
+  <block wx:for="{{list}}">
+    <view class="order-item">
+      <view class="order-head flex-center">
+        <view class="odd-num">拼团号：{{item.p_ordernum}}</view>
+        <view class="status" style="{{item.status!='0'?'color:#000;':''}}">{{item.status_str}}</view>
+      </view>
+      <block wx:for="{{item.goods_list}}" wx:for-item="g">
+        <view class="pro flex-center">
+          <image class="cart-img" src="{{g.thumb}}" mode="scaleToFill"></image>
+          <view class="cart-text flex-center">
+            <view class="pro-name">{{g.name}}</view>
+            <view class="pro-info">
+              <text class="pro-tips"></text> {{g.p_str}}</view>
+            <view class="cart-bottom flex-center">
+              <view class="price">￥{{g.unit_price}}</view>
+              <text class="pro-num">*{{g.num}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+
+
+      <view class="order-bottom flex-center">
+        <view class="order-bottom-text">
+          <view class="total-num">进度：{{item.num}}/{{item.need_num}}</view>
+          <view class="price">{{item.type_str}}</view>
+        </view>
+        <view class="order-btn-wrap flex-center">
+          <!-- <view bindtap='call' data-tel="{{data.shop_info.tel}}" class="order-btn cancel-btn flex-center">客服</view> -->
+          <navigator url='./item?ordernum={{item.ordernum}}' class="order-btn main_bg payment-btn flex-center">商品</navigator>
+<!-- <view wx:if="{{item.hx_str && item.status==2}}" bindtap='thx' data-hx="{{item.hx_str}}"  class="order-btn btn-bg payment-btn flex-center">取货码</view> -->
+          
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>
+
+<msg wx:if="{{list.length<=0}}"></msg>
+
+<include src="order_pt.wxml" />
+<nav act="4"></nav>
+

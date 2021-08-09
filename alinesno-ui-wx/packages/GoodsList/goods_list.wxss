@@ -1,0 +1,292 @@
+@import "/app.wxss";
+
+.like-cut-line {
+  position: relative;
+  margin: 30rpx auto;
+  width: 4em;
+  font-size: 32rpx;
+  color: #4EA9F6;
+}
+
+.like-cut-line::before,
+.like-cut-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 36rpx;
+  height: 2rpx;
+  background-color: #4EA9F6;
+}
+
+.like-cut-line::before {
+  left: 0;
+  transform: translateX(-140%);
+}
+
+.like-cut-line::after {
+  right: 0;
+  transform: translateX(140%);
+}
+
+.pro-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx 30rpx 0;
+}
+
+.pro-list .pro-item {
+  width: 330rpx;
+  margin-bottom: 28rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+
+}
+
+.pro-list .pro-img {
+  width: 100%;
+  height: 300rpx;
+}
+
+.pro-list .pro-name {
+  /* font-size: 28rpx;
+  line-height: 1.5em;
+  padding: 12rpx;
+
+  height: 95rpx;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+
+  font-size: 28rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 78rpx;
+  padding: 0;
+  margin: 12rpx;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.pro-list .tag-list {
+  padding: 0 10rpx;
+}
+
+.pro-list .tag {
+  padding: 2rpx 10rpx;
+  font-size: 20rpx;
+  color: #F9604E;
+  margin-right: 14rpx;
+  border-radius: 4rpx;
+  border: 1px solid #f9604e;
+}
+
+.pro-list .tag.red {
+  background-color: #F74833;
+  color: #fff;
+}
+
+.pro-list .pro-bottom {
+  padding: 10rpx 10rpx 18rpx 18rpx;
+}
+
+.pro-list .pro-price {
+  color: #F74833;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.pro-list .old-price {
+  font-size: 28rpx;
+  color: #BBBBBB;
+  text-decoration: line-through;
+  margin-left: 12rpx;
+}
+
+.pro-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx 30rpx 0;
+}
+
+.pro-list .pro-img {
+  width: 100%;
+  height: 300rpx;
+}
+
+.pro-list .tag-list {
+  padding: 0 10rpx;
+}
+
+.pro-list .tag {
+  padding: 2rpx 10rpx;
+  font-size: 20rpx;
+  color: #F9604E;
+  margin-right: 14rpx;
+  border-radius: 4rpx;
+  border: 1px solid #f9604e;
+}
+
+.pro-list .tag.red {
+  background-color: #F74833;
+  color: #fff;
+}
+
+.pro-list .pro-bottom {
+  padding: 10rpx 10rpx 18rpx 18rpx;
+  height: 95rpx;
+}
+
+.pro-list .pro-price {
+  color: #F74833;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.pro-list .old-price {
+  font-size: 28rpx;
+  color: #BBBBBB;
+  text-decoration: line-through;
+  margin-left: 12rpx;
+}
+
+.pro-list .pro-btn {
+  width: 60rpx;
+  margin-left: auto;
+}
+
+.pro-list .symbol {
+  font-size: 24rpx;
+}
+
+.pro-list .pro-btn {
+  width: 60rpx;
+  margin-left: auto;
+}
+
+.pro-list .symbol {
+  font-size: 24rpx;
+}
+
+/*第二种列表*/
+.tab-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 30rpx 30rpx;
+}
+.item-wrap {
+  margin-top: 20rpx;
+  padding: 20rpx;
+  width: 296rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+view {
+  box-sizing: content-box;
+}
+
+.show-img {
+  position: relative;
+  display: block;
+  width: 296rpx;
+  height: 296rpx;
+}
+
+.sold {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0.3em 0.8em;
+  background-color: #BBBBBB;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  transform: translate(-50%, -50%) rotateZ(-20deg);
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin: 20rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+}
+
+.symbol2 {
+  display: inline-block;
+  margin-top: 0.3em;
+  margin-right: 0.5em;
+  border: 2rpx solid #F9604E;
+  border-radius: 8rpx;
+  overflow: hidden;
+  font-size: 20rpx;
+}
+
+.symbol2 .a1,
+.symbol2 .a2 {
+  display: inline-block;
+  padding: 0 0.3em;
+  line-height: 1.6em;
+}
+
+.symbol2 .a1 {
+  background-color: #F9604E;
+  color: #fff;
+}
+
+.symbol2 .a2 {
+  background-color: #fff;
+  color: #F9604E;
+}
+
+.price .current {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #F74833;
+}
+
+.current .s {
+  font-size: 24rpx;
+}
+
+.price .original {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5em;
+  text-decoration: line-through;
+  font-size: 28rpx;
+  color: #BBBBBB;
+}
+
+.original .s {
+  font-size: 22rpx;
+}
+
+.userinfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10rpx;
+  border-top: 1px solid #d4d4d4;
+  margin-top: 10rpx;
+}
+.userinfo .avatar {
+  display: block;
+  margin-right: 24rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+}
+.userinfo .name {
+  font-size: 27rpx;
+}
+.userinfo .symbol{
+  font-size: 22rpx;
+  color: #BBBBBB;
+}

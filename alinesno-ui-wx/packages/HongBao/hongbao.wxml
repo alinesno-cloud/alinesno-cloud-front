@@ -1,0 +1,25 @@
+<block wx:if="{{show}}">
+
+  <view class="mask"></view>
+
+  <view class="gx-popp">
+    <image src="shining.png" class="shining"></image>
+    <view class="gx-title">
+      送你 <text class="big">{{info.total}}</text> 元红包
+    </view>
+    <view class="used-p">{{info.msg}}</view>
+    <!-- <view class="used-list">
+		<view class="used-img">
+			<image src="gx-img1.jpg" class="gx-image"></image>
+		</view>
+		<view class="used-img">
+			<image src="gx-img2.jpg" class="gx-image"></image>
+		</view>
+	</view> -->
+    <view class="gx-btn" bindtap="lingqu">立即领取</view>
+    <view class="who">来自好友 “{{info.nickname}}” 赠送</view>
+    <view class="gx-close">
+      <image src="close@2x.png" bindtap="show" class="close-icon"></image>
+    </view>
+  </view>
+</block>

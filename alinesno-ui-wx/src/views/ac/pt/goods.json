@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "goods": "/com/goods/goods",
+    "poster": "/com/miniprogram_dist/poster/index",
+    "comment_list": "/com/comment_list/comment_list"
+
+  }
+}

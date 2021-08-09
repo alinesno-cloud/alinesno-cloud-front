@@ -1,0 +1,29 @@
+<view class="header">
+	<image class="head-bg" src="{{cdn}}header_bg.png" />
+	<view class="search-wrap flex-center" bindtap="open_search">
+		<image class="icon" src="{{cdn}}search.png" mode="widthFix" />
+		<input type="text"  disabled="true"  placeholder="搜索手机" />
+	</view>
+</view>
+
+<swiper class="banner" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
+	<swiper-item wx:for="{{data.banner}}">
+		<image bindtap="tourl" data-url="{{item.link}}" src="{{item.big}}" />
+	</swiper-item>
+</swiper>
+
+<view class="nav">
+	<navigator class="nav-item" wx:for="{{data.category_list}}" url="/pages/goods/index/index?category_id={{item.category_id}}">
+		<image src="{{item.thumb}}" class="n-icon"></image>
+		<view class="nav-p">{{item.name}}</view>
+	</navigator>
+</view>
+
+
+
+
+<goods_list show_jg="{{false}}" list="{{data.re_list}}" show_msg="" />
+
+<nav act="1"></nav>
+<wxs module="f" src="../../utils/f.wxs" />
+<search open_search="{{open_search}}" wx:if="{{open_search}}" bind:change_open_search="change_open_search" />

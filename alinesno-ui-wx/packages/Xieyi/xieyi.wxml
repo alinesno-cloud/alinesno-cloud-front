@@ -1,0 +1,19 @@
+<block wx:if="{{show}}">
+  <view class="mask" bindtap="close"></view>
+
+  <view class="pro-popp">
+    <view class="popp-close" bindtap="close">
+      <image src="close.png" class="close-icon"></image>
+    </view>
+    <view class="pro-popp-wrap" style="    height: 508rpx; overflow-y: scroll;">
+
+      <rich-text nodes="{{html}}" />
+
+    </view>
+    <view class="pro-popp-bb">
+      <view class="save-btn" bindtap="sub" >同意</view>
+
+      <view class="save-btn" style="background:#989898" bindtap="close">不同意</view>
+    </view>
+  </view>
+</block>

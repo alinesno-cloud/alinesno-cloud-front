@@ -1,0 +1,24 @@
+<view class="reward-list">
+	<view class="reward-list-bar">
+		<view class="reward-list-title">提现记录</view>
+	</view>
+
+	<view class="reward-item" wx:for="{{list}}" wx:for-item="v">
+		<view class="reward-name">
+			{{v.status_str}}
+			<view class="reward-time">{{v.time}}</view>
+		</view>
+
+		<view class="reward-money" style="color: #53d504;">
+			{{v.money}}【{{v.pay_type}} 】
+		</view>
+
+
+
+	</view>
+
+	<msg wx:if="{{list.length <= 0}}" />
+
+</view>
+
+<nav />

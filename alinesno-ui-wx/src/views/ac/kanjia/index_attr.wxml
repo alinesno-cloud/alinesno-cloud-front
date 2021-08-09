@@ -1,0 +1,31 @@
+<!-- 规格弹窗 -->
+<view class="select-popup {{showSelect ? 'show' : ''}}" style="padding-bottom: {{buBottom}}rpx;">
+  <view class="mask" catchtouchstart="stopScroll"></view>
+
+  <view class="select-content">
+    <icon class="close-btn iconfont icon-close-circle" bindtap="showSelectPop"></icon>
+    <view class="select-head flex-center">
+      <image class="select-img" src="{{current_item.thumb}}"></image>
+      <view class="select-text">
+        <view class="price" style='font-size:30rpx;'>最低价￥{{filter.clear_zero(kj_price)}} 原价￥{{filter.clear_zero(show_price)}}</view>
+
+        <view class="{{current_item.is_spec==1 ? '' : 'hide'}}"  >请选择规格</view>
+      </view>
+    </view>
+
+
+
+     <block wx:if="{{current_item.is_spec==1}}">
+      <view class="option" wx:if="{{current_item.spec}}">
+        <view class="option-title">规格</view>
+        <view class="option-wrap flex-center">
+          <block wx:for="{{current_item.spec[1]}}">
+            <view class="option-item {{spec_child_id==item.spec_child_id?'selected':''}}" bindtap='change_spec' data-spec_child_id="{{item.spec_child_id}}">{{item.name}}</view>
+          </block>
+        </view>
+      </view>
+    </block>
+
+    <view class="select-btn" bindtap="xiayibu">下一步</view>
+  </view>
+</view>

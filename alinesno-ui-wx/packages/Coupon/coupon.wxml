@@ -1,0 +1,43 @@
+<block wx:if="{{type==1}}">
+
+	<view class="mask" bindtap="cacel" ></view>
+	<view class="coupon_popp move" >
+		<image  src="x2.png" class="coupon_close" bindtap="cacel" ></image>
+		<view class="coupon_title">使用优惠券</view>
+		<view class="coupon_no" bindtap='onTapChild'>不使用</view>
+
+		<view class="coupon">
+
+			<msg wx:if="{{data.list.length <= 0}}"></msg>
+			<block wx:if="{{true}}">
+				<scroll-view class="coupon_scroll" scroll-y>
+					<view class="coupon_item" wx:for="{{data.list}}" wx:for-index="i" bindtap='onTapChild' data-aid='{{item.id}}'>
+						<view class="left">
+							<view class="price">
+								<text>￥</text>{{f.clear_zero(item.money)}}
+							</view>
+							<view class="spec" wx:if="{{item.base_money > 0}}">满{{f.clear_zero(item.base_money)}}减{{f.clear_zero(item.money)}}</view>
+							<view class="dot top"></view>
+							<view class="dot bottom"></view>
+						</view>
+						<view class="right">
+							<view class="name">{{item.name}}</view>
+							<text class="spec" wx:if="{{item.remark}}">{{item.remark}}</text>
+							<view class="time">{{item.end_msg}}</view>
+							<view class="btn">使用</view>
+						</view>
+					</view>
+				</scroll-view>
+			</block>
+		</view>
+	</view>
+
+</block>
+
+
+
+
+
+
+
+<wxs module="f" src="/utils/f.wxs" />

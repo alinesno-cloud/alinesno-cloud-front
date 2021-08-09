@@ -1,0 +1,91 @@
+<block wx:if="{{type==1}}">
+
+
+	<view style=" width:750rpx;height:auto;">
+		<image wx:for="{{data.ad5}}" class="info" mode="widthFix" src="{{item.big}}" />
+		<view style="color:#fff">.</view>
+	</view>
+	<view class="btn" hover-class="none" bindtap="change_type" data-type="2" url="/pages/resident-form/resident-form">立即入驻</view>
+
+</block>
+<block wx:if="{{type==2}}">
+	<form bindsubmit="sub">
+		<view class="title">基本信息</view>
+
+		<view class="form-area">
+			<view class="row">
+				<view class="name">商户名称<text class="must">*</text></view>
+				<view class="content">
+					<input class="input" name="name" placeholder="请输入店铺名称" />
+				</view>
+			</view>
+			<view class="row" catch:tap="showProjects">
+				<view class="name">主营项目<text class="must">*</text></view>
+				<view class="content project" >
+					<view class="text">{{info_type_name}}</view>
+					<image class="icon" mode="heightFix" src="/images/icon/arrow-s2.svg" />
+				</view>
+			</view>
+			<view class="row">
+				<view class="name">店铺地址<text class="not-must">*</text></view>
+				<view class="content">
+					<input class="input" name="address" placeholder="请输入店铺地址" />
+				</view>
+			</view>
+			<view class="row introduce" style="{{showProjects?'display:none;':''}}">
+				<view class="name">店铺介绍<text class="not-must">*</text></view>
+				<view class="content">
+					<textarea class="textarea" name="remark" maxlength="200" placeholder="简单介绍商铺"></textarea>
+				</view>
+			</view>
+		</view>
+
+		<view class="form-area">
+			<view class="row">
+				<view class="name">联 系 人<text class="must">*</text></view>
+				<view class="content">
+					<input class="input" name="linkman"  placeholder="请输入真实姓名" />
+				</view>
+			</view>
+			<view class="row">
+				<view class="name">手机号码<text class="must">*</text></view>
+				<view class="content">
+					<input class="input" type="number" name="tel"  placeholder="请输入手机号码" />
+				</view>
+			</view>
+		</view>
+
+		<view class="upload-datum">
+			<view class="name">上传相关资料</view>
+			<view class="images">
+				<!-- 被添加的照片 -->
+				<image class="img" wx:for="{{img}}" mode="aspectFill" src="{{item}}" />
+				<!-- 添加按钮 -->
+				<image class="img add-img" mode="widthFix" bindtap="upload_img" src="/images/shagn-chuan.png" />
+				<!-- 填充，保证图片能正确布局(不可删) -->
+				<view class="img padding"></view>
+				<view class="img padding"></view>
+				<view class="img padding"></view>
+				<view class="img padding"></view>
+			</view>
+		</view>
+
+		<view class="protocol">
+			<image class="radio" mode="widthFix" src="{{radioState?'/images/icon/radio-active.png':'/images/icon/radio.png'}}" catch:tap="radioState" />
+			我已经阅读并了解<navigator class="link" hover-class="none" url="/pages/content/page/page?id={{data.xieyi.id}}">{{data.xieyi.title}}</navigator>
+		</view>
+  <button  class="confirm-btn" style="width: 600rpx;" form-type="submit">立即申请入驻</button>
+	</form>
+	<view wx:if="{{showProjects}}" class="projects-shade">
+		<view class="mian">
+			<view class="header">
+				<view>　</view>
+				<view class="title">请选择</view>
+				<image class="close" mode="widthFix" src="/images/icon/cha.svg" catch:tap="showProjects" />
+			</view>
+			<view class="projects">
+				<view class="item {{info_type==item.id?'active':''}}" wx:for="{{data.type}}" data-id="{{item.id}}"  data-name="{{item.name}}" bindtap="change_type2">{{item.name}}</view>
+			</view>
+		</view>
+	</view>
+</block>

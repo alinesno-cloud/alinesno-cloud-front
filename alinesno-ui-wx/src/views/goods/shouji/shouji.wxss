@@ -1,0 +1,307 @@
+page {
+  background-color: #f8f8f8;
+}
+
+.header {
+  position: relative;
+  background-color: #fff;
+  padding: 1px;
+}
+
+.head-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 240rpx;
+}
+
+.banner {
+  width: 690rpx;
+  height: 260rpx;
+  margin: 36rpx auto;
+}
+
+.banner image {
+  display: block;
+  width: 100%;
+  height: 260rpx;
+  border-radius: 15rpx;
+}
+
+.banner .wx-swiper-dots.wx-swiper-dots-horizontal {
+  border-radius: 20rpx;
+}
+
+.banner .wx-swiper-dot {
+  width: 20rpx;
+  display: inline-flex;
+  height: 4rpx;
+  justify-content: space-between;
+  margin: 0;
+  margin: -16rpx;
+}
+
+.banner .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.57);
+  border-radius: 0;
+}
+
+.banner .wx-swiper-dot-active::before {
+  background: #fff;
+}
+
+.info-list {
+  position: relative;
+  padding: 10rpx 30rpx;
+}
+
+.info-list-item {
+  flex: 1;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.info-list-item image {
+  width: 32rpx;
+  margin-right: 6rpx;
+}
+
+.hot {
+  border-top: #8751F4 10rpx solid;
+  border-radius: 20rpx;
+  padding: 10rpx 20rpx 20rpx;
+  background-color: #fff;
+}
+
+.hot .hot-list {
+  padding: 20rpx 30rpx 30rpx;
+  white-space: nowrap;
+}
+
+.hot-list-item {
+  width: 33.3333%;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.hot-img {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  height: 210rpx;
+}
+
+.hot-name {
+  font-size: 24rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 66rpx;
+  padding: 0;
+  margin: 12rpx;
+  text-align: center;
+  white-space: pre-wrap;
+}
+.hot-price {
+  font-size: 32rpx;
+  color: #F74833;
+}
+
+.hot .symbol {
+  font-size: 20rpx;
+}
+
+.hot .limit-price {
+  align-items: baseline;
+  justify-content: center;
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 24rpx;
+  color: #F74833;
+}
+
+.hot .limit .old-price {
+  font-size: 16rpx;
+  text-decoration: line-through;
+  color: #BBBBBB;
+}
+
+.red {
+  color: #F74833;
+}
+
+.towards-icon {
+  width: 68rpx;
+  margin-left: 20rpx;
+}
+
+.img-wrap {
+  position: relative;
+}
+
+.img-wrap .pro-img {
+  width: 100%;
+  height: 250rpx;
+}
+
+.img-wrap .tag {
+  position: absolute;
+  width: 66rpx;
+  top: 0;
+  left: 0;
+  border-radius: 20rpx 4rpx 20rpx 4rpx;
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  height: 36rpx;
+  line-height: 36rpx;
+  background-color: #7E7E7E;
+}
+
+.img-wrap .tag.red {
+  background: #F9604E;
+}
+
+.title {
+  font-size: 32rpx;
+}
+
+.title-btn {
+  margin-left: auto;
+  font-size: 24rpx;
+  color: #bbb;
+}
+
+.title-btn image {
+  width: 40rpx;
+}
+
+.title .countdown {
+  margin-left: 10rpx;
+}
+
+.adver-img {
+  display: block;
+  width: 100%;
+}
+
+.tab {
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 30rpx 25rpx 0;
+  border-radius: 0 0 20rpx 20rpx;
+}
+
+.tab-item {
+  font-size: 28rpx;
+  color: #7E7E7E;
+  width: 20%;
+  padding: 8rpx 0;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.tab .active {
+  /* border: 1px solid #4ea9f6; */
+  /* border-radius: 200rpx; */
+  color: #4EA9F6;
+  
+}
+
+.pro-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx 30rpx 0;
+}
+
+.pro-list .pro-item {
+  width: 330rpx;
+  margin-bottom: 28rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+
+.pro-list .pro-img {
+  width: 100%;
+  height: 300rpx;
+}
+
+.pro-list .pro-name {
+  font-size: 28rpx;
+  line-height: 1.5em;
+  padding: 12rpx;
+}
+
+.pro-list .tag-list {
+  padding: 0 10rpx;
+}
+
+.pro-list .tag {
+  padding: 2rpx 10rpx;
+  font-size: 20rpx;
+  color: #F9604E;
+  margin-right: 14rpx;
+  border-radius: 4rpx;
+  border: 1px solid #f9604e;
+}
+
+.pro-list .tag.red {
+  background-color: #F74833;
+  color: #fff;
+}
+
+.pro-list .pro-bottom {
+  padding: 10rpx 10rpx 18rpx 18rpx;
+}
+
+.pro-list .pro-price {
+  color: #F74833;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.pro-list .old-price {
+  font-size: 28rpx;
+  color: #BBBBBB;
+  text-decoration: line-through;
+  margin-left: 12rpx;
+}
+
+.pro-list .pro-btn {
+  width: 60rpx;
+  margin-left: auto;
+}
+
+.pro-list .symbol {
+  font-size: 24rpx;
+}
+
+.recommend {
+  height: 268rpx;
+}
+
+.recommend image {
+  height: 268rpx;
+}
+
+.violet {
+  border-color: #8751F4;
+}
+
+.blue {
+  border-color: #5192F4;
+}
+
+.green {
+  border-color: #07C160;
+}
+
+.grey {
+  border-color: #BBBBBB;
+}

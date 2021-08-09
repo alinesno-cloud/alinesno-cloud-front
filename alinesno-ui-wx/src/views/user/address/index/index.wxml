@@ -1,0 +1,35 @@
+
+
+<view class="dizhi-item" wx:for="{{add_list}}">
+    <view  bindtap="select_address" data-id="{{item.id}}">
+        <view class="dizhi-name">{{item.name}} {{item.tel}}</view>
+        <view class="dizhi-con">{{item.province_name}} {{item.city_name}} {{item.country_name}} {{item.address}}</view>
+
+    </view>
+    <view class="dizhi-bar">
+        <view class="dizhi-normal" bindtap="set_default" data-id="{{item.id}}">
+            <icon class="icon-small" type="success" color="#4EA9F6" size="23" wx:if="{{item.is_default==1}}"></icon>
+             <icon class="icon-small" type="circle" size="23" wx:else></icon>
+            设为默认地址
+        </view>
+        <view class="dizhi-btn">
+            <navigator class="edit-btn" url="../item/item?id={{item.id}}">
+                <image src="edit.png" class="edit-icon"></image>
+            </navigator>
+            <view class="del-btn" bindtap="del_info" data-id="{{item.id}}">
+                <image src="del2.png" class="del-icon"></image>
+            </view>
+        </view>
+    </view>
+</view>
+
+<msg wx:if="{{add_list.length<=0}}"></msg>
+
+
+<view class="new-dizhi-wrap" style="padding-bottom: {{buBottom}}rpx">
+    <navigator class="new-dizhi" url="../item/item">新增地址</navigator>
+</view>
+
+<view class="new-dizhi-margin-wrap" style="padding-bottom: {{buBottom}}rpx">
+    <view class="new-dizhi-margin"></view>
+</view>

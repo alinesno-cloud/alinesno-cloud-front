@@ -1,0 +1,75 @@
+<view class="bg"></view>
+
+<view class="state-wrap">
+	<view class="state">{{data.info.status_str}}</view>
+	<view class="date" wx:if="{{data.info.up_time}}">{{data.info.up_time}}</view>
+</view>
+
+<view class="detail">
+	<view class="row">
+		<view class="name">订单编号</view>
+		<view class="content">{{data.ordernum}}</view>
+	</view>
+	<!-- <view class="row">
+    <view class="name">退款金额</view>
+    <view class="content money">￥6500</view>
+  </view>
+  <view class="row">
+    <view class="name">退款路径</view>
+    <view class="content">原路反回</view>
+  </view> -->
+</view>
+
+
+<view class="maincontainer" style=" margin-top:10rpx;" wx:if="{{data.info.status == 3 }}">
+
+
+
+	<view class="part_wrap whitebg radius10">
+		<view class='heading_wrap' style="border:none;">
+			<view class='itemlable'>请按该地址退回，然后填写快递信息</view>
+		</view>
+		<view class='heading_wrap' style="border:none;">
+			<view class='itemlable'>姓名：{{data.th_name}} <view class="copy-btn" bindtap="copyText" data-text="{{data.copy_text}}" >复制</view></view>
+		</view>
+		<view class='heading_wrap' style="border:none;">
+			<view class='itemlable'>电话：{{data.th_tel}}</view>
+		</view>
+		<view class='heading_wrap' style="border:none;">
+			<view class='itemlable'>地址：{{data.th_address}}</view>
+		</view>
+
+
+		<view class='heading_wrap'>
+			<view class='itemlable'>快递名称</view>
+			<view class='heading_info'><input type='text' value='{{info.ex_name}}' bindfocus='change_field' bindinput='change_field' data-field='ex_name' placeholder='请输入快递名称'></input></view>
+		</view>
+		<view class='heading_wrap'>
+			<view class='itemlable'>快递单号</view>
+			<view class='heading_info'><input type='text' value='{{info.ex_num}}' bindfocus='change_field' bindinput='change_field' data-field='ex_num' placeholder='请输入快递单号'></input></view>
+		</view>
+		
+    <view class="btn_long" bindtap="sub">确定</view>
+	</view>
+
+
+
+
+</view>
+
+
+<view class="progress-area">
+
+	<block wx:for="{{data.list}}">
+		<view class="item {{index==0?'ed':''}}">
+			<view class="point"></view>
+			<view class="content">
+				<view class="active">{{item.msg}}</view>
+				<view class="date">{{item.time}}</view>
+			</view>
+		</view>
+	</block>
+
+</view>
+
+<nav />

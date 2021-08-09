@@ -1,0 +1,54 @@
+<block wx:if="{{data.cart_num>0}}">
+
+  <view class="cart-item" wx:for="{{data.list}}" wx:for-item="v">
+
+		<scroll-view class="pro-wrap"  scroll-left="{{shuxing}}"    scroll-x="{{true}}">
+			<view class="pro-container">
+				<view class="pro-item flex-center">
+
+					<view catchtap="change_check" data-id="{{v.id}}" class="select-wrap {{v.check==1?'selected':''}}">
+						<image  class="select-icon" src="{{cdn}}select-icon.png" mode="widthFix" />
+						<image  class="select-icon-active" src="{{cdn}}select-icon-active.png" mode="widthFix" />
+					</view>
+
+					<image class="pro-img"  catchtap="tourl" data-url="/pages/goods/item/item?goods_id={{v.goods_id}}" src="{{v.info.thumb}}" />
+					<view class="pro-text">
+						<view class="pro-name"   catchtap="tourl" data-url="/pages/goods/item/item?goods_id={{v.goods_id}}" >{{v.info.name}}</view>
+						<view class="pro-introduction" wx:if="{{v.spec_str}}">{{v.spec_str}}</view>
+						<view class="flex-center pro-num">
+							<view class="pro-price"><text class="symbol">￥</text>{{v.price}}</view>
+							<view class="operation flex-center">
+								<view class="reduce"  bindtap='set_num' data-flag="0" data-id='{{v.id}}'>-</view>
+								<input class="operation-input" bindblur="change_num" type="number" data-id="{{v.id}}" data-num="{{v.num}}" value="{{v.num}}" />
+								<view class="add"  bindtap='set_num' data-flag="1" data-id='{{v.id}}'>+</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view catchtap="del" data-id="{{v.id}}" class="delete-btn">删除</view>
+		</scroll-view>
+
+	</view>
+
+	<view class="buy-nav flex-center">
+		<view catchtap="change_all" data-check="{{data.is_all?0:1}}" class="select-wrap {{data.is_all==1?'selected':''}}">
+			<image class="select-icon" src="{{cdn}}select-icon.png" mode="widthFix" />
+			<image class="select-icon-active" src="{{cdn}}select-icon-active.png" mode="widthFix" />
+		</view>
+		<text catchtap="change_all"  data-check="{{data.is_all?0:1}}" >全选</text>
+
+		<view class="total">合计：<text><text class="symbol">￥</text>{{data.sel_total}}</text></view>
+		<view class="nav-btn" style="{{ data.sel_num<=0 ? 'background: #ccc;':''}}" catchtap="sub">去付款（{{data.sel_num}}）</view>
+	</view>
+</block>
+
+<view class="head" wx:if="{{data.cart_num<=0}}">
+	<image class="none-pro-img" src="{{cdn}}none-pro-img.png" mode="widthFix" />
+	<view class="title">购物车暂无商品</view>
+</view>
+
+
+<goods_list list="{{data.like_goods}}" show_msg="" title="猜你喜欢"></goods_list>
+
+<nav act="3" />

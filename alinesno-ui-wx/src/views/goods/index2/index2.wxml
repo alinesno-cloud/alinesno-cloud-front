@@ -1,0 +1,66 @@
+<!--pages/classify/index.wxml-->
+<view class="header l2">
+    <!--搜索-->
+    <view class="search_wrap whitebg">
+        <view class="search_box">
+            <view class="search_ico"><image src="{{cdn}}search.png"></image></view>
+            <input type="text" class="search-key"  value=""  placeholder="搜商品 " bindinput="get_title" bindblur="search_title"   />
+        </view>
+    </view>
+    <!--领劵-->
+</view>
+
+<view class="classify" style="height:{{height}}px">
+    <!--left-->
+    <view class="classify-left">
+        <scroll-view scroll-y class="classify-left-scroll">
+            <view class="classify-link-list">
+                <navigator class="classify-link {{category_id==item.category_id?'active':''}}" bindtap="change_cate" data-category_id="{{item.category_id}}" wx:for="{{resData.category_list}}" >{{item.name}}</navigator>
+            </view>
+        </scroll-view>
+    </view>
+    <!--right-->
+    <view class="classify-right">
+        <scroll-view scroll-y class="classify-right-scroll" bindscrolltolower='get_list' >
+
+            <view class="classify-list">
+                <view class="classify-title">
+                    <view class="classifyname">{{resData.category_list[category_id].name}}</view>
+                    <picker class="classifysort" bindchange="genderChange" value="{{genderindex}}" range="{{genderarray}}">
+                        <view class="pickertext">
+                            {{genderarray[genderindex]}}
+                        </view>
+                        <view class="pickerarrow"><image src="{{cdn}}icon/arrow_up.png"></image></view>
+                    </picker>
+
+                </view>
+                <msg wx:if="{{list.length <= 0}}" />
+                <view class="goods_listwrap">
+                    <!--mode-->
+
+                    <navigator class="goods_item whitebg radius10" wx:for="{{list}}"  url="/pages/goods/item/item?goods_id={{item.goods_id}}">
+                        <view class="goods_pict"><image src="{{item.thumb}}" ></image></view>
+                        <view class="goods_des ellipsis_two">{{item.name}}</view>
+                        <view class="goods_pricebox">
+                            <view class="pricebox">
+                                <view><text>￥</text>{{f.clear_zero(item.min_price)}}</view>
+                                <view>￥{{f.clear_zero(item.min_market_price)}}</view>
+                            </view>
+                            <view class="intocart"><image src="{{cdn}}icon/into_add.png"></image></view>
+                        </view>
+                    </navigator>
+                    <!--mode end-->
+                </view>
+
+            </view>
+        </scroll-view>
+    </view>
+
+    <!--right end-->
+</view>
+
+
+<wxs module="f" src="../../../utils/f.wxs" />
+<nav act="5" class='l3'></nav>
+
+

@@ -1,0 +1,256 @@
+.user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20rpx 30rpx;
+
+  background: var(--main_bg);
+}
+
+view {
+  box-sizing: content-box;
+}
+
+.user .avatar {
+  display: block;
+  margin-right: 24rpx;
+  width: 112rpx;
+  height: 112rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+}
+
+.user .info {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.user .name-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.user .name {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.user .symbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  border-radius: 4rpx;
+  background: linear-gradient(#FFEA44, #FFAE00);
+  font-size: 20rpx;
+  color: #8D4F0A;
+}
+
+.user .egs {
+  margin-top: 20rpx;
+  padding: 0 16rpx;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2em;
+  font-size: 24rpx;
+  line-height: 2em;
+  color: #fff;
+}
+
+.user .arrow {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.data-area {
+  display: flex;
+  padding: 30rpx;
+  align-items: center;
+  color: #fff;
+}
+
+.data-area .item {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.data-area .cut {
+  width: 2rpx;
+  height: 40rpx;
+  background-color: #fff;
+}
+
+.data-area .num {
+  font-size: 36rpx;
+}
+
+.data-area .title {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+}
+
+.order-form-area,
+.tool-aera {
+  margin: 0 30rpx;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(167, 167, 167, 0.16);
+}
+
+.order-form-area .header,
+.tool-aera .header {
+  display: flex;
+  align-items: center;
+}
+
+.order-form-area .title,
+.tool-aera .title {
+  flex: 1;
+  font-size: 32rpx;
+}
+
+.order-form-area .more-btn {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.order-form-area .more-btn .arrow {
+  display: block;
+  margin-left: 4rpx;
+  height: 38rpx;
+  width: 38rpx;
+}
+
+.order-form-area .button-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.order-form-area .button-wrap .item {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.order-form-area .item .badge {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #FF4444;
+  border-radius: 1em;
+  transform: translate(30%, -30%);
+  font-size: 20rpx;
+  line-height: 1em;
+  color: #fff;
+}
+
+.order-form-area .button-wrap .icon,
+.tool-aera .button-wrap .icon {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;    margin: 0 auto;
+}
+
+.order-form-area .button-wrap .name,
+.tool-aera .button-wrap .name {
+  font-size: 24rpx;
+  color: #7E7E7E;
+}
+
+.tool-aera {
+  margin-top: 30rpx;
+}
+
+.tool-aera .row {
+  width: 100%;
+  display: block;
+  height: 100rpx;
+  margin: 30rpx auto;
+  text-align: center;
+}
+
+.tool-aera .button-wrap .item {
+  width: 25%;
+  margin: 0 auto;
+  float: left;
+  display: inline-block;
+}
+
+.banner {
+  display: block;
+  margin: 30rpx;
+}
+
+.banner .img {
+  display: block;
+  margin: 0 auto;
+  height: 160rpx;
+  border-radius: 20rpx;
+  width: 100%; 
+}
+
+.circle-background{
+  position: absolute;
+  height: 409rpx;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100;
+  left: 0;
+  overflow: hidden;
+border-radius: 0 0 10% 10%;
+background-color: #4EA9F6;
+}
+
+
+ .nav {
+	position: relative;    padding: 20rpx;
+  margin: 20rpx 30rpx;border-radius: 20rpx;
+}
+ .nav .nav-list {
+	flex-wrap: wrap;
+}
+ .nav .nav-list .nav-item  {
+	width: 25%;
+	margin-top: 30rpx;
+}
+.name{
+  color:#7E7E7E;
+  font-size: 24rpx;
+}
+
+ .nav .nav-list .nav-item .nav-icon{
+	width: 60rpx;
+	height: 60rpx;
+	margin-bottom: 15rpx;
+}
+.column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.row2 {
+  display: flex;
+  align-items: center;
+}
+.bg-white{
+  background:#fff;
+}

@@ -1,0 +1,188 @@
+page {
+  background: #fff;
+}
+
+.power {
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+
+.power-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120rpx;
+  border-bottom: 1px #e6e6e6 solid;
+}
+
+.power-left {
+  display: flex;
+  align-items: center;
+}
+
+.p-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 15rpx;
+}
+
+.power-p {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.power-right {
+  display: flex;
+  align-items: center;
+}
+
+.power-em {
+  font-size: 28rpx;
+  color: #a09f9f;
+}
+
+.ra {
+  width: 14rpx;
+  height: 26rpx;
+  margin-left: 15rpx;
+}
+
+.inv {
+  padding: 50rpx 0;
+  border-bottom: 1px #e6e6e6 solid;
+  background: #fff;
+}
+
+.inv-tit {
+  padding: 0 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.swiper-block{
+  height: 715rpx;
+  width: 100%;
+}
+.swiper-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow:unset;
+}
+.slide-image{
+  height:715rpx;
+  width: 400rpx;
+  border-radius: 9rpx;
+  box-shadow: 0px 0px 30rpx rgba(0, 0,0,.2);
+  margin: 0rpx 30rpx;
+  z-index: 1;
+  transform: scale(0.9);
+  transition:all .2s ease-in 0s;
+}
+.active{
+  transform: scale(1);
+  z-index: 20;
+}
+  
+.swiper-block{
+  height: 715rpx;
+  width: 100%;
+}
+
+.inv-list {
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+}
+
+.inv-item {
+  position: relative;
+  text-align: center;
+}
+
+.i-icon {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 15rpx;
+}
+
+.inv-p {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.done-popp {
+  width: 460rpx;
+  height: 700rpx;
+  padding: 40rpx;
+  border-radius: 15rpx;
+  background: #fff;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -350rpx;
+  margin-left: -230rpx;
+  z-index: 982;
+}
+
+.qr-img {
+  width: 380rpx;
+  height: 380rpx;
+  margin-bottom: 25rpx;
+}
+
+.done-popp-h {
+  font-size: 32rpx;
+}
+
+.done-popp-p {
+  margin-bottom: 30rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.done-btn {
+  width: 380rpx;
+  height: 88rpx;
+  margin: 30rpx auto;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background: -webkit-linear-gradient(top, #fa5656, #d51c1e);
+  background: -o-linear-gradient(bottom, #fa5656, #d51c1e);
+  background: -moz-linear-gradient(bottom, #fa5656, #d51c1e);
+  background: linear-gradient(to bottom, #fa5656, #d51c1e);
+}
+
+.cancel-btn {
+  font-size: 28rpx;
+  color: #4aa3ff;
+}
+
+.share{
+  position: absolute;
+  top:0;
+  left: 0;
+ opacity: 0;
+ 
+}
+
+.save-btn {
+ width: 450rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  background: #da251d;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+  margin: 20rpx auto;
+}
+  

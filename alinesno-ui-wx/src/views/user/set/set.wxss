@@ -1,0 +1,52 @@
+.area {
+  margin-top: 30rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+view {
+  box-sizing: content-box !important;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+
+.row:last-of-type {
+  border-bottom: none;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #7E7E7E;text-align: right;
+
+}
+
+.arrow {
+  height: 38rpx;
+}
+
+.avatar {
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 112rpx;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50rpx auto;
+  width: 600rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 80rpx;
+  font-size: 28rpx;
+}

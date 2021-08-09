@@ -1,0 +1,107 @@
+<!-- 顶部banner -->
+<image class="share-btn" src="{{cdn}}share-icon.png" />
+<swiper indicator-dots="true" indicator-active-color="#e91a1a" class="detail-banner  swiper-container">
+	<swiper-item wx:for="{{data.info.images}}" class="banner-item flex-center swiper-slide">
+		<image mode="widthFix" src="{{item}}" />
+	</swiper-item>
+</swiper>
+
+<view class="collage_wrap">
+	<view class="collage_one">
+		<view class="collprice"><text>￥</text>{{data.ptinfo.min_price}}</view>
+		<view class="collnum"><image src="{{cdn}}collnumico.png"></image><text>{{data.ptinfo.pt_num}}人拼</text></view>
+	</view>
+	<view class="collage_two">单买价<text>￥{{data.info.min_price}}</text></view>
+</view>
+
+<view class="pro-text">
+	<view class="detail-name">{{data.ptinfo.name?data.ptinfo.name:data.info.name}} </view>
+	<p class="info">{{data.info.small_title}}</p>
+	<view class="head-bottom flex-center">
+		{{data.goods_tips}}
+		<text>已售{{data.info.sale_num}}件</text>
+	</view>
+</view>
+
+<view class="line"></view>
+
+<view class="join_wrap whitebg radius10">
+	<view class="join_title">
+		<view class="titlename">已有<text>{{data.info.sale_num}}</text>人参加活动</view>
+		<view class="arrow"><image src="{{cdn}}arrow_right_a.png"></image></view>
+	</view>
+	<!--参与列表-->
+	<view class="join_list">
+		<!--mode-->
+		<view wx:for="{{pt_list}}" class="attend_item" wx:for-index="i">
+			<view class="join_area">
+				<view class="join_user">
+					<view  class="useritem"><image src="{{item.headimgurl}}"></image></view>
+					<view class="usernone"><image src="{{cdn}}join_usernone.png"></image></view>
+				</view>
+				<view class="join_residue">
+					<view>还差<text>{{item.cha}}人</text>成团</view>
+					<view>剩余 {{item.djs}}</view>
+				</view>
+			</view>
+			<view  data-p_ordernum="{{item.p_ordernum}}"  catchtap="show_goods_sel" data-flag="pt" class="joinbtn">去参团</view>
+		</view>
+		<!--mode end-->
+		<!--mode-->
+	</view>
+	<!--参与列表 end-->
+	<view class="para_item">
+		<view class="para_item_name">玩法</view>
+		<view class="para_item_info">开团/参团 - 邀请好友 - 满元发货</view>
+		<view class="para_item_arrow"><image src="{{cdn}}arrow_right_a.png"></image></view>
+	</view>
+</view>
+
+
+<view class="line"></view>
+
+		<!--  -->
+<view class="select-list">
+
+	<view class="select-guige flex-center" catchtap="">
+		<text class="left">物流</text>
+		<view class="select-btn flex-center">包邮
+			<image class="" mode="widthFix" src="{{cdn}}arrow-btn.png" />
+		</view>
+	</view>
+</view>
+
+<view class="line"></view>
+
+<include src="/pages/goods/item/comment" />
+<view class="line"></view>
+
+<view class="pro-detail tab-target" style="text-align: left;">
+	<view class="detail-title">商品介绍</view>
+	<rich-text style="width:100%;" nodes="{{data.info.content_html}}"></rich-text>
+</view>
+
+
+<view class="foot_details whitebg">
+	<view class="link_wrap">
+		<navigator url="/pages/index/index" class="link_item" open-type="reLaunch">
+			<view class="link_ico"><image src="{{cdn}}index-icon.png"></image></view>
+			<view class="link_text">首页</view>
+		</navigator>
+	</view>
+	<view  bindtap="showSelectPop"  class="handitem handitem1" catchtap="show_goods_sel" data-flag="buy">
+		<view class="price"><text>￥</text>{{data.info.min_price}}</view>
+		<view class="name">单独购买</view>
+	</view>
+	<view  bindtap="showSelectPop"  class="handitem handitem2" catchtap="show_goods_sel" data-flag="pt">
+		<view class="price"><text>￥</text>{{data.ptinfo.min_price}}</view>
+		<view class="name">我要开团</view>
+	</view>
+</view>
+
+<poster id="poster" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail"></poster>
+<goods id="goods"></goods>
+
+
+
+

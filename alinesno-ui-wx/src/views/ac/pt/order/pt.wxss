@@ -1,0 +1,380 @@
+@import "/css/main.wxss";
+@import "/css/meiye.wxss";
+
+
+page {
+	background: #F7F7F7;
+	padding-top: 90rpx;
+}
+.order-wrap {
+	padding: 0 3%;
+	box-sizing: border-box;
+}
+.order-item {
+	background-color: #ffffff;
+	box-shadow: 0px 3rpx 6rpx 0px 
+		rgba(0, 0, 0, 0.05);
+	border-radius: 10rpx;
+	border: solid 1px #f2f2f2;
+	padding: 3%;
+	margin: 3% 0;
+	box-sizing: border-box;
+}
+
+.odd-num {
+	font-size: 24rpx;
+	color: #666;
+}
+.status {
+	margin-left: auto;
+	font-size: 28rpx;
+	color: #f32224;
+}
+
+.pro {
+	padding: 3% 0;
+}
+.pro:last-of-type {
+	borde-bottom: 1px solid #f2f2f2;
+}
+.cart-img {
+	display: block;
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 10rpx;
+	margin-right: 20rpx;
+}
+
+.cart-text {
+	flex-direction: column;
+	align-items: flex-start;
+	height: 160rpx;
+	flex: 1;
+}
+
+.pro-info {
+	font-size: 20rpx;
+	color: #666;
+	margin-top: 5rpx;
+}
+
+.pro-tips {
+	color: #f32224;
+}
+
+.price {
+	font-size: 29rpx;
+}
+
+.cart-bottom {width: 100%;}
+
+.pro-num {
+	margin-left: auto;
+	font-size: 34rpx;
+}
+
+.pro-name {
+	width: 84%;
+	font-size: 28rpx;
+}
+.cart-bottom {
+	margin-top: auto;
+}
+
+.order-bottom {
+	padding-top: 3%;
+	font-size: 24rpx;
+}
+.total-num {
+	color: #999;
+}
+.total-num text {
+	color: #f32224;
+}
+.order-bottom .price {
+	font-size: 24rpx;
+}
+.order-btn-wrap {
+	flex-wrap: nowrap;
+	margin-left: auto;
+}
+.order-btn {
+	margin-left: 20rpx;
+	width: 95rpx;
+	height: 60rpx;
+	
+	border-radius: 30rpx;
+	color: #fff;
+	justify-content: center;
+}
+.cancel-btn {
+	box-shadow: 0px 4rpx 8rpx 0px 
+		rgba(0, 0, 0, 0.05);
+	background-color: #ffffff;
+	color: #333;
+}
+
+
+
+/* 拼团 */
+.assemble-title {
+	padding: 3%;
+	font-size: 32rpx;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.assemble-title text {
+	font-size: 24rpx;
+	color: #999;
+}
+
+.assemble-wrap {
+	padding: 0 3%;
+}
+.assemble-item {
+	padding: 3% 0;
+	border-bottom: 1px solid #f2f2f2;
+}
+.assemble-item .user-head {
+	width: 80rpx;
+	height: 80rpx;
+}
+
+.usrename {
+	font-size: 28rpx;
+	margin-left: 20rpx;
+}
+
+.assemble-text {
+	flex-grow: 1;
+	padding-right: 12rpx;
+	text-align: right;
+}
+.assemble-num {
+	font-size: 24rpx;
+	color: #666;
+}
+.assemble-num text {
+	color: #f32224;
+}
+
+.time {
+	color: #999;
+	font-size: 20rpx;
+}
+
+.assemble-btn {
+	margin-left: auto;
+	width: 120rpx;
+	height: 50rpx;
+	justify-content: center;
+	font-size: 24rpx;
+	color: #fff;
+	background-color: #f32224;
+	border-radius: 10rpx;
+}
+
+.start-assemble {
+	padding-top: 20vh;
+}
+.popup-content {
+	margin: 0 auto;
+	width: 500rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+	top: 20%;
+	left: 33%;
+	overflow: hidden;
+	text-align: center;
+}
+.popup-title {
+	font-size: 32rpx;
+	padding: 3% 0;
+	text-align: center;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.popup-tips {
+	font-size: 24rpx;
+	padding: 3% 0;
+}
+
+.user-list {
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.user-head {
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	display: block;
+}
+
+.user-item {
+	margin: 0 10rpx;
+}
+.username {
+	font-size: 20rpx;
+	color: #666;
+	/* margin: 10rpx 0; */
+}
+
+.await-user {
+	width: 80rpx;
+	height: 80rpx;
+	background-color: #f2f2f2;
+	display: block;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 80rpx;
+}
+.await-user .iconfont {
+	font-size: 40rpx;
+	color: #999;
+}
+
+.start-assemble .pro-name {
+	font-size: 20rpx;
+	max-width: 80%;
+	margin: 0 auto;
+	padding-top: 20rpx;
+	padding-bottom: 8rpx;
+}
+.start-assemble .pro-info {
+	font-size: 20rpx;
+}
+.start-assemble .price {
+	font-size: 20rpx;
+}
+.start-assemble .buy-num {
+	color: #999;
+}
+
+.popup .share-btn {
+	margin: 30rpx auto;
+	width: 400rpx;
+	height: 70rpx;
+	text-align: center;
+	line-height: 70rpx;
+	color: #fff;
+	font-size: 28rpx;
+	box-shadow: 0px 4rpx 8rpx 0px 
+		rgba(12, 217, 202, 0.3);
+	border-radius: 35rpx;
+}
+
+.popup-close-btn {
+	font-size: 50rpx;
+	color: #fff;
+	position: absolute;
+	/* bottom: -10%; */
+	top: 52%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.popup-tips .user-name {
+	color: #f32224;
+}
+
+
+
+
+.start-assemble {
+	padding-top: 20vh;
+}
+.popup-content {
+	margin: 0 auto;
+	width: 500rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+	overflow: hidden;
+	text-align: center;
+}
+.popup-title {
+	font-size: 32rpx;
+	padding: 3% 0;
+	text-align: center;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.popup-tips {
+	font-size: 24rpx;
+	padding: 3% 0;
+}
+
+.user-list {
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.user-head {
+	width: 80rpx;
+	height: 80rpx;
+	display: block;
+}
+
+.user-item {
+	margin: 0 10rpx;
+}
+.username {
+	font-size: 20rpx;
+	color: #666;
+	/* margin: 10rpx 0; */
+}
+
+.await-user {
+	width: 80rpx;
+	height: 80rpx;
+	background-color: #f2f2f2;
+	display: block;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 80rpx;
+}
+.await-user .iconfont {
+	font-size: 40rpx;
+	color: #999;
+}
+
+.start-assemble .pro-name {
+	font-size: 20rpx;
+	max-width: 80%;
+	margin: 0 auto;
+	padding-top: 20rpx;
+	padding-bottom: 8rpx;
+}
+.start-assemble .pro-info {
+	font-size: 20rpx;
+}
+.start-assemble .price {
+	font-size: 20rpx;
+}
+.start-assemble .buy-num {
+	color: #999;
+}
+
+.popup .share-btn {
+	margin: 30rpx auto;
+	width: 400rpx;
+	height: 70rpx;
+	text-align: center;
+	line-height: 70rpx;
+	color: #fff;
+	font-size: 28rpx;
+	
+	border-radius: 35rpx;
+}
+
+.popup-close-btn {
+	font-size: 50rpx;
+	color: #fff;
+	position: absolute;
+	/* bottom: -10%; */
+	top: 52%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.popup-tips .user-name {
+	color: #f32224;
+}

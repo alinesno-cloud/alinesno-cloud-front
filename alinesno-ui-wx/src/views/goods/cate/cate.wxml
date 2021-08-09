@@ -1,0 +1,24 @@
+<!-- <view class="header">
+	<view class="search-wrap flex-center">
+		<image src="{{cdn}}search.png" mode="widthFix" />
+		<input type="text" placeholder="手机" />
+	</view>
+</view> -->
+
+
+<view class="type-select flex-center">
+
+    <scroll-view scroll-y="true" class="type-nav">
+        <view wx:for="{{data.list}}" wx:for-index="i" bindtap="change_cate" data-index="{{i}}" class="{{i==index ? 'active' :''}} type-nav-item">{{item.name}}</view>
+    
+    </scroll-view> 
+
+    <scroll-view scroll-y="true" class="type-right">
+        <view class="pub-title">{{data.list[index].name}}</view>
+        <view class="phone-list flex-center">
+            <navigator url="/pages/goods/index/index?category_id={{item.category_id}}" wx:for="{{data.list[index].children}}" class="phone-item"><image src="{{item.thumb}}" />{{item.name}}</navigator>
+        </view>
+    </scroll-view>
+</view>
+
+<nav  act="2" />

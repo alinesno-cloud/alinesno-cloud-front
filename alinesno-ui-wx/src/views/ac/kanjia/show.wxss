@@ -1,0 +1,611 @@
+@import '/css/pt.wxss';
+@import '/css/pt_ico.wxss';
+@import "/css/attr.wxss";
+.head-top image {
+  width: 100%;
+}
+
+.head-top {
+  position: relative;
+}
+
+.head-left-text {
+  position: absolute;
+  left: 0;
+  width: 750rpx;
+  height:100rpx; 
+  bottom: 0;
+  padding-left: 10rpx;
+  color: #fff;
+  background: url(http://yizhou-cdn.tx520.cn/yingloubang/com/pt_item_bg.png) no-repeat center center;
+}
+
+.head-right-text {
+  position: absolute;
+  bottom: 0;
+  width: 225rpx;
+  right: 0;
+  color: #630f06;
+  text-align: right;
+  font-size: 22rpx;
+  height:100rpx; 
+  padding: 5rpx 10rpx;
+
+  background: url(http://yizhou-cdn.tx520.cn/yingloubang/com/pt_item_bg.png) no-repeat center right;
+
+}
+
+.head-left-text {
+  /* bottom: 2%; */
+}
+
+.head-left-text .price {
+  font-size: 52rpx;
+  font-weight: bold;
+  font-family: '黑体';
+}
+
+.head-left-text .miaosha-wrap {
+  padding: relative;
+  margin-left: 10%;
+}
+
+.head-left-text .tag {
+  position: relative;
+  display: block;
+  width: 74rpx;
+  height: 28rpx;
+  color: #ef2b30;
+  font-size: 23rpx;
+}
+
+.head-left-text .tag image {
+  position: absolute;
+  width: 114%;
+  height: 100%;
+  left: -14%;
+  top: 0;
+}
+
+.head-left-text .tag text {
+  position: relative;
+}
+
+/* .head-left-text .tag .triangle {
+	position: absolute;
+	content: '';
+	border-width: 10rpx 0 0 10rpx;
+	border-color: #fff 0 0 #fff;
+	border-style: solid;
+	z-index: 100;
+	top: 0%;
+	left: -10rpx;
+	transform: rotate(180deg);
+} */
+
+.head-left-text .old-price {
+  font-size: 25rpx;
+  text-decoration: line-through;
+  display: block;
+}
+
+.head-right-text .time {
+  margin-top: 5%;
+}
+
+.head-right-text .time-item {
+  display: inline-block;
+  background: #630f06;
+  color: #fff;
+  border-radius: 5rpx;
+  margin: 0 2rpx;
+  padding: 1rpx 3rpx;
+}
+
+.header .share {
+  padding: 0 3%;
+  height: 127rpx;
+}
+
+.header .share .text {
+  width: 72%;
+  font-weight: bold;
+  padding-right: 10%;
+  border-right: 1px dashed #eee;
+  font-size: 32rpx;
+}
+
+.header .share .icon {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.header .share .icon  icon {
+  display: block;
+  font-size: 55rpx;
+}
+
+.line {
+  height: 15rpx;
+  background: #e9e7e7;
+}
+
+.tuangou-list {
+  background: #92e0e4;
+  padding: 5%;
+}
+
+.tuangou-list .list {
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.tuangou-list .head {
+  justify-content: center;
+  height: 70rpx;
+  background-color: #5a9ea2;
+  font-size: 34rpx;
+  color: #fff;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.tuangou-list .head text {
+  width: 35rpx;
+  height: 55rpx;
+  font-size: 36rpx;
+  color: #5a9ea2;
+  background-color: #fff;
+  border-radius: 10px;
+  line-height: 55rpx;
+  margin: 0 4rpx;
+}
+
+.tuangou-list .scroll {
+  height: 450rpx;
+  background: #fff;
+  /* padding: 0 3%; */
+}
+
+.tuangou-list .scroll .item {
+  float: left;
+  width: 20%;
+  text-align: center;
+  margin: 2% 0;
+  font-size: 30rpx;
+}
+
+.tuangou-list .scroll .item image {
+  margin: 0 auto;
+  display: block;
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+}
+
+.tuangou-list .bottom {
+  background: #e6e6e6;
+  padding: 3% 0;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.page-bottom {
+  position: relative;
+}
+
+.page-bottom .content-img {
+  width: 100%;
+}
+
+.page-bottom .contact {
+  box-sizing: border-box;
+  position: absolute;
+  width: 88%;
+  left: 6%;
+  top: 106rpx;
+  padding: 3% 2%;
+  height: 190rpx;
+  background-color: #fff;
+  border-radius: 6px;
+  border: solid 1px #e7e7e6;
+}
+
+.contact .title {
+  display: block;
+  width: 100%;
+  font-size: 34rpx;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #eee;
+}
+
+.contact .nav {
+  padding: 0% 0;
+  margin-top: 1%;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.contact .left {
+  border-right: 1px solid #eee;
+  width: 85%;
+}
+
+.contact .left icon {
+  color: #ef908a;
+  font-size: 35rpx;
+  margin-right: 2%;
+  line-height: 2em;
+}
+
+.contact .left text {
+  margin-left: auto;
+  margin-right: 4%;
+}
+
+.contact .right {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.contact .right icon {
+  font-size: 38rpx;
+  line-height: 2em;
+  color: #ef908a;
+}
+
+.footer-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.05);
+  b: #fff;
+}
+
+.footer-nav .item {
+  box-sizing: border-box;
+  padding: 1.5% 0;
+  height: 105rpx;
+  flex: 1;
+  text-align: center;
+}
+
+.footer-nav .yellow-bg {
+  background: #efd95c;
+  color: #333;
+}
+
+.footer-nav .red-bg {
+  background: #ed1a1a;
+  color: #fff;
+}
+
+.footer-nav .pink-bg {
+  background: #e97b74;
+  color: #fff;
+}
+
+.footer-nav .item .num {
+  font-size: 22rpx;
+}
+
+.footer-nav .item .text {
+  font-size: 32rpx;
+}
+
+.footer-nav .item .num .strong {
+  font-size: 32rpx;
+}
+
+.footer-nav .kefu-icon {
+  width: 20%;
+  color: #666;
+  background: #fff;
+  font-size: 28rpx;
+}
+
+.footer-nav .kefu-icon icon {
+  display: block;
+  font-size: 35rpx;
+  color: #666;
+}
+
+.suspension {
+  position: fixed;
+  right: 1%;
+  bottom: 15%;
+}
+
+.suspension .item {
+  width: 65rpx;
+  height: 65rpx;
+  background: rgba(0, 0, 0, 0.53);
+  line-height: 65rpx;
+  border-radius: 50%;
+  color: #fff;
+  margin-top: 8rpx;
+  text-align: center;
+  font-size: 16rpx;
+}
+
+.suspension .item icon {
+  font-size: 40rpx;
+  height: 30rpx;
+  display: block;
+  line-height: 0em;
+}
+
+.suspension .user icon {
+  font-size: 30rpx;
+  line-height: 0em;
+  transform: translateY(-12rpx);
+}
+
+.suspension .user text {
+  display: block;
+  transform: translateY(-12rpx);
+}
+
+.music-btn {
+  position: fixed;
+  right: 4%;
+  top: 4%;
+  width: 48rpx;
+  height: 48rpx;
+  /* line-height: 48rpx; */
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  background: #666;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  animation: music-rotate 5s infinite alternate-reverse linear;
+}
+
+.music-btn icon {
+  /* line-height: 0em; */
+  display: block;
+  font-size: 40rpx;
+  transform: translateY(-5rpx);
+  color: #fff;
+}
+
+.music-btn.play {
+  animation-play-state: running;
+}
+
+.music-btn.stop {
+  animation-play-state: paused;
+}
+
+@keyframes music-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.share_btn {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140rpx;
+  height: 100rpx;
+}
+
+.footer-nav2 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.05);
+  b: #fff;
+}
+
+.footer-nav2 .item {
+  box-sizing: border-box;
+  padding: 1.5% 0;
+  height: 105rpx;
+  flex: 1;
+  text-align: center;
+}
+
+.footer-nav2 .share-btn {
+  height: 105rpx;
+  flex-grow: 1;
+  font-size: 32rpx;
+  background: #de4040;
+  text-align: center;
+  line-height: 105rpx;
+  color: #fff;
+  border-radius: 0;
+}
+
+.footer-nav2 .kefu-icon {
+  width: 20%;
+  color: #666;
+  background: #fff;
+  font-size: 28rpx;
+}
+
+.footer-nav2 .kefu-icon icon {
+  display: block;
+  font-size: 35rpx;
+  color: #666;
+}
+
+/*进行*/
+
+.cantuan-list .content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cantuan-list .content .title {
+  font-size: 32rpx;
+  text-align: center;
+  padding: 5% 0;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+}
+
+.cantuan-list .content .close-btn {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  font-size: 50rpx;
+  color: #999;
+}
+
+.cantuan-list .content scroll-view {
+  box-sizing: border-box;
+  height: 550rpx;
+  padding: 0 2.5%;
+}
+
+.cantuan-list .content .list-item {
+  box-sizing: border-box;
+  padding: 3% 0;
+  border-bottom: 1px solid #eee;
+  flex-wrap: nowrap;
+}
+
+.cantuan-list .content .list-item .userimg {
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+}
+
+.cantuan-list .content .list-item .text-wrap {
+  padding-left: 6%;
+  line-height: 1.1em;
+}
+
+.cantuan-list .content .list-item .name {
+  font-size: 30rpx;
+}
+
+.cantuan-list .content .list-item .user-num {
+  font-size: 26rpx;
+}
+
+.cantuan-list .content .list-item .num {
+  color: #e2716c;
+}
+
+.cantuan-list .content .list-item .time {
+  font-size: 23rpx;
+  color: #999;
+}
+
+.cantuan-list .content .list-item .btn {
+  width: 140rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  background-color: #e97b74;
+  border-radius: 10rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 56rpx;
+  margin-left: auto;
+}
+
+/*我的团购*/
+
+.tuangou-list {
+  background: #92e0e4;
+  padding: 5%;
+}
+
+.tuangou-list .list {
+  border-radius: 10rpx;
+  overflow: hidden;
+  padding: 4% 3%;
+  background-color: #fff;
+  box-shadow: -5px 1px 7px 0px rgba(0, 0, 0, 0.07);
+}
+
+.tuangou-list .top {
+  font-size: 32rpx;
+  align-items: flex-end;
+}
+
+.tuangou-list .top .right {
+  margin-left: auto;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.user-list {
+  justify-content: center;
+  padding: 5% 0;
+}
+
+.user-list .item {
+  position: relative;
+  width: 82rpx;
+  height: 82rpx;
+  margin: 0 4%;
+}
+
+.user-list .user-item {
+}
+
+.user-list .user-item image {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #ef908a;
+  border-radius: 50%;
+}
+
+.user-list .shenfen {
+  position: absolute;
+  bottom: -15%;
+  left: 16%;
+  font-size: 18rpx;
+  color: #fff;
+  padding: 1rpx 15rpx;
+  background-color: #ef908a;
+  border-radius: 12px;
+}
+
+.user-list .add-item {
+  line-height: 82rpx;
+  text-align: center;
+  border: 1px dashed #e6e6e6;
+  border-radius: 50%;
+}
+
+.user-list .add-item icon {
+  line-height: 82rpx;
+  font-size: 40rpx;
+  color: #e6e6e6;
+}
+
+.yaoqing-btn {
+  height: 89rpx;
+  background-image: -webkit-linear-gradient(left, #ef908a 0%, #de5252 100%);
+  border-radius: 45px;
+  color: #fff;
+  text-align: center;
+  font-size: 34rpx;
+  line-height: 89rpx;
+}
+
+.rule {
+  padding-top: 1%;
+  text-align: center;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.rule icon {
+  font-size: 30rpx;
+  color: #ecc8c5;
+}

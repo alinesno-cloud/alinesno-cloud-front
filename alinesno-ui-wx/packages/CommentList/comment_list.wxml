@@ -1,0 +1,28 @@
+<view class="comment">
+  <view class="comment-item" wx:for="{{list}}" wx:key="item">
+    <view class="comment-bar">
+      <view class="comment-member">
+        <view class="comment-member-img">
+          <image src="{{item.headimgurl}}" class="comment-member-image" width="70" height="70"></image>
+        </view>
+        <view class="comment-member-name">{{item.nickname}}</view>
+      </view>
+      <view class="stars">
+         <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="i">
+          <view class="star {{item.star >= i ? 'active' :''}}"></view>
+        </block>
+      </view>
+    </view>
+    <view class="comment-con">{{item.content}}</view>
+    <view class="comment-pic">
+      <view class="comment-pic-item" wx:for="{{item.images}}" wx:for-item="v">
+        <image src="{{v}}"   bindtap="img_re"  data-list="{{item.images}}" data-src="{{v}}"     class="comment-pic-image" width="180" height="180"></image>
+      </view>
+    </view>
+    <view class="comment-stu">
+      <view class="comment-type"></view>
+      <view class="comment-time">评论日期:{{item.time}}</view>
+    </view>
+  </view>
+</view>
+<msg wx:if="{{list.length <= 0}}" msg="暂无评论" />

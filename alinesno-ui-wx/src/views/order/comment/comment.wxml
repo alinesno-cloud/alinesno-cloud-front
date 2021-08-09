@@ -1,0 +1,43 @@
+<block wx:for="{{data.goods_list}}" wx:for-index="i">
+  <view class="sh-item">
+    <view class="sh-img">
+      <image src="{{item.thumb}}" class="sh-image" width="90" height="90"></image>
+    </view>
+    <view class="sh-info">
+      <view class="sh-name">{{item.name}}</view>
+      <view class="sh-bar">
+        <view class="sh-type">{{item.spec_str}}</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="recommend">
+    <view class="stars">
+      <block wx:for="{{[1,2,3,4,5]}}">
+        <view bindtap="change_star" data-star="{{item}}"    data-i="{{i}}" class="star {{list[i].star>=item?'active':''}}"></view>
+      </block>
+    </view>
+    <textarea placeholder="评价内容" value="{{list[i].content}}" bindinput="change_message"  data-i="{{i}}" class="sh-in"></textarea>
+    <view class="up-list">
+
+      <view class="up-item" wx:for="{{list[i].images}}"  wx:for-item="ii"  wx:for-index="ii_index" >
+        <image src="{{ii}}" class="up-image" width="180" height="180"></image>
+        <view class="up-del" bindtap="del_img" data-index="{{ii_index}}" data-i="{{i}}">删除</view>
+      </view>
+
+      <view class="up-item">
+        <image src="/images/shagn-chuan.png" bindtap="upload_img" data-i="{{i}}" class="up-icon" width="180" height="180"></image>
+      </view>
+    </view>
+
+  </view>
+</block>
+<view class="recommend">
+  <view class="unname" bindtap="c_is_anonymous">
+    <view class="unname-p {{is_anonymous?'active':''}}">匿名</view>
+    <view class="unname-tips">您写的评价将会以匿名的形式展现</view>
+  </view>
+  <view url="#" bindtap="sub" class="shiming-btn">提交</view>
+</view>
+<footer-nav act='order'></footer-nav>

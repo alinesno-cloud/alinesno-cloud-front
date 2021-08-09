@@ -1,0 +1,18 @@
+
+<view class="fx-item" wx:for="{{list}}">
+  <view class="fx-top">
+    <view class="fx-num">订单编号：{{item.ordernum}}</view>
+    <view class="fx-time">时间：{{item.create_time}}</view>
+  </view>
+  <view class="fx-content">
+    <view class="fx-bar">
+      <view class="fx-name">购买一件商品</view>
+      <view class="fx-money">￥{{item.goods_count}}</view>
+    </view>
+    <view class="fx-bar">
+      <view class="fx-p blue">购买人：{{item.username}}</view>
+      <view class="fx-p red">提成：￥{{item.bro}}</view>
+    </view>
+  </view>
+</view>
+  <msg wx:if='{{list.length<1}}'></msg>

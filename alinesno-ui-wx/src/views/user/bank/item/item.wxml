@@ -1,0 +1,24 @@
+<view class="card-wrap">
+
+    <view class="creat">
+        <view class="creat-item">
+            <view class="creat-item-p">银行卡号</view>
+            <input type="text" placeholder="填写银行卡号" class="creat-item-in" model:value="{{num}}"/>
+        </view>
+        <view class="creat-item">
+            <view class="creat-item-p">开户行</view>
+            <input type="text" placeholder="填写开户行" class="creat-item-in" model:value="{{name}}"/>
+        </view>
+        <view class="creat-item">
+            <view class="creat-item-p">开户人</view>
+            <input type="text" placeholder="填写开户人" class="creat-item-in" model:value="{{realname}}"/>
+        </view>
+        <view class="creat-item">
+            <view class="creat-item-p">预留电话</view>
+            <input type="text" placeholder="填写预留电话" class="creat-item-in" model:value="{{tel}}"/>
+        </view>
+        <view class="creat-btn-wrap">
+            <view class="creat-btn" bindtap="sub">确认添加</view>
+        </view>
+    </view>
+</view>

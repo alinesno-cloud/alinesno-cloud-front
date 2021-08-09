@@ -1,0 +1,17 @@
+<modal hidden="{{isHidden}}" title="{{title}}" confirm-text="确定" cancel-text="取消" bindcancel="cancel"
+  bindconfirm="confirm" no-cancel="{{nocancel}}">
+  <picker wx:if="{{list.length > 0}}" range="{{list}}"  value="{{list_index}}" range-key="name" mode="selector" bindchange="change_list">
+    <view class="register-item">
+      <view class="register-bar">
+        <text class="re-txt">{{list[list_index].name}}</text>
+      </view>
+    </view>
+  </picker>
+
+  <view class="register-item">
+    <view class="register-bar">
+      <input placeholder='{{placeholder}}' class="re-txt" type='{{type}}' value='{{v}}' maxlength="24"
+        bindinput='setInput' />
+    </view>
+  </view>
+</modal>

@@ -1,0 +1,13 @@
+
+<view class="grid">
+	<view class="comment-title">
+		<view class="comment-title-h">商品评论({{data.com_count}})条</view>
+
+		<navigator class="comment-title-more" url="/pages/goods/comment/comment?goods_id={{data.info.goods_id}}">
+			<view class="comment-title-more-p">查看全部</view>
+			<image src="{{cdn}}icon/ra.png" class="ra"></image>
+		</navigator>
+
+	</view>
+	<comment_list list="{{data.com_list}}" />
+</view>

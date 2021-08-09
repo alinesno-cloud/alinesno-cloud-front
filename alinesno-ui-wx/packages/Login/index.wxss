@@ -1,0 +1,27 @@
+.popbg{width: 100%; height: 100%; background: rgba(0,0,0,0.7);  position: fixed; left: 0; top: 0; z-index: 9999}
+.logincontainer{
+   width: 600rpx; position: fixed; left: 50%; margin-left: -300rpx; top:20%; background: #fff; z-index: 99999; border-radius: 20rpx; padding:20rpx 0 20rpx; box-shadow: 0rpx 2rpx 10rpx #555;
+}
+form {
+  width:600rpx;
+}
+.logo {
+  width:200rpx; display: block;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  margin-top:20rpx;
+}
+.profile {
+  text-align: center;
+  margin-top:30rpx;
+  font-size: 14px;
+  color:#888;
+}
+.mini-btn{
+  margin-top: 50rpx;
+  margin-left: 50px;
+  margin-right: 50px;width: 546rpx;
+
+}

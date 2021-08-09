@@ -1,0 +1,21 @@
+<view class="wrap shouji_search" wx:if="{{open_search}}">
+    <view class="search-wrap flex-center">
+        <view class="input-wrap flex-center">
+            <image src="search.png" mode="widthFix" />
+            <input class="search-shouji" type="text" value="{{name}}" bindinput="change_name" bindblur="sub" placeholder="手机" />
+        </view>
+        <view class="search-btn" bindtap="open_search">取消</view>
+    </view>
+    
+    <view class="title flex-center">最近搜索<image bindtap="clear" src="delete-icon.png" mode="widthFix" /></view>
+    <view class="tag-list flex-center">
+        <navigator wx:for="{{user_search}}" url="/pages/goods/index/index?name={{item}}"  class="tag">{{item}}</navigator>
+    </view>
+
+
+    <view class="title flex-center">热门搜索</view>
+    <view class="tag-list flex-center">
+        <navigator class="tag" wx:for="{{data.list}}" url="{{item.url}}">{{item.name}}</navigator>
+    </view>
+</view>
+

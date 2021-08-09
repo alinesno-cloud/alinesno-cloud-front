@@ -1,0 +1,120 @@
+<block wx:if="{{type==1}}">
+	<view class="mask"></view>
+	<view class="to" style='padding-bottom:{{btuBottom}}'>
+		<view class="to-close" bindtap='change_type' data-type='0'>
+			<image src="close.png"></image>
+		</view>
+		<view class="to-tit">{{title}}</view>
+		<scroll-view scroll-y class="to-scroll" bindscrolltolower='load_list'>
+			<view class="to-content">
+				<block wx:for="{{add_list}}">
+					<view class="to-bar  {{sel_id==item.id?'active':''}} " data-id="{{item.id}}" data-info="{{item}}" bindtap='onTapChild'>
+						<view>{{item.province_name}} {{item.city_name}} {{item.country_name}} {{item.address}}</view>
+						<view>{{item.name}} {{item.tel}}</view>
+					</view>
+
+				</block>
+
+			</view>
+		</scroll-view>
+		<view bindtap='change_type' data-type='2' class="to-link main_btn">添加联系人</view>
+
+	</view>
+</block>
+
+<block wx:if="{{type==2}}">
+	<view class="mask"></view>
+	<!--地址编辑  -->
+	<form bindsubmit="formSubmit">
+		<view class="address-edit to">
+			<view class="to-back" bindtap='change_type' data-type='1'>
+				<image src="back.png"></image>
+			</view>
+			<view class="to-close" bindtap='change_type' data-type='0'>
+				<image src="close.png"></image>
+			</view>
+			<view class="to-tit">编辑联系人</view>
+			<view class="edit-box">
+				<view class="edit">
+					<view class="edit-bar">
+						<view class="edit-name">姓名：</view>
+						<view class="edit-txt">
+							<input name="name" value='{{info.name}}' placeholder="请填写姓名" />
+						</view>
+					</view>
+				</view>
+				<view class="edit">
+					<view class="edit-bar">
+						<view class="edit-name">手机：</view>
+						<view class="edit-txt">
+							<input name="tel" value='{{info.tel}}' placeholder="请填写手机号码" type='number' />
+						</view>
+					</view>
+				</view>
+				<view class="edit">
+					<view class="edit-bar">
+						<view class="edit-name">区域：</view>
+						<view class="edit-txt" bindtap="open">
+							<!-- <picker bindchange="sub_region" bindcolumnchange="change_region" mode="multiSelector" value='{{region_index}}' range-key='name' range='{{region_data}}'> -->
+								<text class='xsdstx-text'>{{region_data[0][province_index].name}} {{region_data[1][city_index].name}} {{region_data[2][country_index].name}}</text>
+							<!-- </picker> -->
+						</view>
+					</view>
+				</view>
+				<view class="edit">
+					<view class="edit-bar">
+						<view class="edit-name">门牌：</view>
+						<view class="edit-txt" style="border-bottom: none;">
+							<input name="address" value='{{info.address}}' placeholder="请填写详细地址" type='text' />
+						</view>
+					</view>
+				</view>
+			</view>
+
+
+			<view class="edit-bar" style=" margin-top:10px; font-size:16px;">
+				<view class="body-view" style='padding-left:17px;'>
+					<text class='set_default'> 设为默认 </text>
+					<switch class='wx-switch-input' checked="{{is_default==1?true:false}}" bindchange="checkboxChange" />
+				</view>
+			</view>
+
+			<view class="btn-area" wx:if="{{show_del==1}}">
+				<button class='del_btn' form-type='button' bindtap='del_info'>
+					删除
+				</button>
+				<button class='save_btn main_btn' form-type='submit'>
+					保存
+				</button>
+			</view>
+			<view class="btn-area" wx:if="{{show_del==0}}">
+				<button class='save_btn main_btn' style='width:100%' form-type='submit'>
+					保存
+				</button>
+			</view>
+
+
+
+		</view>
+
+
+	</form>
+</block>
+
+<view wx:if="{{condition}}" class="citypicker">
+	<picker-view indicator-style="height: 50px;" style="" value="{{value}}" bindchange="bindChange" class="citybody">
+		<view class="cityheader">
+			<view bindtap="open" class="city-cancel">取消</view>
+			<view bindtap="open" class="city-true">确定</view>
+		</view>
+		<picker-view-column>
+			<view wx:for="{{region_data[0]}}" wx:key="item" style="font-size:14px;line-height: 50px;padding-left:10px;">{{item.name}}</view>
+		</picker-view-column>
+		<picker-view-column>
+			<view wx:for="{{region_data[1]}}" wx:key="item" style="font-size:14px;line-height: 50px;padding-left:10px;">{{item.name}}</view>
+		</picker-view-column>
+		<picker-view-column>
+			<view wx:for="{{region_data[2]}}" wx:key="item" style="font-size:14px;line-height: 50px;padding-left:10px;">{{item.name}}</view>
+		</picker-view-column>
+	</picker-view>
+</view>

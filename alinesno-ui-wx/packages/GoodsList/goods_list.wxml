@@ -1,0 +1,19 @@
+<view class="like-cut-line" wx:if="{{title && list.length > 0}}">{{title}}</view>
+<view class="pro-list flex-center">
+	<navigator wx:for="{{list}}" url="/pages/goods/item/item?goods_id={{item.goods_id}}" class="pro-item">
+		<image class="pro-img" src="{{item.thumb}}" />
+		<view class="pro-name">{{item.name}}</view>
+
+		<view class="tag-list flex-center" style="height:40rpx">
+			<text class="tag" wx:for="{{item.tags}}" wx:for-item="v">{{v}}</text>
+		</view>
+		<view class="pro-bottom flex-center">
+			<view class="pro-price"><text class="symbol">￥</text>{{f.clear_zero(item.min_price)}}</view>
+			<text class="old-price"><text class="symbol">￥</text>{{f.clear_zero(item.min_market_price)}}</text>
+			<image class="pro-btn" src="/images/shopping.png" mode="widthFix" />
+		</view>
+	</navigator>
+</view>
+
+<msg wx:if="{{show_msg && list.length <=0 }}" msg="{{show_msg}}" />
+<wxs module="f" src="../../utils/f.wxs" />

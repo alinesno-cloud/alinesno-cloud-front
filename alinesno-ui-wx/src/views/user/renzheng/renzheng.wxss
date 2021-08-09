@@ -1,0 +1,73 @@
+.title {
+  padding: 30rpx;
+  font-size: 24rpx;
+  color: #7E7E7E;
+}
+
+view {
+  box-sizing: content-box;
+}
+
+.user-area {
+  padding: 0 30rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+.row {
+  display: flex;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid rgb(233, 233, 233);
+}
+
+.row:last-of-type {
+  border-bottom: none;
+}
+
+.row .name {
+  margin-right: 30rpx;
+}
+
+.name .must {
+  color: red;
+}
+
+.row .input {
+  flex: 1;
+  text-align: right;
+}
+
+.row.tel .input {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #808080;
+}
+
+.row.tel .arrow {
+  height: 38rpx;
+}
+
+.identity-card {
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.card-img {
+  display: block;
+  width: 520rpx;
+  margin: 20rpx auto;
+}
+
+.push-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30rpx auto;
+  width: 600rpx;
+  height: 80rpx;
+  background-color: #4EA9F6;
+  border-radius: 80rpx;
+  font-size: 32rpx;
+  color: #fff;
+}

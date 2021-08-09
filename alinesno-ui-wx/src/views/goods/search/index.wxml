@@ -1,0 +1,48 @@
+<view class="search_layer">
+    <view class="search">
+        <image src="{{cdn}}zoom.png" class="zoom_icon"></image>
+        <input type="text" placeholder="根据关键词搜索" class="search_txt" model:value="{{title}}"  bindblur="search" />
+    </view>
+    <view class="cancel_btn" bindtap="cancel">取消</view>
+</view>
+
+        <!-- 未搜到 -->
+<view class="nothing" wx:if="{{is_search&&list.length<=0}}">
+<!--    <image src="{{cdn}}nothing.png" mode="widthFix" class="nothing_image"></image>-->
+    <msg></msg>
+    <view class="nothing_p">抱歉！未搜索到相关的产品</view>
+    <view class="nothing_p">请换一个关键词试试</view>
+</view>
+
+        <!-- 搜索历史 -->
+<view class="history" wx:if="{{!is_search}}">
+    <view class="history_title">
+        <view class="history_title_h">搜索历史</view>
+        <image src="{{cdn}}del.png" class="del_icon" bindtap="delhistory"></image>
+    </view>
+    <view class="history_list">
+        <block wx:for="{{historyList}}" wx:key="id" >
+            <view class="history_item" bindtap="history_search"  data-title="{{item}}">{{item}}</view>
+        </block>
+    </view>
+</view>
+
+
+<view class="result" wx:if="{{list.length>0}}">
+    <view class="title">
+        相关产品（{{data.count}}）
+    </view>
+    <view class="goods_list">
+        <navigator class="goods_item" wx:for="{{list}}" url="/pages/goods/item/item?goods_id={{item.goods_id}}">
+            <view class="goods_img">
+                <image class="" src="{{item.thumb}}"></image>
+            </view>
+            <view class="goods_info">
+                <view class="goods_name line-two">
+                    {{item.name}}
+                </view>
+                <view class="goods_price"><text>￥</text>{{item.min_price}}</view>
+            </view>
+        </navigator>
+    </view>
+</view>

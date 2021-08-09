@@ -1,0 +1,25 @@
+<view class="area" wx:for="{{data.list}}">
+	<view class="company">
+		<view class="text">{{item.express_name}} {{item.express_code}}</view>
+		<view class="copy-btn" bindtap="copyText" data-text="{{item.express_name}} {{item.express_name}}">复制</view>
+	</view>
+	<view class="progress">
+		<block wx:for="{{item.data}}" wx:for-item="v" wx:for-index="k">
+			<view class="item {{k==0?'ed':''}}">
+				<view class="date">
+					<view>{{v.m1}}</view>
+					<view>{{v.m2}}</view>
+				</view>
+				<view class="bar">
+					<view class="point"></view>
+					<view class="line"></view>
+				</view>
+				<view class="event">{{v.context}}</view>
+			</view>
+		</block>
+
+
+	</view>
+</view>
+
+<nav />

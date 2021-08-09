@@ -1,0 +1,72 @@
+<view class="shouyi-tab">
+
+  <view wx:for="{{data.navs}}" class="shouyi-tab-item {{flag==item.flag?' active ':''}}" bindtap='change_flag' data-flag="{{item.flag}}">
+    <text class="">{{item.name}}</text>
+  </view>
+
+</view>
+
+<view class="shouyi-tab-margin"></view>
+
+
+<block wx:for="{{list}}">
+
+  <view class="order-item">
+    <view class="order-tit">
+      <view clas="order-num">单号{{item.ordernum}} <text class="ms_act" wx:if="{{item.type==3}}">秒杀</text></view>
+      <view class="order-stu" style="color:{{item.status_data.color}}">{{item.status_data.status}}</view>
+    </view>
+    <view class="o-list">
+
+      <navigator url="/pages/goods/item/item?goods_id={{g.goods_id}}" class="o-item" wx:for="{{item.goods_list}}" wx:for-item="g">
+        <view class="o-img">
+          <image src="{{g.thumb}}" class="o-image" width="160" height="160"></image>
+        </view>
+        <view class="o-info">
+          <view class="o-name">{{g.name}}</view>
+          <view class="o-type" wx:if="{{g.spec_str}}">{{g.spec_str}}</view>
+          <view class="o-bar">
+            <view class="o-price">￥{{g.unit_price}}</view>
+            <view class="o-num">*{{g.num}}</view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+    <view class="order-bar">
+      <view class="order-bar-left">
+        <view class="order-count">
+          共计
+          <text class="red">{{item.goods_list.length}}件</text> 商品 >
+        </view>
+        <view class="order-price">
+          合计：￥{{item.total}}
+        </view>
+      </view>
+      <view class="order-btn" wx:if="{{item.status_btn.length <= 4}}">
+        <block wx:for="{{item.status_btn}}" wx:for-item="b">
+          <view class="{{b.class}}" bindtap="{{b.bindtap}}" data-orderid="{{item.orderid}}" data-ordernum="{{item.ordernum}}">{{b.name}}</view>
+        </block>
+       
+      </view>
+    </view>
+
+    <view class="order-bar" wx:if="{{item.status_btn.length > 4}}">
+    
+      <view class="order-btn" >
+ 
+        <block wx:for="{{item.status_btn}}" wx:for-item="b">
+          <view class="{{b.class}}" bindtap="{{b.bindtap}}" data-orderid="{{item.orderid}}" data-ordernum="{{item.ordernum}}">{{b.name}}</view>
+        </block>
+      </view>
+    </view>
+
+
+
+  </view>
+</block>
+
+<msg wx:if="{{list.length<=0}}"></msg>
+
+
+<nav />

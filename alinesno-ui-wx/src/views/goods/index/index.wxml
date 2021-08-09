@@ -1,0 +1,58 @@
+<view class="header">
+	<view class="input-wrap flex-center">
+		<image src="{{cdn}}search.png" mode="widthFix" />
+		<input class="search-shouji" bindinput="change_field" data-field="name" value="{{name}}" bindblur="search" type="text" placeholder="搜索名称" />
+	</view>
+</view>
+<view class="filter">
+	<view class="filter-mask" wx:if="{{showFilter}}"></view>
+	<view class="tab-list flex-center">
+		<view wx:for="{{data.nav}}" class="tab-item {{type==item.type?'active':''}}" bindtap="change_type" data-type="{{item.type}}">{{item.name}}</view>
+	</view>
+	<view class="tab-child flex-center">
+		<view class="tab-child-item  {{order_type==0?'active':''}}" bindtap="change_zh">综合</view>
+		<view class="tab-child-item" data-index="2" catchtap="open_cate">分类</view>
+		<view class="tab-child-item {{order_type==1?'asc':''}}  {{order_type==2?'desc':''}}" bindtap="change_sale">销量</view>
+		<view class="tab-child-item  {{order_type==3?'asc':''}}  {{order_type==4?'desc':''}}" bindtap="change_price">价格
+		</view>
+	</view>
+	<view class="filter-content" wx:if="{{open_cate}}">
+		<!-- 综合 -->
+
+		<!-- 分类 -->
+
+		<scroll-view scroll-x="true" scroll-with-animation="true" class="tab">
+
+			<view class="tab-item {{category_id==item.category_id?'active':''}}" wx:for="{{data.category_list}}"
+				data-category_id="{{item.category_id}}" bindtap="change_category_id">{{item.name}}</view>
+				
+		</scroll-view>
+	</view>
+
+</view>
+
+<navigator wx:for="{{list}}" url="/pages/goods/item/item?goods_id={{item.goods_id}}" class="pro-item flex-center">
+	<image class="pro-img" src="{{item.thumb}}" />
+	<view class="pro-text">
+		<view class="pro-name">{{item.name}}</view>
+		<view class="pro-introduction">{{item.small_title}}</view>
+		<view class="flex-center">
+			<view class="pro-price"><text class="symbol">￥</text>{{f.clear_zero(item.min_price)}}</view>
+			<text class="old-price"><text class="symbol">￥</text>{{f.clear_zero(item.min_market_price)}}</text>
+		</view>
+		<view class="pro-bottom flex-center">
+
+			<view class="tag-list flex-center">
+				<text class="tag red" wx:if="{{item.is_zy==1}}">商城自营</text>
+				<text class="tag" wx:for="{{item.tags}}" wx:for-item="v">{{v}}</text>
+			</view>
+
+			<image class="pro-btn" src="{{cdn}}shopping.png" mode="widthFix" />
+		</view>
+	</view>
+</navigator>
+
+<msg wx:if="{{list.length <= 0}}" />
+<wxs module="f" src="../../../utils/f.wxs" />
+
+<nav act="2"></nav>

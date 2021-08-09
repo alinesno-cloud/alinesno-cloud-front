@@ -1,0 +1,35 @@
+.register-item {
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-bar {
+  flex: 1;
+  display: flex;
+  height: 74rpx;
+  border-radius: 15rpx;
+  border: 1rpx #e6e6e6 solid;
+}
+.re-txt {
+  flex: 1;
+  height: 74rpx;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;line-height: 74rpx;
+}
+.code-btn {
+  width: 280rpx;
+  height: 76rpx;
+  margin-left: 10rpx;
+  border-radius: 15rpx;
+  background: #ff8e00;
+  text-align: center;
+  line-height: 76rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.misds{overflow: auto;}
+.szmm{ color: #1983eeb9}
+.fr{ float:right;}
+.fl{ float:left;}

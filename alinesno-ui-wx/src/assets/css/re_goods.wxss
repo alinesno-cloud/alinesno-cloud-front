@@ -1,0 +1,113 @@
+
+/*热卖*/
+
+.title {
+  font-size: 30rpx;
+}
+
+.title-icon {
+  width: 60rpx;
+}
+
+.title-btn {
+  margin-left: auto;
+  font-size: 24rpx;
+  color: #bbb;
+}
+
+.title-btn image {
+  width: 40rpx;
+}
+
+.title .countdown {
+  margin-left: 10rpx;
+}
+
+.hot {
+  border-radius: 20rpx;
+  padding: 10rpx 20rpx 20rpx;
+  background-color: #fff;
+}
+
+.hot .hot-list {
+  padding: 20rpx 30rpx 30rpx;
+  white-space: nowrap;
+}
+
+.hot-list-item {
+  width: 33.3333%;
+  display: inline-block;
+  text-align: center;
+}
+
+.hot-img {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  height: 210rpx;
+}
+
+.hot-name {
+  font-size: 24rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 66rpx;
+  padding: 0;
+  margin: 12rpx;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.hot-price {
+  font-size: 32rpx;
+  color: #F74833;
+}
+
+.hot .symbol {
+  font-size: 20rpx;
+}
+
+.hot .tips {
+  font-size: 20rpx;
+  color: #7E7E7E;
+  padding-left: 70rpx;
+}
+
+.hot .limit-price {
+  align-items: baseline;
+  justify-content: center;
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 24rpx;
+  color: #F74833;
+}
+
+.hot .limit .old-price {
+  font-size: 16rpx;
+  text-decoration: line-through;
+  color: #BBBBBB;
+}
+
+.hot .progress-bar {
+  width: 70%;
+  border-radius: 4rpx;
+  background-color: #E3EDF6;
+  position: relative;
+  overflow: hidden;
+  margin: 10rpx auto;
+  height: 8rpx;
+}
+
+.hot .innerbar {
+  background-color: #4EA9F6;
+  border-radius: inherit;
+  height: 100%;
+}
+
+.hot .progress-num {
+  text-align: center;
+  font-size: 22rpx;
+  color: #BBBBBB;
+}

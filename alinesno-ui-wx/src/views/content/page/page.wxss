@@ -1,0 +1,62 @@
+page{
+  background: #fff;
+}
+.wrap {
+  padding: 30rpx;
+}
+
+.title {
+  margin-bottom: 30rpx;
+  font-size: 16px;
+}
+
+.article-time {
+  margin-bottom: 30rpx;
+  font-size: 12px;
+  color: #999;
+}
+
+.article-btm {
+  width: 100%;
+  background: #fff;
+  border-top: 1px #e6e6e6 solid;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.article-btm-inner {
+  height: 90rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-margin {
+  height: 90rpx;
+  box-sizing: content-box;
+}
+
+.share-btn {
+  width: 160rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50rpx;
+  background: #4b818a;
+  font-size: 12px;
+  color: #fff;
+}
+
+.read {
+  font-size: 12px;
+  color: #999;
+}
+
+.link {
+  font-size: 12px;
+  color: #4b818a;
+}

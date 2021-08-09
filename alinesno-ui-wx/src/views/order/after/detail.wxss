@@ -1,0 +1,75 @@
+/* pages/user/afterSales/detail/index.wxss */
+page {
+  background-color: #f5f5f5;
+}
+.header_cv {
+  background-color: #fff;
+  padding-top: 80rpx;
+  padding-bottom: 60rpx;
+}
+.title_tv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: #333;
+}
+.title_tv image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 10rpx;
+}
+.header_cv .tt {
+  margin-top: 40rpx;
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+}
+.conteView {
+  padding: 0 24rpx;
+  margin-top: 20rpx;
+}
+.conte_cv {
+  padding: 24rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+}
+.order_ct {
+  font-size: 28rpx;
+  color: #666;
+  height: 64rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order_ct .name {
+  width: 180rpx;
+}
+.order_ct .rt {
+  flex: 1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.conte_cv .title {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 28rpx;
+}
+.conte_cv2 .rt {
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

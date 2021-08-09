@@ -1,0 +1,58 @@
+/* pages/userinfo/index.wxss */
+
+
+.maincontainer{
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+.part_wrap{ padding-left: 22rpx;}
+.user_head{ height: 118rpx; padding:20rpx 20rpx 20rpx 0; border-bottom: 1rpx solid #f3f3f3; display: flex; align-items: center; justify-content: space-between;}
+.user_head_pic{ width: 118rpx; height: 118rpx; border-radius: 10rpx; overflow: hidden;}
+.user_head_pic image{width: 118rpx; height: 118rpx;}
+
+.term_item{height: 110rpx; border-bottom: 1rpx solid #f3f3f3; padding-right: 20rpx; display: flex; align-items: center; justify-content: space-between;}
+.user_head_title,.term_item_name{ font-size: 28rpx; color: #000;}
+.term_item_name text{margin-left: 20rpx; font-size: 28rpx; color: #000; vertical-align: middle;}
+.term_item_info{ font-size: 26rpx; color: #000;}
+.term_item_info image{ width: 32rpx; height: 32rpx; margin-left: 6rpx; vertical-align: middle; margin-top: -4rpx;}
+.telephone{ width: 50rpx; height: 50rpx;}
+.telephone image{width: 50rpx; height: 50rpx;}
+.term_item_inputbox input{ width: 300rpx; text-align: right; font-size: 26rpx; color: #333;}
+
+.title_tuanwrap{ height: 86rpx; padding: 0 32rpx; display: flex; align-items: center;}
+.title_tuanwrap text:first-child{font-size: 24rpx; color: #999; margin-right: 15rpx;}
+.title_tuanwrap text:last-child{ display: inline-block; height: 38rpx; border-radius: 19rpx;background: #ffe4b6; color: #a68142; font-size: 20rpx; line-height: 38rpx; padding: 0 20rpx;}
+
+
+
+.close_btn2 {
+  background: #4EA9F6;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.drop-item2 {
+  height: 100%;
+  background-color: #4EA9F6;
+  color: #fff;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 65rpx;
+  height: 65rpx;
+}
+
+
+
+
+
+
+
+
+

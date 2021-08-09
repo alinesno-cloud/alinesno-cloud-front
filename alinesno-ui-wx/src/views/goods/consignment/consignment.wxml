@@ -1,0 +1,22 @@
+<!-- 二手电器 -->
+<view class="header">
+	<image class="head-bg" src="{{cdn}}header_bg.png" />
+	<view class="search-wrap flex-center">
+		<image class="icon"  src="{{cdn}}search.png" mode="widthFix" />
+		<input type="text"  bindinput="change_name" bindblur="search" value="{{name}}" placeholder="搜索手机" />
+	</view>
+</view>
+<swiper class="banner" indicator-dots="{{true}}" >
+	<swiper-item wx:for="{{banner}}"><image src="{{item.big}}" /></swiper-item>
+</swiper>
+<view class="cateitem">
+<view class="like-cut-line" >为您推荐</view>
+
+<view class="tab flex-center">
+	<view  wx:for="{{category}}" class="tab-item {{category_id==item.category_id?'active':''}}" bindtap='change_flag' data-flag="{{item.category_id}}">{{item.name}}</view>
+</view>
+</view>
+
+<goods_list list="{{list}}" show_type="2" show_msg="暂无商品" title=""></goods_list>
+
+<nav />

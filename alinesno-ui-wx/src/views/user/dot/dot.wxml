@@ -1,0 +1,23 @@
+<view class="deposit-area">
+	<view class="deposit">
+		<view class="money"><text class="s">￥</text>{{data.can_total}}</view>
+		<view class="title">　账户余额</view>
+	</view>
+
+	<image class="bg" mode="widthFix" src="{{cdn}}wallet-bg.png" />
+</view>
+
+<view class="cut-line">收支明细</view>
+
+<view class="item" wx:for="{{list}}">
+	<view class="info">
+		<view class="title">{{item.cate_str}}</view>
+		<view class="date">{{item.time}}</view>
+	</view>
+	<view class="money {{item.type==1?'income':'pay'}}">{{item.type==1?'+':'-'}}{{item.total}}</view>
+</view>
+
+
+<msg wx:if="{{list.length <= 0}}" />
+
+<nav />

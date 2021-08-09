@@ -1,0 +1,53 @@
+.nav {
+	display: flex;
+	flex-wrap: nowrap;
+	z-index: 80;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #ffffff;
+	box-shadow: inset 0px 3rpx 0px 0px #f2f2f2;
+}
+
+.nav-item {
+  flex: 1;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	justify-content: center;
+	flex-wrap: nowrap;
+  height: 100rpx;
+	font-size: 20rpx;
+  color: #bbbec6;
+}
+
+.n-icon,.n-icon-h,.cart-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.n-icon-h {
+  display: none;
+}
+
+.active .n-icon {
+  display: none;
+}
+
+.active .n-icon-h {
+  display: block;
+}
+
+.active {
+  color: #4b818a;
+}
+
+.footer-margin {
+  height: 100rpx;
+}

@@ -1,0 +1,8 @@
+<view class="wrap">
+	<view class="title">{{data.info.title}}</view>
+	<view class="article-time">发布时间：{{data.info.time}}</view>
+
+	<rich-text class="article-con" nodes="{{data.info.html}}"></rich-text>
+
+</view>
+<nav></nav>

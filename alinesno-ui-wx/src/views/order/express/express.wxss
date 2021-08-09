@@ -1,0 +1,98 @@
+.area {
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+
+.company {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #E8E8E8;
+}
+
+.company .text {
+  font-size: 28rpx;
+}
+
+.company .copy-btn {
+  padding: 0.2em 1em;
+  background-color: #DDDDDD;
+  border-radius: 1em;
+  font-size: 26rpx;
+  color: #7E7E7E;
+}
+
+.progress {
+  padding: 30rpx 0;
+}
+
+
+.item {
+  display: flex;
+  color: #BBBBBB;
+}
+
+.item .date {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 64rpx;
+  font-size: 22rpx;
+}
+
+.item .bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 60rpx;
+}
+
+.bar .point {
+  position: absolute;
+  z-index: 1;
+  top: 20rpx;
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 30rpx;
+  background-color: #BBBBBB;
+}
+
+.bar .line {
+  width: 2rpx;
+  background-color: #E8E8E8;
+  transform: translateY(28rpx);
+}
+
+.item:last-of-type .line {
+  display: none;
+}
+
+.item .event {
+  flex: 1;
+  padding-top: 10rpx;
+  padding-bottom: 60rpx;
+  font-size: 28rpx;
+}
+
+/* **已完成** */
+.item.ed {
+  color: #222;
+}
+
+.item.ed .point {
+  background-color: #F9604E;
+}
+/* ********* */
+
+/* **进行中** */
+.item.ing {
+  color: #222;
+}
+
+.item.ing .point {
+  background-color: #F9604E;
+  box-shadow: 0 0 0 4rpx rgba(249, 95, 78, 0.2);
+  transform: scale(1.4);
+}
+/* ********* */

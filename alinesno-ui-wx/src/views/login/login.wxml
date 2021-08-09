@@ -1,0 +1,36 @@
+
+
+<view class="pagemain" wx:if="{{step==1}}">
+  <!-- <view class="pagemainbg"><image src="/images/pagemainbg.jpg" mode="widthFix"></image></view> -->
+  <view class="pagewrap">
+    <view class="logobox">
+      <image src="{{data.logo?data.logo:'wechat.png'}}"></image>
+    </view>
+    <view class="loginbtnbox">
+      <view class="loginbtn" style="width:690rpx" bindtap="login">
+        <image src="/ico/weixin_tag.png"></image>
+        <text>微信授权登录</text>
+      </view>
+      <view bindtap="no_login"  class="no_login">暂不登录</view>
+    </view>
+
+  </view>
+
+</view>
+
+<view class="pagemain" wx:if="{{step==2}}">
+  <view class="pagewrap">
+    <view class="logobox">
+      <image src="{{data.logo?data.logo:'wechat.png'}}"></image>
+    </view>
+    <view class="loginbtnbox">
+      <button style="width:690rpx; text-align:center;" class="loginbtn"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"   >
+        <image src="/ico/weixin_tag.png"></image>
+        <text>一键绑定</text>
+      </button>
+      <view bindtap="no_login"  class="no_login">暂不需要</view>
+    </view>
+
+  </view>
+
+</view>

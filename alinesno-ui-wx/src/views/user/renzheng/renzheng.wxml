@@ -1,0 +1,36 @@
+<view class="title">完善个人信息</view>
+
+<view class="user-area">
+	<view class="row">
+		<view class="name">真实姓名<text class="must">*</text></view>
+		<input class="input" bindinput="change_name" data-name="realname" placeholder="请输入真实姓名" />
+	</view>
+	<view class="row">
+		<view class="name">身份证号<text class="must">*</text></view>
+		<input class="input" type="idcard" bindinput="change_name" data-name="card" placeholder="请输入身份证号" />
+	</view>
+	<view class="row">
+		<view class="name">开户行名称<text class="must">*</text></view>
+		<input class="input" bindinput="change_name" data-name="bank_name" placeholder="请输入开户行名称" />
+	</view>
+	<view class="row">
+		<view class="name">银行卡号<text class="must">*</text></view>
+		<input class="input" type="idcard" bindinput="change_name" data-name="bank_num" placeholder="请输入银行卡号" />
+	</view>
+	<view class="row tel">
+		<view class="namidcarde">联系电话<text class="must">*</text></view>
+		<view class="input">
+			<button class="edit-txt" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="width:300rpx;text-align:center;margin: 0;">{{info.tel?info.tel:'一键获取'}}</button>
+		</view>
+	</view>
+</view>
+
+<view class="title">上传身份材料</view>
+
+<view class="identity-card">
+	<image class="card-img" mode="widthFix"  bindtap="upload_img" data-name="img1" src="{{info.img1?info.img1:cdn+'id-card-front.png'}}" />
+	<image class="card-img" mode="widthFix"   bindtap="upload_img" data-name="img2" src="{{info.img2?info.img2:cdn+'id-card-back.png'}}" />
+</view>
+
+<view class="push-btn" bindtap="sub">提交</view>
+<nav></nav>

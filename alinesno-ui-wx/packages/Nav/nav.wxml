@@ -1,0 +1,41 @@
+<!-- 脚步导航 -->
+<view class="nav" style="padding-bottom: {{buBottom}}rpx">
+
+
+	<navigator class="nav-item {{act==1?'active':''}}"  url="/pages/index/index"  open-type="reLaunch" >
+		<image src="/images/nav-icon1.png" class="nav-icon1"></image>
+		<image src="/images/nav-icon1-h.png" class="nav-icon2"></image>
+		<text class="">首页</text>
+	</navigator>
+	
+	<navigator  class="nav-item {{act==2?'active':''}}"  url="/pages/fang/index/index"  open-type="reLaunch" >
+		<image src="/images/nav-icon2.png" class="nav-icon1"></image>
+		<image src="/images/nav-icon1-h.png" class="nav-icon2"></image>
+		<text class="">房源</text>
+	</navigator>
+
+	<navigator hover-class="none" url="/pages/fang/sel_type/sel_type" class="fly-btn"  open-type="reLaunch" >
+		<view class="fly">
+			<image src="/images/fly.png" class="fly-icon"></image>
+		</view>
+		<view class="fly-zhan"></view>
+		<text class="">发布</text>
+	</navigator>
+
+  <navigator class="nav-item  {{act==3?'active':''}}" url="/pages/wu/index/index"  open-type="reLaunch" >
+		<image src="/images/nav-icon3.png" class="nav-icon1"></image>
+		<image src="/images/nav-icon1-h.png" class="nav-icon2"></image>
+		<text class="">服务中心</text>
+	</navigator>
+
+	<navigator url="/pages/user/index/index"   open-type="reLaunch"  class="nav-item  {{act==4?'active':''}}">
+		<image src="/images/nav-icon4.png" class="nav-icon1"></image>
+		<image src="/images/nav-icon1-h.png" class="nav-icon2"></image>
+		<text class="">我的</text>
+	</navigator>
+
+</view>
+
+<view class="footer-margin-wrap" style="padding-bottom: {{buBottom}}rpx">
+  <view class="footer-margin"></view>
+</view>

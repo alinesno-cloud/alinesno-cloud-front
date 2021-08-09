@@ -1,0 +1,149 @@
+<view class="bg"></view>
+
+
+<view class="state-info">
+  <view class="state">{{data.status_data.status}}</view>
+  <view class="tip">{{data.status_data.info}}</view>
+  <view class="date">{{data.info.create_time}}</view>
+</view>
+
+
+
+
+<view class="wp payer-info">
+  <view class="payer">
+    <image class="position" mode="heightFix" src="/images/icon/ding-wei.svg" />
+    <!-- <view wx:if="{{data.info.send_type == 1}}"> -->
+      <view class="info"  wx:if="{{data.info.send_type == 1}}">
+        <view class="name">{{data.info.linkman}} {{data.info.tel}}</view>
+        <view class="address">{{data.info.province}} {{data.info.city}} {{data.info.country}} {{data.info.address}}</view>
+      </view>
+      <image  wx:if="{{data.info.send_type == 1}}" class="arrow" mode="heightFix" src="/images/icon/arrow-s2.svg" />
+    <!-- </view> -->
+    <view wx:if="{{data.info.send_type == 2}}">
+      <view class="info">
+        <view class="name">到店自提</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <view class="pd payer-info">
+  <view class="express">
+    <image class="car" mode="heightFix" src="/images/icon/wu-liu.svg" />
+    <view class="info">
+      <view class="event">您已在XXXXX完成取件，感谢您使用顺丰快递555期待您的下次合作</view>
+      <view class="date">2020-07-13 12:00</view>
+    </view>
+    <image class="arrow" mode="heightFix" src="/images/icon/arrow-s2.svg" />
+  </view>
+  <view class="payer">
+    <image class="position" mode="heightFix" src="/images/icon/ding-wei.svg" />
+    <view class="info">
+      <view class="name">王垚 15564254458</view>
+      <view class="address">广西南宁市江南区白沙大道天源国际1栋1单元</view>
+    </view>
+  </view>
+</view> -->
+
+
+
+<view class="produce-info">
+  <view class="shop">
+    <image class="icon" mode="widthFix" src="/images/icon/shang-pu.png" />
+    <view class="name">{{data.shop_info.name}}</view>
+    <view class="shop_address" wx:if="{{data.info.send_type == 2}}">{{data.shop_info.address}}</view>
+  </view>
+
+  <view class="info"  wx:for="{{data.goods_list}}">
+    <image class="show-img" mode="aspectFill" src="{{item.thumb}}" />
+    <view class="right-side">
+      <view class="title-wrap">
+        <!-- <view class="symbol"></view> -->
+        <text class="title">{{item.name}}</text>
+      </view>
+      <view class="data" wx:if="{{item.spec_str}}">{{item.spec_str}}</view>
+      <view class="pay-info">
+        <view class="price"><text class="s">￥</text>{{item.unit_price}}</view>
+        <view class="sum">x{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view  class="btns">
+    <view  wx:if="{{data.show_jishou==1}}"  class="btn">一键寄售</view>
+    <navigator wx:if="{{data.show_feed==1}}" class="btn" hover-class="none" url="/pages/order/feek/feek?orderid={{data.info.orderid}}">申请售后</navigator>
+  </view>
+
+
+</view>
+
+
+
+<view class="payment-info area">
+  <view class="row">
+    <view class="name">商品金额</view>
+    <view class="content">￥{{data.info.goods_total}}</view>
+  </view>
+  <view class="row" wx:if="{{data.info.send_money > 0}}">
+    <view class="name">商品金额 运费</view>
+    <view class="content">￥{{data.info.send_money}}</view>
+  </view>
+  <view class="row" wx:if="{{data.info.coupon_money > 0}}">
+    <view class="name">代金券</view>
+    <view class="content">-￥{{data.info.coupon_money}}</view>
+  </view>
+  <view class="row" wx:if="{{data.info.dot_money > 0}}">
+    <view class="name">积分</view>
+    <view class="content">-￥{{data.info.dot_money}}</view>
+  </view>
+
+  <view class="row">
+    <view wx:if="{{data.info.is_pay==0}}" class="name stress">需付款</view>
+    <view wx:if="{{data.info.is_pay==1}}" class="name stress">实付款</view>
+    <view class="content price">￥{{data.info.total}}</view>
+  </view>
+
+</view>
+
+
+
+<view class="payment-info area">
+  <view class="row" wx:if="{{data.info.get_dot > 0}}">
+    <view class="name">获得积分</view>
+    <view class="content stress">获得{{data.info.get_dot}}商城积分</view>
+  </view>
+  <view class="row">
+    <view class="name">订单编号</view>
+    <view class="content stress">{{data.info.ordernum}}</view>
+  </view>
+  <view class="row">
+    <view class="name">下单时间</view>
+    <view class="content stress">{{data.info.create_time}}</view>
+  </view>
+  <view class="row" wx:if="{{data.info.pay_time}}">
+    <view class="name">付款时间</view>
+    <view class="content stress">{{data.info.pay_time}}</view>
+  </view>
+  <view class="row" wx:if="{{data.info.send_time}}">
+    <view class="name">发货时间</view>
+    <view class="content stress">{{data.info.send_time}}</view>
+  </view>
+ 
+</view>
+
+
+
+
+<view class="order-btm-wrap" style="padding-bottom: {{buBottom}}rpx">
+  <view class="order-btm">
+
+    <block wx:for="{{data.btn_data}}" wx:for-item="b">
+      <view class="{{b.class}}" bindtap="{{b.bindtap}}" wx:if="{{b.bindtap !='item'}}" data-orderid="{{data.info.orderid}}" data-ordernum="{{data.info.ordernum}}">{{b.name}}</view>
+    </block>
+
+  </view>
+</view>
+
+<view class="order-margin-wrap" style="padding-bottom: {{buBottom}}rpx">
+  <view class="order-margin"></view>
+</view>

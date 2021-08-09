@@ -1,0 +1,212 @@
+page {
+  /* background-color: #fff !important; */
+}
+
+.head {
+  background-color: #fff;
+  padding: 74rpx 80rpx;
+  text-align: center;
+}
+
+.head .success-img {
+  display: block;
+  margin: 0 auto;
+  width: 220rpx;
+}
+
+.head .title {
+  font-size: 36rpx;
+}
+
+.head .date {
+  font-size: 28rpx;
+  color: #7e7e7e;
+  padding: 20rpx 0;
+}
+
+.head .btn-wrap {
+  justify-content: space-between;
+}
+
+.head .btn {
+  margin: 30rpx 0;
+  padding: 20rpx 74rpx;
+  border-radius: 200rpx;
+  border: 1px solid #7E7E7E;
+  font-size: 30rpx;
+}
+
+.head .btn:last-child {
+  background-color: #4EA9F6;
+  color: #fff;
+  border-color: #4EA9F6;
+}
+
+.pro-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx 30rpx 0;
+}
+
+.pro-list .pro-item {
+  width: 330rpx;
+  margin-bottom: 28rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+
+.pro-list .pro-img {
+  width: 100%;
+  height: 300rpx;
+}
+
+.pro-list .pro-name {
+  font-size: 28rpx;
+  line-height: 1.5em;
+  padding: 12rpx;
+}
+
+.pro-list .tag-list {
+  padding: 0 10rpx;
+}
+
+.pro-list .tag {
+  padding: 2rpx 10rpx;
+  font-size: 20rpx;
+  color: #F9604E;
+  margin-right: 14rpx;
+  border-radius: 4rpx;
+  border: 1px solid #f9604e;
+}
+
+.pro-list .tag.red {
+  background-color: #F74833;
+  color: #fff;
+}
+
+.pro-list .pro-bottom {
+  padding: 10rpx 10rpx 18rpx 18rpx;
+}
+
+.pro-list .pro-price {
+  color: #F74833;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.pro-list .old-price {
+  font-size: 28rpx;
+  color: #BBBBBB;
+  text-decoration: line-through;
+  margin-left: 12rpx;
+}
+
+.pro-list .pro-btn {
+  width: 60rpx;
+  margin-left: auto;
+}
+
+.pro-list .symbol {
+  font-size: 24rpx;
+}
+
+.token-popup .money-bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.token-popup .popup-content {
+  width: 642rpx;
+}
+
+.token-popup .close-btn {
+  position: absolute;
+  left: calc(50% - 40rpx);
+  width: 80rpx;
+  bottom: -15%;
+}
+
+.token-popup .title {
+  position: relative;
+  z-index: 2;
+  font-size: 32rpx;
+  color: #F9604E;
+  text-align: center;
+  padding: 100rpx 0 36rpx;
+}
+
+.token-popup .token {
+  padding: 26rpx 20rpx;
+  position: relative;
+  z-index: 2;
+  width: 366rpx;
+  color: #F9604E;
+  margin: 0 auto;
+}
+
+.token-popup .token-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.token-popup .token-num {
+  position: relative;
+  z-index: 2;
+  font-size: 70rpx;
+  margin-right: 20rpx;
+  border-right: 1px dashed #fff;
+  width: 50%;
+}
+
+.token-popup .symbol {
+  font-size: 26rpx;
+}
+
+.token-popup .token-text {
+  position: relative;
+  z-index: 2;
+  font-size: 28rpx;
+  color: #F9604E;
+}
+
+.token-popup .token-text text {
+  display: block;
+  font-size: 22rpx;
+  margin-top: 8rpx;
+}
+
+.token-popup .tips {
+  position: relative;
+  z-index: 2;
+  font-size: 24rpx;
+  color: #F9604E;
+  text-align: center;
+  padding-top: 36rpx;
+  padding-bottom: 30rpx;
+}
+
+.token-popup .btn {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #8D4F0A;
+}
+
+.token-popup .btn text {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+}
+
+.token-popup .btn-bg {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}

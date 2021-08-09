@@ -1,0 +1,33 @@
+<view class="waiting">
+  <view class="waiting-title">
+    <view class="waiting-title-p">{{data.shop_info.shop_name}}</view>
+  </view>
+  <view class="waiting-p">
+    <text class="big">￥{{data.info.total}}</text>
+  </view>
+  <view class="least-time">剩余支付时间：{{m}}:{{s}}</view>
+</view>
+
+<radio-group bindchange="radioChange">
+  <label wx:for="{{data.pay_list}}" >
+    <view class="pay-item">
+      <view class="pay-left">
+        <image src="{{item.thumb}}" class="pay-icon"></image>
+        <view class="pay-p">{{item.name}}</view>
+      </view>
+      <radio value="{{item.pay_type}}" checked="{{item.pay_type==pay_type?'true':''}}" ></radio>
+    </view>
+  </label>
+</radio-group>
+
+<view class="settlement-wrap" style="padding-bottom: {{buBottom}}rpx">
+  <view class="settlement">
+    <view bindtap="pay_order"  class="settlement-btn">立即支付{{data.info.total}}元</view>
+    <!-- <view class="tips">
+      <image src="{{statics}}/images/hongbao.png" class="hongbao"></image>
+      <view class="tips-p">完成支付，可获得红包</view>
+    </view> -->
+  </view>
+</view>
+
+<view class="settlement-margin" style="padding-bottom: {{buBottom}}rpx"></view>

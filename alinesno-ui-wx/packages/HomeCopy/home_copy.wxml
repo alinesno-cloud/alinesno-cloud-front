@@ -1,0 +1,5 @@
+<image class="page-bottom-img" src="logo.png" mode="widthFix" bindtap="call_tel" data-tel="{{tel}}" ></image>
+<view class="page-bottom" bindtap="call_tel" data-tel="{{tel}}">
+新狐科技提供技术支持 	
+<!-- <navigator bindtap="call_tel" data-tel="{{resData.lx}}">联系我们</navigator>。 -->
+</view>

@@ -1,0 +1,42 @@
+.popbg{width: 100%; height: 100%; background: rgba(0,0,0,0.7);  position: fixed; left: 0; top: 0; z-index: 9999}
+/* .logincontainer{
+   width: 600rpx; position: fixed; left: 50%; margin-left: -300rpx; top:20%; background: #fff; z-index: 99999; border-radius: 20rpx; padding:20rpx 0 20rpx; box-shadow: 0rpx 2rpx 10rpx #555;
+}
+form {
+  width:600rpx;
+}
+.logo {
+  width:200rpx; display: block;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  margin-top:20rpx;
+}
+.profile {
+  text-align: center;
+  margin-top:30rpx;
+  font-size: 14px;
+  color:#888;
+}
+.mini-btn{
+  margin-top: 50rpx;
+  margin-left: 50px;
+  margin-right: 50px;width: 546rpx;
+
+} */
+page{background: #f7f6fc; width: 100%; height: 100%;}
+
+.pagemain{ width: 100%; height: 100%; position: relative; overflow: hidden;}
+.pagewrap{width: 100%; position: absolute; left: 0; top: 0;}
+.pagemainbg image{width: 100%;}
+
+.logobox{ width: 380rpx; height: 380rpx; margin: 170rpx auto 0;}
+.logobox image{width: 380rpx; height: 380rpx;}
+
+.loginbtnbox{margin-top: 130rpx;}
+.loginbtn{ width: 690rpx; height: 90rpx; margin: 0 auto; padding: 0; border-radius: 12rpx; display: flex; justify-content: center; align-items: center; background: #31944f;}
+.loginbtn text{font-size: 32rpx; color: #fff; font-weight: normal;}
+.loginbtn image{width: 50rpx; height: 50rpx; margin-right: 15rpx;}
+
+.no_login{text-align: center;text-decoration-line: underline;margin-top: 55rpx;}

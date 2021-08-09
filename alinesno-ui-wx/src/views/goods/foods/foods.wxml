@@ -1,0 +1,42 @@
+<!-- 精选美食 -->
+<view class="header">
+	<image class="head-bg" src="{{cdn}}header_bg.png" />
+</view>
+<swiper class="banner" indicator-dots="{{true}}" >
+	<swiper-item wx:for="{{banner}}"><image src="{{item.big}}" /></swiper-item>
+</swiper>
+
+
+<view class="menu-list flex-center">
+	<navigator url="/pages/goods/index/index?category_id={{item.category_id}}" class="menu-list-item" wx:for="{{category}}" ><image src="{{item.thumb}}" mode="widthFix" />{{item.name}}</navigator>
+</view>
+
+<view class="line"></view>
+
+<view class="hot">
+	<view class="title flex-center">
+		<image class="title-icon" src="{{cdn}}home-hot.png" mode="widthFix" />{{title}}	
+		<navigator url="/pages/goods/cate/cate?category_id=7" class="title-btn flex-center">更多 <image src="{{cdn}}arrow-btn.png" mode="widthFix" /></navigator>
+	</view>
+	<scroll-view class="hot-list" scroll-x="{{true}}" scroll-with-animation="{{true}}">
+		<block wx:for="{{hot}}">
+			<navigator class="hot-list-item"  url="/pages/goods/item/item?goods_id={{item.goods_id}}">
+				<image src="{{item.thumb}}" class="hot-img" />
+				<view class="hot-name">{{item.name}}</view>
+				<view class="hot-price"><text class="symbol">￥</text>{{item.min_price}}</view>
+			</navigator>
+		</block>
+	</scroll-view>
+</view>
+
+
+<view class="line"></view>
+
+
+<view class="tab-swiper flex-center" >
+	<view class="swiper-tab-item {{category_id==0?'active':''}}" bindtap='change_flag' data-flag="0" >全部</view>
+	<view wx:for="{{category}}" class="swiper-tab-item {{category_id==item.category_id?'active':''}}" bindtap='change_flag' data-flag="{{item.category_id}}" >{{item.desc}}</view>
+</view>
+<goods_list list="{{list}}" show_type="1" show_msg="暂无商品" title=""></goods_list>
+
+<nav />

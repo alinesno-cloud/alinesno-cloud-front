@@ -1,0 +1,20 @@
+<view class="item" wx:for="{{list}}">
+  <view class="info">
+    <image class="img" mode="heightFix" src="{{item.thumb}}" />
+    <view class="right-side">
+      <view class="name">{{item.name}}</view>
+      <view class="detail" wx:if="{{item.small_title}}">{{item.small_title}}</view>
+      <view class="cost">
+        <text class="preferential"><text class="s">￥</text>{{item.min_price}}</text> 
+         <text class="original"><text class="s">￥</text>{{item.min_market_price}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="btn-box">
+    <view class="btn" bindtap="del" data-goods_id="{{item.goods_id}}" data-index="{{index}}">删除</view>
+    <view class="btn" bindtap="tourl" data-url="/pages/goods/item/item?goods_id={{item.goods_id}}">去购买</view>
+  </view>
+</view>
+
+<msg wx:if="{{list.length <= 0}}" />
+<nav />

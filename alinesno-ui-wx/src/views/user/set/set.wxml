@@ -1,0 +1,46 @@
+<view class="area">
+	<view class="row" bindtap="upload_img">
+		<view class="name">个人头像</view>
+		<view class="content">
+			<image class="avatar" src="{{data.uinfo.headimgurl}}" />
+		</view>
+	</view>
+	<view class="row">
+		<view class="name">昵称</view>
+		<input type="text" class="content" value="{{data.uinfo.nickname}}" placeholder="请输入" data-name="nickname" bindinput="change_name" bindblur="sub_name"></input>
+	</view>
+</view>
+
+<view class="area">
+
+	<view class="row">
+		<view class="name">手机</view>
+		<view class="content">
+			<button class="edit-txt" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="width:200rpx;text-align:center;margin: 0;">{{data.uinfo.tel?data.uinfo.tel:'一键绑定'}}</button>
+		</view>
+	</view>
+
+	<picker  bindchange="change_name" data-name="sex" range="{{sexs}}" value="{{data.uinfo.sex}}">
+		<view class="row">
+			<view class="name">性别</view>
+			<view class="content">
+				<text class="sex">{{data.uinfo.sex?sexs[data.uinfo.sex]:'无'}}</text>
+				<image class="arrow" mode="heightFix" src="{{cdn}}icon/arrow-s2.svg" />
+			</view>
+		</view>
+	</picker>
+
+	<picker mode="date" bindchange="change_name" data-name="birthday" value="{{data.uinfo.birthday}}">
+		<view class="row">
+			<view class="name">生日</view>
+			<view class="content">
+				<text class="sex">{{data.uinfo.birthday?data.uinfo.birthday:'请选择'}}</text>
+				<image class="arrow" mode="heightFix" src="{{cdn}}icon/arrow-s2.svg" />
+			</view>
+		</view>
+	</picker>
+</view>
+
+<view class="logout" bindtap="logout">退出登录</view>
+
+<nav></nav>

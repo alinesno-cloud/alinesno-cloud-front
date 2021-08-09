@@ -1,0 +1,123 @@
+<!-- 1.6手机商城 -->
+<view class="header">
+	<image class="head-bg" src="{{cdn}}header_bg.png" />
+</view>
+
+<swiper class="banner" indicator-dots="{{true}}">
+
+	<swiper-item wx:for="{{data.ad12}}">
+		<image bindtap="tourl" data-url="{{item.link}}" src="{{item.big}}" />
+	</swiper-item>
+</swiper>
+
+
+<view class="info-list flex-center">
+	<view class="info-list-item flex-center" wx:for="{{data.ad1}}">
+		<image src="{{item.link}}" mode="widthFix" />{{item.name}}</view>
+
+</view>
+
+<block wx:if="{{data.xinji_list.length > 0}}">
+	<view class="line"></view>
+
+	<view class="hot violet">
+		<view class="title flex-center">
+			新机<text class="red">首发</text>
+			<image class="towards-icon" src="{{cdn}}towards.png" mode="widthFix" />
+			<navigator  url="/pages/goods/index/index?category_id=1"  class="title-btn flex-center">更多
+				<image src="{{cdn}}arrow-btn.png" mode="widthFix" />
+			</navigator>
+		</view>
+		<scroll-view class="hot-list" scroll-x="{{true}}" scroll-with-animation="{{true}}">
+			<block wx:for="{{data.xinji_list}}">
+				<navigator url="/pages/goods/item/item?goods_id={{item.goods_id}}&is_xinji=1" class="hot-list-item">
+					<view class="img-wrap">
+						<image class="pro-img" src="{{item.thumb}}" />
+						<view class="tag red" wx:if="{{item.is_xinji==1}}">新机</view>
+					</view>
+					<view class="hot-name">{{item.name}}</view>
+					<view class="hot-price"><text class="symbol">￥</text>{{f.clear_zero(item.min_price)}}</view>
+				</navigator>
+			</block>
+		</scroll-view>
+	</view>
+</block>
+
+<block wx:if="{{data.ms_list.length > 0}}">
+	<view class="line"></view>
+
+	<view class="hot blue">
+		<view class="title flex-center">
+			限时<text class="red">秒杀</text>
+			<image class="towards-icon" src="{{cdn}}towards.png" mode="widthFix" />
+			<navigator url="/pages/goods/ms_list/ms_list" class="title-btn flex-center">更多
+				<image src="{{cdn}}arrow-btn.png" mode="widthFix" />
+			</navigator>
+		</view>
+		<scroll-view class="limit hot-list" scroll-x="{{true}}">
+			<block wx:for="{{data.ms_list}}">
+				<navigator url="/pages/goods/item/item?goods_id={{item.goods_id}}" class="hot-list-item">
+					<image src="{{item.thumb}}" class="hot-img" mode="widthFix" />
+					<view class="hot-name">{{item.name}}</view>
+					<view class="limit-price flex-center"><text class="symbol">￥</text>{{f.clear_zero(item.min_price)}} <text class="old-price">￥{{f.clear_zero(item.min_market_price)}}</text></view>
+				</navigator>
+			</block>
+		</scroll-view>
+	</view>
+</block>
+
+
+<block wx:if="{{data.zy_list.length > 0}}">
+	<view class="line"></view>
+
+	<view class="hot blue">
+		<view class="title flex-center">
+			商城<text class="red">自营</text>
+			<image class="towards-icon" src="{{cdn}}towards.png" mode="widthFix" />
+			<navigator url="/pages/goods/index/index?category_id=1&is_zy=1&type=2"  class="title-btn flex-center">更多
+				<image src="{{cdn}}arrow-btn.png" mode="widthFix" />
+			</navigator>
+		</view>
+		<scroll-view class="limit hot-list" scroll-x="{{true}}">
+			<block wx:for="{{data.zy_list}}">
+				<navigator url="/pages/goods/item/item?goods_id={{item.goods_id}}" class="hot-list-item">
+					<image src="{{item.thumb}}" class="hot-img" mode="widthFix" />
+					<view class="hot-name">{{item.name}}</view>
+					<view class="limit-price flex-center"><text class="symbol">￥</text>{{f.clear_zero(item.min_price)}} <text class="old-price">￥{{f.clear_zero(item.min_market_price)}}</text></view>
+				</navigator>
+			</block>
+		</scroll-view>
+	</view>
+</block>
+
+
+
+<view class="line"></view>
+
+<view class="hot grey">
+	<view class="title flex-center">
+		商品<text class="red">推荐</text>
+		<image class="towards-icon" src="{{cdn}}towards.png" mode="widthFix" />
+		<navigator url="/pages/goods/index/index?category_id=1" class="title-btn flex-center">更多
+			<image src="{{cdn}}arrow-btn.png" mode="widthFix" />
+		</navigator>
+	</view>
+</view>
+<swiper class="recommend">
+	<swiper-item wx:for="{{data.ad13}}" >
+		<image  src="{{item.big}}" bindtap="tourl" data-url="{{item.link}}"  class="adver-img" mode="widthFix" />
+	</swiper-item>
+</swiper>
+
+
+<view class="tab flex-center">
+	<view class="tab-item {{category_id==item.category_id?'active':''}}" wx:for="{{data.category_list}}" bindtap="change_cate" data-category_id="{{item.category_id}}">{{item.name}}</view>
+
+</view>
+
+
+<goods_list show_jg="{{false}}" list="{{list}}" show_msg="暂无商品" />
+
+
+<nav />
+<wxs module="f" src="../../../utils/f.wxs" />

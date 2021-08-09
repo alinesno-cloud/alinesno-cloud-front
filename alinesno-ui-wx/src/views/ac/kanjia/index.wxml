@@ -1,0 +1,63 @@
+<!-- 2-4-0砍价 -->
+<image class="banner-img" src="{{data.top}}" mode="widthFix"></image>
+
+
+
+<view class="bargain-item inprogress-item"  wx:if="{{data.my_list.length > 0}}">
+  <view class="inprogress-title">
+    - 正在进行中 -
+  </view>
+
+  <block wx:for="{{data.my_list}}"> 
+    <view data-item="{{item}}" bindtap="toitem" class="content flex-center" url="/pages/goods/kj/item?kj_id={{item.id}}">
+      <image class="bargain-img" src="{{item.thumb}}"></image>
+      <view class="content-text">
+        <view class="shop-name">{{item.name}}</view>
+        <view class="money">已砍
+          <text>{{item.total_ed}}元</text>
+        </view>
+        <view class="content-bottom flex-center">
+          <view class="time-wrap flex-center">
+            剩余时间
+            <text class="">{{filter.count_down(item.sy,1)}}</text>:
+            <text class="">{{filter.count_down(item.sy,2)}}</text>:
+            <text class="">{{filter.count_down(item.sy,3)}}</text>
+          </view>
+          <view class="bargain-btn">{{item.to_str}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+
+</view>
+
+<block wx:for="{{list}}">
+  <view class="bargain-item"  bindtap="buy" data-goods_id="{{item.goods_id}}">
+    <view class="content flex-center">
+      <image class="bargain-img" src="{{item.thumb}}"></image>
+      <view class="content-text">
+        <view class="shop-name">{{item.name}}</view>
+        <view class="shop-name2">仅剩{{item.stock}}件</view>
+        <view class="shop-name3">原价：￥{{item.min_price}}</view>
+        <view class="content-bottom flex-center">
+          <view class="item-num">砍后价：
+            <text>￥{{item.min_kj_price}}</text>
+          </view>
+          <view class="bargain-btn"  data-index="{{index}}"  data-id="{{item.id}}">点击砍价</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<msg_com wx:if="{{list.length <= 0}}"></msg_com>
+
+<include src="index_attr.wxml" />
+<wxs module="filter" src="../../../utils/f.wxs" />
+
+<nav />
+<goods id="goods" goods_id="{{goods_id}}" btn_type="2" show="{{goods_show}}"  bind:change_goods_show='change_goods_show'   bind:sel_goods='sel_goods'></goods>
+
+<address_com id="address_com_id" sel_id="{{data.sel_id}}" title="选择收货地址" bind:change_address_sel='change_address_sel' type="{{address_type}}"></address_com>

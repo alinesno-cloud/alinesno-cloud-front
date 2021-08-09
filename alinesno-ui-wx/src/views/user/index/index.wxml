@@ -1,0 +1,172 @@
+<!-- <view class="circle-background"></view> -->
+
+<view class="user">
+	<image class="avatar" src="{{data.uinfo.headimgurl}}" />
+	<view class="info">
+		<view class="name-wrap">
+			<text class="name">{{data.uinfo.nickname}}</text>
+			<view class="symbol">{{data.uinfo.rank_name}}</view>
+		</view>
+
+		<navigator class="egs" hover-class="none" url="/pages/user/set/set">设置
+		</navigator>
+
+	</view>
+	<navigator hover-class="none" url="/pages/user/set/set">
+		<image class="arrow" src="{{cdn}}icon/arrow-s1.png" />
+	</navigator>
+</view>
+
+<view class="data-area" style=" background:#4EA9F6">
+	<navigator class="item" hover-class="none" url="/pages/user/money/money">
+		<text class="num">{{data.finfo.money}}</text>
+		<text class="title">钱包</text>
+	</navigator>
+	<view class="cut"></view>
+	<navigator class="item" hover-class="none" url="/pages/user/dot/dot">
+		<text class="num">{{data.finfo.dot}}</text>
+		<text class="title">积分</text>
+	</navigator>
+	<view class="cut" ></view>
+	<navigator class="item" hover-class="none" url="/pages/user/bro/bro">
+		<text class="num">{{data.finfo.bro}}</text>
+		<text class="title">佣金</text>
+	</navigator>
+	<view class="cut"></view>
+	<navigator class="item" hover-class="none" url="/pages/user/coupon/coupon">
+		<text class="num">{{data.coupon_num}}</text>
+		<text class="title">优惠券</text>
+	</navigator>
+</view>
+
+<view class="order-form-area" style=" margin-top:20rpx;">
+	<view class="header" bindtap="tourl" data-url="/pages/order/index/index">
+		<text class="title">我的订单</text>
+		<view class="more-btn">
+			查看全部
+			<image class="arrow" mode="heightFix" src="{{cdn}}icon/arrow-s2.svg" />
+		</view>
+	</view>
+
+	<view class="button-wrap">
+
+		<navigator class="item" hover-class="none" url="/pages/order/index/index?flag=wait_pay">
+			<view class="badge" wx:if="{{data.orderCountInfo.wait_pay_count > 0}}">{{data.orderCountInfo.wait_pay_count}}
+			</view>
+			<image class="icon" src="{{cdn}}icon/dai-fu-kuan.png" />
+			<text class="name">待付款</text>
+		</navigator>
+
+		<navigator class="item" hover-class="none" url="/pages/order/index/index?flag=wait_send">
+			<view class="badge" wx:if="{{data.orderCountInfo.wait_send_count > 0}}">{{data.orderCountInfo.wait_send_count}}
+			</view>
+
+			<image class="icon" src="{{cdn}}icon/dai-fa-huo.png" />
+			<text class="name">待发货</text>
+		</navigator>
+		<navigator class="item" hover-class="none" url="/pages/order/index/index?flag=wait_get">
+			<view class="badge" wx:if="{{data.orderCountInfo.wait_get_count > 0}}">{{data.orderCountInfo.wait_get_count}}
+			</view>
+
+			<image class="icon" src="{{cdn}}icon/dai-shou-huo.png" />
+			<text class="name">待收货</text>
+		</navigator>
+		<navigator class="item" hover-class="none" url="/pages/order/index/index?flag=wait_com">
+			<view class="badge" wx:if="{{data.orderCountInfo.wait_com_count > 0}}">{{data.orderCountInfo.wait_com_count}}
+			</view>
+
+			<image class="icon" src="{{cdn}}icon/ping-jia.png" />
+			<text class="name">待评价</text>
+		</navigator>
+		<navigator class="item" hover-class="none" url="/pages/order/after/index">
+			<view class="badge" wx:if="{{data.orderCountInfo.feedback_count > 0}}">{{data.orderCountInfo.feedback_count}}
+			</view>
+
+			<image class="icon" src="{{cdn}}icon/shou-hou.png" />
+			<text class="name">售后</text>
+		</navigator>
+	</view>
+
+</view>
+
+<view class="nav bg-white" wx:if="{{data.nav}}">
+			<view class="nav-list row2">
+					<navigator wx:for="{{data.nav}}" url="{{item.url}}" class="nav-item column-center">
+							<image class="nav-icon" src="{{item.img}}" />
+							<view class="name xs">{{item.name}}</view>
+					</navigator>
+				
+			</view>
+	
+</view>
+
+
+<!-- <view class="tool-aera">
+	<view class="header">
+		<text class="title">我的工具</text>
+	</view>
+	<view class="button-wrap">
+		<view class="row">
+			<navigator class="item" hover-class="none" url="/pages/user/atn/atn">
+				<image class="icon" src="{{cdn}}icon/a1.png" />
+				<text class="name">我的收藏</text>
+			</navigator>
+			<navigator class="item"  hover-class="none" url="/pages/address/index/index">
+				<image class="icon" src="{{cdn}}icon/shou-huo-di-zhi.png" />
+				<text class="name">收货地址</text>
+			</navigator>
+
+			<navigator class="item" hover-class="none" url="/pages/user/history/history">
+				<image class="icon" src="{{cdn}}icon/wo-de-zu-ji.png" />
+				<text class="name">我的足迹</text>
+			</navigator>
+
+			
+			<navigator class="item" hover-class="none" url="/pages/user/msg/msg">
+				<image class="icon" src="{{cdn}}icon/xiao-xi-zhong-xin.png" />
+				<text class="name">消息中心</text>
+			</navigator>
+		
+		</view>
+		<view class="row">
+	
+
+
+			<navigator class="item" hover-class="none" url="/pages/zhuanpan/log/log">
+				<image class="icon" src="{{cdn}}icon/wo-de-fa-bu.png" />
+				<text class="name">中奖记录</text>
+			</navigator>
+
+			<navigator class="item" hover-class="none" url="/pages/user/get_coupon/get_coupon">
+				<image class="icon" src="{{cdn}}icon/wo-de-shou-cang.png" />
+				<text class="name">领券中心</text>
+			</navigator>
+			<navigator wx:if="{{data.site_status==1}}" class="item" hover-class="none" url="/pages/fenxiao/index/index">
+				<image class="icon" src="{{cdn}}index-icon-active.png" />
+				<text class="name">分销中心</text>
+			</navigator>
+
+
+
+		</view>
+
+		
+
+
+	</view>
+</view> -->
+
+<navigator wx:if="{{data.ad4}}" class="banner" hover-class="none" url="{{data.ad4.link}}">
+	<image class="img" src="{{data.ad4.big}}" mode="widthFix" />
+</navigator>
+
+<block wx:for="{{data.ad11}}">
+	<navigator class="banner" hover-class="none" url="{{item.link}}">
+		<image class="img" mode="widthFix" src="{{item.big}}" />
+	</navigator>
+</block>
+
+<goods_list list="{{data.like_goods}}" show_msg="" title="猜你喜欢"></goods_list>
+<nav act="4"></nav>
+<address_com id="address_com_id" sel_id="{{data.sel_id}}" title="收货地址（点击可编辑）"
+	bind:change_address_sel='change_address_sel' bind:del_address='del_address' type="{{address_type}}"></address_com>

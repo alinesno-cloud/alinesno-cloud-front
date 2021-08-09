@@ -1,0 +1,107 @@
+<!-- 2-4-1发起砍价 -->
+<view class="page-content">
+  <view class="header">
+    <view class="bargain-item inprogress-item">
+      <view class="content flex-center">
+        <image class="bargain-img" src="{{data.info.thumb}}"></image>
+        <view class="content-text">
+          <view class="shop-name">{{data.info.name}}</view>
+          <view class="time-wrap flex-center">
+            剩余时间
+            <text class="">{{d}}</text>:
+            <text class="">{{h}}</text>:
+            <text class="">{{m}}</text>:
+            <text class="">{{s}}</text>
+          </view>
+          <view class="content-bottom flex-center">
+            砍到{{data.info.real_total}}元拿
+            <view class="tag">{{data.info.status_str}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="head-text">已砍
+      <text>{{data.info.total_ed}}元</text>，还差
+      <text>{{data.info.total_cha}}元</text>
+    </view>
+    <view class="progress-bar">
+      <view class="inner-bar" style="	width: {{data.info.width}}%;"></view>
+    </view>
+
+    <view class="head-btn" bindtap="kan" wx:if="{{data.show_kan==1}}">
+      <text>{{data.btn_msg}}</text>
+    </view>
+    <button class="head-btn" style="width:300rpx;line-height:87rpx;height: 87rpx;padding:0;" open-type="share" wx:if="{{data.show_kan==2}}">
+      <text>{{data.btn_msg}}</text>
+    </button>
+
+  </view>
+
+  <view class="line"></view>
+
+  <block wx:if="{{data.info.log_list.length > 0}}">
+    <scroll-view class="user-list" scroll-y="true">
+      <view wx:for="{{data.info.log_list}}" class="user-item flex-center">
+        <image class="user-head" src="{{item.headimgurl}}" mode="widthFix"></image>
+        <view class="user-info">
+          <view class="username">{{item.nickname}}</view>
+          <view class="user-time">{{item.time}}</view>
+        </view>
+        <view class="user-money">已帮您砍掉
+          <text>-{{filter.clear_zero(item.total)}}元</text>
+        </view>
+      </view>
+    </scroll-view>
+
+    <view class="line"></view>
+  </block>
+
+  <view class="bargain-list">
+    <view class="title">其他热门砍价商品</view>
+    <block wx:for="{{data.list}}">
+
+      <view class="bargain-item" bindtap="buy" data-goods_id="{{item.goods_id}}">
+        <view class="content flex-center">
+          <image class="bargain-img" src="{{item.thumb}}"></image>
+          <view class="content-text">
+            <view class="shop-name">{{item.name}}</view>
+            <view class="shop-name2">仅剩{{item.stock}}件</view>
+            <view class="shop-name3">原价：￥{{item.min_price}}</view>
+            <view class="content-bottom flex-center">
+              <view class="item-num">砍后价：
+                <text>￥{{item.min_kj_price}}</text>
+              </view>
+              <view class="bargain-btn" data-index="{{index}}" data-id="{{item.id}}">点击砍价</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+
+
+</view>
+
+
+<!-- 砍价成功弹窗 -->
+<view wx:if="{{successShow}}" class="success-popup popup" style="padding-bottom: {{buBottom}}rpx;">
+  <view class="mask" bindtap="successShow" ></view>
+  <view class="popup-content">
+    <!-- <icon class="close-btn iconfont icon-close-circle" bindtap="successShow"></icon> -->
+    <view class="success-title">{{kan_msg}}</view>
+    <view class="success-price">{{kan_total}}
+      <text>元</text>
+    </view>
+    <view bindtap="tourl" class="success-btn">我也要砍价</view>
+    <button open-type="share" style="height: 70rpx;width:300rpx;line-height:70rpx;padding:0;" class="success-btn invite-btn">邀请好友帮TA砍</button>
+  </view>
+</view>
+
+<nav />
+<wxs module="filter" src="../../../utils/f.wxs" />
+<include src="index_attr.wxml" />
+<address_com id="address_com_id" sel_id="{{data.sel_id}}" title="选择收货地址" bind:change_address_sel='change_address_sel'
+  type="{{address_type}}"></address_com>

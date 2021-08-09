@@ -1,0 +1,142 @@
+/* .wrapper {
+  padding: 24rpx;
+} */
+.pro-popp {
+  width: 650rpx;
+  /* background: #fff; */
+  position: fixed;
+  top: 10rpx;
+  left: 43%;
+  margin-left: -270rpx;
+  z-index: 991;
+}
+.coupon {
+  padding: 60rpx 24rpx 100rpx;
+  margin-bottom: 80rpx;
+  background-color: #FF3737;
+  position: relative;
+}
+.coupon .coupon_scroll {
+  height: 700rpx;
+}
+.coupon .coupon_item {
+  margin-bottom: 24rpx;
+  display: flex;
+  border-radius: 20rpx;
+  background-color: #fff;
+  position: relative;
+}
+.coupon .coupon_item .left {
+  width: 220rpx;
+  height: 220rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 2PX #e6e6e6 dashed;
+  position: relative;
+}
+.coupon .coupon_item .left .price {
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #FF3737;
+}
+.coupon .coupon_item .left .price text {
+  font-size: 40rpx;
+}
+.coupon .coupon_item .left .spec {
+  font-size: 24rpx;
+  color: #FF3737;
+}
+.coupon .coupon_item .left .dot {
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #FF3737;
+  border-radius: 50%;
+  position: absolute;
+  right: -15rpx;
+  z-index: 9;
+}
+.coupon .coupon_item .left .dot.top {
+  top: -15rpx;
+}
+.coupon .coupon_item .left .dot.bottom {
+  bottom: -15rpx;
+}
+.coupon .coupon_item .right {
+  flex: 1;
+  padding: 0 40rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.coupon .coupon_item .right .name {
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+.coupon .coupon_item .right .spec {
+  display: inline-block;
+  margin-bottom: 30rpx;
+  padding: 5rpx 10rpx;
+  border: 1PX #FF3737 solid;
+  border-radius: 6rpx;
+  font-size: 20rpx;
+  color: #FF3737;
+}
+.coupon .coupon_item .right .time {
+  font-size: 22rpx;
+  color: #999;
+}
+.coupon .btn_wrap {
+  width: 100%;
+  height: 186rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+.coupon .btn_wrap .btn {
+  width: 540rpx;
+  height: 96rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50rpx;
+  background: linear-gradient(to bottom, #FFECAA, #FFB736);
+  font-size: 42rpx;
+  font-weight: bold;
+  color: var(--themeColor);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.use_title {
+  margin-bottom: 30rpx;
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #333;
+}
+.empty {
+  height: 500rpx;
+  text-align: center;
+  color: #fff;
+}
+.empty .title {
+  font-size: 48rpx;
+}
+.empty .tips {
+  font-size: 28rpx;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 980;
+}

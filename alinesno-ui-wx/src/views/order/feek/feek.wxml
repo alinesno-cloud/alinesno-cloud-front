@@ -1,0 +1,74 @@
+<view class="produce-info" wx:for="{{data.goods_list}}">
+	<image class="show-img" mode="aspectFill" src="{{item.thumb}}" />
+	<view class="right-side">
+		<text class="title">{{item.name}}</text>
+		<view class="data" wx:if="{{item.spec_str}}">{{item.spec_str}}</view>
+	</view>
+</view>
+
+<view class="area">
+	<view class="row cause">
+		<view class="name stress">售后类型</view>
+	</view>
+	<view class="feedback-list">
+		<block wx:for="{{data.feedback_type}}" wx:for-index="index" wx:for-item="item">
+			<view bindtap='sel_type_btn' data-name="{{index}}" class="feedback-item {{sel_type==index?'active':''}}">{{item}}</view>
+		</block>
+	</view>
+
+	<view class="row status">
+		<view class="header">
+			<view class="name stress">商品状态</view>
+			<view class="radio-wrap">
+				<view class="radio" catch:tap="is_chai">
+					<image class="icon" mode="widthFix" src="{{!is_chai?'/images/icon/radio-active.png':'/images/icon/radio.png'}}" />
+					<view class="label">未拆封</view>
+				</view>
+				<view class="radio" catch:tap="is_chai">
+					<image class="icon" mode="widthFix" src="{{is_chai?'/images/icon/radio-active.png':'/images/icon/radio.png'}}" />
+					<view class="label">已拆封</view>
+				</view>
+			</view>
+		</view>
+		<view class="content">
+			<textarea class="textarea" value='{{info.content}}'   bindfocus='change_field'  bindinput='change_field' data-field='content' placeholder="请描述售后原因"></textarea>
+			<view class="upload-img">
+				<!-- 被添加的照片 -->
+				<view class="img"  wx:for='{{info.img}}'>
+					<image class="close" mode="widthFix"   bindtap='del_img' data-index='{{index}}' data-field='img'  src="/images/icon/cha-s1.png" />
+					<image class="img" mode="aspectFill"src="{{item}}" />
+				</view>
+			
+				<!-- 添加按钮 -->
+				<image class="img add-img"  bindtap='upload_imgs' data-field='img' mode="widthFix" src="/images/shagn-chuan.png" />
+				<!-- 填充，保证图片能正确布局(不可删) -->
+				<view class="img padding"></view>
+				<view class="img padding"></view>
+				<view class="img padding"></view>
+				<view class="img padding"></view>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 
+<view class="area">
+	<view class="row">
+		<view class="name stress">退款方式</view>
+		<view class="content">原支付返回</view>
+	</view>
+	<view class="row">
+		<view class="name stress">退款人</view>
+		<view class="content stress">王小丫</view>
+	</view>
+	<view class="row way">
+		<view class="name stress">退货方式</view>
+		<view class="content">
+			<view class="text">请选择退款原因</view>
+			<image class="arrow" mode="heightFix" src="/images/icon/arrow-s2.svg" />
+		</view>
+	</view>
+</view> -->
+
+<view class="confirm-btn" bindtap="sub">申请售后</view>
+
+<nav />

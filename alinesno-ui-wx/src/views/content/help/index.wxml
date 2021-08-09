@@ -1,0 +1,11 @@
+<!-- 设置帮助 -->
+<view class="wrap">
+    <navigator class="set-item flex-center" url="/pages/content/help/item?id={{item.id}}" wx:for="{{list}}">
+        {{item.title}}
+        <image class="arrow-btn" src="/images/arrow-btn.png" mode="widthFix" />
+    </navigator>
+   
+</view>
+<msg wx:if="{{list.length <= 0}}"></msg>
+
+<nav></nav>

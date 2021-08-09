@@ -1,0 +1,45 @@
+<!-- 购物车弹窗 -->
+<block wx:if='{{show}}'>
+	<view class="mask" bindtap="close"></view>
+	<view class="pro-popp-wrap {{show==true?'move':''}}" style="padding-bottom: {{buBottom}}rpx">
+		<view class="pro-popp">
+			<image src="x.png" class="x-close" bindtap="close"></image>
+			<view class="sp-item">
+				<view class="sp-img">
+					<image src="{{info.image}}" class="sp-image"></image>
+				</view>
+				<view class="sp-info">
+					<view class="sp-price">
+						<view class="sp-new"><text class="small">￥</text>{{info.price}}</view>
+						<view class="sp-old">￥{{info.market_price}}</view>
+					</view>
+					<view class="sp-saled">库存：<text class="red">{{info.stock}}</text>件</view>
+					<view class="sp-saled">已选：<text class="red">{{info.spec_value_str}}</text></view>
+				</view>
+			</view>
+			<view class="sp-chicked"  wx:for="{{data.goods_spec}}" wx:for-index="si" wx:for-item="sv">
+				<view class="sp-chicked-title">{{sv.name}}</view>
+				<view class="sp-chicked-list">
+					<view class="sp-chicked-item {{svv.check==1?'on':''}}" bindtap="sel_spec"  wx:for="{{sv.spec_value}}"  wx:for-index="svi" wx:for-item="svv"  data-item="{{svv}}" data-index="{{svi}}" data-pindex="{{si}}" >
+						<text class="{{svv.check==1?'text-hide':''}}"></text>{{svv.value}}
+					</view>
+				</view>
+			</view>
+			<view class="sp-bar">
+				<view class="sp-chicked-title">购买数量</view>
+				<view class="count">
+					<image src="jian.png" class="jian-icon" bindtap='jian_num'></image>
+					<view class="count-p">{{num}}</view>
+					<image src="jia.png" class="jia-icon" bindtap='jia_num'></image>
+				</view>
+			</view>
+		</view>
+		<view class="sp-btn" wx:if="{{buy_type}}">
+			<view class="sp-btn2" bindtap="toorder" data-flag="{{flag}}" style="width: 100%">{{flag=='pt'?'立即拼团':'立即购买'}}</view>
+		</view>
+		<view class="sp-btn" wx:else>
+			<view class="sp-btn1" bindtap="toorder" data-flag="">加入购物车</view>
+			<view class="sp-btn2" bindtap="toorder" data-flag="buy">立即购买</view>
+		</view>
+	</view>
+</block>

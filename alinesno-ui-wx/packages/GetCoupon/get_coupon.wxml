@@ -1,0 +1,35 @@
+<view class="mask" bindtap="close_hb"></view>
+
+<view class="pro-popp">
+    <image class="" src="coupon_top.png" mode="widthFix"></image>
+    <view class="coupon">
+        <scroll-view class="coupon_scroll" scroll-y>
+            <view class="coupon_item" wx:for="{{4}}">
+                <view class="left">
+                    <view class="price">
+                        <text>￥</text>100
+                    </view>
+                    <view class="spec">满100减10</view>
+                    <view class="dot top"></view>
+                    <view class="dot bottom"></view>
+                </view>
+                <view class="right">
+                    <view class="name">仅可购买大包装水分类商品</view>
+                    <text class="spec">大包装水可用</text>
+                    <view class="time">2021.01.01-2021.12.3</view>
+                </view>
+            </view>
+        </scroll-view>
+        <!-- 已领完 -->
+
+        <!-- 按钮 -->
+        <view class="btn_wrap">
+            <image class="" src="coupon_btm.png" mode="widthFix"></image>
+            <view class="btn">一键领取</view>
+        </view>
+    </view>
+    <!-- <view class="use_title">优惠券使用说明</view>
+    <rich-text class="" nodes="123">
+
+    </rich-text> -->
+</view>

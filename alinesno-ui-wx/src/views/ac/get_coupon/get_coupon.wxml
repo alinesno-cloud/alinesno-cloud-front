@@ -1,0 +1,30 @@
+<view class="quan">
+  <view class="quan-item" wx:for="{{data.coupon}}" wx:key="item">
+    <view class="quan-info">
+      <view class="quan-info-left">
+        <view class="quan-money"><text class="small">￥</text>{{f.clear_zero(item.money)}}</view>
+        <view class="quan-tips">{{item.base_money}}起用</view>
+      </view>
+      <view class="quan-info-right">
+        <view class="quan-info-p">{{item.name}}</view>
+        <view class="quan-info-time">{{item.remark?item.remark:''}}</view>
+      </view>
+    </view>
+    <view class="quan-img" bindtap="getCoupon" data-coupon_id="{{item.id}}">
+      <image src="quan.png" class="quan-image"></image>
+      <view class="quan-btn-yes" wx:if="{{item.is_get==true}}">已领取</view>
+      <view class="quan-btn" wx:if="{{item.is_get== false}}">立即领取</view>
+      <view class="quan-stuff">
+        <view class="quan-dot"></view>
+        <view class="quan-bar"></view>
+        <view class="quan-dot"></view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<msg wx:if="{{data.coupon.length <= 0 }}"></msg>
+<wxs module="f" src="../../../utils/f.wxs" />
+
+<nav />

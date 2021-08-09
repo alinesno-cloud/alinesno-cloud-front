@@ -1,0 +1,123 @@
+page {
+  background-color: #f8f8f8;
+}
+
+.list {
+  padding: 45rpx 0;
+  background-color: #fff;
+}
+
+.list-item {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.msg-icon {
+  width: 104rpx;
+  display: block;
+  margin: 0 auto 8rpx;
+}
+
+.no-msg {
+  padding: 194rpx 0;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.no-msg image {
+  width: 400rpx;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 18rpx;
+}
+
+/*活动消息*/
+
+.msg-item {
+  text-align: center;
+}
+
+.date {
+  margin: 28rpx 0;
+  display: inline-block;
+  padding: 8rpx 35rpx;
+  background-color: #BBBBBB;
+  border-radius: 200rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.msg-wrap {
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.msg-title {
+  text-align: left;
+  font-size: 34rpx;
+  margin-bottom: 30rpx;
+  font-weight: bold;
+}
+
+.msg-text {
+  font-size: 28rpx;
+  color: #7e7e7e;
+  padding-bottom: 26rpx;
+  border-bottom: 1px solid #E8E8E8;
+  text-align: left;
+}
+
+.msg-btn {
+  font-size: 28rpx;
+  color: #7e7e7e;
+  padding-top: 22rpx;
+}
+
+.arrow-btn {
+  width: 45rpx;
+  margin-left: auto;
+}
+/*消息列表*/
+
+.msg-item {
+  text-align: center;
+  padding: 25rpx;
+}
+
+.date {
+  margin: 28rpx 0;
+  display: inline-block;
+  padding: 8rpx 35rpx;
+  background-color: #BBBBBB;
+  border-radius: 200rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.msg-wrap {
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.msg-title {
+  text-align: left;
+  font-size: 34rpx;
+  margin-bottom: 30rpx;
+}
+
+.pro-img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.pro-name {
+  flex-grow: 1;
+  padding-left: 36rpx;
+  font-size: 32rpx;
+  color: #7e7e7e;
+  line-height: 1.5em;
+  text-align: left;
+}

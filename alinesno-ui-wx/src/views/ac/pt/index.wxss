@@ -1,0 +1,130 @@
+/* pages/3.0/index.wxss */
+.custom_head{ height: 390rpx;  background: #da251c; z-index: 999; position: relative;}
+.custom_head image.adpic{ width: 100%;height: 390rpx;}
+.empty_custom_head{ height: 90rpx;width: 100%;}
+.custom_title{ width: 100%; height: 90rpx; position: absolute; left: 0; top: 20rpx;}
+.custom_titleX{top: 25px;}
+.custom_titlebox{ line-height: 90rpx; font-size: 32rpx;font-weight: bold; color: #fff; text-align: center; position: relative;}
+.back_arrow{ width: 38rpx;height: 38rpx;position: absolute;left: 20rpx;top: 0;margin-top: 8rpx;}
+.back_arrow image.backarrow{width: 38rpx;height: 38rpx;}
+
+/* 筛选 */
+.screen_warp{ position: relative; z-index: 999;}
+.screen_area{height: 80rpx;display: flex;}
+.screen_item{ flex: 1; height: 80rpx; display: flex;justify-content: center;align-items: center;}
+.screen_item text{font-size: 28rpx;color: #000;}
+.screen_item .ico{ width: 22rpx;height: 22rpx; }
+.screen_item image{width: 22rpx;height: 22rpx; margin-left: 6rpx; margin-top: 5rpx; vertical-align: middle; }
+
+.screen_popwrap{ width: 100%; position: absolute; left: 0; top: 80rpx; border-top: 1rpx solid #f3f1f1;}
+.screen_sortbox{padding: 10rpx 10rpx; display: flex;}
+.screen_option{width: 162rpx; height: 54rpx;border-radius: 27rpx; border:1rpx solid #a9a9a9; margin: 15rpx 8rpx; font-size: 24rpx; color: #a9a9a9; display: flex;justify-content: center;align-items: center;}
+.option_current{background: #e21e2e;border:1rpx solid #e21e2e; color: #fff;font-weight: bold;}
+
+.makebg_screen{ width: 100%;height: 100%; position: fixed; left: 0; top: 0rpx; background: rgba(0,0,0,0.6); z-index:10;}
+/* 筛选 end */
+
+.part_list{ padding: 0 20rpx; display: flex; justify-content: space-between; flex-wrap: wrap;}
+
+.seizeArea{ height: 140rpx;}
+
+.goodad_item {
+    width: 346rpx;
+    margin-top: 20rpx;
+    overflow: hidden;
+    position: relative;
+}
+.radius10 {
+    border-radius: 10rpx;
+}
+.whitebg {
+    background: #fff;
+}
+.goodpic,.goodpic image {
+    width: 346rpx;
+    height: 346rpx;
+}
+.goodinfobox {
+    padding: 10rpx 15rpx;
+}
+.goodtitle {
+    margin-top: 5rpx;
+    font-size: 26rpx;
+    color: #333;
+}
+.overflow_clear {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.goodinfobox {
+    padding: 10rpx 15rpx;
+}
+.goodtitle {
+    margin-top: 5rpx;
+    font-size: 26rpx;
+    color: #333;
+}
+.collagepricebox {
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+}
+.goodprice {
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+}
+.collagelimit {
+    width: 90rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+    border-radius: 4rpx;
+    border: 1rpx solid #fae1bf;
+    background: #fdf4e6;
+    font-size: 20rpx;
+    color: #f19f40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collagenum {
+    font-size: 22rpx;
+    color: #afafaf;
+}
+.overflow_clear {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.collagetag {
+    width: 76rpx;
+    height: 76rpx;
+    position: absolute;
+    right: 10rpx;
+    bottom: 15rpx;
+}
+.collagetag image {
+    width: 76rpx;
+    height: 76rpx;
+}
+
+.goodprice text:first-child {
+    font-size: 24rpx;
+}
+.goodprice text {
+    font-weight: bold;
+    font-size: 34rpx;
+    color: #e21e2e;
+}
+
+
+
+
+
+
+
+
+

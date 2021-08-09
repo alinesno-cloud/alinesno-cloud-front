@@ -1,0 +1,73 @@
+@import "/app.wxss";
+page {
+  background-color: #f8f8f8;
+}
+
+.shouji_search{
+  width: 100%;
+  height: 100vh;
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.wrap {
+  background-color: #fff;
+  padding: 0 10rpx 0 10rpx;
+}
+
+.search-wrap {
+  margin: 30rpx 0;
+}
+
+.input-wrap {
+  width: 580rpx;
+  background-color: #E8E8E8;
+  border-radius: 30rpx;
+  height: 60rpx;
+  padding-left: 16rpx;
+  font-size: 28rpx;
+}
+
+.input-wrap image {
+  width: 45rpx;
+  margin-right: 10rpx;
+}
+
+.search-btn {
+  /* margin-left: auto; */
+  width: 140rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.title {
+  margin: 30rpx 0;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.title image {
+  margin-left: auto;
+  width: 60rpx;
+  margin-right: 45rpx;
+}
+
+.tag-list {
+  margin: 30rpx auto;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 10rpx 32rpx;
+  background-color: #E8E8E8;
+  border-radius: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+}
+
+.search-shouji {
+  width: 100%;
+}

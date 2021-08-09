@@ -1,0 +1,34 @@
+<!-- 脚步导航 -->
+<view class="nav" style="padding-bottom: {{buBottom}}rpx">
+	<navigator class="nav-item {{act == 1 ? 'active' : ''}}" open-type="reLaunch" url="/pages/index/index">
+		<image class="nav-icon normal-icon" src="{{cdn}}index-icon.png"></image>
+		<image class="nav-icon active-icon" src="{{cdn}}index-icon-active.png"></image>
+		<text class="">首页</text>
+	</navigator>
+
+	<navigator class="nav-item {{act == 2 ? 'active' : ''}}" open-type="reLaunch" url="/pages/goods/cate/cate">
+		<image class="nav-icon normal-icon" src="{{cdn}}classification-icon.png"></image>
+		<image class="nav-icon active-icon" src="{{cdn}}classification-icon-active.png"></image>
+		<text class="">分类</text>
+	</navigator>
+
+	<navigator class="nav-item {{act == 5 ? 'active' : ''}}" open-type="reLaunch" url="/pages/goods/index2/index2">
+		<image class="nav-icon normal-icon" src="{{cdn}}classification-icon.png"></image>
+		<image class="nav-icon active-icon" src="{{cdn}}classification-icon-active.png"></image>
+		<text class="">分类2</text>
+	</navigator>
+
+	<navigator class="nav-item {{act == 3 ? 'active' : ''}}" open-type="reLaunch" url="/pages/goods/cart/cart">
+		<image class="nav-icon normal-icon" src="{{cdn}}cart-icon.png"></image>
+		<image class="nav-icon active-icon" src="{{cdn}}cart-icon-active.png"></image>
+		<text class="">购物车</text>
+	</navigator>
+
+	<navigator class="nav-item {{act == 4 ? 'active' : ''}}" open-type="reLaunch" url="/pages/user/index/index">
+		<image class="nav-icon normal-icon" src="{{cdn}}mine-icon.png"></image>
+		<image class="nav-icon active-icon" src="{{cdn}}mine-icon-active.png"></image>
+		<text class="">我的</text>
+	</navigator>
+
+</view>
+

@@ -1,0 +1,138 @@
+page {
+    background-color: #fff;
+}
+
+.search_layer {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.search {
+    width: 635rpx;
+    height: 68rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+    border-radius: 50rpx;
+    background-color: #f6f6f6;
+}
+
+.zoom_icon {
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 15rpx;
+}
+
+.search_txt {
+    width: 100%;
+    font-size: 24rpx;
+}
+
+.cancel_btn {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.nothing {
+    padding-top: 174rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #999;
+}
+
+.nothing_image {
+    width: 60%;
+}
+
+.history {
+    padding: 20rpx;
+}
+
+.history_title {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history_title_h {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #333;
+}
+
+.del_icon {
+    width: 28rpx;
+    height: 30rpx;
+}
+
+.history_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.history_item {
+    padding: 10rpx 20rpx;
+    margin: 10rpx;
+    border-radius: 50rpx;
+    background-color: #f2f2f2;
+    font-size: 24rpx;
+    color: #333;
+}
+
+
+
+.result {
+    padding: 0 20rpx;
+}
+
+.title {
+    height: 96rpx;
+    margin-bottom: 40rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 1PX #e6e6e6 solid;
+    font-size: 26rpx;
+}
+
+.goods_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.goods_list .goods_item {
+    width: 320rpx;
+    padding: 15rpx;
+    margin-bottom: 20rpx;
+    border-radius: 15rpx;
+    background-color: #fff;
+}
+
+.goods_list .goods_item .goods_img {
+    margin-bottom: 20rpx;
+    height: 320rpx;
+}
+
+.goods_list .goods_item .goods_img image {
+    height: 320rpx;
+}
+
+.goods_list .goods_item .goods_info .goods_name {
+    margin-bottom: 15rpx;
+    height: 68rpx;
+    font-size: 26rpx;
+    line-height: 34rpx;
+}
+
+.goods_list .goods_item .goods_info .goods_price {
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.goods_list .goods_item .goods_info .goods_price text {
+    font-size: 26rpx;
+}

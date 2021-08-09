@@ -1,0 +1,120 @@
+<!-- 5-9订单详情 -->
+<view class="header">
+	<view class="header-bg main_bg" style=" width:750rpx; height:200rpx;" src="" mode="widthFix"></view>
+	<view class="header-text-wrap">
+		<view class="head-title">{{data.status_data.status}}</view>
+		<view class="head-text">下单时间：{{data.info.create_time}}</view>
+	</view>
+</view>
+
+<view class="line"></view>
+
+<view class="address-wrap">
+
+	<view class="address-item" wx:if="{{data.info.send_type==1}}">
+		<view class="address-head flex-center">
+			<icon class="iconfont icondizhi1"></icon>
+			<text class="">收货地址</text>
+		</view>
+	
+		<view class="address-text">
+			<view class="address-name">{{data.info.linkman}} <text class="phone">{{data.info.tel}}</text></view>
+			<view class="address">{{data.info.province}}{{data.info.city}}{{data.info.country}}{{data.info.address}}</view>
+		</view>
+	</view>
+	
+	<view class="address-item" wx:if="{{data.info.send_type==2}}">
+		<view class="address-head flex-center">
+			<icon class="iconfont iconmendian"></icon>
+			<text class="">到店自提</text>
+			<view class="address-btn" bindtap='taf_nav' data-name="{{data.shop_info.name}}"  data-address="{{data.shop_info.address}}" data-lat='{{data.shop_info.lat}}' data-lng='{{data.shop_info.lng}}'>导航门店 <icon class="iconfont iconxuanze"></icon>
+			</view>
+		</view>
+	
+		<view class="address-text">
+			<view class="address">{{data.shop_info.address}}</view>
+		</view>
+	</view>
+<!--	<image class="address-line" src="/images/address-line.png" mode="widthFix"></image>-->
+</view>
+
+
+<view class="address-wrap"  wx:if="{{data.express_info}}" >
+	<view class="address-item"  wx:for="{{data.express_info}}" wx:for-item="sendInfo">
+		<view class="address-head flex-center">
+			<icon class="iconfont icondizhi1"></icon>
+			<text class="">物流信息 {{sendInfo.express_name}} {{sendInfo.express_code}}</text>
+		</view>
+    	<view class="address-text"  wx:if="{{sendInfo.process.message}}">
+			<view class="address">{{sendInfo.process.message}}</view>
+		</view>
+	
+		<view class="address-text"  wx:for="{{sendInfo.process.data}}"  wx:for-item="v">
+			<view class="address">{{v.time}}{{v.content}}</view>
+		</view>
+
+	</view>
+	
+	
+<!--	<image class="address-line" src="/images/address-line.png" mode="widthFix"></image>-->
+</view>
+
+
+<view class="line"></view>
+<navigator url="/pages/ac/pt/goods?id={{item.pt_id}}" class="cart-item flex-center" wx:for="{{data.goods_list}}">
+	<image class="cart-img" src="{{item.thumb}}" mode="scaleToFill"></image>
+	<view class="cart-text flex-center">
+		<view class="pro-name">{{item.name}}</view>
+		<view class="pro-info"> <text class="pro-tips"> </text> {{item.p_str}}</view>
+		<view class="cart-bottom flex-center">
+			<view class="price">￥{{item.unit_price}}</view>
+			<text class="pro-num">*{{item.num}}</text>
+		</view>
+	</view>
+</navigator>
+
+<view class="line"></view>
+
+<view class="option-wrap">
+	<view class="option-item flex-center">
+		<text class="option-title">商品总额</text>
+		<view class="option-right">
+			<view class="option-btn">￥{{data.info.goods_total}}</view>
+		</view>
+	</view>
+		<view class="option-item flex-center" wx:if="{{data.info.send_money > 0}}">
+		<text class="option-title">快递费用</text>
+		<view class="option-right">
+			<view class="option-btn">￥{{data.info.send_money}}</view>
+		</view>
+	</view>
+	<view class="option-item flex-center">
+		<text class="option-title">优惠抵扣</text>
+		<view class="option-right">
+			<view class="option-btn">-￥{{data.info.coupon_total}}</view>
+		</view>
+	</view>
+	<view class="option-item flex-center">
+		<text class="option-title">实付金额</text>
+		<view class="option-right">
+			<view class="option-btn">￥{{data.info.total}}</view>
+		</view>
+	</view>
+</view>
+
+<view class="line"></view>
+
+<!-- <view class="detail-wrap">
+	<view class="detail-item flex-center">
+		<view class="detail-left">下单时间</view>
+		<view class="detail-right">2019-01-20 12:00:00</view>
+	</view>
+
+</view> -->
+
+
+<view style="padding-bottom:  {{buBottom}}rpx" class="foot-nav flex-center">
+	<view class="foot-btn-wrap flex-center">
+		<navigator  class="order-btn main_bg payment-btn flex-center" open-type='navigateBack'>返回</navigator>
+	</view>
+</view>

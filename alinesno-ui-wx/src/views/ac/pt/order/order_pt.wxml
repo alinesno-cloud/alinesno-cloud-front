@@ -1,0 +1,69 @@
+
+<!-- 开始拼单 -->
+<view wx:if="{{showPopup1}}" class="start-assemble popup">
+  <view class="mask" bindtap="close_pop"></view>
+  <view class="popup-content">
+    <view class="popup-title">开始拼单</view>
+    <view class="popup-tips">恭喜您已发起拼单~</view>
+
+    <view class="user-list flex-center">
+
+      <view class="user-item">
+        <image class="user-head" src="{{data.uinfo.headimgurl}}" mode="widthFix"></image>
+        <text class="username">我</text>
+      </view>
+
+
+      <view class="user-item" wx:for="{{data.pt_info.cha_arr}}">
+        <image class="user-head" src="{{cdn}}addd_ico.png" mode="widthFix"></image>
+        <text class="username">等待...</text>
+      </view>
+
+
+
+
+    </view>
+    <view class="pro-name ellipsis">{{data.pt_info.goods_name}}</view>
+    <view class="pro-info">
+      <text class="price">拼团价￥{{data.pt_info.pt_price}}</text>
+      <text class="buy-num">/单买：￥{{data.pt_info.min_price}}</text>
+    </view>
+    <!-- <view class="share-btn btn-bg">去分享</view> -->
+    <button class="share-btn btn-bg" style=" padding:0;" open-type="share">去分享</button>
+
+  </view>
+
+  <icon class="popup-close-btn iconfont iconguanbi" catchtap="showPopup1"></icon>
+</view>
+
+
+
+<!-- 拼单成功 -->
+<view wx:if="{{showPopup2}}" class="start-assemble  popup">
+  <view class="mask" bindtap="close_pop"></view>
+  <view class="popup-content">
+    <view class="popup-title">拼单成功</view>
+    <view class="popup-tips">恭喜您参与
+      <text class="user-name">{{data.pt_info.name}}</text> 的拼单成功~~</view>
+
+    <view class="user-list flex-center">
+
+
+      <view class="user-item" wx:for="{{data.pt_info.user_data}}">
+        <image class="user-head" src="{{item.headimgurl}}" mode="widthFix"></image>
+        <text class="username">{{item.nickname}}</text>
+      </view>
+   
+    </view>
+    <view class="pro-name ellipsis">{{data.pt_info.goods_name}}</view>
+    <view class="pro-info">
+      <text class="price">拼团价￥{{data.pt_info.pt_price}}</text>
+      <text class="buy-num">/单买：￥{{data.pt_info.min_price}}</text>
+    </view>
+    <!-- <view class="share-btn btn-bg">去支付</view> -->
+    <button class="share-btn btn-bg"  style=" padding:0;" open-type="share">去分享</button>
+
+  </view>
+
+  <icon class="popup-close-btn iconfont iconguanbi" catchtap="showPopup2"></icon>
+</view>

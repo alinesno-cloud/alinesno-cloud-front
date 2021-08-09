@@ -1,0 +1,63 @@
+<!--pages/userinfo/index.wxml-->
+
+<view class="maincontainer">
+	<!--part1-->
+	<view class="part_wrap whitebg">
+		<navigator url="/pages/user/take_log/take_log" class="term_item" style="padding-right: 119rpx;">
+			<view class="term_item_name">提现记录<text></text></view>
+			<view class="telephone" bindtap="all">
+				<view class="drop-item2" style="width:160rpx; padding:0;">查看</view>
+			</view>
+		</navigator>
+
+		<view class="term_item">
+			<view class="term_item_name">提现方式</view>
+			<view class="term_item_inputbox">
+				<input type="digit" class="term-input" disabled="true" value="{{data.tx_type}}" />
+			</view>
+		</view>
+		<view class="term_item">
+			<view class="term_item_name">姓名</view>
+			<view class="term_item_inputbox">
+				<input type="text" class="term-input" bindinput="change_field" value="{{info.name}}" data-field="name" placeholder="请输入" />
+			</view>
+		</view>
+
+		<view class="term_item">
+			<view class="term_item_name">开户行</view>
+			<view class="term_item_inputbox">
+				<input type="text" class="term-input"  bindinput="change_field" value="{{info.yh_khh}}" data-field="yh_khh" placeholder="请输入" />
+			</view>
+		</view>
+
+		<view class="term_item">
+			<view class="term_item_name">银行卡号</view>
+			<view class="term_item_inputbox">
+				<input type="digit" class="term-input"  bindinput="change_field" value="{{info.yh_num}}" data-field="yh_num" placeholder="请输入" />
+			</view>
+		</view>
+
+
+		<view class="term_item" style="padding-right: 119rpx;">
+			<view class="term_item_name">当前余额<text>￥{{data.finfo.bro}}</text></view>
+			<view class="telephone" bindtap="all">
+				<view class="drop-item2" style="width:160rpx; padding:0;">全部提现</view>
+				<!-- <image src='/images/bangding.png'></image> -->
+			</view>
+		</view>
+		<view class="term_item">
+			<view class="term_item_name">提现金额</view>
+			<view class="term_item_inputbox">
+				<input type="digit" class="term-input" bindinput="change_money" value="{{money}}" name="money" placeholder="请输入" />
+			</view>
+		</view>
+		<view style="height:auto; line-height:70rpx;color:red;">{{data.msg}}</view>
+
+
+	</view>
+
+	<view catchtap="sub" class="close_btn2" style=" line-height:50px; padding:0;">确定</view>
+</view>
+
+
+<nav></nav>

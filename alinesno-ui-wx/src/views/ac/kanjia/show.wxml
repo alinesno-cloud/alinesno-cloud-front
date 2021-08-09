@@ -1,0 +1,90 @@
+<view class="header">
+  <view class="head-top">
+    <image src="{{data.info.thumb}}" mode="widthFix"></image>
+
+
+    <view class="head-left-text flex-center" style=" ">
+      <text class="price">￥{{data.info.min_kj_price}}</text>
+      <view class="miaosha-wrap">
+        <view class="tag">
+          <image src="{{cdn}}tag-bg.png"></image>
+          <text>砍后价</text>
+        </view>
+        <text class="old-price">￥{{data.info.min_market_price}}</text>
+      </view>
+    </view>
+
+    <!-- <view class="head-right-text">
+      <text class="">已抢{{data.info.sale_num}}件</text>
+
+      <view class="time" wx:if="{{is_down==1}}">
+        距结束
+        <text class="time-item">{{h}}</text>:
+        <text class="time-item">{{m}}</text>:
+        <text class="time-item">{{s}}</text>
+      </view>
+      <view class="time" wx:if="{{is_down==0}}">
+        已结束
+      </view>
+    </view> -->
+
+
+  </view>
+
+  <view class="share flex-center">
+    <text class="text">{{data.info.name}}</text>
+    <view class="icon">
+      <icon class="iconfont iconiconfontzhizuobiaozhun023130"></icon>
+      <text>分享</text>
+      <button open-type='share' class='share_btn'>分享</button>
+    </view>
+  </view>
+</view>
+
+<view class="line"></view>
+
+
+
+
+
+<!-- 底部 -->
+<view class="page-bottom">
+<!-- 
+  <block wx:for="{{data.imgs}}">
+    <image src="{{item}}" mode='widthFix' style='width:100%;display:block;'></image>
+  </block> -->
+
+  <rich-text nodes="{{data.info.content_html}}" style='  padding:20px;'></rich-text>
+
+ 
+</view>
+
+
+<!-- 底部按钮-->
+<view class="footer-nav2 flex-center" style=' {{pbottom}};'>
+  <!-- <view class="kefu-icon item" data-tel="{{data.store_info.tel}}" bindtap='call'>
+    <icon class="iconfont iconshangcheng"></icon>
+    客服
+  </view> -->
+  <view class="share-btn" bindtap="tohome" style=" background:#4EA9F6">返回首页</view>
+  <view class="share-btn"  bindtap="buy" open-type="share">我要砍价</view>
+</view>
+
+
+
+
+<!-- 音乐播放 -->
+<!-- <audio id="myAudio" src="{{data.audio}}"></audio>
+<view class="music-btn {{audioPlay ? 'play' : 'stop'}} flex-center" catchtap="audioPlay">
+  <icon class="iconfont iconyinfu"></icon>
+</view> -->
+
+
+
+<include src="index_attr.wxml" />
+<wxs module="filter" src="../../../utils/f.wxs" />
+
+
+<address_com id="address_com_id" sel_id="{{data.sel_id}}" title="选择收货地址" bind:change_address_sel='change_address_sel' type="{{address_type}}"></address_com>
+
+

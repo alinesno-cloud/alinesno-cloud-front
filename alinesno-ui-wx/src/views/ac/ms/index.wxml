@@ -1,0 +1,70 @@
+<!-- <view class="kill-banner">
+ <navigator url="{{data.ad8[0].link}}">
+   <image src="{{data.ad8[0].big}}" class="kill-banner-image" width="750" height="260"></image>
+
+  </navigator>
+</view> -->
+
+<view class="kill-time">
+
+  <view bindtap="change_category_id" data-cate_id="{{item.id}}"  class="kill-time-item {{cate_id==item.id?'active':''}}" wx:for="{{data.cate}}">
+    <image src="{{cdn}}clock.png" class="clock" style=" {{item.is_use==1?'display: block;':''}}"></image>
+    <view class="killing">{{item.start}}</view>
+    <view class="kill-time-p"> {{item.is_use==1?'正在进行':'即将开始'}}</view>
+  </view>
+  
+</view>
+
+<view class="timing-tit" wx:if="{{cate_info.is_use==1}}">
+  <view class="timing-tit-name">疯狂抢购中</view>
+  <view class="timing">
+    <view class="timing-p">距离结束</view>
+    <view class="timing-box">
+      <view class="t-item">
+        <image src="{{cdn}}time-peper.png" class="time-peper"></image>
+        <view class="t-item-bb">{{h}}</view>
+      </view>
+      <view class="t-mao">:</view>
+      <view class="t-item">
+        <image src="{{cdn}}time-peper.png" class="time-peper"></image>
+        <view class="t-item-bb">{{m}}</view>
+      </view>
+      <view class="t-mao">:</view>
+      <view class="t-item">
+        <image src="{{cdn}}time-peper.png" class="time-peper"></image>
+        <view class="t-item-bb">{{s}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="rush-item" wx:for="{{list}}"  bindtap="tourl" data-goods_id="{{item.goods_id}}" data-id="{{item.id}}" data-sale_status="{{item.sale_status}}">
+
+  <view class="rush-img">
+    <image src="{{item.thumb}}" class="rush-image" width="200" height="200"></image>
+  </view>
+
+  <view class="rush-info">
+    <view class="rush-name">{{item.name}}</view>
+    <view class="kill-step">
+      <view class="kill-persent">
+        <view class="kill-persent-stuff" style="width: {{item.sale_bili}}%;"></view>
+      </view>
+      <view class="kill-persent-p">已售{{item.sale_bili}}%</view>
+    </view>
+    <view class="rush-bar">
+      <view class="limited-price"><text class="small">￥</text>{{f.clear_zero(item.min_price)}}<text class="old-price">￥{{f.clear_zero(item.min_market_price)}}</text></view>
+      <view wx:if="{{item.is_use==1}}"  class="{{item.sale_status==1?'rush-btn':'rush-done'}}">{{item.sale_status==1?'立即抢购':'已抢光'}}</view>
+      <view wx:if="{{item.is_use==0}}" class="rush-done">尚未开始</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+<msg wx:if="{{list.length <= 0}}"></msg>
+
+<nav></nav>
+
+<wxs module="f" src="../../../utils/f.wxs" />

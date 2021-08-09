@@ -1,0 +1,117 @@
+.quan {
+  padding: 40rpx 20rpx;
+}
+
+.quan-item {
+  display: flex;
+  margin-bottom: 30rpx;
+}
+
+.quan-info {
+  width: 480rpx;
+  height: 160rpx;
+  padding: 0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: -webkit-linear-gradient(top, #ff801d, #fe342b);
+  background: -o-linear-gradient(bottom, #ff801d, #fe342b);
+  background: -moz-linear-gradient(bottom, #ff801d, #fe342b);
+  background: linear-gradient(to bottom, #ff801d, #fe342b);
+  color: #fff;
+}
+
+.quan-info-left {
+  width: 140rpx;
+}
+
+.quan-money {
+  font-size: 45rpx;
+}
+
+.small {
+  font-size: 30rpx;
+}
+
+.quan-tips {
+  font-size: 28rpx;
+}
+
+.quan-info-right {
+  width: 275rpx;
+}
+
+.quan-info-p {
+  margin-bottom: 15rpx;
+  font-size: 24rpx;
+}
+
+.quan-info-time {
+  font-size: 24rpx;
+  opacity: 0.5;
+}
+
+.quan-img {
+  width: 230rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffdfd3;
+  position: relative;
+}
+
+.quan-image {
+  width: 72rpx;
+  height: 81rpx;
+  margin-bottom: 5rpx;
+}
+
+.quan-btn {
+  width: 150rpx;
+  height: 40rpx;
+  border-radius: 50rpx;
+  background: #f32224;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+}
+.quan-btn-yes {
+  width: 150rpx;
+  height: 40rpx;
+  border-radius: 50rpx;
+  background: #b8b5b5;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+}
+.quan-stuff {
+  width: 6rpx;
+  height: 160rpx;
+  border-left: 6rpx #fff dashed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.quan-dot {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50rpx;
+  background: #f2f2f2;
+  position: absolute;
+  left: 50%;
+  margin-left: -12rpx;
+}
+
+.quan-dot:nth-child(1) {
+  top: -12rpx;
+}
+
+.quan-dot:last-child {
+  bottom: -12rpx;
+}

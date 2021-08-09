@@ -1,0 +1,109 @@
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 980;
+}
+.pro-popp {
+  width: 540rpx;
+  background: #fff;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-left: -270rpx;
+  z-index: 991;
+}
+
+.pro-popp-wrap {
+  padding: 10rpx;
+  border-bottom: 1px #e6e6e6 solid;
+}
+
+.pro-popp-img {
+  height: 700rpx;
+  margin-bottom: 10rpx;
+}
+
+.pro-popp-image {
+  height: 700rpx;
+  width: 100%;
+}
+
+.pro-popp-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pro-popp-info {
+  width: 300rpx;
+}
+
+.pro-popp-name {
+  margin-bottom: 25rpx;
+  font-size: 24rpx;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.pro-popp-qr {
+  width: 160rpx;
+  text-align: center;
+}
+
+.qr-image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 20rpx;
+}
+
+.qr-p {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.pro-popp-bb {
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pro-popp-tips {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.pro-popp-tips .red {
+  color: #f00;
+}
+
+.save-btn {
+  width: 180rpx;
+  height: 60rpx;
+  border-radius: 6rpx;
+  background: #f30;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.popp-close {
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  bottom: -70rpx;
+  left: 50%;
+  margin-left: -22rpx;
+}
+
+.close-icon {
+  width: 45rpx;
+  height: 45rpx;
+}

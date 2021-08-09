@@ -1,0 +1,64 @@
+<!--pages/user/afterSales/apply/index.wxml-->
+<view>
+  <view class="afterView">
+    <!-- <view class="item">
+      <view class="name">收货状态</view>
+      <view class="info">
+        <picker class="shouhuo-picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker" wx:if="{{selectStr.length > 0}}">
+            {{array[index]}}
+          </view>
+          <view class="picker dz_t" wx:else>
+            选择收货状态
+          </view>
+        </picker>
+      </view>
+      <image class="icon" src="{{cdn}}icon_ir3.png"></image>
+    </view> -->
+    <view class="item">
+      <view class="name">申请原因</view>
+      <view class="info">
+        <picker class="shouhuo-picker" bindchange="bindPickerChange2" value="{{index2}}" range="{{data.ReasonLists}}">
+          <view class="picker" wx:if="{{selectStr2.length > 0}}">
+            {{data.ReasonLists[index2]}}
+          </view>
+          <view class="picker dz_t" wx:else>
+            选择申请原因
+          </view>
+        </picker>
+      </view>
+      <image class="icon" src="{{cdn}}icon_ir3.png"></image>
+    </view>
+  </view>
+  <!-- <view class="info_cv">
+    <view class="title">退款金额</view>
+    <view class="money"><text>￥</text>{{data.goods.can_refund}}</view>
+    <view class="tt">若退款成功，将退还给您¥{{data.goods.can_refund}}</view>
+  </view> -->
+  <view class="info_cv">
+    <view class="title-sh-cv">
+      <view class="title">申请说明</view>
+      <view class="rt">最多可输入120个汉字</view>
+    </view>
+    <view class="inputView">
+      <textarea name="" bindinput="textInput" id="" maxlength="120" placeholder="请详细填写申请说明"></textarea>
+    </view>
+    <view class="clearFlex addImage">
+      <view class="item" wx:for="{{images}}" wx:key="index" style="height:{{imgWidth}}px;">
+        <view class="img_cv">
+          <image src="{{item}}" mode=""></image>
+          <image class="cloes" bindtap="touchToDelete" data-index="{{index}}" src="{{cdn}}sun_del.png"
+            mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="item addBtn" style="height:{{imgWidth}}px;">
+        <view class="imageView" bindtap="touchToAddImage"  data-field='img' data-i="{{i}}">
+          <image src="/ico/add_ico.png" mode="widthFix" style=" width:150rpx;height:150rpx;border: 1px solid #ccc;padding: 10rpx;"></image>
+          <!-- <view class="tt">上传图片</view> -->
+        </view>
+      </view>
+    </view>
+    <view class="upBtn" bindtap="sub">确定</view>
+  </view>
+</view>
+<nav />

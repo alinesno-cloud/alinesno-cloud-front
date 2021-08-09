@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goods_list": "/com/goods_list/goods_list",
+    "search": "/com/search/search"
+	}
+}

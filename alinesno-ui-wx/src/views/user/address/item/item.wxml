@@ -1,0 +1,58 @@
+
+<form bindsubmit="formSubmit">
+<view class="shiming">
+    <view class="shiming-bar">
+        <view class="shiming-name">收货人</view>
+        <input placeholder="请输入收货人" class="shiming-in" name="name" value='{{info.name}}' />
+    </view>
+    <view class="shiming-bar">
+        <view class="shiming-name">手机号码</view>
+        <input placeholder="请输入手机号码" class="shiming-in" name="tel" value='{{info.tel}}'  type='number'/>
+    </view>
+    <view class="shiming-bar">
+        <view class="shiming-name">所属区域</view>
+        <view class="shouhuo-picker" bindtap="open">
+            <view class="shouhuo-bar" >
+<!--                <view class="shouhuo-dizhi" wx:if="{{region_data}}">请选择收货地址</view>-->
+                <view class="shouhuo-dizhi" >{{region_data[0][province_index].name}} {{region_data[1][city_index].name}} {{region_data[2][country_index].name}}</view>
+
+                <image src="{{cdn}}icon/ra.png" class="ra-icon"></image>
+            </view>
+        </view>
+    </view>
+    <view class="shiming-bar">
+        <view class="shiming-name">详细地址</view>
+        <input placeholder="请输入联系地址" class="shiming-in" name="address" value='{{info.address}}'  />
+    </view>
+</view>
+
+<view class="pay-item active" bindtap="checkboxChange">
+    <view class="pay-name">
+        <view class="pay-name-p">设为默认</view>
+    </view>
+    <icon class="icon-small" type="success" color="#4EA9F6" size="23" wx:if="{{is_default==1}}"></icon>
+     <icon class="icon-small" type="circle" size="23" wx:else></icon>
+</view>
+
+<button  class="shiming-btn" form-type='submit'>保存</button>
+
+</form>
+
+
+<view wx:if="{{condition}}" class="citypicker">
+    <picker-view indicator-style="height: 50px;" style="" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+            <view bindtap="open" class="city-cancel">取消</view>
+            <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+            <view wx:for="{{region_data[0]}}" wx:key="item" style="font-size:14px;line-height: 50px;padding-left:10px;">{{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{region_data[1]}}" wx:key="item" style="font-size:14px;line-height: 50px;padding-left:10px;">{{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{region_data[2]}}" wx:key="item" style="font-size:14px;line-height: 50px;padding-left:10px;">{{item.name}}</view>
+        </picker-view-column>
+    </picker-view>
+</view>

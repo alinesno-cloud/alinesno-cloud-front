@@ -1,0 +1,102 @@
+.dizhi-item {
+    margin-top: 20rpx;
+    padding: 30rpx;
+    background: #fff;
+    border-bottom: 1px #e6e6e6 solid;
+}
+
+.dizhi-name {
+    margin-bottom: 20rpx;
+    font-size: 32rpx;
+    color: #333;
+}
+
+.dizhi-con {
+    margin-bottom: 30rpx;
+    font-size: 24rpx;
+    color: #333;
+}
+
+.dizhi-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dizhi-normal {
+    display: flex;
+    align-items: center;
+    font-size: 20rpx;
+    color: #666;
+}
+
+.dot1,.dot2 {
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 10rpx;
+}
+
+.dot2 {
+    display: none;
+}
+
+.dizhi-normal.active .dot1 {
+    display: none;
+}
+
+.dizhi-normal.active .dot2 {
+    display: block;
+}
+
+.dizhi-btn {
+    display: flex;
+}
+
+.edit-btn {
+    width: 90rpx;
+    height: 40rpx;
+    border-right: 1px #e6e6e6 solid;
+    text-align: center;
+    line-height: 40rpx;
+}
+
+.edit-icon {
+    width: 37rpx;
+    height: 37rpx;
+}
+
+.del-btn {
+    width: 90rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+}
+
+.del-icon {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.new-dizhi-wrap {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 980;
+}
+
+.new-dizhi-margin {
+    height: 90rpx;
+}
+
+.new-dizhi {
+    width: 80%;
+    height: 90rpx;
+    margin: 0 auto 60rpx;
+    border-radius: 50rpx;
+    text-align: center;
+    line-height: 90rpx;
+    font-size: 32rpx;
+    color: #fff;
+    background: var(--main_bg) ;
+}

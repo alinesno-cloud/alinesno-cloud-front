@@ -1,0 +1,114 @@
+
+
+<view class="member">
+  <view class="member-bar">
+    <view class="member-item">
+      <view class="member-img">
+        <image src="{{resData.uinfo.headimgurl}}" class="member-image" width="100" height="100"></image>
+      </view>
+      <view class="member-info">
+        <view class="member-name">
+          <view class="member-name-p">{{resData.uinfo.nickname}}</view>
+        </view>
+        <view class="member-label">
+          <view class="member-label-p">ID：{{resData.uinfo.id}}</view>
+          <view class="member-label-p">加入时间：{{resData.uinfo.create_time}}</view>
+        </view>
+      </view>
+    </view>
+    <navigator class="qr-btn" bindtap="qr">
+      <image src="{{cdn}}qr-icon.png" class="qr-icon"></image>
+      <view class="qr-p">扫描二维码</view>
+    </navigator>
+  </view>
+</view>
+
+<view class="card-wrap">
+  <view class="card">
+    <image src="{{cdn}}card.jpg" class="card-bg"></image>
+    <navigator class="card-flag" url="/pages/user/bro/bro">查看明细</navigator>
+    <view class="card-box">
+      <view class="card-item">
+        <view class="card-bb">
+          <view class="card-p">累计收益</view>
+          <view class="card-h">{{resData.history}}</view>
+        </view>
+      </view>
+      <view class="card-item">
+        <view class="card-bb">
+          <view class="card-p">今日收益</view>
+          <view class="card-h">{{resData.history_day}}</view>
+        </view>
+        <view class="card-bb">
+          <view class="card-p">近30天收益</view>
+          <view class="card-h">{{resData.history_day30}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="wallet">
+  <view class="wallet-left">
+    <image src="{{cdn}}wallet.jpg" class="wallet-img"></image>
+    <view class="wallet-info">
+      <view class="wallet-p">可提现收益(元)：</view>
+      <view class="wallet-h">{{resData.finance.bro}}</view>
+    </view>
+  </view>
+  <navigator class="wallet-btn" url="/pages/user/bro_put/bro_put">立即提现</navigator>
+</view>
+
+<view class="saled">
+  <view class="myorder-tit">
+    <view class="myorder-tit-name">我的销量</view>
+    <navigator url="/pages/fenxiao/order/order" class="myorder-more">查看明细 ></navigator>
+  </view>
+  <view class="pro-tab" style="top:{{sxTop}}px;">
+    <navigator hover-class="none"  class="pro-tab-item {{sela_count==1?'active':''}}" data-v="1" bindtap="setcount">今天</navigator>
+    <navigator hover-class="none"  class="pro-tab-item {{sela_count==2?'active':''}}" data-v="2" bindtap="setcount">近7天</navigator>
+    <navigator hover-class="none"  class="pro-tab-item {{sela_count==3?'active':''}}" data-v="3" bindtap="setcount">近30天</navigator>
+    <navigator hover-class="none"  class="pro-tab-item {{sela_count==4?'active':''}}" data-v="4" bindtap="setcount">累计</navigator>
+  </view>
+  <view class="saled-count">
+    <view class="saled-item">
+      <view class="saled-p">订单数</view>
+      <view class="saled-h">{{count}}</view>
+    </view>
+    <view class="saled-item">
+      <view class="saled-p">订单金额（元）</view>
+      <view class="saled-h">{{total}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="inv">
+  <view class="myorder-tit">
+    <view class="myorder-tit-name">我的邀请</view>
+    <navigator url="/pages/fenxiao/team/team" class="myorder-more">查看全部 ></navigator>
+  </view>
+  <view class="fans-list">
+    <view class="fans-item" wx:for="{{resData.t_list}}">
+      <view class="fans-man" >
+        <view class="fans-img">
+          <image src="{{item.headimgurl}}" class="fans-image" width="78" height="78"></image>
+        </view>
+        <view class="fans-info">
+          <view class="fans-name">{{item.nickname}} </view>
+          <view class="fans-time">{{item.create_time}}加入</view>
+        </view>
+      </view>
+      <view class="fans-count">
+        <view class="fans-p">订单金额/元</view>
+        <view class="fans-num"> {{item.goods_total}} </view>
+      </view>
+      <view class="fans-count">
+        <view class="fans-p">订单数</view>
+        <view class="fans-num">{{item.count}}</view>
+      </view>
+    </view>
+    <msg wx:if='{{resData.t_list.length<=0}}'></msg>
+
+
+  </view>
+</view>

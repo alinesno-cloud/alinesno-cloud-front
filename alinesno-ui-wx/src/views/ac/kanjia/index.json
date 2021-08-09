@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "address_com": "/com/address/address",
+    "goods": "/com/goods/goods"
+  }
+}

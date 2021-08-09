@@ -1,0 +1,35 @@
+<!-- 脚步导航 -->
+<view class="nav" style="padding-bottom: {{buBottom}}rpx">
+	<view class="nav-item">
+    <navigator url="/pages/shop/index/index"   open-type="reLaunch"  hover-class="none" class="nav-link  {{act == 1 ? 'active' : ''}}">
+      <image src="{{cdn}}bhome.png" class="n-icon"></image>
+      <image src="{{cdn}}bhome-h.png" class="n-icon-h"></image>
+      <text class="">首页</text>
+    </navigator>
+  </view>
+	
+	<view class="nav-item">
+    <navigator hover-class="none"  open-type="reLaunch"  url="/pages/shop/order/order" class="nav-link  {{act == 2 ? 'active' : ''}}">
+      <image src="{{cdn}}bshop.png" class="n-icon"></image>
+      <image src="{{cdn}}bshop-h.png" class="n-icon-h"></image>
+      <text class="">订单</text>
+    </navigator>
+  </view>
+	
+	
+	<view class="nav-item"  >
+    <navigator hover-class="none"  url="/pages/shop/goods/goods" open-type="reLaunch"  class="nav-link  {{act == 3 ? 'active' : ''}}">
+    
+
+      <image src="{{cdn}}bpo.png" class="n-icon"></image>
+      <image src="{{cdn}}bpo-h.png" class="n-icon-h"></image>
+      <text class="">商品</text>
+    </navigator>
+  </view>
+
+
+</view>
+
+<view class="footer-margin-wrap" style="padding-bottom: {{buBottom}}rpx">
+  <view class="footer-margin"></view>
+</view>

@@ -1,0 +1,179 @@
+@import "/css/attr.wxss";
+
+page{
+  /* background: #fff !important; */
+}
+.banner-img {
+  display: block;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.bargain-item {
+  width: 730rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.inprogress-item {
+  background-color: #fff9f2;
+  box-shadow: 0rpx 4rpx 20rpx 0rpx rgba(0, 0, 0, 0.08);
+  border-radius: 10rpx;
+  border: solid 1rpx #ff9b25;
+}
+
+.inprogress-title {
+  height: 60rpx;
+  background-color: #ff9b25;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.content {
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.bargain-img {
+  width: 220rpx;
+  height: 220rpx;
+  background-color: #00611e;
+}
+
+.content-text {
+  height: 220rpx;
+  position: relative;
+  padding-left: 16rpx;
+  width: 530rpx;
+}
+
+.shop-name {
+  font-size: 28rpx;
+  line-height: 44rpx;
+}
+
+.shop-name2 {
+  font-size: 22rpx;
+  line-height: 44rpx;
+  color: #666;
+}
+
+.shop-name3 {
+  position: absolute;
+  bottom: 60rpx;
+  font-size: 22rpx;
+  text-decoration: line-through;
+  width: calc(100% - 16rpx);
+  left: 16rpx;  color: #666;
+
+}
+
+.money {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 23rpx;
+}
+
+.money text {
+  color: #f00;
+}
+
+.content-bottom {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 16rpx);
+  left: 16rpx;
+}
+
+.time-wrap {
+  font-size: 20rpx;
+}
+
+.time-wrap text {
+  padding: 2rpx 7rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background-color: #666;
+  border-radius: 4rpx;
+  margin: 0 3rpx;
+}
+
+.bargain-btn {
+  width: 161rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-left: auto;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #cc2b00;
+  border-radius: 4rpx;
+}
+
+.item-num {
+  font-size: 20rpx;
+  color: #ff3600;
+}
+
+.item-num text {
+  font-size: 32rpx;
+}
+
+.address {
+  padding: 47rpx 30rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.address .iconfont {
+  font-size: 48rpx;
+  margin-right: 30rpx;
+  color: #b2b2b2;
+}
+
+.username {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 27rpx;
+}
+
+.phone {
+  font-size: 28rpx;
+  margin-left: 18rpx;
+  font-weight: normal;
+}
+
+.price {
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #f00;
+}
+
+.price-symbol {
+  font-size: 24rpx;
+}
+
+.address-text {
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+
+.add-address {
+  padding: 36rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
+
+.add-address .iconfont {
+  margin-left: auto;
+  font-size: 26rpx;
+  color: #b2b2b2;
+}
+
+.address-popup .select-content {
+  padding: 0;
+}

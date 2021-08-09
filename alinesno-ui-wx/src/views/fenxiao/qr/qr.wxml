@@ -1,0 +1,19 @@
+
+
+<view class="inv"   >
+  <view class="inv-tit">{{resData.uinfo.nickname}}二维码</view>
+  <swiper class="swiper-block" previous-margin="160rpx" next-margin="160rpx" current="{{swiperIndex}}" bindchange="swiperChange" >
+    <block wx:for="{{resData.ad}}" wx:index="{{index}}">
+      <swiper-item class="swiper-item">
+          <image mode="aspectFill" src="{{item.img}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+
+
+<!-- </block> -->
+
+  <view class="save-btn"  bindtap="get_haibao">生成海报</view>
+  <haibao id="haibao" posterConfig="{{posterConfig}}"></haibao>

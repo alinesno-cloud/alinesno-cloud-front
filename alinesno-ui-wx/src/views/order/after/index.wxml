@@ -1,0 +1,120 @@
+<!-- pages/my/order.wxml -->
+<!-- 我的订单页面 -->
+<view class="nav_box">
+    <view class="nav_con">
+        <view class="nav_item {{tabIndex == index?'nav-active':''}}" wx:for="{{tabList}}" wx:key="index"
+            data-index="{{index}}" data-flag="{{item.flag}}" bindtap="touchToTab">
+            {{item}}
+        </view>
+    </view>
+</view>
+<!-- 订单区域 -->
+<view class="order_block_box" wx:if="{{tabIndex == 0}}">
+    <!-- 订单详细区块 -->
+    <view class="order_pro_box" wx:for="{{orderList}}" wx:key="*this" bindtap="touchDetail" data-num="{{item.ordernum}}">
+        <view class="order_pro_top">
+            <view class="order_ofont">
+                <text>订单号：</text>
+                <text>{{item.ordernum}}</text>
+            </view>
+            <view class="order_pfont" style="color:{{item.status_data.color}}">{{item.status_data.status}}</view>
+        </view>
+        <view class="order_pro_con"  wx:for="{{item.goods_list}}" wx:for-item="goods" wx:for-index="{{goodsIndex}}" wx:key="goodsIndex" data-item="{{item}}">
+            <view class="order_con_box">
+                <view class="order_img_box" catchtap="toGoods" data-id="{{goods.goods_id}}">
+                    <image class="" src="{{goods.thumb}}" mode="aspectFit" />
+                </view>
+                <view class="order_des">
+                    <view class="order_d1">
+                        <view class="d_f1">{{goods.name}}</view>
+                        <view class="d_f2">{{goods.spec_str}}   x{{goods.num}}</view>
+                    </view>
+                    <view class="order_d2">
+                        <view>
+                            <text class="d_f3">¥</text>
+                            <text class="d_f4">{{goods.unit_price}}</text>
+                        </view>
+                        <view class="d_f5">¥{{goods.old_unit_price}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="order_num" wx:if="{{goods.after_status == 0}}">
+                <view class="order_pay_btn" data-gid="{{goods.id}}" catchtap="apply">
+                    申请售后
+                </view>
+            </view>
+            <view class="order_num" style="color:red;" wx:else>
+                   {{goods.after_status_txt}}
+            </view>
+        </view>
+        <view class="order_pro_bot">
+            <view>
+                <text class="b_f1">共{{item.goods_count}}件商品，省¥{{item.youhui_total}}，实付：</text>
+                <text class="b_f2">¥</text>
+                <text class="b_f3">{{item.total}}</text>
+            </view>
+            <!-- <view class="order_btn">
+                <view class="order_pay_btn" bindtap="apply">
+                    申请售后
+                </view>
+            </view> -->
+        </view>
+    </view>
+    <!-- 订单详细区块 -->
+</view>
+
+<view class="order_block_box" wx:if="{{tabIndex == 1}}">
+    <!-- 订单详细区块 -->
+    <view class="order_pro_box" wx:for="{{orderList}}" wx:key="*this" bindtap="touchDetail" data-num="{{item.ordernum}}">
+        <view class="order_pro_top">
+            <view class="order_ofont">
+                <text>售后单号：</text>
+                <text>{{item.sn}}</text>
+            </view>
+            <view class="order_pfont" style="color:{{item.status_data.color}}">{{item.status_text}}</view>
+        </view>
+        <view class="order_pro_con"  wx:for="{{item.order_goods}}" wx:for-item="goods" wx:for-index="{{goodsIndex}}" wx:key="goodsIndex" data-item="{{item}}">
+            <view class="order_con_box">
+                <view class="order_img_box" catchtap="toGoods" data-id="{{goods.goods_id}}">
+                    <image class="" src="{{goods.thumb}}" mode="aspectFit" />
+                </view>
+                <view class="order_des">
+                    <view class="order_d1">
+                        <view class="d_f1">{{goods.name}}</view>
+                        <view class="d_f2">{{goods.spec_str}}   x{{goods.num}}</view>
+                    </view>
+                    <view class="order_d2">
+                        <view>
+                            <text class="d_f3">¥</text>
+                            <text class="d_f4">{{goods.unit_price}}</text>
+                        </view>
+                        <!-- <view class="d_f5">¥{{goods.old_unit_price}}</view> -->
+                    </view>
+                </view>
+            </view>
+            <!-- <view class="order_num" wx:if="{{goods.after_status == 0}}">
+                <view class="order_pay_btn" data-gid="{{goods.id}}" catchtap="apply">
+                    售后详情
+                </view>
+            </view> -->
+        </view>
+        <view class="order_pro_bot">
+            <view>
+                <text class="b_f1">共{{item.goods_num}}件商品，退款金额：</text>
+                <text class="b_f2">¥</text>
+                <text class="b_f3">{{item.refund_price}}</text>
+            </view>
+            <view class="order_btn">
+                <view class="order_qx_btn" wx:if="{{item.status < 6}}" data-id="{{item.id}}" catchtap="cacel">
+                    取消申请
+                </view>
+                <view class="order_pay_btn" data-id="{{item.id}}" catchtap="item">
+                    售后详情
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 订单详细区块 -->
+</view>
+<msg wx:if="{{orderList.length<=0}}"></msg>
+<nav />

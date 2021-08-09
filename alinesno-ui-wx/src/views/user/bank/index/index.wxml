@@ -1,0 +1,52 @@
+<view class="card-wrap">
+    <view class="pro-tit">
+        <view class="pro-tit-em"></view>
+        <view class="pro-tit-view">我的卡</view>
+        <view class="pro-tit-em"></view>
+    </view>
+    <view class="card-viewst">
+        <view class="card-ul">
+
+            <view class="card-li {{item.index==1?'lan':''}}{{item.index==2?'hong':''}}{{item.index==3?'lv':''}}"  wx:for="{{data.list}}" wx:for-index="i">
+                <view class="card-left">
+                    <view class="card-name">{{item.name}} </view>
+                    <view class="carder">{{item.realname}}    **** {{item.num_h}}</view>
+                </view>
+                <view class="del-btn" bindtap="del" data-id="{{item.id}}">
+                    <view class="card-del-p" >删除</view>
+                    <view class="iconfont icon-ashbin"></view>
+                </view>
+            </view>
+
+            <msg wx:if="{{data.list.length<=0}}"></msg>
+        </view>
+
+        <view class="creat-btn-wrap">
+            <navigator class="creat-btn" url="../item/item">添加银行卡</navigator>
+        </view>
+    </view>
+
+
+
+<!--    <view class="creat">-->
+<!--        <view class="creat-item">-->
+<!--            <view class="creat-item-p">银行卡号</view>-->
+<!--            <input type="text" placeholder="填写银行卡号" class="creat-item-in"/>-->
+<!--        </view>-->
+<!--        <view class="creat-item">-->
+<!--            <view class="creat-item-p">开户行</view>-->
+<!--            <input type="text" placeholder="填写开户行" class="creat-item-in"/>-->
+<!--        </view>-->
+<!--        <view class="creat-item">-->
+<!--            <view class="creat-item-p">开户人</view>-->
+<!--            <input type="text" placeholder="填写开户人" class="creat-item-in"/>-->
+<!--        </view>-->
+<!--        <view class="creat-item">-->
+<!--            <view class="creat-item-p">预留电话</view>-->
+<!--            <input type="text" placeholder="填写预留电话" class="creat-item-in"/>-->
+<!--        </view>-->
+<!--        <view class="creat-btn-wrap">-->
+<!--            <view class="creat-btn">确认添加</view>-->
+<!--        </view>-->
+<!--    </view>-->
+</view>

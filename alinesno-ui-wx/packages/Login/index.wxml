@@ -1,0 +1,15 @@
+<view wx:if="{{show}}">
+<view class="popbg"></view>
+<view class="logincontainer">
+    <form bindsubmit="bindSave">
+    <image class="logo" src="wechat.png" mode="widthFix" />
+    <view class="title">微信授权页面</view>
+    <view class="profile"></view>
+    <button type="primary" style="width: 546rpx;" open-type="getUserInfo" bindgetuserinfo="login" disabled='{{butnLoading}}' loading='{{butnLoading}}' class="weui-btn mini-btn">授权登录</button>
+     <!--<navigator url="/pages/index/index"  style=" margin-top:10px;" class="no_login_btn">暂不登录</navigator>-->
+
+    <button type="default" bindtap="nologin"  style="width: 546rpx; ba" class="weui-btn mini-btn no_login_btn">暂不登录</button>
+
+    </form>
+</view>
+</view>

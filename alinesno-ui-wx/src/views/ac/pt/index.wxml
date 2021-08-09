@@ -1,0 +1,75 @@
+<!--pages/3.0/index.wxml-->
+<!--自定义标题头部-->
+<view class="custom_head">
+  <image class="adpic" src="http://static.tx520.cn/liuym/mzjsimg/wxapp/head_pinad.jpg"></image>
+  <!--标题-->
+<!--  <view class="custom_title {{isIphoneX?'custom_titleX':''}}">
+    <view class="custom_titlebox">
+      <view class="back_arrow"><image src="{{statics}}/images/title_arrow.png" class="backarrow"></image></view>
+      拼团
+    </view>
+  </view>-->
+  <!--标题 end-->
+</view>
+<!--自定义标题头部 end-->
+<!--mainconter-->
+<view class="maincontainer">
+  <!--
+  <view class="screen_warp">
+    <view class="screen_area whitebg">
+      <view class="screen_item" bindtap="set_type" data-sort="" >
+        <text>综合</text>
+        <image src="{{cdn}}icon/screen_ico1.png"></image>
+      </view>
+      <view class="screen_item"  bindtap="set_type" data-sort="sale_num">
+        <text>销量</text>
+        <image src="{{cdn}}icon/screen_ico2.png"></image>
+      </view>
+      <view class="screen_item"  bindtap="set_type" data-sort="{{price_sort}}" >
+        <text>价格</text>
+        <image src="{{cdn}}icon/screen_ico2.png"></image>
+      </view>
+    </view>
+
+    <view class="screen_popwrap whitebg" wx:if="{{showclass}}">
+      <view class="screen_sortbox">
+        <view class="screen_option option_current">品牌街</view>
+        <view class="screen_option">品牌街</view>
+        <view class="screen_option">品牌街</view>
+        <view class="screen_option">品牌街</view>
+      </view>
+    </view>
+
+  </view>
+  -->
+  <!--list-->
+  <msg wx:if="{{data.list.length<=0}}"></msg>
+  <view class="part_list">
+    <!--mode-->
+
+
+
+    <navigator url="./goods?id={{item.id}}" wx:for="{{data.list}}" class="goodad_item whitebg radius10">
+      <view class="goodpic"><image src="{{item.thumb}}"></image></view>
+      <view class="goodinfobox">
+        <view class="goodtitle overflow_clear">{{item.name}}</view>
+        <view class="collagepricebox">
+          <view class="goodprice"><text>￥</text><text>{{item.min_price}}</text></view>
+          <view class="collagelimit">{{item.pt_num}}人拼团</view>
+        </view>
+        <view class="collagenum overflow_clear">已{{item.sale_num}}人拼团</view>
+        <view class="collagetag"><image src="/images/collagetag.png"></image></view>
+      </view>
+    </navigator>
+    <!--mode end-->
+
+
+  </view>
+  <!--list end-->
+
+</view>
+<!--mainconter end-->
+<!--占位-->
+<view class="seizeArea"></view>
+
+<nav />

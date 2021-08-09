@@ -1,0 +1,22 @@
+page {
+  background-color: #f8f8f8;
+  padding-top: 28rpx;
+}
+
+.wrap {
+  background-color: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  padding: 0 30rpx;
+}
+
+.set-item {
+  border-bottom: 1px solid rgba(232, 232, 232, .6);
+  padding: 30rpx 0;
+  font-size: 30rpx;
+}
+
+.arrow-btn {
+  width: 45rpx;
+  margin-left: auto;
+}

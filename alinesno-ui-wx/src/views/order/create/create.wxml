@@ -1,0 +1,132 @@
+<view class="wrap">
+
+	<view class="tab" wx:if="{{data.can_ps_type==3}}">
+		<view class="tab-item {{send_type==1 ?'on':''}}" data-send_type="1" bindtap="change_send_type">送货上门</view>
+		<view class="tab-item {{send_type==2 ?'on':''}}" data-send_type="2" bindtap="change_send_type">门店自提</view>
+	</view>
+
+	<view class="tab" wx:if="{{data.can_ps_type==2}}">
+		<view class="tab-item on" data-send_type="2" bindtap="change_send_type">门店自提</view>
+		<view class="tab-item "></view>
+	</view>
+	<view class="tab" wx:if="{{data.can_ps_type==1}}">
+		<view class="tab-item on" data-send_type="1" bindtap="change_send_type">送货上门</view>
+		<view class="tab-item "></view>
+	</view>
+
+	<view class="tab-content" wx:if="{{send_type==1}}" bindtap="open_address">
+
+		<block wx:if="{{data.ad_info}}">
+			<view class="address-info">
+				<view class="address-p">{{data.ad_info.province_name}} {{data.ad_info.city_name}} {{data.ad_info.country_name}}
+					{{data.ad_info.address}}</view>
+				<image src="{{cdn}}icon/ra.png" class="ra"></image>
+			</view>
+			<view class="address-bb">
+				<view class="address-name">{{data.ad_info.name}}</view>
+				<view class="address-phone">{{data.ad_info.tel}}</view>
+			</view>
+		</block>
+
+		<block wx:if="{{!data.ad_info}}">
+			<view class="address-info">
+				<view class="address-p">请选择收货地址</view>
+				<image src="{{cdn}}icon/ra.png" class="ra"></image>
+			</view>
+
+		</block>
+	</view>
+	<view class="tab-content" wx:if="{{send_type==2}}">
+		<view class="address-info">
+			<view class="address-p">{{data.ziti_info.name}} {{data.ziti_info.address}} </view>
+
+		</view>
+	</view>
+	<view class="grid">
+		<view class="cart-item" wx:for="{{data.goods_list}}" wx:key="index">
+			<view class="cart-img">
+				<image src="{{item.info.thumb}}" class="cart-image"></image>
+			</view>
+			<view class="cart-info">
+				<view class="cart-info-top">
+					<view class="cart-info-name">{{item.info.name}}</view>
+				</view>
+				<view class="cart-info-tips">{{item.spec_str}}</view>
+				<view class="cart-info-bar">
+					<view class="cart-info-price">
+						<view class="new-price red">￥{{item.price}}</view>
+					</view>
+					<view class="cart-info-num">X{{item.num}}</view>
+				</view>
+			</view>
+		</view>
+		<input type="text" maxlength="100" placeholder="买家留言" bindinput="change_message" class="msg-txt" />
+	</view>
+
+
+
+	<view class="info-wrap">
+
+		<view class="info-item flex-center" bindtap='show_coupon' wx:if="{{data.mall_can_coupon==1}}">
+			<view class="left">优惠券 <text class="tools-tips">{{data.coupon_count}}张</text></view>
+			<view class="right flex-center red" wx:if="{{!data.coupon_info}}">
+				{{data.coupon_count > 0 ? '不使用' : '无可用券'}}
+				<image class="arrow-btn" src="/ico/arrow-btn.png" mode="widthFix" />
+			</view>
+			<view class="right flex-center red" wx:if="{{data.coupon_info}}">
+				减￥{{data.coupon_info.money}}
+				<image class="arrow-btn" src="/ico/arrow-btn.png" mode="widthFix" />
+			</view>
+		</view>
+		<view class="info-item flex-center" bindtap="use_dot" wx:if="{{data.mall_can_dot == 1}}">
+			<view class="left">积分<text class="tips2">共{{data.finfo.dot}}，抵<text class="red">￥{{data.dot_money}}</text></text>
+			</view>
+			<view class="select-wrap {{use_dot==1?'selected':''}} right">
+				<image class="select-icon" src="/ico/select-icon.png" mode="widthFix" />
+				<image class="select-icon-active" src="/ico/select-icon-active.png" mode="widthFix" />
+			</view>
+		</view>
+		<view class="info-item flex-center" bindtap="use_money" wx:if="{{data.mall_can_money == 1}}">
+			<view class="left">余额<text class="tips2">共{{data.finfo.money}}，抵<text class="red">￥{{data.money}}</text></text>
+			</view>
+			<view class="select-wrap {{use_money==1?'selected':''}} right">
+				<image class="select-icon" src="/ico/select-icon.png" mode="widthFix" />
+				<image class="select-icon-active" src="/ico/select-icon-active.png" mode="widthFix" />
+			</view>
+		</view>
+
+
+	</view>
+
+
+
+	<view class="grid">
+		<view class="grid-bar" style="height: 60rpx;">
+			<view class="backup-p">商品金额</view>
+			<view class="grid-p">￥{{data.goods_total}}</view>
+		</view>
+		<view class="grid-bar" style="height: 60rpx;" wx:if="{{data.send_money > 0}}">
+			<view class="backup-p">运费</view>
+			<view class="grid-p"><text class="red">+¥{{data.send_money}}</text></view>
+		</view>
+
+	</view>
+</view>
+
+<!-- 一件结算 -->
+<view class="settlement-wrap" style="padding-bottom: {{buBottom}}rpx">
+	<view class="settlement">
+		<view class="settlement-right">
+			<view class="settlement-info">
+				<view class="settlement-p">合计：</view>
+				<view class="settlement-p"><text class="red">¥{{data.total}}</text></view>
+			</view>
+		</view>
+		<view class="settlement-btn" bindtap="sub">立即购买</view>
+	</view>
+</view>
+
+<view class="settlement-margin" style="padding-bottom: {{buBottom}}rpx"></view>
+
+<coupon_com id="coupon_com_id" aid="{{coupon_id}}" goods_id_arr="{{data.goods_ids}}" goods_total="{{data.goods_total}}"
+	cate_arr="{{data.cate_info}}" bind:change_sel='change_coupon_sel' type="{{coupon_type}}"></coupon_com>

@@ -1,0 +1,23 @@
+
+<poster id="poster" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail"></poster>
+<block wx:if="{{hb}}">
+<view class="mask" bindtap="close_hb"></view>
+
+<view class="pro-popp">
+  <view class="popp-close" bindtap="close_hb">
+    <image src="close.png" class="close-icon"></image>
+  </view>
+  <view class="pro-popp-wrap">
+    <view class="pro-popp-img">
+      <image src="{{hb_url}}" class="pro-popp-image" width="500" height="500" ></image>
+    </view>
+
+  </view>
+  <view class="pro-popp-bb">
+    <view class="pro-popp-tips">
+      <!-- 本次分享可获得 <text class="red">+2</text> 积分 -->
+    </view>
+    <view class="save-btn" bindtap="saveimg" data-img="{{hb_url}}">保存到相册</view>
+  </view>
+</view>
+</block>

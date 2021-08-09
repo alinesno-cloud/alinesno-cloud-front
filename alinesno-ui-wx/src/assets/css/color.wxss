@@ -1,0 +1,23 @@
+page{
+  --main_bg:#4EA9F6;
+  --main_bg2:#fea914;
+  --main_font:#fff;
+}
+
+.main_bg {
+  background: var(--main_bg) !important;
+}
+
+.main_font {
+  color: var(--main_font) !important;
+}
+
+.main_btn {
+  background: var(--main_bg) !important;
+  color: var(--main_font) !important;
+}
+
+.tips {
+  background-color: var(--main_bg) !important;
+  color: var(--main_font) !important;
+}

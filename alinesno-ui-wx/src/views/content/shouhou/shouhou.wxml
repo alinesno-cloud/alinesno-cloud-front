@@ -1,0 +1,24 @@
+<image class="head-bg" src="/images/header_bg.png" mode="widthFix" />
+<view class="list">
+	<view class="title">您好，请选择您的问题</view>
+	<view class="red-title">常见问题</view>
+	<view class="item flex-center" bindtap="sel_info" data-index="{{index}}" wx:for="{{list}}">{{item.title}}
+		<image class="arrow-btn" mode="widthFix" src="/images/arrow-btn.png" />
+	</view>
+</view>
+
+<!-- <view class="date">2020-7-28  14:22</view> -->
+
+<block wx:if="{{show_type==1}}">
+	<view class="user-dialog flex-center">
+		<view class="msg">{{msg1}}</view>
+		<image src="/images/mine-h.png" class="user-img" />
+	</view>
+
+	<view class="contact-dialog flex-center">
+		<image src="/images/mine-h.png" class="user-img" />
+		<view class="msg">{{msg2}}</view>
+	</view>
+</block>
+
+<button class="lxkf" style="width:100%;line-height:100rpx;height:100rpx;padding:0;" open-type="contact" >联系客服</button>

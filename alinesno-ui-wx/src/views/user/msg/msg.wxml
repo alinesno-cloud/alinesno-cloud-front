@@ -1,0 +1,32 @@
+<!-- 消息 -->
+<view class="list flex-center">
+	<view class="list-item" bindtap="change_type" data-type="1" url="/pages/msg/user/user">
+		<image src="{{cdn}}msg-icon1.png" mode="widthFix" class="msg-icon" />通知消息</view>
+	<view class="list-item"  bindtap="change_type" data-type="2" url="/pages/msg/huodong/huodong">
+		<image src="{{cdn}}msg-icon2.png" mode="widthFix" class="msg-icon" />活动消息</view>
+	<navigator class="list-item" url="/pages/content/help/index">
+		<image src="{{cdn}}msg-icon3.png" mode="widthFix" class="msg-icon" />设置帮助</navigator>
+	<view class="list-item"  bindtap="change_type" data-type="3" url="/pages/msg/order/order">
+		<image src="{{cdn}}msg-icon4.png" mode="widthFix" class="msg-icon" />消息列表</view>
+</view>
+
+<!-- 活动消息 -->
+<view class="msg-item" wx:for="{{list}}">
+	<view class="date" wx:if="{{item.time_tran}}">{{item.time_tran}}</view>
+	<view class="msg-wrap" bindtap="tourl" data-url="{{item.url}}">
+		<view class="msg-title">{{item.title}}</view>
+		<view class="msg-text">{{item.content}}</view>
+
+		<navigator class="msg-btn flex-center" wx:if="{{item.to_str}}">{{item.to_str}}
+			<image class="arrow-btn" src="{{cdn}}arrow-btn.png" mode="widthFix" />
+		</navigator>
+
+	</view>
+</view>
+
+<view class="no-msg" wx:if="{{list.length <= 0}}">
+	<image src="{{cdn}}no-msg.png" mode="widthFix" />
+	暂无任何消息
+</view>
+
+<nav></nav>

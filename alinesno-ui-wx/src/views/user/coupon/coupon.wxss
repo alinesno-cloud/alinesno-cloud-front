@@ -1,0 +1,166 @@
+.tabs {
+  display: flex;
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+
+view {
+  box-sizing: content-box;
+}
+
+.tabs .tab {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+}
+
+.tabs .tab.active {
+  color: #4EA9F6;
+}
+
+.tabs .tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100rpx;
+  height: 4rpx;
+  background-color: #4EA9F6;
+}
+
+.grl {
+  display: block;
+  margin: 30rpx;
+}
+
+
+.item {
+  position: relative;
+  width: 690rpx;
+  height: 160rpx;
+  margin:30rpx auto;
+}
+
+view {
+  box-sizing: content-box;
+}
+
+.bg {
+  height: 160rpx;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  color: #F9604E;    background: #fff;
+}
+
+.money {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 170rpx;
+}
+
+.money .num {
+  font-size: 60rpx;
+}
+
+.money .title,
+.money .s {
+  font-size: 24rpx;
+}
+
+.limit {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20rpx;
+}
+
+.limit .must-money {
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+}
+
+.limit .must-date {
+  font-size: 24rpx;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170rpx;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  height: 40rpx;
+  border: 2rpx solid #F74833;
+  border-radius: 40rpx;
+  font-size: 24rpx;
+}
+
+.ready-img {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 100rpx;
+}
+
+
+/* ***可以使用*** */
+
+
+
+
+/* ************* */
+
+
+/* ***已使用*** */
+
+.item.used {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+
+/* ************ */
+
+
+/* ***快过期*** */
+
+.item.ready-expire .ready-img {
+  display: block;
+}
+
+
+
+/* ************ */
+
+
+/* ***已过期*** */
+
+.item.expired {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+
+
+/* ************ */

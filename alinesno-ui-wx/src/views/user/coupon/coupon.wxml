@@ -1,0 +1,29 @@
+<view class="tabs">
+	<view class="tab {{flag=='no_use'?'active':''}}" data-flag="no_use" catch:tap="change_flag">未使用</view>
+	<view class="tab {{flag=='used'?'active':''}}" data-flag="used" catch:tap="change_flag">已使用</view>
+	<view class="tab {{flag=='expire'?'active':''}}" data-flag="expire" catch:tap="change_flag">已过期</view>
+</view>
+<msg wx:if="{{list.length <= 0}}"></msg>
+<view class="tab-content">
+	<view class="item {{item.class}}" wx:for="{{list}}">
+		<image class="bg" mode="heightFix" src="/images/dai-jin-quan.png" />
+		<view class="content">
+			<view class="money">
+				<view class="num"><text class="s">￥</text>{{item.money}}</view>
+				<view class="title">{{item.type_msg}}</view>
+			</view>
+			<view class="limit">
+				<view class="must-money">{{item.msg}}{{item.remark_msg}}</view>
+				<view class="must-date">{{item.end_msg}}</view>
+			</view>
+
+			<view class="btn-wrap" bindtap="tourl" data-is_can="{{item.is_can}}">
+				<view class="btn">{{item.status_str}}</view>
+			</view>
+
+			<image class="ready-img" mode="widthFix" src="/images/kuai-guo-qi.png" />
+		</view>
+	</view>
+</view>
+
+<nav></nav>

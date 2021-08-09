@@ -1,0 +1,157 @@
+/* pages/user/afterSales/apply/index.wxss */
+page {
+  background-color: #f5f5f5;
+}
+.afterView {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.afterView .item {
+  padding: 0 24rpx;
+  height:106rpx;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.afterView .item::after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 24rpx;
+  bottom: 0;
+  right: 0;
+  height: 2rpx;
+  background-color: #E6E6E6;
+}
+.afterView .item:last-child::after {
+  display: none;
+}
+.afterView .item .name {
+  font-size: 32rpx;
+  color: #333;
+}
+.info {
+  flex: 1;
+  text-align: right;
+}
+.afterView .item .icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 16rpx;
+}
+.picker {
+  font-size: 32rpx;
+  color: #333;
+}
+.dz_t {
+  color: #ADADAD;
+}
+.info_cv {
+  padding: 24rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.info_cv .title {
+  font-size: 32rpx;
+  color: #333;
+}
+.info_cv .money {
+  font-size: 72rpx;
+  font-weight: bold;
+  color: #333;
+  margin-top: 18rpx;
+}
+.info_cv .money text {
+  font-size: 48rpx;
+  font-weight: normal;
+}
+.info_cv .tt {
+  margin-top: 22rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.title-sh-cv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-sh-cv .rt {
+  font-size: 28rpx;
+  color: #999;
+}
+.inputView {
+  margin-top: 52rpx;
+}
+.inputView textarea {
+  width: 100%;
+  height: 240rpx;
+  border-radius: 8rpx;
+  border: 1px solid #E6E6E6;
+  padding: 20rpx 24rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.addImage {
+  margin:0 -10rpx;
+  margin-top: 20rpx;
+}
+.addImage .item {
+  /* width: 230rpx;
+  height: 230rpx; */
+  height: 224rpx;
+  width: 33.333333%;
+  position: relative;
+  margin-bottom: 20rpx;
+  /* float: left; */
+  padding: 0 10rpx;
+}
+.img_cv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.addImage .item image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.addImage .item .cloes {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34rpx;
+  height: 34rpx;
+  display: block;
+  z-index: 99;
+}
+.addBtn image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.imageView {
+  position: relative;
+}
+.imageView .tt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 128rpx;
+  font-size: 28rpx;
+  columns: #999;
+  text-align: center;
+}
+
+.upBtn {
+  line-height: 96rpx;
+  text-align: center;
+  border-radius: 48rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background-color: #ee8814;
+  margin-top: 60rpx;
+}
+
+
