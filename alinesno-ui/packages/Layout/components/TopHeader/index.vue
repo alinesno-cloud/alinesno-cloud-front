@@ -39,7 +39,7 @@
                      to="/dashboard/platform/service">支持管理
         </router-link>
       </div>
-	  <el-dropdown>
+	  <el-dropdown @command="handleCommand">
       <div class="CB-qpwBh" style="display: flex;">
         <a class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab">【系统管理员-张三】</a>
 		<a class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab" target="_blank">
@@ -58,7 +58,7 @@
 	    <el-dropdown-item icon="el-icon-warning">访问控制</el-dropdown-item>
 	    <el-dropdown-item icon="el-icon-s-check">AccessKey管理</el-dropdown-item>
 	    <el-dropdown-item icon="el-icon-s-management">推荐返利后台</el-dropdown-item>
-	    <el-dropdown-item icon="el-icon-s-tools">账号中心</el-dropdown-item>
+	    <el-dropdown-item icon="el-icon-s-tools" command="userInfo">账号中心</el-dropdown-item>
 		<el-container>
 		  <el-main>
 			<el-button style="width: 100%;" @click="logout">退出登陆</el-button>
@@ -87,6 +87,9 @@ export default {
     }
   },
   methods: {
+	handleCommand(command){
+		this.$router.push({name:command})
+	},
     toggleSideBar () {
       this.$store.dispatch('app/toggleSideBar')
     },

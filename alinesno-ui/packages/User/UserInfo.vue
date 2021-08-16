@@ -63,8 +63,8 @@
 						<el-form-item label="应用行业" :rules="[{ required: true, message: '应用行业不能为空'}]">
 						<el-cascader 
 							class="el-input"
-							v-model="value"
-							:options="formData.trades"
+							v-model="formData.tradesSubmit"
+							:options="trades"
 							:props="{ expandTrigger: 'hover' }"
 							@change="handleChange"></el-cascader>
 						</el-form-item>
@@ -89,13 +89,13 @@
 						<el-form-item label="所在地址" :rules="[{ required: true, message: '所在地址不能为空'}]">
 							<el-cascader
 								class="el-input"
-							    v-model="value"
-							    :options="formData.position"
+							    v-model="formData.positionSubmit"
+							    :options="position"
 							    :props="{ expandTrigger: 'hover' }"
 							    @change="positionChange"></el-cascader>
 						</el-form-item>
-						<el-form-item label="企业官网">
-							<el-input class="el-input" placeholder="企业官网" v-model="formData.hisUrl"></el-input>
+						<el-form-item label="详细地址">
+							<el-input class="el-input" placeholder="详细地址" v-model="formData.area"></el-input>
 						</el-form-item>
 					</el-form>
 				</el-main>
@@ -125,107 +125,113 @@
 		data() {
 			return {
 				avatarUrl: 'https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png',
+				trades: [{
+					value: 'fastsale',
+					label: '快消',
+					children:[{
+						value: 'departmentStores',
+						label: '百货商店',
+					},{
+						value: 'estate',
+						label: '商业地产'
+					},{
+						value: 'supermartkey',
+						label: '超级市场'
+					}]
+				}, {
+					value: 'wenti',
+					label: '文体娱乐',
+					children:[{
+						value: 'traval',
+						label: '旅游',
+					},{
+						value: 'basketball',
+						label: '篮球比赛'
+					},{
+						value: 'swim',
+						label: '游泳池'
+					}]
+				}, {
+					value: 'tax',
+					label: '财税'
+				}],
+				position:[{
+					value: 'guangxi',
+					label: '广西壮族自治区',
+					children:[{
+						value: 'nanning',
+						label: '南宁市',
+						children:[{
+							value: 'yongning',
+							label: '邕宁区',
+						},{
+							value: 'liangqing',
+							label: '良庆区',
+						}]
+					},{
+						value: 'yulin',
+						label: '玉林市',
+						children:[{
+							value: 'yuzhou',
+							label: '玉州区',
+						},{
+							value: 'rongxian',
+							label: '容县',
+						}]
+					},{
+						value: 'liuzhou',
+						label: '柳州市',
+						children:[{
+							value: 'yufeng',
+							label: '鱼峰区',
+						},{
+							value: 'rongan',
+							label: '融安县',
+						}]
+					}]
+				}, {
+					value: 'guangdong',
+					label: '广东省',
+					children:[{
+						value: 'guangzhou',
+						label: '广州市',
+						children:[{
+							value: 'zhujiangxincity',
+							label: '珠江新城',
+						},{
+							value: 'baiyun',
+							label: '白云区',
+						}]
+					},{
+						value: 'shenzhen',
+						label: '深圳市',
+						children:[{
+							value: 'futian',
+							label: '福田区',
+						},{
+							value: 'luohu',
+							label: '罗湖区',
+						}]
+					}]
+				}],
 				formData: {
 					realName: '张三',
 					vipStatu: '个人',
-					trades: [{
-						value: 'fastsale',
-						label: '快消',
-						children:[{
-							value: 'departmentStores',
-							label: '百货商店',
-						},{
-							value: 'estate',
-							label: '商业地产'
-						},{
-							value: 'supermartkey',
-							label: '超级市场'
-						}]
-					}, {
-						value: 'wenti',
-						label: '文体娱乐',
-						children:[{
-							value: 'traval',
-							label: '旅游',
-						},{
-							value: 'basketball',
-							label: '篮球比赛'
-						},{
-							value: 'swim',
-							label: '游泳池'
-						}]
-					}, {
-						value: 'tax',
-						label: '财税'
-					}],
+					tradesSubmit:[],
 					production:'',
 					hisUrl:'',
 					country:'中国',
-					position:[{
-						value: 'guangxi',
-						label: '广西壮族自治区',
-						children:[{
-							value: 'nanning',
-							label: '南宁市',
-							children:[{
-								value: 'yongning',
-								label: '邕宁区',
-							},{
-								value: 'liangqing',
-								label: '良庆区',
-							}]
-						},{
-							value: 'yulin',
-							label: '玉林市',
-							children:[{
-								value: 'yuzhou',
-								label: '玉州区',
-							},{
-								value: 'rongxian',
-								label: '容县',
-							}]
-						},{
-							value: 'liuzhou',
-							label: '柳州市',
-							children:[{
-								value: 'yufeng',
-								label: '鱼峰区',
-							},{
-								value: 'rongan',
-								label: '融安县',
-							}]
-						}]
-					}, {
-						value: 'guangdong',
-						label: '广东省',
-						children:[{
-							value: 'guangzhou',
-							label: '广州市',
-							children:[{
-								value: 'zhujiangxincity',
-								label: '珠江新城',
-							},{
-								value: 'baiyun',
-								label: '白云区',
-							}]
-						},{
-							value: 'shenzhen',
-							label: '深圳市',
-							children:[{
-								value: 'futian',
-								label: '福田区',
-							},{
-								value: 'luohu',
-								label: '罗湖区',
-							}]
-						}]
-					}]
+					positionSubmit:[],
+					area:''
 				}
 			}
 		},
 		methods: {
 			onSubmit() {
-				console.log("提交")
+				var form = this.formData;
+				// form.trades = null;
+				// form.position = null;
+				console.log("表单数据：",form);
 			},
 			handleChange(e){
 				console.log(e)
