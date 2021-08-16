@@ -46,24 +46,28 @@
 		  <img src="//oss.aliyuncs.com/aliyun_id_photo_bucket/default_family.jpg" alt="" class="su70ez-0 CB-gLgKdv"/>
 		</a>
       </div>
-	  <el-dropdown-menu slot="dropdown" style="width:400px">
-		<el-container>
-		  <el-header class="bg-color-base info-h" style="height: auto;padding-bottom:15px">
-			<p class="color-text-primary f-m">系统管理员-张三</p>
-			<p class="color-text-secondary f-b">账号：1593454011@qq.com</p>
-			<el-tag>系统管理员</el-tag>
-		  </el-header>
-		</el-container>
-	    <el-dropdown-item style="margin-top:15px" icon="el-icon-platform-eleme">安全访问</el-dropdown-item>
-	    <el-dropdown-item icon="el-icon-warning">访问控制</el-dropdown-item>
-	    <el-dropdown-item icon="el-icon-s-check">AccessKey管理</el-dropdown-item>
-	    <el-dropdown-item icon="el-icon-s-management">推荐返利后台</el-dropdown-item>
-	    <el-dropdown-item icon="el-icon-s-tools" command="userInfo">账号中心</el-dropdown-item>
-		<el-container>
-		  <el-main>
-			<el-button style="width: 100%;" @click="logout">退出登陆</el-button>
-		  </el-main>
-		</el-container>
+	  <el-dropdown-menu slot="dropdown" class="dropdown-container" style="width:350px">
+      <el-container>
+        <el-header class="bg-color-base info-h" style="height: auto;padding-bottom:15px">
+        <p class="color-text-primary f-e-s">系统管理员-张三</p>
+        <p class="color-text-secondary f-e-s">账号：1593454011@qq.com</p>
+        <el-tag>系统管理员</el-tag>
+        </el-header>
+      </el-container>
+        <el-dropdown-item icon="el-icon-platform-eleme">安全访问</el-dropdown-item>
+        <el-dropdown-item icon="el-icon-warning">访问控制</el-dropdown-item>
+        
+        <!--
+        <el-dropdown-item icon="el-icon-s-check">AccessKey管理</el-dropdown-item>
+        <el-dropdown-item icon="el-icon-s-management">推荐返利后台</el-dropdown-item>
+        -->
+
+        <el-dropdown-item icon="el-icon-s-tools" command="userInfo">账号中心</el-dropdown-item>
+      <el-container>
+        <el-main>
+        <el-button style="width: 100%;" size="small" @click="logout">退出登陆</el-button>
+        </el-main>
+      </el-container>
 	  </el-dropdown-menu>
 	  </el-dropdown>
     </nav>
@@ -206,6 +210,7 @@ export default {
       color: #555;
       height: 50px;
       line-height: 50px;
+      font-size: 12px;
       display: block !important;
     }
 
@@ -231,6 +236,41 @@ export default {
   border: 0px;
   margin-left: 20px;
   font-weight: 500;
+}
+
+.dropdown-container{
+  .f-e-l {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .f-l {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .f-m {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .f-b {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .f-b {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .f-s {
+    font-size: 13px;
+    line-height: 13px;
+  }
+  .f-e-s {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.el-dropdown-menu--medium .el-dropdown-menu__item{
+    font-size: 12px;
 }
 
 </style>
