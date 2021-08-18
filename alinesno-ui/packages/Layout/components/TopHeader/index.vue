@@ -146,7 +146,8 @@ export default {
   right: 0px;
   left: 0px;
   z-index: 10;
-  box-shadow: 0 2px 4px 0 var(--cb-color-shadow, rgba(0, 0, 0, 0.16));
+  // box-shadow: 0 2px 4px 0 var(--cb-color-shadow, rgba(0, 0, 0, 0.16));
+  border-bottom: var(--card-border-width,1px) var(--card-border-style,solid) var(--card-border-color,#e3e4e6) ;
 
   .header-logo-label {
     font-size: 16px;
