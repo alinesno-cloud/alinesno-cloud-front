@@ -10,10 +10,10 @@
     </div>
     <span id="bannerQuickLink" class="ng-scope">
         <div style="display:inline">
-            <a class="homepageLink ng-binding" ng-bind="i18n('homepageLink')" href="http://www.huaweicloud.com/?locale=zh-cn">首页</a>
+            <a class="homepageLink ng-binding" ng-bind="i18n('homepageLink')" href="/">首页</a>
         </div>
         <div style="display:inline">
-            <a class="homepageLink ng-binding" ng-bind="i18n('helpCenter')" href="http://support.huaweicloud.com/">帮助中心</a>
+            <a class="homepageLink ng-binding" ng-bind="i18n('helpCenter')" href="">帮助中心</a>
         </div>
     </span>
 </div>
@@ -30,13 +30,9 @@
 @import 'alinesno-ui/src/assets/styles/login/pageframework.scss';
 @import 'alinesno-ui/src/assets/styles/login/login.scss';
 
-.loginDiv{
-    border-radius: 2px;
-    box-shadow: 0 2px 15px rgb(0 0 0 / 15%);
-}
-
 #banner{
     height: 50px;
+    box-shadow: none !important;
 
     #bannerQuickLink{
         height: 50px ;

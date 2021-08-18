@@ -207,8 +207,8 @@ export default {
 @import 'alinesno-ui/src/assets/styles/login/login.scss';
 
 .loginDiv{
-    border-radius: 2px;
-    box-shadow: 0 2px 15px rgb(0 0 0 / 15%);
+    border-radius: 4px !important;
+    box-shadow: none !important;
 
     .selectedType{
         height: 100% !important ;
