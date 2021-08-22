@@ -143,7 +143,7 @@ import { DEP_CONFIG, CONFIG_LIST } from './config.js'
 import { debounce } from '../../src/utils/index.js'
 
 export default {
-  name: 'fc-org-transfer',
+  name: 'OrgTransfer',
   props: {
 	//标题
 	title:{

@@ -31,12 +31,12 @@
 @import 'alinesno-ui/src/assets/styles/login/login.scss';
 
 #banner{
-    height: 50px;
+    height: 60px;
     box-shadow: none !important;
 
     #bannerQuickLink{
-        height: 50px ;
-        line-height: 50px;
+        height: 60px ;
+        line-height: 60px;
     }
 }
 
@@ -49,14 +49,14 @@
     margin-left: 10px;
     text-shadow: 0 0 0px black;
     color: #005bd4;
-    margin-top: 15px;
+    margin-top: 20px;
     float: left;
 }
 
 .logo-banner{
     float: left;
     background: #005BD4;
-    height: 50px;
+    height: 60px;
     width: 60px;
     position: relative;
     left: 0px;
@@ -146,7 +146,7 @@
 }
 
 #footer .footer-content {
-    height: 50px;
+    height: 60px;
     position: absolute;
     bottom: 0px;
     width: 100%;

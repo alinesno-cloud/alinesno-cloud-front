@@ -1,11 +1,6 @@
 <template>
 <div id="content">
     <div class="widthLimit" ui-view="content">
-        <div id="loginAdv" class="ng-scope">
-            <a>
-                <img src="http://training-static.linesno.com/bg-images.png" alt="" />
-            </a>
-        </div>
         <login-form />
     </div>
 </div>

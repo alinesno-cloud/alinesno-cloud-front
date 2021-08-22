@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="login-container">
     <top-header />
     <login-content />
     <login-footer />
@@ -30,17 +30,23 @@ export default {
 @import 'alinesno-ui/src/assets/styles/login/pageframework.scss';
 @import 'alinesno-ui/src/assets/styles/login/login.scss';
 
-.loginDiv{
-    border-radius: 2px;
-    box-shadow: 0 2px 15px rgb(0 0 0 / 15%);
+.login-container{
+    height: 100%;
+    background: #f5f5f5;
+    background-image: url('http://training-static.linesno.com/quare_bg_01.png') ; 
+    background-repeat: no-repeat;
+
+    #banner{
+        box-shadow: none;
+    }
 }
 
 #banner{
-    height: 50px;
+    height: 60px;
 
     #bannerQuickLink{
-        height: 50px ;
-        line-height: 50px;
+        height: 60px ;
+        line-height: 60px;
     }
 }
 
@@ -60,7 +66,7 @@ export default {
 .logo-banner{
     float: left;
     background: #005BD4;
-    height: 50px;
+    height: 60px;
     width: 60px;
     position: relative;
     left: 0px;
@@ -149,8 +155,9 @@ export default {
     content: url("https://console-static.huaweicloud.com/static/authui/20210513103904/public/custom/images/close.svg")
 }
 
+
 #footer .footer-content {
-    height: 50px;
+    height: 60px;
     position: absolute;
     bottom: 0px;
     width: 100%;
