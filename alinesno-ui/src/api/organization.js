@@ -15,10 +15,30 @@
 // 从正式借口获取后
 import request from 'alinesno-ui/src/utils/request'
 // 获取组织机构根节点
-export const GET_DEPT_ROOT = () => {return request({url: 'depRoot.json',method: 'get'})}
+export const GET_DEPT_ROOT = () => {
+    return request({
+        url: '/organize/department',
+        method: 'get'
+    })
+}
 // 根据部门id获取分页人员信息
-export const GET_PAGE_EMPLOYEE = () => {return request({url: 'userData.json',method: 'get'})}
+export const GET_PAGE_EMPLOYEE = () => {
+    return request({
+        url: '/organize/account',
+        method: 'get'
+    })
+}
 // 获取组织机构子节点
-export const GET_DEPT_TREE = () => {return request({url: 'depChild.json',method: 'get'})}
+export const GET_DEPT_TREE = () => {
+    return request({
+        url: '/organize/department',
+        method: 'get'
+    })
+}
 // 获取组织机构下人员信息
-export const GET_USER_BY_DEPT = () => {return request({url: 'userData.json',method: 'get'})}
+export const GET_USER_BY_DEPT = () => {
+    return request({
+        url: '/organize/account',
+        method: 'get'
+    })
+}
