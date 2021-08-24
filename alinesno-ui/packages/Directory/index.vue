@@ -13,6 +13,10 @@ import { getDicts } from "alinesno-ui/src/api/dict";
 
 export default {
   name: 'DictSelect',
+  model: {
+    prop: 'modelVal',//指向props的参数名
+    event: 'change'//事件名称
+  },
   data(){
       return {
           newValue:'' ,
@@ -20,7 +24,8 @@ export default {
       }
   } ,
   props:{
-      dictType: String ,
+      type: String ,
+      modelVal: String,
       placeholder: String ,
       filterAttr: String ,
       defaultValue: String ,
@@ -30,19 +35,9 @@ export default {
   created(){
     this.getDict() ;
   },
-  computed:{
-      newValue:{
-          get:function(){
-              return this.value + '' ;
-          },
-          set: function(value){
-              this.$emit('input', value);
-          }
-      }
-  },
   methods:{
       getDict(){
-        var dictType = this.dictType ;
+        var dictType = this.type ;
         console.log('directType = ' + dictType)
 
         getDicts(dictType).then(response => {
@@ -50,7 +45,13 @@ export default {
             this.paramArr = response.data ;
         });
       }
-  }
+  },
+  watch:{
+      //监听值变化，再赋值给modelVal
+      newValue(value){
+        this.$emit('change',value);
+      }
+    }
 }
 </script>
 
