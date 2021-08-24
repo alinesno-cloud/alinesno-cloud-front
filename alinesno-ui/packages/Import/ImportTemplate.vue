@@ -1,4 +1,4 @@
-<!--导入包含下载模板组件-->
+<!--导入包含下载模块组件-->
 <template>
     <div class="home">
         <el-row :gutter="10" class="mb8">
@@ -25,7 +25,8 @@
                     :disabled="upload.isUploading"
                     :on-progress="handleFileUploadProgress"
                     :on-success="handleFileSuccess"
-                    :auto-upload="false"
+                    :on-error = "handleFileError"
+                    :auto-upload="isAutoUpload"
                     drag
             >
                 <i class="el-icon-upload"></i>
@@ -67,6 +68,7 @@
             limit: String,
             accept: String,
             icon: String,
+            autoUpload: Boolean,
         },
         data() {
             return {
@@ -95,6 +97,7 @@
                 uploadLimit: 1,
                 uploadAccept: '.xlsx, .xls',
                 btnIcon: 'el-icon-upload2',
+                isAutoUpload: false
             }
         },
         mounted() {
@@ -115,6 +118,7 @@
                 this.btnSize = this.size
                 this.uploadLimit = parseInt(this.limit)
                 this.uploadAccept = this.accept
+                this.isAutoUpload = this.autoUpload
             },
             /** 下载模板操作 */
             importTemplate() {
@@ -125,13 +129,19 @@
             // 文件上传中处理
             handleFileUploadProgress(event, file, fileList) {
                 this.upload.isUploading = true;
+                this.$emit('handleFileUploadProgress', event, file, fileList)
             },
             // 文件上传成功处理
             handleFileSuccess(response, file, fileList) {
                 this.upload.open = false;
                 this.upload.isUploading = false;
                 this.$refs.upload.clearFiles();
-                this.$alert(response.msg, "导入结果", {dangerouslyUseHTMLString: true});
+                // this.$alert(response.msg, "导入结果", {dangerouslyUseHTMLString: true});
+                this.$emit('handleFileSuccess', response, file, fileList)
+            },
+            // 文件上传失败处理
+            handleFileError(response, file, fileList) {
+                this.$emit('handleFileError', response, file, fileList)
             },
             // 提交上传文件
             submitFileForm() {
