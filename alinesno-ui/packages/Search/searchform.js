@@ -1,38 +1,33 @@
-import timefilters from "./timefilters";
-
 /**
- * 时间搜索
- * @param {*} context 
- * @param {*} ref 
- * @param {*} form 
- * @returns 
+ * 搜索条件处理
+ * @param config 字段配置
+ * @param queryDataObj 数据对象
  */
-export default function searchParam(context, ref, form) {
-    let paramArr = []
-    let formname = ref.$vnode.data.ref
-    for (let i in form) {
-        if (form[i] instanceof Array) {
-            if (context.$refs[`${formname}.${i}`].$attrs.range) {
-                if (context.$refs[`${formname}.${i}`].$vnode.data.model.value instanceof Array) {
-                    const timeArr = context.$refs[`${formname}.${i}`].$vnode.data.model.value
-                    if (timeArr[0] instanceof Date) {
-                        const strings = context.$refs[`${formname}.${i}`].$attrs.range
-                        var split = strings.split('|');
-                        let start = {'column': split[0], 'type': 'eq', 'value': timefilters(timeArr[0])}
-                        let end = {'column': split[1], 'type': 'eq', 'value': timefilters(timeArr[1])}
-                        paramArr.push(start)
-                        paramArr.push(end)
-                    }
-                }
-            }
-        } else {
-            const wrapper = context.$refs[`${formname}.${i}`].$attrs.wrapper === undefined ? 'eq' : context.$refs[`${formname}.${i}`].$attrs.wrapper
-            const properties = context.$refs[`${formname}.${i}`].$vnode.data.model.value
-            if(properties != null){
-                let obj = {'column': i, 'type': wrapper, 'value': properties}
-                paramArr.push(obj)
-            }
-        }
+
+export function searchParam (config, queryDataObj) {
+  if (config == null || queryDataObj == null) {
+    return queryDataObj
+  }
+  //处理后的搜索对象
+  const processedParams = {}
+  //查询字段列表
+  const queryFields = Object.keys(queryDataObj)
+  queryFields.forEach(key => {
+    if (config.hasOwnProperty(key)) {
+      const fields = config[key](key)
+      if (fields instanceof Array) {
+        const values = queryDataObj[key]
+        processedParams[fields[0]] = values ? values[0] : null
+        processedParams[fields[1]] = values ? values[1] : null
+      } else {
+        processedParams[fields] = queryDataObj[key]
+      }
+    } else {
+      //不在配置对象的字段原样传输到后端
+      processedParams[key] = queryDataObj[key]
     }
-    return paramArr
+  })
+  return processedParams
 }
+
+
