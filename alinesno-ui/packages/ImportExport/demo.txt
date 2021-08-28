@@ -1,0 +1,56 @@
+<template>
+    <div class="import">
+        <ImportTemplate
+                import-url="/system/user/import"
+                download-url="/system/user/downloadTemplate"
+                @success="success"/>
+        <ExportData
+                class="export"
+                export-url="/exportData"
+                @exportSuccess="exportSuccess"
+        />
+    </div>
+</template>
+
+<script>
+
+    import ImportTemplate from "alinesno-ui/packages/ImportExport/ImportTemplate";
+    import ExportData from "alinesno-ui/packages/ImportExport/ExportData";
+    export default {
+        components: {
+            ImportTemplate,
+            ExportData
+        },
+        methods: {
+            handleFileUploadProgress(event, file, fileList) {
+                console.log(event)
+                console.log(file)
+                console.log(fileList)
+            },
+            success(response, file, fileList) {
+                console.log(response)
+                console.log(file)
+                console.log(fileList)
+            },
+            handleFileError(response, file, fileList) {
+                console.log(response)
+            },
+            exportSuccess(response, file, fileList) {
+                console.log(response)
+                console.log(file)
+                console.log(fileList)
+            },
+        }
+    }
+
+</script>
+
+<style scoped>
+    .import {
+        padding: 30px 30px;
+        display: flex;
+    }
+    .export {
+        margin-left: 20px;
+    }
+</style>
