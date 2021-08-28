@@ -1,0 +1,41 @@
+<template>
+    <div class="content">
+        <!--
+            mode:
+            point-fixed
+            point-pop
+            slide-fixed
+            slide-pop
+        -->
+        <CaptCha @success="verifySuccess"  mode="slide-fixed"/>
+    </div>
+</template>
+
+<script>
+    import CaptCha from "alinesno-ui/packages/CaptCha/CaptCha";
+    export default {
+        name: "CaptChaTest.vue",
+        components: {CaptCha},
+        data() {
+            return {
+            }
+        },
+        methods: {
+            verifySuccess(data) {
+                if (data) {
+                    this.$notify({
+                        title: '成功',
+                        message: '这是一条成功的提示消息',
+                        type: 'success'
+                    });
+                }
+            }
+        }
+    }
+</script>
+
+<style scoped>
+    .content {
+        padding: 130px 260px;
+    }
+</style>

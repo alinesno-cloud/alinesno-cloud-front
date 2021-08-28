@@ -1,0 +1,103 @@
+<template>
+    <TransferTest
+            v-model="text"
+            :filter-type="4"
+            :from-data="fromData"
+            :current-user-dept-id="currentUserDeptId"
+            @btn-confirm="btnConfirm"
+    />
+    <!--
+        filter-type: 数组结构中 type 字段, 根据类型过滤（可选）
+        from-data: 左边的数据, 需要进行初始化
+        to-data: 右边的数据, 可以进行初始化（可选）
+        current-user-dept-id: 当前用户 id 展示我所在部门（必选）
+    -->
+</template>
+
+<script>
+    import TransferTest from "alinesno-ui/packages/TreeTransfer/Transfer";
+    export default {
+        name: "Transfer",
+        components: {TransferTest},
+        data() {
+            return {
+                currentUserDeptId: '3',
+                text: '',
+                fromData: [
+                    {
+                        id: "1",
+                        pid: 0,
+                        label: "组织结构",
+                        type: 1,
+                        children: [
+                            {
+                                id: "2",
+                                pid: "1",
+                                type: 2,
+                                label: "深圳院",
+                                children: [
+                                    {
+                                        id: "3",
+                                        pid: "2",
+                                        type: 3,
+                                        label: "院部",
+                                        children: [
+                                            {
+                                                id: "5",
+                                                pid: "3",
+                                                type: 4,
+                                                children: [],
+                                                label: "刘忠文"
+                                            },
+                                            {
+                                                id: "6",
+                                                pid: "3",
+                                                type: 4,
+                                                children: [],
+                                                label: "周军"
+                                            },
+                                        ],
+
+                                    },
+                                    {
+                                        id: "4",
+                                        pid: "1",
+                                        type: 3,
+                                        label: "综合部",
+                                        children: [
+                                            {
+                                                id: "7",
+                                                pid: "4",
+                                                type: 4,
+                                                children: [],
+                                                label: "王英"
+                                            },
+                                            {
+                                                id: "8",
+                                                pid: "4",
+                                                type: 4,
+                                                children: [],
+                                                label: "沈淼"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+
+                        ]
+                    },
+                ],
+            }
+        },
+        methods: {
+            btnConfirm(data) {
+                console.log(data)
+                console.log(this.text)
+            }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

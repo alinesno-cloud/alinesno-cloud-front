@@ -2,9 +2,9 @@
     <el-col :span="1.5">
         <el-button
                 :type="btnType"
-                :plain="isPlain"
-                :round="isRound"
-                :circle="isCircle"
+                :plain="plain"
+                :round="round"
+                :circle="circle"
                 :icon="btnIcon"
                 :size="btnSize"
                 :loading="isExportLoading"
@@ -15,43 +15,56 @@
 </template>
 
 <script>
-
-    import {exportData} from "../../src/api/export";
+    import {exportData} from "alinesno-ui/src/api/export";
 
     export default {
         props: {
-            type: String,
-            icon: String,
-            size: String,
-            plain: Boolean,
-            round: Boolean,
-            circle: Boolean,
-            queryParams: Object, // 查询参数
-            loading: Boolean,
-            exportUrl: String
+            btnType: {
+                type: String,
+                default: () => 'info'
+            },
+            btnIcon: {
+                type: String,
+                default: () => 'el-icon-bottom'
+            },
+            btnSize: {
+                type: String,
+                default: () => 'medium'
+            },
+            plain: {
+                type: Boolean,
+                default: () => true
+            },
+            round: {
+                type: Boolean,
+                default: () => false
+            },
+            circle: {
+                type: Boolean,
+                default: () => false
+            },
+            queryParams: {
+                type: Object,
+                default: () => {
+                }
+            },
+            loading: {
+                type: Boolean,
+                default: () => false
+            },
+            exportUrl: {
+                type: String,
+                default: () => process.env.VUE_APP_EXPORT_URL ? process.env.VUE_APP_EXPORT_URL : '/common/export'
+            },
         },
         data() {
             return {
                 // 导出遮罩层
                 isExportLoading: false,
-                btnType: 'info',
-                btnIcon: 'el-icon-download',
-                btnSize: 'mini',
-                isPlain: false,
-                isRound: false,
-                isCircle: false,
-                withQueryParams: {},
             }
         },
         mounted() {
             this.isExportLoading = this.loading ? this.loading : this.isExportLoading
-            this.btnType = this.type ? this.type : this.btnType
-            this.btnIcon = this.icon ? this.icon : this.btnIcon
-            this.btnSize = this.size ? this.size : this.btnSize
-            this.isPlain = this.plain
-            this.isRound = this.round
-            this.isCircle = this.circle
-            this.withQueryParams = this.queryParams
         },
         methods: {
             /** 导出按钮操作 */
@@ -65,7 +78,7 @@
                     this.isExportLoading = true;
                     return exportData(this.exportUrl, queryParams);
                 }).then(response => {
-                    this.$emit("handleExportSuccess", response)
+                    this.$emit("exportSuccess", response)
                     // this.download(response.msg);
                     this.isExportLoading = false;
                 }).catch((e) => {

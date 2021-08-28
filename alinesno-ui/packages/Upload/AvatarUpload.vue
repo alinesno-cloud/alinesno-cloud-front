@@ -1,4 +1,3 @@
-<!--头像上传-->
 <template>
     <el-upload
             class="avatar-uploader"
@@ -17,7 +16,7 @@
         props: {
             uploadUrl: {
                 type: String,
-                default: '/common/upload'
+                default: process.env.VUE_APP_UPLOAD_URL ? process.env.VUE_APP_UPLOAD_URL : '/common/upload'
             },
             showFileList: {
                 type: Boolean,
@@ -40,6 +39,7 @@
         methods: {
             handleAvatarSuccess(res, file) {
                 this.imageUrl = URL.createObjectURL(file.raw);
+                this.$emit('input', res.data.id)
                 this.$emit('handleAvatarSuccess', res, file)
             },
             handleAvatarError(res, file) {

@@ -1,4 +1,3 @@
-<!--照片墙上传-->
 <template>
     <div>
         <el-upload
@@ -22,7 +21,7 @@
         props: {
             uploadUrl: {
                 type: String,
-                default: '/common/upload'
+                default: process.env.VUE_APP_UPLOAD_URL ? process.env.VUE_APP_UPLOAD_URL : '/common/upload'
             },
             fileSize: {
                 type: String,
@@ -49,6 +48,7 @@
                 this.$emit('handlePictureCardPreview', file)
             },
             handleUploadSuccess(res, file) {
+                this.$emit('input', res.data.id)
                 this.imageUrl = URL.createObjectURL(file.raw);
                 this.$emit('handleUploadSuccess', res, file)
             },

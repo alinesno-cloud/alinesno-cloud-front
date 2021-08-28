@@ -22,7 +22,7 @@
     import "quill/dist/quill.core.css";
     import "quill/dist/quill.snow.css";
     import "quill/dist/quill.bubble.css";
-    /* import { getToken } from "@/utils/auth";*/
+   /* import { getToken } from "@/utils/auth";*/
 
     export default {
         name: "Editor",
@@ -49,7 +49,7 @@
             },
             // 上传文件大小限制(MB)
             fileSize: {
-                type: String,
+                type: Number,
                 default: 5,
             },
             /* 类型（base64格式、url格式） */
@@ -60,14 +60,14 @@
             // 上传服务器地址
             uploadUrl: {
                 type: String,
-                default: process.env.VUE_APP_BASE_API + "/common/upload"
+                default: process.env.VUE_APP_UPLOAD_URL ? process.env.VUE_APP_UPLOAD_URL : "/common/upload"
             }
         },
         data() {
             return {
-                editorUploadUrl: process.env.VUE_APP_BASE_API + "/common/upload", // 上传的图片服务器地址
+                editorUploadUrl: process.env.VUE_APP_UPLOAD_URL ? process.env.VUE_APP_UPLOAD_URL : "/common/upload", // 上传的图片服务器地址
                 headers: {
-                    /* Authorization: "Bearer " + getToken()*/
+                   /* Authorization: "Bearer " + getToken()*/
                 },
                 Quill: null,
                 currentValue: "",
@@ -80,12 +80,12 @@
                         toolbar: [
                             ["bold", "italic", "underline", "strike"],       // 加粗 斜体 下划线 删除线
                             ["blockquote", "code-block"],                    // 引用  代码块
-                            [{list: "ordered"}, {list: "bullet"}],       // 有序、无序列表
-                            [{indent: "-1"}, {indent: "+1"}],            // 缩进
-                            [{size: ["small", false, "large", "huge"]}],   // 字体大小
-                            [{header: [1, 2, 3, 4, 5, 6, false]}],         // 标题
-                            [{color: []}, {background: []}],             // 字体颜色、字体背景颜色
-                            [{align: []}],                                 // 对齐方式
+                            [{ list: "ordered" }, { list: "bullet" }],       // 有序、无序列表
+                            [{ indent: "-1" }, { indent: "+1" }],            // 缩进
+                            [{ size: ["small", false, "large", "huge"] }],   // 字体大小
+                            [{ header: [1, 2, 3, 4, 5, 6, false] }],         // 标题
+                            [{ color: [] }, { background: [] }],             // 字体颜色、字体背景颜色
+                            [{ align: [] }],                                 // 对齐方式
                             ["clean"],                                       // 清除文本格式
                             ["link", "image", "video"]                       // 链接、图片、视频
                         ],
@@ -149,7 +149,7 @@
                     const quill = this.Quill;
                     this.currentValue = html;
                     this.$emit("input", html);
-                    this.$emit("on-change", {html, text, quill});
+                    this.$emit("on-change", { html, text, quill });
                 });
                 this.Quill.on("text-change", (delta, oldDelta, source) => {
                     this.$emit("on-text-change", delta, oldDelta, source);
@@ -182,8 +182,8 @@
                     // 获取光标所在位置
                     let length = quill.getSelection().index;
                     // 插入图片  res.url为服务器返回的图片地址
-                    // quill.insertEmbed(length, "image", process.env.VUE_APP_BASE_API + res.fileName);
-                    quill.insertEmbed(length, "image", this.uploadUrl + res.fileName);
+                   // quill.insertEmbed(length, "image", process.env.VUE_APP_BASE_API + res.fileName);
+                    quill.insertEmbed(length, "image", process.env.VUE_APP_DISPLAY_URL + res.data.id);
                     // 调整光标到最后
                     quill.setSelection(length + 1);
                 } else {
@@ -204,15 +204,12 @@
         white-space: pre-wrap !important;
         line-height: normal !important;
     }
-
     .quill-img {
         display: none;
     }
-
     .ql-snow .ql-tooltip[data-mode="link"]::before {
         content: "请输入链接地址:";
     }
-
     .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
         border-right: 0px;
         content: "保存";
@@ -227,17 +224,14 @@
     .ql-snow .ql-picker.ql-size .ql-picker-item::before {
         content: "14px";
     }
-
     .ql-snow .ql-picker.ql-size .ql-picker-label[data-value="small"]::before,
     .ql-snow .ql-picker.ql-size .ql-picker-item[data-value="small"]::before {
         content: "10px";
     }
-
     .ql-snow .ql-picker.ql-size .ql-picker-label[data-value="large"]::before,
     .ql-snow .ql-picker.ql-size .ql-picker-item[data-value="large"]::before {
         content: "18px";
     }
-
     .ql-snow .ql-picker.ql-size .ql-picker-label[data-value="huge"]::before,
     .ql-snow .ql-picker.ql-size .ql-picker-item[data-value="huge"]::before {
         content: "32px";
@@ -247,32 +241,26 @@
     .ql-snow .ql-picker.ql-header .ql-picker-item::before {
         content: "文本";
     }
-
     .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
     .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
         content: "标题1";
     }
-
     .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
     .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
         content: "标题2";
     }
-
     .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
     .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
         content: "标题3";
     }
-
     .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before,
     .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
         content: "标题4";
     }
-
     .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before,
     .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
         content: "标题5";
     }
-
     .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before,
     .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
         content: "标题6";
@@ -282,12 +270,10 @@
     .ql-snow .ql-picker.ql-font .ql-picker-item::before {
         content: "标准字体";
     }
-
     .ql-snow .ql-picker.ql-font .ql-picker-label[data-value="serif"]::before,
     .ql-snow .ql-picker.ql-font .ql-picker-item[data-value="serif"]::before {
         content: "衬线字体";
     }
-
     .ql-snow .ql-picker.ql-font .ql-picker-label[data-value="monospace"]::before,
     .ql-snow .ql-picker.ql-font .ql-picker-item[data-value="monospace"]::before {
         content: "等宽字体";

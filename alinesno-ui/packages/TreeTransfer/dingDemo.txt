@@ -1,0 +1,67 @@
+<template>
+    <DingTree v-model="text" :data="deptOptions"/>
+</template>
+
+<script>
+
+    import DingTree from "alinesno-ui/packages/TreeTransfer/DingTree";
+    export default {
+        name: "DingTalkTree",
+        components: {
+            DingTree
+        },
+        data() {
+            return {
+                text: '',
+                deptOptions: [
+                    {
+                        label: '集团',
+                        children: [
+                            {
+                                label: '新狐公司',
+                                children: [
+                                    {
+                                        label: '新狐部门'
+                                    },
+                                    {
+                                        label: '华为部门'
+                                    },
+                                    {
+                                        label: '阿里部门'
+                                    }
+                                ]
+                            },
+                            {
+                                label: '阿里公司',
+                                children: [
+                                    {
+                                        label: '若依部门'
+                                    },
+                                    {
+                                        label: '科技部门'
+                                    }
+                                ]
+                            },
+                            {
+                                label: '华为公司'
+                            }
+                        ]
+                    }
+                ],
+            }
+        },
+        watch: {
+            text(val) {
+                this.$notify({
+                    title: '选择的抄送人',
+                    message: val,
+                    type: 'success'
+                });
+            }
+        },
+    }
+</script>
+
+<style scoped>
+
+</style>

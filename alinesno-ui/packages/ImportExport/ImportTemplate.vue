@@ -1,13 +1,12 @@
-<!--导入包含下载模块组件-->
 <template>
     <div class="home">
         <el-row :gutter="10" class="mb8">
             <el-col :span="1.5">
                 <el-button
                         :type="btnType"
-                        :plain="isPlain"
-                        :round="isRound"
-                        :circle="isCircle"
+                        :plain="plain"
+                        :round="round"
+                        :circle="circle"
                         :icon="btnIcon"
                         :size="btnSize"
                         @click="handleImport"
@@ -19,21 +18,22 @@
         <el-dialog :title="title" :visible.sync="upload.open" width="400px" append-to-body>
             <el-upload
                     ref="upload"
-                    :limit="uploadLimit"
-                    :accept="uploadAccept"
-                    :action="upload.url"
+                    :limit="limit"
+                    :accept="accept"
+                    :action="importUrl"
                     :disabled="upload.isUploading"
                     :on-progress="handleFileUploadProgress"
                     :on-success="handleFileSuccess"
                     :on-error = "handleFileError"
-                    :auto-upload="isAutoUpload"
+                    :auto-upload="autoUpload"
+                    :multiple="multiple"
                     drag
             >
                 <i class="el-icon-upload"></i>
                 <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
                 <div class="el-upload__tip text-center" slot="tip">
                     <span>{{ tip }}</span>
-                    <el-link v-show="isShowTemplate" type="primary" :underline="false" style="font-size:12px;vertical-align: baseline;"
+                    <el-link v-show="showTemplate" type="primary" :underline="false" style="font-size:12px;vertical-align: baseline;"
                              @click="importTemplate(downloadUrl)">下载模板
                     </el-link>
                 </div>
@@ -48,32 +48,78 @@
 
 <script>
 
-
-    import {importTemplate} from "../../src/api/import";
+    import {importTemplate} from "alinesno-ui/src/api/download";
 
     export default {
         name: 'Home',
         props: {
-            type: String,
-            size: String,
-            plain: Boolean,
-            round: Boolean,
-            circle: Boolean,
-            title: String,
-            downloadUrl: String,
-            disabledUpload: Boolean,
-            importUrl: String,
-            tip: String,
-            showTemplate: Boolean,
-            limit: String,
-            accept: String,
-            icon: String,
-            autoUpload: Boolean,
+            btnType: {
+                type: String,
+                default: () => ''
+            },
+            btnSize: {
+                type: String,
+                default: () => 'medium'
+            },
+            plain: {
+                type: Boolean,
+                default: () => false
+            },
+            round: {
+                type: Boolean,
+                default: () => false
+            },
+            circle: {
+                type: Boolean,
+                default: () => false
+            },
+            title: {
+                type: String,
+                default: () => '导入'
+            },
+            downloadUrl: {
+                type: String,
+                default: () => process.env.VUE_APP_DOWNLOAD_URL ? process.env.VUE_APP_DOWNLOAD_URL : '/common/download'
+            },
+            disabledUpload: {
+                type: Boolean,
+                default: () => false
+            },
+            importUrl: {
+                type: String,
+                default: () => '/common/import'
+            },
+            tip: {
+                type: String,
+                default: () => '仅允许导入xls、xlsx格式文件。'
+            },
+            showTemplate: {
+                type: Boolean,
+                default: () => true
+            },
+            limit: {
+                type: Number,
+                default: () => 3
+            },
+            accept: {
+                type: String,
+                default: () => ''
+            },
+            btnIcon: {
+                type: String,
+                default: () => 'el-icon-upload'
+            },
+            autoUpload: {
+                type: Boolean,
+                default: () => false
+            },
+            multiple: {
+                type: Boolean,
+                default: () => false
+            },
         },
         data() {
             return {
-                isShowTemplate: true,
-                exportLoading: false,
                 // 用户导入参数
                 upload: {
                     // 是否显示弹出层（用户导入）
@@ -89,36 +135,13 @@
                     // 上传的地址
                     url: ''
                 },
-                isPlain: false,
-                isRound: false,
-                isCircle: false,
-                btnType: 'info',
-                btnSize: 'mini',
-                uploadLimit: 1,
-                uploadAccept: '.xlsx, .xls',
-                btnIcon: 'el-icon-upload2',
-                isAutoUpload: false
             }
-        },
-        mounted() {
-            this.upload.isUploading = this.disabledUpload
-            this.upload.url = this.importUrl
-            this.isPlain = this.plain
-            this.isRound = this.round
-            this.isCircle = this.circle
-            this.btnType = this.type
-            this.btnIcon = this.icon
         },
         methods: {
             /** 导入按钮操作 */
             handleImport() {
                 this.upload.title = this.title
                 this.upload.open = true
-                this.isShowTemplate = this.showTemplate
-                this.btnSize = this.size
-                this.uploadLimit = parseInt(this.limit)
-                this.uploadAccept = this.accept
-                this.isAutoUpload = this.autoUpload
             },
             /** 下载模板操作 */
             importTemplate() {
@@ -128,6 +151,7 @@
             },
             // 文件上传中处理
             handleFileUploadProgress(event, file, fileList) {
+                console.log(fileList)
                 this.upload.isUploading = true;
                 this.$emit('handleFileUploadProgress', event, file, fileList)
             },
@@ -136,8 +160,8 @@
                 this.upload.open = false;
                 this.upload.isUploading = false;
                 this.$refs.upload.clearFiles();
-                // this.$alert(response.msg, "导入结果", {dangerouslyUseHTMLString: true});
-                this.$emit('handleFileSuccess', response, file, fileList)
+               // this.$alert(response.msg, "导入结果", {dangerouslyUseHTMLString: true});
+                this.$emit('success', response, file, fileList)
             },
             // 文件上传失败处理
             handleFileError(response, file, fileList) {

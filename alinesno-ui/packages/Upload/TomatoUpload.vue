@@ -1,15 +1,18 @@
-<!--手动上传-->
 <template>
     <el-upload
             class="upload-demo"
             ref="upload"
             :action="uploadUrl"
+            :on-success="handleSuccess"
             :on-preview="handlePreview"
             :on-remove="handleRemove"
             :file-list="fileList"
             :auto-upload="autoUpload">
-        <el-button :icon="chooseBtnIcon" slot="trigger" :size="chooseBtnSize" :type="chooseBtnType">{{ chooseBtnText }}</el-button>
-        <el-button :icon="uploadBtnIcon" v-show="autoUpload === false" style="margin-left: 10px;"  :size="uploadBtnSize" :type="uploadBtnType" @click="submitUpload">{{ uploadBtnText }}
+        <el-button :icon="chooseBtnIcon" slot="trigger" :size="chooseBtnSize" :type="chooseBtnType">{{ chooseBtnText
+            }}
+        </el-button>
+        <el-button :icon="uploadBtnIcon" v-show="autoUpload === false" style="margin-left: 10px;" :size="uploadBtnSize"
+                   :type="uploadBtnType" @click="submitUpload">{{ uploadBtnText }}
         </el-button>
         <div slot="tip" class="el-upload__tip">{{ tip }}</div>
     </el-upload>
@@ -20,7 +23,7 @@
         props: {
             uploadUrl: {
                 type: String,
-                default: '/common/upload'
+                default: process.env.VUE_APP_UPLOAD_URL ? process.env.VUE_APP_UPLOAD_URL : '/common/upload'
             },
             uploadBtnText: {
                 type: String,
@@ -72,12 +75,14 @@
             submitUpload() {
                 this.$refs.upload.submit();
             },
+            handleSuccess(response, file, fileList) {
+                this.$emit('input', response.data.id)
+                this.$emit('success', response, file, fileList)
+            },
             handleRemove(file, fileList) {
-                console.log(file, fileList);
                 this.$emit('handleRemove', file, fileList)
             },
             handlePreview(file) {
-                console.log(file);
                 this.$emit('handlePreview', file)
             },
         }

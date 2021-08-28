@@ -1,4 +1,3 @@
-<!--普通上传-->
 <template>
     <el-upload
             class="upload-demo"
@@ -13,7 +12,7 @@
             :limit="fileLimit"
             :on-exceed="handleExceed"
             :file-list="fileList">
-        <el-button :icon="icon" :size="size" :type="type">{{ btnText }}</el-button>
+        <el-button :icon="btnIcon" :size="btnSize" :type="btnType">{{ btnText }}</el-button>
         <div slot="tip" class="el-upload__tip">{{ tip }}</div>
     </el-upload>
 </template>
@@ -23,21 +22,21 @@
         props: {
             uploadUrl: {
                 type: String,
-                default: '/common/upload'
+                default: process.env.VUE_APP_UPLOAD_URL ? process.env.VUE_APP_UPLOAD_URL : '/common/upload'
             },
             multiple: {
                 type: Boolean,
                 default: false
             },
             limit: {
-                type: String,
+                type: Number,
                 default: 3
             },
-            size: {
+            btnSize: {
                 type: String,
-                default: 'mini'
+                default: 'medium'
             },
-            type: {
+            btnType: {
                 type: String,
                 default: 'info'
             },
@@ -49,7 +48,7 @@
                 type: String,
                 default: '上传按钮文字'
             },
-            icon: {
+            btnIcon: {
                 type: String,
                 default: 'el-icon-upload'
             },
@@ -89,8 +88,9 @@
             },
             // 文件上传成功处理
             handleFileSuccess(response, file, fileList) {
+                this.$emit('input', response.data.id)
                 this.$refs.upload.clearFiles();
-                this.$emit('handleFileSuccess', response, file, fileList)
+                this.$emit('success', response, file, fileList)
             },
             // 文件上传失败处理
             handleFileError(response, file, fileList) {
