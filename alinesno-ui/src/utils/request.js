@@ -15,7 +15,7 @@ const service = axios.create({
 // request拦截器
 service.interceptors.request.use(config => {
   // 是否需要设置 token
-  if (['/tryLogin', '/ssoSignOut'].indexOf(config.url) === -1 && getToken() !== null) {
+  if (['/tryLogin', '/ssoSignOut','/oauth/token'].indexOf(config.url) === -1 && getToken() !== null) {
     config.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
   }
 
@@ -51,24 +51,19 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(res => {
     // 未设置状态码则默认成功状态
     const { data } = res
-    console.log('data', data)
     const code = data.code || 200
     // 获取错误信息
     const msg = errorCode[code] || data.msg || errorCode['default']
     if (code === 401) {
-      MessageBox.confirm('登录状态已过期，您可以继续留在该页面，或者重新登录', '系统提示', {
+      MessageBox.confirm('登录状态已过期，请重新登录', '系统提示', {
           confirmButtonText: '重新登录',
           cancelButtonText: '取消',
           type: 'warning'
         }
       ).then(() => {
-        const params = new URLSearchParams()
-        const { secret, loginEndPoint } = data.data
-        const fromRouter = location.href
-        params.append('redirect_uri', fromRouter)
-        params.append('secret', secret)
+        const {loginEndPoint } = data.data
         store.dispatch('LogOut').then(() => {
-          location.href = `${loginEndPoint}?${params.toString()}`
+          location.href = loginEndPoint
         })
       })
     } else if (code === 500) {
