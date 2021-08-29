@@ -61,9 +61,8 @@ service.interceptors.response.use(res => {
           type: 'warning'
         }
       ).then(() => {
-        const {loginEndPoint } = data.data
         store.dispatch('LogOut').then(() => {
-          location.href = loginEndPoint
+          location.href = "/index"
         })
       })
     } else if (code === 500) {
