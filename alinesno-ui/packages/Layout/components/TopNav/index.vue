@@ -5,9 +5,10 @@
     @select="handleSelect"
   >
     <template v-for="(item, index) in topMenus">
-      <el-menu-item :style="{'--theme': theme}" :index="item.path" :key="index" v-if="index < visibleNumber"
-        ><svg-icon :icon-class="item.meta.icon" />
-        {{ item.meta.title }}</el-menu-item
+      <el-menu-item :style="{'--theme': theme}" :index="item.path" :key="index" v-if="index < visibleNumber">
+        <i :class="item.meta.icon" />
+        {{ item.meta.title }}
+        </el-menu-item
       >
     </template>
 
@@ -160,12 +161,12 @@ export default {
 <style lang="scss">
 .el-menu--horizontal > .el-menu-item {
   float: left;
-  height: 50px;
-  line-height: 50px;
+  height: 50px !important;
+  line-height: 50px !important;
   margin: 0;
   border-bottom: 3px solid transparent;
   color: #999093;
-  padding: 0 5px;
+  padding: 0 10px !important;
   margin: 0 10px;
 }
 
