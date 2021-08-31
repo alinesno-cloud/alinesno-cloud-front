@@ -1,6 +1,6 @@
 {
   "name": "alinesno-ui",
-  "version": "1.4.11",
+  "version": "1.4.12",
   "private": false,
   "main": "index.js",
   "scripts": {

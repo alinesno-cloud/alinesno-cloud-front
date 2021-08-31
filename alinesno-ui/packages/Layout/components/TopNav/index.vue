@@ -166,7 +166,7 @@ export default {
   margin: 0;
   border-bottom: 3px solid transparent;
   color: #999093;
-  padding: 0 10px !important;
+  padding: 0 5px !important;
   margin: 0 10px;
 }
 
