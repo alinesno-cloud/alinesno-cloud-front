@@ -5,6 +5,8 @@
         <div class="setting-drawer-title">
           <h3 class="drawer-title">主题风格设置</h3>
         </div>
+
+        <!--
         <div class="setting-drawer-block-checbox">
           <div class="setting-drawer-block-checbox-item" @click="handleTheme('theme-dark')">
             <img src="alinesno-ui/src/assets/images/dark.svg" alt="dark">
@@ -31,6 +33,7 @@
             </div>
           </div>
         </div>
+        -->
 
         <div class="drawer-item">
           <span>主题颜色</span>
@@ -52,15 +55,19 @@
         <el-switch v-model="tagsView" class="drawer-switch" />
       </div>
 
+      <!--
       <div class="drawer-item">
         <span>固定 Header</span>
         <el-switch v-model="fixedHeader" class="drawer-switch" />
       </div>
+      -->
 
+      <!--
       <div class="drawer-item">
         <span>显示 Logo</span>
         <el-switch v-model="sidebarLogo" class="drawer-switch" />
       </div>
+      -->
 
       <el-divider/>
 
