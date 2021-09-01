@@ -58,8 +58,12 @@ export const EnableUaaClient = new Object()
 EnableUaaClient.install = (Vue, options) => {
   if (options && options['routerInstance']) {
     const { routerInstance } = options
+    //hack路由守卫顺序，确保授权拦截的hook优先级最高
+    const oldROuterBeforeHook = [].concat(routerInstance.beforeHooks);
+    routerInstance.beforeHooks = [];
     routerInstance.beforeEach(routerTokenService)
     routerInstance.beforeEach(AuthGuardService)
+    oldROuterBeforeHook.forEach(hook=>routerInstance.beforeEach(hook))
   } else {
     console.warn('UaaRouterGuard', '使用UaaRouterGuard插件必须为options设置路由实例对象!!!')
   }
