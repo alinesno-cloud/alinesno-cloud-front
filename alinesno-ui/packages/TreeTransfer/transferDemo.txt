@@ -1,5 +1,5 @@
 <template>
-    <TransferTest
+    <Transfer
             v-model="text"
             :filter-type="4"
             :from-data="fromData"
@@ -15,10 +15,10 @@
 </template>
 
 <script>
-    import TransferTest from "alinesno-ui/packages/TreeTransfer/Transfer";
+    import Transfer from "alinesno-ui/packages/TreeTransfer/Transfer";
     export default {
         name: "Transfer",
-        components: {TransferTest},
+        components: {Transfer},
         data() {
             return {
                 currentUserDeptId: '3',
