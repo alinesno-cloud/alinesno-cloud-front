@@ -6,6 +6,7 @@
                 :mode="'pop'"
                 :captcha-type="'clickWord'"
                 :img-size="{ width: '330px', height: '155px' }"
+                :applicationCode="applicationCode"
         />
         <!-- 组件 -->
         <el-button style="width: 300px;" type="info" size="medium" @click="$refs.verify.show()">登录</el-button>
@@ -16,6 +17,12 @@
 import Verify from '../../verifition/Verify'
 export default {
   name: 'SliderFixed',
+  props: {
+    applicationCode: {
+      type: String,
+      default: ''
+    }
+  },
   components: {
     Verify
   },

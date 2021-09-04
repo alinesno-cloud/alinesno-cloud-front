@@ -8,6 +8,7 @@
               :captcha-id="'9ca07a9c-c260-50ae-2c13-89cde2f34cb9'"
               :container-id="'#sliderFixed_btn'"
               :img-size="{ width: '330px', height: '155px' }"
+              :applicationCode="applicationCode"
       />
       <!-- 组件 -->
       <el-button v-if="isShowBtn" style="width: 300px;" type="primary" size="medium" @click="show">登录</el-button>
@@ -18,6 +19,12 @@
 import Verify from '../../verifition/Verify'
 export default {
   name: 'SliderFixed',
+  props: {
+    applicationCode: {
+      type: String,
+      default: ''
+    }
+  },
   components: {
     Verify
   },

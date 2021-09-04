@@ -101,6 +101,10 @@ export default {
     defaultImg: {
       type: String,
       default: ''
+    },
+    applicationCode: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -235,6 +239,7 @@ export default {
         captchaType: this.captchaType,
         clientUid: localStorage.getItem('point'),
         ts: Date.now(), // 现在的时间戳
+        applicationCode: this.applicationCode //appCode
       }
       reqGet(data).then(res => {
         if (res.repCode == '0000') {
