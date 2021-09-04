@@ -15,7 +15,7 @@ export function searchParam (config, queryDataObj) {
   queryFields.forEach(key => {
     if (config.hasOwnProperty(key)) {
       const fields = config[key](key)
-      if (fields instanceof Array) {
+      if (fields instanceof Array && fields.length === 2) {
         const values = queryDataObj[key]
         processedParams[fields[0]] = values ? values[0] : null
         processedParams[fields[1]] = values ? values[1] : null

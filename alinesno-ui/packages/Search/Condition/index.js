@@ -1,71 +1,74 @@
-
-function baseWrapper(type, field) {
+function baseWrapper (type, field) {
   return `condition[${field}|${type}]`
 }
 
-function likeBuilder(field) {
+function likeBuilder (field) {
   return baseWrapper('like', field)
 }
 
-function eqBuilder(field) {
+function eqBuilder (field) {
   return baseWrapper('eq', field)
 }
 
-function neBuilder(field) {
+function neBuilder (field) {
   return baseWrapper('ne', field)
 }
 
-function rangeDateBuilder(field) {
+function rangeDateBuilder (field) {
   const geTime = baseWrapper('geTime', field)
   const leTime = baseWrapper('leTime', field)
   return [geTime, leTime]
 }
 
-function rangeSizeBuilder(field) {
+function rangeSizeBuilder (field) {
   const ge = baseWrapper('ge', field)
   const le = baseWrapper('le', field)
   return [ge, le]
 }
 
-function containsBuilder(field) {
+function containsBuilder (field) {
   return baseWrapper('in', field)
 }
 
-function geBuilder(field) {
+function geBuilder (field) {
   return baseWrapper('ge', field)
 
 }
 
-function gtBuilder(field) {
+function gtBuilder (field) {
   return baseWrapper('gt', field)
 
 }
 
-function leBuilder(field) {
+function leBuilder (field) {
   return baseWrapper('le', field)
 
 }
 
-function ltBuilder(field) {
+function ltBuilder (field) {
   return baseWrapper('lt', field)
 }
 
-function geTimeBuilder(field) {
+function geTimeBuilder (field) {
   return baseWrapper('geTime', field)
 }
 
-function gtTimeBuilder(field) {
+function gtTimeBuilder (field) {
   return baseWrapper('gtTime', field)
 }
 
-function leTimeBuilder(field) {
+function leTimeBuilder (field) {
   return baseWrapper('leTime', field)
 }
 
-function ltTimeBuilder(field) {
+function ltTimeBuilder (field) {
   return baseWrapper('ltTime', field)
 }
 
+function orderByBuilder (field) {
+  return baseWrapper('orderBy', field)
+
+}
 
 const Condition = {
   /**
@@ -125,5 +128,9 @@ const Condition = {
    * 时间字段小于搜索
    */
   ltTime: () => ltTimeBuilder,
+  /**
+   * 排序字段
+   */
+  orderBy: () => orderByBuilder()
 }
 export default Condition
