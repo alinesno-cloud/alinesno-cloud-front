@@ -1,9 +1,9 @@
 <template>
     <div>
-        <SliderPop @success="verifySuccess" v-show="mode === 'slide-pop'"/>
-        <SliderFixed @success="verifySuccess" v-show="mode === 'slide-fixed'"/>
-        <PointPop @success="verifySuccess" v-show="mode === 'point-pop'"/>
-        <PointFixed @success="verifySuccess" v-show="mode === 'point-fixed'"/>
+        <SliderPop @success="verifySuccess" v-show="mode === 'slide-pop'" :applicationCode="applicationCode"/>
+        <SliderFixed @success="verifySuccess" v-show="mode === 'slide-fixed'" :applicationCode="applicationCode"/>
+        <PointPop @success="verifySuccess" v-show="mode === 'point-pop'" :applicationCode="applicationCode"/>
+        <PointFixed @success="verifySuccess" v-show="mode === 'point-fixed'"   :applicationCode="applicationCode"/>
     </div>
 </template>
 
@@ -18,6 +18,10 @@
             mode: {
               type: String,
               default: () => ''
+          },
+          applicationCode: {
+            type: String,
+            default: ''
           }
         },
         name: "CaptCha",

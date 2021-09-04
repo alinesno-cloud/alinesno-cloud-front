@@ -120,6 +120,10 @@ export default {
     defaultImg: {
       type: String,
       default: ''
+    },
+    applicationCode: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -352,7 +356,8 @@ export default {
       const data = {
         captchaType: this.captchaType,
         clientUid: localStorage.getItem('slider'),
-        ts: Date.now(), // 现在的时间戳
+        ts: Date.now(),
+        applicationCode: this.applicationCode //appCode
       }
       reqGet(data).then(res => {
         if (res.repCode == '0000') {
