@@ -104,7 +104,7 @@
 
 <style scoped>
     .container {
-        padding: 30px 30px;
+        padding: 10px 10px 10px 10px;
     }
 
     .left {

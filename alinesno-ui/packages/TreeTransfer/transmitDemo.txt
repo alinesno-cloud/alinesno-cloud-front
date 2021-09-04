@@ -1,0 +1,62 @@
+<template>
+    <div>
+        <Transmit v-model="ids" :data="tableData" filter-value="name" />
+    </div>
+</template>
+
+<script>
+
+    import Transmit from "../components/Transmit";
+    export default {
+        name: "TransmitTest",
+        components: {
+            Transmit
+        },
+        data() {
+            return {
+                ids: [],
+                tableData: [{
+                    id: 1,
+                    name: '不良帅',
+                }, {
+                    id: 2,
+                    name: '李星云',
+                }, {
+                    id: 3,
+                    name: '张子凡',
+                }, {
+                    id: 4,
+                    name: '姬如雪',
+                }, {
+                    id: 5,
+                    name: '陆林轩',
+                }, {
+                    id: 6,
+                    name: '李茂贞',
+                }, {
+                    id: 7,
+                    name: '张天师',
+                }, {
+                    id: 8,
+                    name: '朱友文',
+                }, {
+                    id: 9,
+                    name: '阳叔子',
+                }, {
+                    id: 10,
+                    name: '陆佑劫',
+                },
+                ]
+            }
+        },
+        watch: {
+            ids(val) {
+                console.log(this.ids)
+            }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
