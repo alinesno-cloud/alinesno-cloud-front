@@ -15,7 +15,7 @@ const service = axios.create({
 // request拦截器
 service.interceptors.request.use(config => {
   // 是否需要设置 token
-  if (['/tryLogin', '/ssoSignOut','/oauth/token'].indexOf(config.url) === -1 && getToken() !== null) {
+  if (['/tryLogin', '/ssoSignOut', '/oauth/token'].indexOf(config.url) === -1 && getToken() !== null) {
     config.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
   }
 
@@ -49,37 +49,30 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(res => {
-    // 未设置状态码则默认成功状态
-    const { data } = res
-    const code = data.code || 200
-    // 获取错误信息
-    const msg = errorCode[code] || data.msg || errorCode['default']
-    if (code === 401) {
-      MessageBox.confirm('登录状态已过期，请重新登录', '系统提示', {
-          confirmButtonText: '重新登录',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }
-      ).then(() => {
-        store.dispatch('LogOut').then(() => {
-          location.href = "/index"
-        })
-      })
-    } else if (code === 500) {
-      Message({
-        message: msg,
-        type: 'error'
-      })
-      return Promise.reject(new Error(msg))
-    } else if (code !== 200) {
-      Notification.error({
-        title: msg
-      })
-      return Promise.reject('error')
-    } else {
-      return data
-    }
-  },
+  // 未设置状态码则默认成功状态
+  const { data } = res
+  const code = data.code || 200
+  // 获取错误信息
+  const msg = errorCode[code] || data.msg || errorCode['default']
+  if (code === 401) {
+    store.dispatch('LogOut').then(() => {
+      location.reload(true)
+    })
+  } else if (code === 500) {
+    Message({
+      message: msg,
+      type: 'error'
+    })
+    return Promise.reject(new Error(msg))
+  } else if (code !== 200) {
+    Notification.error({
+      title: msg
+    })
+    return Promise.reject('error')
+  } else {
+    return data
+  }
+},
   error => {
     console.log('err' + error)
     let { message } = error
