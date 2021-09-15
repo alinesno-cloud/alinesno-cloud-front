@@ -1,1 +1,2 @@
-export { default as searchParam } from './searchform'
+import { searchParam } from './searchform'
+export default searchParam;
