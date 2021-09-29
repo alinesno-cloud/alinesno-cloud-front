@@ -1,8 +1,9 @@
 import axios from 'axios'
-import { Notification, MessageBox, Message } from 'element-ui'
+import { Message, Notification } from 'element-ui'
 import store from '@/store'
 import { getToken } from './auth'
 import errorCode from './errorCode'
+import { useSSO } from '../../index'
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 // 创建axios实例
@@ -49,30 +50,34 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(res => {
-  // 未设置状态码则默认成功状态
-  const { data } = res
-  const code = data.code || 200
-  // 获取错误信息
-  const msg = errorCode[code] || data.msg || errorCode['default']
-  if (code === 401) {
-    store.dispatch('LogOut').then(() => {
-      location.reload(true)
-    })
-  } else if (code === 500) {
-    Message({
-      message: msg,
-      type: 'error'
-    })
-    return Promise.reject(new Error(msg))
-  } else if (code !== 200) {
-    Notification.error({
-      title: msg
-    })
-    return Promise.reject('error')
-  } else {
-    return data
-  }
-},
+    // 未设置状态码则默认成功状态
+    const { data } = res
+    const code = data.code || 200
+    // 获取错误信息
+    const msg = errorCode[code] || data.msg || errorCode['default']
+    if (code === 401) {
+      store.dispatch('LogOut').then(() => {
+        if (useSSO) {
+          console.log('useSSO:' + useSSO)
+          const redirectTo = data.data.loginEndPoint;
+          window.location.href = redirectTo
+        }
+      })
+    } else if (code === 500) {
+      Message({
+        message: msg,
+        type: 'error'
+      })
+      return Promise.reject(new Error(msg))
+    } else if (code !== 200) {
+      Notification.error({
+        title: msg
+      })
+      return Promise.reject('error')
+    } else {
+      return data
+    }
+  },
   error => {
     console.log('err' + error)
     let { message } = error

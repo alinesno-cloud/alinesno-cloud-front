@@ -63,6 +63,7 @@ EnableUaaClient.install = (Vue, options) => {
     routerInstance.beforeHooks = [];
     routerInstance.beforeEach(routerTokenService)
     routerInstance.beforeEach(AuthGuardService)
+    Vue.useSSO = true;
     oldROuterBeforeHook.forEach(hook=>routerInstance.beforeEach(hook))
   } else {
     console.warn('UaaRouterGuard', '使用UaaRouterGuard插件必须为options设置路由实例对象!!!')
