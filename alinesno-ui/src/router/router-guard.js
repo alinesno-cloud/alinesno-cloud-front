@@ -32,7 +32,21 @@ const routerTokenService = (to, from, next) => {
   }
 
 }
-
+const AuthGuardService = (to, from, next) => {
+  if (!getToken()) {
+    //没有token时拦截
+    next(false)
+    request({
+      url: '/tryLogin',
+      method: 'get',
+    }).then((res) => {
+      const { loginEndPoint } = res.data
+      location.href = loginEndPoint
+    })
+  } else {
+    next()
+  }
+}
 export const EnableUaaClient = new Object()
 /**
  * 接入全局的单点路由守卫,拦截所有的401响应和 beforeEach
@@ -46,6 +60,7 @@ EnableUaaClient.install = (Vue, options) => {
     const oldROuterBeforeHook = [].concat(routerInstance.beforeHooks);
     routerInstance.beforeHooks = [];
     routerInstance.beforeEach(routerTokenService)
+    routerInstance.beforeEach(AuthGuardService)
     window.useSSO = true;
     oldROuterBeforeHook.forEach(hook=>routerInstance.beforeEach(hook))
   } else {
