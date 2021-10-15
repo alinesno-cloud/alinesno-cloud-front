@@ -31,30 +31,30 @@
             >控制台
           </router-link>
         </div>
-        <div class="CB-qpwBh">
-          <router-link
-            tag="a"
-            class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab"
-            to="/dashboard/document"
-            >文档服务
-          </router-link>
-        </div>
-        <div class="CB-qpwBh">
-          <router-link
-            tag="a"
-            class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab"
-            to="/dashboard/notifications"
-            >消息管理
-          </router-link>
-        </div>
-        <div class="CB-qpwBh">
-          <router-link
-            tag="a"
-            class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab"
-            to="/dashboard/workorder"
-            >提交工单
-          </router-link>
-        </div>
+<!--        <div class="CB-qpwBh">-->
+<!--          <router-link-->
+<!--            tag="a"-->
+<!--            class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab"-->
+<!--            to="/dashboard/document"-->
+<!--            >文档服务-->
+<!--          </router-link>-->
+<!--        </div>-->
+<!--        <div class="CB-qpwBh">-->
+<!--          <router-link-->
+<!--            tag="a"-->
+<!--            class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab"-->
+<!--            to="/dashboard/notifications"-->
+<!--            >消息管理-->
+<!--          </router-link>-->
+<!--        </div>-->
+<!--        <div class="CB-qpwBh">-->
+<!--          <router-link-->
+<!--            tag="a"-->
+<!--            class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab"-->
+<!--            to="/dashboard/workorder"-->
+<!--            >提交工单-->
+<!--          </router-link>-->
+<!--        </div>-->
         <div class="CB-qpwBh">
           <router-link
             tag="a"
@@ -109,10 +109,8 @@
                 <el-tag>系统管理员</el-tag>
               </el-header>
             </el-container>
-            <el-dropdown-item icon="el-icon-platform-eleme"
-              >安全访问</el-dropdown-item
-            >
-            <el-dropdown-item icon="el-icon-warning">访问控制</el-dropdown-item>
+<!--            <el-dropdown-item icon="el-icon-platform-eleme">安全访问</el-dropdown-item>-->
+<!--            <el-dropdown-item icon="el-icon-warning">访问控制</el-dropdown-item>-->
 
             <!--
         <el-dropdown-item icon="el-icon-s-check">AccessKey管理</el-dropdown-item>
@@ -124,9 +122,7 @@
               >布局设置</el-dropdown-item
             >
 
-            <el-dropdown-item icon="el-icon-s-tools" command="userInfo"
-              >账号中心</el-dropdown-item
-            >
+<!--            <el-dropdown-item icon="el-icon-s-tools" command="userInfo">账号中心</el-dropdown-item>-->
             <el-container>
               <el-main>
                 <el-button style="width: 100%" size="small" @click="logout"
