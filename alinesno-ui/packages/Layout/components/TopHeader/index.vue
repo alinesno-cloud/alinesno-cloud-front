@@ -182,7 +182,7 @@
       },
     },
     data () {
-      const { VUE_APP_SASS_TITLE, VUE_APP_SASS_URL, VUA_APP_SAAS_LOGO_URL } = process.env
+      const { VUE_APP_SASS_TITLE, VUE_APP_SASS_URL, VUE_APP_SAAS_LOGO_URL } = process.env
       let saasTitle = '新狐云数字化平台'
       let saasUrl = 'http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/'
       let saasLogoUrl = 'http://training-static.linesno.com/fox_cloud/fox_header.png'
@@ -192,8 +192,8 @@
       if (VUE_APP_SASS_URL) {
         saasUrl = VUE_APP_SASS_URL
       }
-      if (VUA_APP_SAAS_LOGO_URL) {
-        saasLogoUrl = VUA_APP_SAAS_LOGO_URL
+      if (VUE_APP_SAAS_LOGO_URL) {
+        saasLogoUrl = VUE_APP_SAAS_LOGO_URL
       }
       return {
         saasTitle,
