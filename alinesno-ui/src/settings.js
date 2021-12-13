@@ -1,5 +1,7 @@
+const defaultTitle = '新狐云数字化平台'
+const titleFromVars = process.env.VUE_APP_SASS_TITLE
 module.exports = {
-  title: '新狐云数字化平台',
+  title: titleFromVars ? titleFromVars : defaultTitle,
 
   /**
    * 侧边栏主题 深色主题theme-dark，浅色主题theme-light
@@ -20,7 +22,7 @@ module.exports = {
   /**
    * 是否显示 tagsView
    */
-  tagsView: false ,
+  tagsView: false,
 
   /**
    * 是否固定头部
@@ -30,7 +32,7 @@ module.exports = {
   /**
    * 是否显示logo
    */
-  sidebarLogo: false ,
+  sidebarLogo: false,
 
   /**
    * @type {string | array} 'production' | ['production', 'development']
