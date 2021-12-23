@@ -164,10 +164,31 @@ export default {
     },
   },
   data() {
+
+    // 处理前端自动化的问题
+    const { VUE_APP_SASS_TITLE, VUE_APP_SASS_URL, VUE_APP_SAAS_LOGO_URL } = process.env
+
+    let saasTitle = '新狐云数字化平台'
+    let saasUrl = 'http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/'
+    let saasLogoUrl = 'http://training-static.linesno.com/fox_cloud/fox_header.png'
+
+    if (VUE_APP_SASS_TITLE) {
+      saasTitle = VUE_APP_SASS_TITLE
+    }
+
+    if (VUE_APP_SASS_URL) {
+      saasUrl = VUE_APP_SASS_URL
+    }
+
+    if (VUE_APP_SAAS_LOGO_URL) {
+      saasLogoUrl = VUE_APP_SAAS_LOGO_URL
+    }
+
     return {
-      saasTitle: "新狐云数字化平台",
-      saasUrl: "http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/",
-    };
+      saasTitle,
+      saasUrl,
+      saasLogoUrl
+    }
   },
   methods: {
     handleCommand(command) {
