@@ -2,7 +2,7 @@
     <div>
         <div class="top-headers">
             <router-link tag="div" class="header-logo-bar" to="/index">
-                <button class="header-logo">
+                <button class="header-logo" v-if="enableLogo">
                     <img
                             :src="saasLogoUrl"
                             style="position: absolute; width: 40px; top: 5px; left: 10px"
@@ -182,8 +182,9 @@
       },
     },
     data () {
-      const { VUE_APP_SASS_TITLE, VUE_APP_SASS_URL, VUE_APP_SAAS_LOGO_URL } = process.env
+      const { VUE_APP_SASS_TITLE, VUE_APP_SASS_URL, VUE_APP_SAAS_LOGO_URL,VUE_APP_ENABLE_LOGO } = process.env
       let saasTitle = '新狐云数字化平台'
+      let enableLogo = true;
       let saasUrl = 'http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/'
       let saasLogoUrl = 'http://training-static.linesno.com/fox_cloud/fox_header.png'
       if (VUE_APP_SASS_TITLE) {
@@ -195,10 +196,14 @@
       if (VUE_APP_SAAS_LOGO_URL) {
         saasLogoUrl = VUE_APP_SAAS_LOGO_URL
       }
+      if (VUE_APP_ENABLE_LOGO === 'off') {
+        enableLogo = false;
+      }
       return {
         saasTitle,
         saasUrl,
-        saasLogoUrl
+        saasLogoUrl,
+        enableLogo
       }
     },
     methods: {
