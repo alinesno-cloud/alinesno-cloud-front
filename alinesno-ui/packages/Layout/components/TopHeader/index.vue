@@ -105,7 +105,7 @@
                                 <p class="color-text-secondary f-e-s">
                                     账号：{{account}}
                                 </p>
-                                <el-tag v-for="r of role">{{r}}</el-tag>
+                                <el-tag v-for="r of role" :key="r">{{r}}</el-tag>
                             </el-header>
                         </el-container>
                         <!--            <el-dropdown-item icon="el-icon-platform-eleme">安全访问</el-dropdown-item>-->
