@@ -36,7 +36,7 @@
       let enableLogo = true;
       let saasUrl = 'http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/' ;
       let saasLogoUrl = 'http://training-static.linesno.com/fox_cloud/fox_header.png' ;
-      let displayUrl = 'http://alinesno-storage.admin.beta.linesno.com/storage/displayImg' ;
+      let displayUrl = 'http://alinesno-storage.admin.beta.linesno.com/storage/displayImg/' ;
 
       if (VUE_APP_SASS_TITLE) {
         saasTitle = VUE_APP_SASS_TITLE
@@ -51,14 +51,14 @@
         enableLogo = false;
       }
       if(VUE_APP_DISPLAY_URL){
-        displayUrl = VUE_APP_DISPLAY_URL ; 
+        displayUrl = VUE_APP_DISPLAY_URL ;
       }
 
       return {
         saasTitle,
         saasUrl,
         saasLogoUrl,
-        enableLogo , 
+        enableLogo ,
         displayUrl,
       }
     },
@@ -68,8 +68,8 @@
             console.info('res = ' + res) ;
             this.saasTitle = res.data.name ;
 
-            console.log(this.saasLogoUrl) ; 
-            console.log('displayUrl ' + this.displayUrl) ; 
+            console.log(this.saasLogoUrl) ;
+            console.log('displayUrl ' + this.displayUrl) ;
 
             if(res.data.logo && this.displayUrl){
               this.saasLogoUrl = this.displayUrl + res.data.logo ;
@@ -91,11 +91,12 @@
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
         background-color: var(--cb-color-bg-primary, #fff);
-        position: fixed;
-        top: 0px;
-        right: 0px;
-        left: 0px;
+        position: relative;
+        // top: 0px;
+        // right: 0px;
+        // left: 0px;
         z-index: 10;
+        float:left ;
         // box-shadow: 0 2px 4px 0 var(--cb-color-shadow, rgba(0, 0, 0, 0.16));
         border-bottom: var(--card-border-width, 1px) var(--card-border-style, solid) var(--card-border-color, #e3e4e6);
 
