@@ -8,4 +8,12 @@ export function getConfigKey(configKey) {
   })
 }
 
+// 获取企业信息ID和logo
+export function getEnterpriseInfo() {
+  return request({
+    url: '/dashboard/getEnterpriseInfo' ,
+    method: 'get'
+  })
+}
+
 
