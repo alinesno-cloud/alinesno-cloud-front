@@ -1,4 +1,4 @@
-const defaultTitle = '新狐云数字化平台'
+const defaultTitle = '企业级数字化中台'
 const titleFromVars = process.env.VUE_APP_SASS_TITLE
 module.exports = {
   title: titleFromVars ? titleFromVars : defaultTitle,
