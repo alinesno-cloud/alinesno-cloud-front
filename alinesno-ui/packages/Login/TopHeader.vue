@@ -1,32 +1,30 @@
 <template>
     <div id="banner">
         <div class="widthLimit" ui-view="banner">
-            <div ng-click="BiEvent('send','event','button','click','login_logoSrc',model.logoSrc)"
-                 style="display:inline" class="ng-scope">
+            <div  style="display:inline">
                 <a class="logo-banner">
-                    <img data-v-01387e75="" :src="saasLogoUrl"
-                         style="position: absolute; width: 40px; top: 5px; left: 10px;">
+                    <img :src="saasLogoUrl" style="position: absolute; width: 50px; top: 5px; left: 10px;">
                 </a>
                 <a :title="saasTitle" target="_self" class="header-logo-label"><span>{{saasTitle}}</span></a>
             </div>
         </div>
-        <span id="bannerQuickLink" class="ng-scope">
-        <div style="display:inline">
-            <a class="homepageLink ng-binding" ng-bind="i18n('homepageLink')" href="/">首页</a>
-        </div>
-        <div style="display:inline">
-            <a class="homepageLink ng-binding" ng-bind="i18n('helpCenter')" href="">帮助中心</a>
-        </div>
-    </span>
     </div>
 </template>
 <script>
   export default {
+    props:{
+        loginTheme: {
+            type: Object 
+        } ,
+    } , 
     data () {
-      const { VUE_APP_SASS_TITLE, VUE_APP_SASS_URL, VUE_APP_SAAS_LOGO_URL } = process.env
+      const { VUE_APP_SASS_TITLE, VUE_APP_SASS_URL, VUE_APP_SAAS_LOGO_URL ,VUE_APP_DISPLAY_URL } = process.env
+
       let saasTitle = '新狐云数字化平台'
       let saasUrl = 'http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/'
       let saasLogoUrl = 'http://training-static.linesno.com/fox_cloud/fox_header.png'
+      let displayUrl = 'http://alinesno-storage.admin.beta.linesno.com/storage/displayImg/' ;
+
       if (VUE_APP_SASS_TITLE) {
         saasTitle = VUE_APP_SASS_TITLE
       }
@@ -36,12 +34,28 @@
       if (VUE_APP_SAAS_LOGO_URL) {
         saasLogoUrl = VUE_APP_SAAS_LOGO_URL
       }
+      if(VUE_APP_DISPLAY_URL){
+        displayUrl = VUE_APP_DISPLAY_URL ;
+      }
+
       return {
         saasTitle,
         saasUrl,
-        saasLogoUrl
+        saasLogoUrl , 
+        displayUrl ,
       }
-    }
+    } , 
+    watch: {
+      loginTheme: {
+          handler(newV){
+              console.log('new v = ' + newV) ; 
+              this.saasTitle = newV.logoTitle ;
+              this.saasLogoUrl = this.displayUrl + newV.loginLogo ;
+              console.log('saasLogoUrl v = ' + this.saasLogoUrl) ; 
+          } , 
+          deep: true
+     }
+    },
   }
 </script>
 
@@ -82,9 +96,9 @@
 
     .logo-banner {
         float: left;
-        background: #005BD4;
+        // background: #005BD4;
         height: 60px;
-        width: 60px;
+        width: 70px;
         position: relative;
         left: 0px;
     }

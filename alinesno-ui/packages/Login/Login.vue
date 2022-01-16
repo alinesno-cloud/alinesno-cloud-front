@@ -1,23 +1,48 @@
 <template>
-<div class="login-container">
-    <top-header />
-    <login-content />
-    <login-footer />
+<div class="login-container" :style="{backgroundImage:`url(${bgImg})`}" >
+    <top-header :loginTheme="loginTheme" />
+    <login-form :loginTheme="loginTheme" />
+    <login-footer :loginTheme="loginTheme" />
 </div>
 </template>
 
 <script>
 import TopHeader from './TopHeader.vue'
-import LoginContent from './LoginContent.vue'
 import LoginFooter from './LoginFooter.vue'
+import LoginForm from './LoginForm.vue'
+
+import { getTheme } from 'alinesno-ui/src/api/login'
 
 export default {
   name: 'Login',
+  data(){
+      const { VUE_APP_DISPLAY_URL } = process.env
+
+      let displayUrl = 'http://alinesno-storage.admin.beta.linesno.com/storage/displayImg/' ;
+
+      if(VUE_APP_DISPLAY_URL){
+        displayUrl = VUE_APP_DISPLAY_URL ;
+      }
+
+      return {
+        loginTheme: null , 
+        bgImg: 'http://training-static.linesno.com/quare_bg_01.png' ,
+        displayUrl ,
+      }
+  } , 
   components: {
       TopHeader ,
-      LoginContent ,
+      LoginForm ,
       LoginFooter
   },
+  mounted () {
+    // 获取企业信息
+    getTheme().then(res => {
+        console.info('res = ' + res) ;
+        this.loginTheme = res.data ; 
+        this.bgImg = this.displayUrl + res.data.logoBackground ; 
+    }) ;
+},
 }
 </script>
 
@@ -33,8 +58,11 @@ export default {
 .login-container{
     height: 100%;
     background: #f5f5f5;
-    background-image: url('http://training-static.linesno.com/quare_bg_01.png') ; 
     background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1F1F1F;
+    background-position: center;
+    background-attachment: fixed;
 
     #banner{
         box-shadow: none;

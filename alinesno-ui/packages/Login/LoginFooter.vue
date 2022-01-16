@@ -3,9 +3,10 @@
     <div class="widthLimit" ui-view="footer">
         <div ng-if="!model.ipIsInternational" class="footer-content ng-scope unfold" ng-class="{'unfold': model.showICP, 'fold': !model.showICP}">
             <div class="copyrightDiv">
-                <span class="right-space ng-binding" ng-bind="model.copyRight">&copy;2021 xinfox技术研发团队 版权所有</span>
-
+                <span class="right-space ng-binding" ng-bind="model.copyRight">{{copyRight}}</span>
             </div>
+
+            <!--
             <div class="otherLinkDiv">
                 <span id="laws">
                     <a ng-if="footer.legalNotice" ng-bind="i18n('legalStatement')" target="_blank" rel="noopener noreferrer"  class="ng-binding ng-scope">法律声明</a>
@@ -15,22 +16,60 @@
                     <a ng-if="footer.cookies" ng-bind="i18n('hwId.cookies')" target="_blank" rel="noopener noreferrer" class="ng-binding ng-scope">Cookies</a>
                 </span>
             </div>
+            -->
+
         </div>
     </div>
 </div>
 </template>
 
-<style lang="scss" scoped>
-    #banner, #loading{
-        z-index: 1999 !important ;
-    }
+<script>
+import LoginForm from './LoginForm.vue'
 
+export default {
+    props:{
+        loginTheme: {
+            type: Object 
+        } ,
+    } , 
+    data(){
+        let copyRight = 'xinfox技术研发团队 版权所有@2021 '
+
+        if(this.loginTheme && this.loginTheme.powerDesc){
+            copyRight = this.loginTheme.powerDesc ;
+        }
+
+        return {
+            copyRight
+        }
+    }  , 
+    components: {
+        LoginForm
+    },
+    watch: {
+      loginTheme: {
+          handler(newV){
+                if(newV && newV.powerDesc){
+                    this.copyRight = newV.powerDesc ;
+                }
+          } , 
+          deep: true
+     }
+    },
+}
+</script>
+
+<style lang="scss" scoped>
 @import 'alinesno-ui/src/assets/styles/login/bootstrap.scss';
 @import 'alinesno-ui/src/assets/styles/login/tiny.min.scss';
 @import 'alinesno-ui/src/assets/styles/login/tiny-plus.min.scss';
 @import 'alinesno-ui/src/assets/styles/login/tinyext.min.scss';
 @import 'alinesno-ui/src/assets/styles/login/pageframework.scss';
 @import 'alinesno-ui/src/assets/styles/login/login.scss';
+
+#banner, #loading{
+    z-index: 1999 !important ;
+}
 
 .loginDiv{
     border-radius: 2px;

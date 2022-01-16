@@ -15,6 +15,14 @@ export function login(username, password, code, uuid) {
   })
 }
 
+// 获取登陆主题 
+export function getTheme() {
+  return request({
+    url: '/login/theme',
+    method: 'get'
+  })
+}
+
 // 获取用户详细信息
 export function getInfo() {
   return request({
