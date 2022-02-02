@@ -3,38 +3,6 @@
     <div class="widthLimit" ui-view="content">
       <div class="loginDiv">
         <br />
-        <div class="QRLoginSwitchDiv" v-if="hasQrLogin == 1">
-          <div class="QRLogin" @click="qrLoginTypeSwitch(true)">
-            <div :class="{ selectedType: selectType == 0 }">扫码登录</div>
-          </div>
-          <div class="intervalDiv"></div>
-          <div class="accountLogin" @click="qrLoginTypeSwitch(false)">
-            <div :class="{ selectedType: selectType == 1 }">密码登录</div>
-          </div>
-        </div>
-        <div class="qr-scope" v-show="selectType == 0">
-          <div id="countDownDiv">
-            <span class=""
-              >请使用
-              <span style="color: #ff9220" class="ng-binding">云APP</span>
-              扫描二维码登录</span
-            >
-            <span class="ng-scope">，</span>
-            <span class="remainingTimeTxt ng-scope">94秒</span>
-            <span class="ng-scope">后二维码失效</span>
-          </div>
-          <div class="QRCodeOuter">
-            <img
-              src="http://training-static.linesno.com/qr.png"
-              style="width: 260px; padding-top: 20px"
-            />
-          </div>
-          <div id="QRLoginBottomDiv">
-            <a class="QRLoginBottomColor" target="_blank">注册</a>
-            <div class="intervalDiv">|</div>
-            <a class="QRLoginBottomColor" target="_blank">手机下载新狐云APP</a>
-          </div>
-        </div>
 
         <el-form
           v-show="selectType == 1"
@@ -45,9 +13,7 @@
           class="ng-hide"
         >
           <div class="loginTypeDiv">
-            <span class="loginTypeNoSelected" ng-bind="i18n('enterpriseUser')"
-              >账号密码登陆</span
-            >
+            <span class="loginTypeNoSelected">注册微型办公服务账号</span>
           </div>
           <div id="serverError">
             <span
@@ -59,26 +25,7 @@
               <input
                 type="text"
                 class="iam-input-text"
-                name="account"
-                v-model="loginForm.username"
-                @keyup.enter="handleLogin"
-                placeholder="账号名"
-                maxlength="255"
-                autocomplete="off"
-                style="width: 100%; height: 48px"
-              />
-            </div>
-            <div class="inputField" style="position: relative">
-              <input
-                class="
-                  iam-input-text
-                  ng-pristine ng-untouched ng-valid ng-valid-maxlength
-                "
-                v-model="loginForm.password"
-                type="password"
-                auto-complete="off"
-                placeholder="密码"
-                @keyup.enter="handleLogin"
+                placeholder="手机号"
                 maxlength="255"
                 autocomplete="off"
                 style="width: 100%; height: 48px"
@@ -98,11 +45,49 @@
                 style="width: 60%; height: 48px"
               />
               <div class="login-code">
-                <img :src="codeUrl" @click="getCode" class="login-code-img" />
+                  <div
+                    size="medium"
+                    type="primary"
+                    style="width: 100%"
+                    @click.prevent="getPhoneCode"
+                    class="loginBtn loginBtnDisabled"
+                  >
+                    <span v-show="validateCodeShow" @click="getPhoneCode" id="btn_submit" >获取验证码</span>
+                    <span v-show="!validateCodeShow" id="btn_submit" >{{count}} s后重新获取</span>
+                  </div>
               </div>
+            </div>
+            <div class="inputField" style="position: relative">
+              <input
+                class="
+                  iam-input-text
+                  ng-pristine ng-untouched ng-valid ng-valid-maxlength
+                "
+                auto-complete="off"
+                placeholder="密码"
+                maxlength="255"
+                autocomplete="off"
+                style="width: 100%; height: 48px"
+              />
+            </div>
+            <div class="inputField" style="position: relative">
+              <input
+                class="
+                  iam-input-text
+                  ng-pristine ng-untouched ng-valid ng-valid-maxlength
+                "
+                auto-complete="off"
+                placeholder="密码"
+                maxlength="255"
+                autocomplete="off"
+                style="width: 100%; height: 48px"
+              />
             </div>
           </div>
           <div class="buttonAreaDiv">
+            <div class="registerTip">
+              帐号服务需要联网，并获取您的帐号、所在区域、浏览器设置信息，以及您主动上传的个人基本资料和身份信息。
+            </div>
             <div id="buttonArea">
               <div
                 id="loginBtn"
@@ -115,35 +100,16 @@
                 tabindex="0"
               >
                 <span id="btn_submit" ng-bind="loginBtn.submitBtnText" class=""
-                  >登录</span
+                  >注册</span
                 >
               </div>
-            </div>
-          </div>
-          <div id="bottomBtns">
-            <div class="forgetPwdLink commonLinkDiv" tabindex="0">
-              <span
-                class="loginswap loginBottomColor"
-                @click="findPwd"
-                > <a href="javascript:;">忘记密码</a></span>
-            </div>
-            <div id="iamCheckArea" class="checkboxDiv checkArea">
-              <input
-                id="checkboxInput"
-                type="checkbox"
-                name="checkboxInput"
-                ng-model="model.rememberChecked"
-                class="ng-pristine ng-untouched ng-valid"
-              />
-              <label for="checkboxInput"></label>
-              <span class="">记住登录名</span>
             </div>
           </div>
           <div class="otherLoginWays">
             <span class="otherLoginTip">
               <span
-                >没有帐号，<a href="javascript:;" @click="toRegister"
-                  >去注册</a
+                >已有帐号，<a href="javascript:;" @click="toLogin"
+                  >去登陆</a
                 ></span
               >
             </span>
@@ -175,9 +141,11 @@ export default {
 
     return {
       codeUrl: "",
-      loginPanel: true,
       hasQrLogin,
       cookiePassword: "",
+      validateCodeShow: true,
+      count: '',
+      timer: null,
       loginForm: {
         username: "",
         password: "",
@@ -230,6 +198,22 @@ export default {
     qrLoginTypeSwitch(s) {
       this.selectType = s ? 0 : 1;
     },
+    getPhoneCode(){
+        const TIME_COUNT = 60;
+        if (!this.timer) {
+            this.count = TIME_COUNT;
+            this.validateCodeShow = false;
+            this.timer = setInterval(() => {
+                if (this.count > 0 && this.count <= TIME_COUNT) {
+                    this.count--;
+                } else {
+                    this.validateCodeShow = true;
+                    clearInterval(this.timer);
+                    this.timer = null;
+                }
+            }, 1000)
+        }
+    },
     getCookie() {
       const username = Cookies.get("username");
       const password = Cookies.get("password");
@@ -241,13 +225,9 @@ export default {
         rememberMe: rememberMe === undefined ? false : Boolean(rememberMe),
       };
     },
-    toRegister() {
-      console.log("to register!");
-      // this.$router.push("/register");
-      this.$emit('showRegister', true) ; 
-    },
-    findPwd(){
-      this.$emit('showFindPwd', true) ; 
+    toLogin() {
+      // this.$router.push("/login");
+      this.$emit('showLogin', true) ; 
     },
     handleLogin() {
       this.$refs.loginForm.validate((valid) => {
@@ -432,10 +412,6 @@ export default {
   cursor: pointer;
 }
 
-.closeImg:before {
-  content: url("https://console-static.huaweicloud.com/static/authui/20210513103904/public/custom/images/close.svg");
-}
-
 #footer .footer-content {
   height: 50px;
   position: absolute;
@@ -512,6 +488,7 @@ export default {
 
   .otherLoginWays {
     font-size: 14px;
+    margin-top: 20px;
   }
 }
 .login-code {
@@ -523,5 +500,11 @@ export default {
     border-radius: 4px;
     border: 0px;
   }
+}
+
+.registerTip {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 20px;
 }
 </style>

@@ -38,6 +38,7 @@
       let saasLogoUrl = 'http://training-static.linesno.com/fox_cloud/fox_header.png' ;
       let displayUrl = 'http://alinesno-storage.admin.beta.linesno.com/storage/displayImg/' ;
 
+
       if (VUE_APP_SASS_TITLE) {
         saasTitle = VUE_APP_SASS_TITLE
       }
@@ -62,17 +63,19 @@
         displayUrl,
       }
     },
-    mounted () {
+    created() {
         // 获取企业信息
         getEnterpriseInfo().then(res => {
             console.info('res = ' + res) ;
-            this.saasTitle = res.data.name ;
+            if(res.data){
+              this.saasTitle = res.data.name ;
 
-            console.log(this.saasLogoUrl) ;
-            console.log('displayUrl ' + this.displayUrl) ;
+              console.log(this.saasLogoUrl) ;
+              console.log('displayUrl ' + this.displayUrl) ;
 
-            if(res.data.logo && this.displayUrl){
-              this.saasLogoUrl = this.displayUrl + res.data.logo ;
+              if(res.data.logo && this.displayUrl){
+                this.saasLogoUrl = this.displayUrl + res.data.logo ;
+              }
             }
         }) ;
     },
@@ -102,7 +105,7 @@
 
         .header-logo-label {
             font-size: 16px;
-            margin-left: 10px;
+            margin-left: 0px;
             text-shadow: 0 0 0px black;
             color: #005bd4;
         }

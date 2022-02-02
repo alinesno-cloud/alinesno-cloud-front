@@ -5,6 +5,7 @@ const user = {
   state: {
     token: getToken(),
     name: '',
+    nickname: '',
     avatar: '',
     roles: [],
     permissions: []
@@ -13,6 +14,10 @@ const user = {
   mutations: {
     SET_TOKEN: (state, token) => {
       state.token = token
+    },
+    SET_NICKNAME: (state, nickname) => {
+      console.log('set nickname = ' + nickname)
+      state.nickname = nickname
     },
     SET_NAME: (state, name) => {
       state.name = name
@@ -52,6 +57,10 @@ const user = {
         getInfo().then(res => {
           const user = res.user
           const avatar = user.avatar == "" ? require("alinesno-ui/src/assets/images/profile.jpg") : process.env.VUE_APP_BASE_API + user.avatar;
+          const nickName = user.nickName ;
+
+          debugger
+          console.log('nick name = ' + nickName) ;
           if (res.roles && res.roles.length > 0) { // 验证返回的roles是否是一个非空数组
             commit('SET_ROLES', res.roles)
             commit('SET_PERMISSIONS', res.permissions)
@@ -59,6 +68,7 @@ const user = {
             commit('SET_ROLES', ['ROLE_DEFAULT'])
           }
           commit('SET_NAME', user.userName)
+          commit('SET_NICKNAME', user.nickName)
           commit('SET_AVATAR', avatar)
           resolve(res)
         }).catch(error => {

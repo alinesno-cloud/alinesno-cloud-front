@@ -9,7 +9,7 @@
         </div>
         <el-dropdown @command="handleCommand">
             <div class="CB-qpwBh" style="display: flex">
-                <a class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab">{{name}}</a>
+                <a class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab">{{nickname}}</a>
                 <a class="sc-2fc5kz-0 fga5tf-0 CB-ktSrBv CB-dPJIQr ra375q-0 CB-jjPPab " target="_blank" >
                     <img src="//oss.aliyuncs.com/aliyun_id_photo_bucket/default_family.jpg" class="su70ez-0 CB-gLgKdv"/>
                 </a>
@@ -21,7 +21,7 @@
                         <p class="color-text-secondary f-e-s">
                             账号：{{account}}
                         </p>
-                        <el-tag v-for="r of role" :key="r">{{r}}</el-tag>
+                        <el-tag v-for="(r , i) of role" :key="i">{{r}}</el-tag>
                     </el-header>
                 </el-container>
                 <el-dropdown-item @click.native="setting = true" icon="el-icon-s-management">布局设置</el-dropdown-item>
@@ -49,13 +49,22 @@
       account: {
         get () {
           const { account } = this.$store.state.user
+          console.log('account = ' + account)
           return account ? account : ''
+        }
+      },
+      nickname: {
+        get () {
+          const nickname = this.$store.state.user.nickname
+          console.log('nickname = ' + nickname)
+          return nickname ;
         }
       },
       name: {
         get () {
-          return this.$store.state.user.name
-
+          const name = this.$store.state.user.name
+          console.log('name = ' + name)
+          return name ;
         }
       },
       setting: {
@@ -111,7 +120,12 @@
           cancelButtonText: '取消',
           type: 'warning',
         }).then(() => {
-          this.$store.dispatch('LogOut')
+            // this.$store.dispatch('LogOut').then(res()=>{
+            //     window.location.href="/"
+            // })
+            this.$store.dispatch('LogOut').then(() => {
+                window.location.href="/"
+            })
         })
       },
     },
