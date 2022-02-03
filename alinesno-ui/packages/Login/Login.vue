@@ -83,7 +83,6 @@ export default {
   },
   methods: {
     showRegister(isShowRegister) {
-      console.log("parent show showRegister , " + isShowRegister);
       this.showRegisterPanel = isShowRegister;
       this.showLoginPanel = false;
       this.showFindPwdPanel = false;

@@ -139,7 +139,7 @@
               <span class="">记住登录名</span>
             </div>
           </div>
-          <div class="otherLoginWays">
+          <div class="otherLoginWays" v-show="hasRegister">
             <span class="otherLoginTip">
               <span
                 >没有帐号，<a href="javascript:;" @click="toRegister"
@@ -168,15 +168,17 @@ export default {
   },
   data() {
     let hasQrLogin = 1;
-
+    // let hasRegister = false ; 
     if (this.loginTheme && this.loginTheme.hasQrLogin) {
       hasQrLogin = this.loginTheme.hasQrLogin;
+      // hasRegister = this.loginTheme.hasRegister == null ? false : this.loginTheme.hasRegister ; 
     }
 
     return {
       codeUrl: "",
       loginPanel: true,
       hasQrLogin,
+      hasRegister: true , 
       cookiePassword: "",
       loginForm: {
         username: "",
@@ -243,8 +245,8 @@ export default {
     },
     toRegister() {
       console.log("to register!");
-      // this.$router.push("/register");
-      this.$emit('showRegister', true) ; 
+      this.$router.push("/register");
+      // this.$emit('showRegister', true) ; 
     },
     findPwd(){
       this.$emit('showFindPwd', true) ; 
